@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link rel='stylesheet' href='../lib/cupertino/jquery-ui.min.css' />
+<link href='../fullcalendar.css' rel='stylesheet' />
+<link href='../fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='../lib/moment.min.js'></script>
+<script src='../lib/jquery.min.js'></script>
+<script src='../fullcalendar.min.js'></script>
+<script>
+
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+			theme: true,
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+		//	var today = new Date();
+			defaultDate: new Date(),
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				{
+					title: 'General Shift (10AM to 7PM) - Narsimha, Krishna, Nithin, Ashish, Niraj, Sagar, Prashanth, Harsha, PriyanshuD, Shikha, Jagadeeswari, Sharath, Santhosh',
+					start: '5/30/2016 10:00 AM',
+					end: '6/3/2016 06:59 PM'
+
+				},
+				{
+					title: 'Early Morning Shift (6AM to 2PM) - Shareef',
+					start: '5/30/2016 06:00 AM',
+					end: '6/3/2016 01:59 PM'
+				},
+				
+				{
+					title: 'Evening Shift (6pm-2am) - Nithin,Udit',
+					start: '5/30/2016 06:00 PM',
+					end: '6/3/2016 01:59 AM'
+				},
+				{
+					title: 'Night Shift-1 (8pm-4am) - Abhishek',
+					start: '5/30/2016 08:00 PM',
+					end: '6/3/2016 03:59 AM'
+				},
+				{
+					title: 'Night Shift-2 (11PM to 7AM) - Parshuram',
+					start: '5/30/2016 11:00 PM',
+					end: '6/3/2016 6:59 AM'
+				}
+				
+			]
+		});
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 11px;
+	}
+
+	#calendar {
+		max-width: 1080px;
+		margin: 0 auto;
+	}
+
+</style>
+</head>
+<body>
+
+	<div id='calendar'></div>
+
+</body>
+</html>
