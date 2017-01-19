@@ -10,6 +10,12 @@
   <?php
   $ID=$_GET['ID'];
   ?>
+  <style>
+  .clear{
+
+	  padding:10px;
+  }
+  </style>
 </head>
 <body>
 
@@ -17,17 +23,18 @@
 <br>
   <div class="panel panel-primary">
     <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
-    <div class="panel-body"><div class="row">
+    <div class="panel-body"><div class="row clear">
 	<div class="col-xs-3">Ticket Id</div><div class="col-xs-3"><input type="text"/></div>
 	<div class="col-xs-3">Ticket Id</div><div class="col-xs-3"><input type="text"/></div>
 	
 	</div>
-	<div class="row">
+	
+	<div class="row clear">
 	<div class="col-xs-3">Ticket Id</div><div class="col-xs-3"><input type="text"/></div>
 	<div class="col-xs-3">Ticket Id</div><div class="col-xs-3"><input type="text"/></div>
 	
 	</div>
-	<div class="row">
+	<div class="row clear">
 	<div class="col-xs-3">Ticket Id</div><div class="col-xs-3"><input type="text"/></div>
 	<div class="col-xs-3">Ticket Id</div><div class="col-xs-3"><input type="text"/></div>
 	
