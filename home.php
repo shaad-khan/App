@@ -27,7 +27,7 @@
 <div class="content-panel" id="reload"  >
 
 
-                         <div class="row" ng-init="load='true'">
+                         <div class="row" ng-init="load='false'">
 
                             <div class="col-xs-12" style="padding-left:40px;padding-right:40px;">
                               <div class="panel panel-primary">
