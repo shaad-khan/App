@@ -40,7 +40,7 @@
 <div class="form-group">
     <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
 "></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ticket Id">
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>" disabled>
   </div>
 
 </div>
