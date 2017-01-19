@@ -26,6 +26,7 @@
 .swid
 {
   width:50px;
+
 }
   </style>
 </head>
