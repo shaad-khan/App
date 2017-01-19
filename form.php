@@ -37,7 +37,7 @@
 	</div>
 	<div class="row clear">
 	<div class="col-xs-3">Project : </div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3">Updated By : <input type="text"/></div>
+	<div class="col-xs-3">Updated By : </div><div class="col-xs-3"><input type="text"/></div>
 	
 	</div>
 	<div class="row clear">
