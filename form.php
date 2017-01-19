@@ -38,8 +38,8 @@
 <div class="col-xs-4">
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Ticket Id<</label> <span class="glyphicon glyphicon-info-sign
-"></span>
+    <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
+"></span></label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ticket Id">
   </div>
 
