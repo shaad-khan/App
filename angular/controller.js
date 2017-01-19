@@ -113,7 +113,7 @@ app.controller("table_count",function($scope,$http,$interval){
   $interval(callApi, 2000);
   function callApi(){
     $http.get("https://apps.continuserve.com/continuity/App/webservice/Tab_content.php").then(function(response){
-
+     	$scope.load='true';
       $scope.items=response.data;
     });
 

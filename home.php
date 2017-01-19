@@ -22,9 +22,9 @@
 
 </div>
 </div>
-<div class="row mt">
+<div class="row mt" ng-controller="table_count">
   <div class="col-md-12">
-<div class="content-panel" id="reload"  ng-controller="table_count">
+<div class="content-panel" id="reload"  >
 
 
                          <div class="row">
