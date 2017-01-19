@@ -18,7 +18,7 @@
   <div class="panel panel-primary">
     <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
     <div class="panel-body"><div class="row">
-	<div class="col-xs-3">Ticket Id</div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3" style="display:block">Ticket Id</div><div class="col-xs-3"><input type="text"/></div>
 	<div class="col-xs-3">Ticket Id</div><div class="col-xs-3"><input type="text"/></div>
 	<div class="col-xs-3">Ticket Id</div><div class="col-xs-3"><input type="text"/></div>
 	</div>
