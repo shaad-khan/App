@@ -31,7 +31,7 @@
 
                             <div class="col-xs-12" style="padding-left:40px;padding-right:40px;">
                               <div class="panel panel-primary">
-                                <div class="panel-heading" style="background-color:#001a33">Task Report1</div>
+                                <div class="panel-heading" style="background-color:#001a33">Task Report</div>
       <div class="panel-body" ng-controller="table_count">
         <table class="table"><tr>
     <th></th>
