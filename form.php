@@ -34,11 +34,20 @@
 <div class="col-xs-6">
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+    <label for="exampleInputEmail1">Ticket Id</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ticket Id">
   </div>
 
 </div>
+<div class="col-xs-6">
+
+<div class="form-group">
+    <label for="exampleInputEmail1">Ticket Id</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ticket Id">
+  </div>
+
+</div>
+
 
 	</div>
 	
