@@ -28,15 +28,21 @@
   <div class="panel panel-primary">
     <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
     <div class="panel-body"><div class="row clear">
-	<div class="col-xs-3">  <div class="form-group">
+	<!--<div class="col-xs-3">Ticket Id <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Created By <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
+	-->
+<div class="col-xs-3">
+
+<div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-  </div></div>
-	<div class="col-xs-3">Created By <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-	
+  </div>
+
+</div>
+
 	</div>
 	
-	<div class="row clear">
+<!--	<div class="row clear">
 	<div class="col-xs-3">Client <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
 	<div class="col-xs-3">Created Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
 	
@@ -54,7 +60,7 @@
 	<div class="row clear">
 	<div class="col-xs-3">Assigned To <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
 	<div class="col-xs-3">Updated Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
-	</div>
+	</div>-->
   </div>
 </div>
 
