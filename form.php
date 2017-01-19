@@ -47,7 +47,7 @@
   </div>
 
 </div>
-<div class="col-xs-5">
+<div class="col-xs-2">
 
 <div class="form-group">
     <label for="exampleInputEmail1">Ticket Id</label>
