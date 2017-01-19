@@ -16,7 +16,7 @@
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
 
-                                   Task Report </div><div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
+                                   Task Assignment Report </div><div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
        <div class="panel-body" ng-controller="table_count">
          <table class="table"><tr>
