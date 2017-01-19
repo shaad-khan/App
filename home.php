@@ -24,7 +24,7 @@
 </div>
 <div class="row mt">
   <div class="col-md-12">
-<div class="content-panel" id="reload">
+<div class="content-panel" id="reload"  ng-controller="table_count">
 
 
                          <div class="row">
@@ -35,7 +35,7 @@
 
                                   Task Report </div><div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                   </div></div></div>
-      <div class="panel-body" ng-controller="table_count">
+      <div class="panel-body">
         <table class="table"><tr>
     <th></th>
       <th>  <span class="glyphicon glyphicon-menu-hamburger"></span>Classify</th>
