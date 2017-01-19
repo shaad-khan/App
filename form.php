@@ -12,11 +12,11 @@
   ?>
   <style>
   body{
-    background-color:black;
+    background-color:#424a5d;
   }
   .clear{
 
-	  padding:11px;
+	  padding:10px;
 	  
   }
   </style>
