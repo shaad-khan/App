@@ -35,7 +35,7 @@ function statuscheck() {
 app.controller("clientgraph", function($scope,$http,$interval){
 	 var x=0;
 
-$interval(callAtInterval, 10000);
+$interval(callAtInterval, 8000);
 function callAtInterval(){
    console.log("called");
   x++;
@@ -69,7 +69,7 @@ function callAtInterval(){
 app.controller("taskgraph", function($scope,$http,$interval){
 	 var x=0;
 
-$interval(callAtInterval2, 10000);
+$interval(callAtInterval2, 8000);
 function callAtInterval2(){
    console.log("called");
   x++;
