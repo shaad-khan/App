@@ -23,6 +23,10 @@
 {
   color:red;
 }
+.swid
+{
+  width:50px;
+}
   </style>
 </head>
 <body>
@@ -49,7 +53,7 @@
 <div class="form-group">
     <label for="exampleInputEmail1">Client <span class="glyphicon glyphicon-info-sign
 "></span></label>
-   <select class="form-control">
+   <select class="form-control swid">
   <option>C1</option>
   <option>C2</option>
   <option>C3</option>
