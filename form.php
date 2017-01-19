@@ -25,19 +25,24 @@
   <div class="panel panel-primary">
     <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
     <div class="panel-body"><div class="row clear">
-	<div class="col-xs-3">Ticket Id :</div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3">Created By :</div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Ticket Id : <input type="text"/></div>
+	<div class="col-xs-3">Created By : <input type="text"/></div>
 	
 	</div>
 	
 	<div class="row clear">
-	<div class="col-xs-3">Client :</div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Client : <input type="text"/></div>
 	<div class="col-xs-3">Created Date Time :</div><div class="col-xs-3"><input type="text"/></div>
 	
 	</div>
 	<div class="row clear">
-	<div class="col-xs-3">Project :</div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3">Updated By :</div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Project : <input type="text"/></div>
+	<div class="col-xs-3">Updated By : <input type="text"/></div>
+	
+	</div>
+	<div class="row clear">
+	<div class="col-xs-3">Assigned To : <input type="text"/></div>
+	<div class="col-xs-3">Updated Date Time : <input type="text"/></div>
 	
 	</div>
   </div>
