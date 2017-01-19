@@ -11,6 +11,9 @@
   $ID=$_GET['ID'];
   ?>
   <style>
+  body{
+    background-color:black;
+  }
   .clear{
 
 	  padding:10px;
