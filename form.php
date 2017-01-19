@@ -35,7 +35,7 @@
 	
 	<div class="row clear">
 	<div class="col-xs-3">Client : </div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3"><span class="glyphicon glyphicon-pencil"></span>Created Date Time :</div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Created Date Time <span class="glyphicon glyphicon-pencil"></span></div><div class="col-xs-3"><input type="text"/></div>
 	
 	</div>
 	<div class="row clear">
