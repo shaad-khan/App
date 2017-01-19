@@ -50,7 +50,7 @@
     <label for="exampleInputEmail1">Client <span class="glyphicon glyphicon-info-sign
 "></span></label>
    <select class="form-control">
-  <option>C1/option>
+  <option>C1</option>
   <option>C2</option>
   <option>C3</option>
   <option>C4</option>
