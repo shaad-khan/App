@@ -31,7 +31,7 @@
 	<!--<div class="col-xs-3">Ticket Id <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
 	<div class="col-xs-3">Created By <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
 	-->
-<div class="col-xs-6">
+<div class="col-xs-3">
 
 <div class="form-group">
     <label for="exampleInputEmail1">Ticket Id</label>
@@ -39,7 +39,15 @@
   </div>
 
 </div>
-<div class="col-xs-6">
+<div class="col-xs-3">
+
+<div class="form-group">
+    <label for="exampleInputEmail1">Ticket Id</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ticket Id">
+  </div>
+
+</div>
+<div class="col-xs-3">
 
 <div class="form-group">
     <label for="exampleInputEmail1">Ticket Id</label>
