@@ -13,7 +13,7 @@
   <style>
   .clear{
 
-	  padding:11px;
+	  padding:12px;
 	  
   }
   </style>
