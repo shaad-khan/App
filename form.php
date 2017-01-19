@@ -14,10 +14,10 @@
 <body>
 
 <div class="container">
-  <h2>Panel Heading</h2>
-  <div class="panel panel-default">
+
+  <div class="panel panel-primary">
     <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
-    <div class="panel-body">Panel Content</div>
+    <div class="panel-body">Form</div>
   </div>
 </div>
 
