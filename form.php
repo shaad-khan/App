@@ -12,7 +12,7 @@
   ?>
   <style>
   body{
-    background-color:#424a5d;
+    background-color:#001a33;
   }
   .clear{
 
