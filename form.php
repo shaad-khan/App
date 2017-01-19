@@ -19,6 +19,10 @@
 	  padding:10px;
 	  
   }
+  .glyphicon-info-sign
+{
+  color:red;
+}
   </style>
 </head>
 <body>
