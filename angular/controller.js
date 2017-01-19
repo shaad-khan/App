@@ -110,10 +110,10 @@ function callAtInterval2(){
 app.controller("table_count",function($scope,$http,$interval){
   var vm = this;
    vm.Total = 0;
-  $interval(callApi, 2000);
+  $interval(callApi, 5000);
   function callApi(){
     $http.get("https://apps.continuserve.com/continuity/App/webservice/Tab_content.php").then(function(response){
-     	$scope.load='true';
+     	$scope.load2='false';
       $scope.items=response.data;
     });
 
