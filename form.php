@@ -28,29 +28,29 @@
   <div class="panel panel-primary">
     <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
     <div class="panel-body"><div class="row clear">
-	<div class="col-xs-3 glyphicon glyphicon-pencil">Ticket Id : </div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3 glyphicon glyphicon-pencil">Created By : </div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Ticket Id : </div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Created By : </div><div class="col-xs-3"><input type="text"/></div>
 	
 	</div>
 	
 	<div class="row clear">
-	<div class="col-xs-3 glyphicon glyphicon-pencil">Client : </div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3 glyphicon glyphicon-pencil">Created Date Time :</div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Client : </div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3"><span class="glyphicon glyphicon-pencil"></span>Created Date Time :</div><div class="col-xs-3"><input type="text"/></div>
 	
 	</div>
 	<div class="row clear">
-	<div class="col-xs-3 glyphicon glyphicon-pencil">Project : </div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3 glyphicon glyphicon-pencil">Updated By : </div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Project : </div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Updated By : </div><div class="col-xs-3"><input type="text"/></div>
 	
 	</div>
 	<div class="row clear">
-	<div class="col-xs-3 glyphicon glyphicon-pencil">Assigned To : </div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3 glyphicon glyphicon-pencil">Updated Date Time :</div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3 ">Assigned To : </div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Updated Date Time :</div><div class="col-xs-3"><input type="text"/></div>
 	
 	</div>
 	<div class="row clear">
-	<div class="col-xs-3 glyphicon glyphicon-pencil">Assigned To :</div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3 glyphicon glyphicon-pencil">Updated Date Time :</div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Assigned To :</div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3">Updated Date Time :</div><div class="col-xs-3"><input type="text"/></div>
 	</div>
   </div>
 </div>
