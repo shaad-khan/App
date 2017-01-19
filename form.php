@@ -47,9 +47,15 @@
 <div class="col-xs-6">
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Client <span class="glyphicon glyphicon-info-sign
 "></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Ticket Id">
+   <select class="form-control">
+  <option>C1/option>
+  <option>C2</option>
+  <option>C3</option>
+  <option>C4</option>
+  <option>C5</option>
+</select>
   </div>
 
 </div>
