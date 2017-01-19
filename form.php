@@ -44,7 +44,7 @@
 	
 	</div>
 	<div class="row clear">
-	<div class="col-xs-3">Assigned To : </div><div class="col-xs-3"><input type="text"/></div>
+	<div class="col-xs-3 glyphicon glyphicon-pencil">Assigned To : </div><div class="col-xs-3"><input type="text"/></div>
 	<div class="col-xs-3">Updated Date Time :</div><div class="col-xs-3"><input type="text"/></div>
 	
 	</div>
