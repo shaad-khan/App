@@ -17,7 +17,7 @@
 <br>
   <div class="panel panel-primary">
     <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
-    <div class="panel-body">
+    <div class="panel-body"><div class="row"></div>
   </div>
 </div>
 
