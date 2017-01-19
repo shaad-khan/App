@@ -14,6 +14,7 @@
   .clear{
 
 	  padding:10px;
+	  border:2px solid;
   }
   </style>
 </head>
