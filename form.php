@@ -202,7 +202,19 @@
   </div>
   </div>
   <!-- ******************************* -->
+<div class="row clear">
+	
+<div class="col-xs-6">
 
+<div class="form-group">
+    <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
+"></span></label>
+<textarea class="form-control" rows="3" placeholder="Discription" disabled></textarea>
+    
+  </div>
+
+</div>
+</div>
 
 
 
