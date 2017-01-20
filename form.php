@@ -16,9 +16,9 @@
   }
   .clear{
 
-	  padding:2px;
+    padding:2px;
     
-	  
+    
   }
   .glyphicon-info-sign
 {
@@ -39,9 +39,9 @@
   <div class="panel panel-primary">
     <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
     <div class="panel-body"><form><div class="row clear">
-	<!--<div class="col-xs-3">Ticket Id <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3">Created By <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-	-->
+  <!--<div class="col-xs-3">Ticket Id <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
+  <div class="col-xs-3">Created By <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
+  -->
 <div class="col-xs-6">
 
 <div class="form-group">
@@ -61,8 +61,8 @@
   </div>
   </div>
 
-	<div class="row clear">
-	
+  <div class="row clear">
+  
 <div class="col-xs-6">
 
 <div class="form-group">
@@ -90,7 +90,7 @@
 <!-- ******************************* -->
 
 <div class="row clear">
-	
+  
 <div class="col-xs-6">
 
 <div class="form-group">
@@ -156,7 +156,7 @@
   <!-- ******************************* -->
 
 <div class="row clear">
-	
+  
 <div class="col-xs-6">
 
 <div class="form-group">
@@ -182,7 +182,7 @@
   <!-- ******************************* -->
 
 <div class="row clear">
-	
+  
 <div class="col-xs-6">
 
 <div class="form-group">
@@ -203,8 +203,8 @@
   </div>
   <!-- ******************************* -->
 <div class="row clear">
-	
-<div class="col-xs-4">
+  
+<div class="col-xs-6">
 
 <div class="form-group">
     <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
@@ -212,7 +212,8 @@
 <textarea class="form-control" rows="3" placeholder="Discription" disabled></textarea>
     
   </div>
-  <div class="col-xs-4">
+  </div>
+  <div class="col-xs-6">
 
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
@@ -227,25 +228,25 @@
 
 
   </form>
-<!--	<div class="row clear">
-	<div class="col-xs-3">Client <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3">Created Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
-	
-	</div>
-	<div class="row clear">
-	<div class="col-xs-3">Project <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3">Updated By <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-	
-	</div>
-	<div class="row clear">
-	<div class="col-xs-3 ">Assigned To <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3">Updated Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
-	
-	</div>
-	<div class="row clear">
-	<div class="col-xs-3">Assigned To <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
-	<div class="col-xs-3">Updated Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
-	</div>-->
+<!--  <div class="row clear">
+  <div class="col-xs-3">Client <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
+  <div class="col-xs-3">Created Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
+  
+  </div>
+  <div class="row clear">
+  <div class="col-xs-3">Project <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
+  <div class="col-xs-3">Updated By <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
+  
+  </div>
+  <div class="row clear">
+  <div class="col-xs-3 ">Assigned To <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
+  <div class="col-xs-3">Updated Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
+  
+  </div>
+  <div class="row clear">
+  <div class="col-xs-3">Assigned To <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
+  <div class="col-xs-3">Updated Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
+  </div>-->
   </div>
 </div>
 
