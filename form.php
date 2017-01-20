@@ -209,7 +209,15 @@
 <div class="form-group">
     <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
 "></span></label>
-<textarea class="form-control" rows="15" placeholder="Discription" disabled></textarea>
+<textarea class="form-control" rows="3" placeholder="Discription" disabled></textarea>
+    
+  </div>
+  <div class="col-xs-6">
+
+<div class="form-group">
+    <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
+"></span></label>
+<textarea class="form-control" rows="3" placeholder="Comments" ></textarea>
     
   </div>
 
