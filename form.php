@@ -235,11 +235,11 @@
   </div>
 
 </div>
-<div class="col-xs-6">
+<div class="col-xs-6" style="position:relative;left:30px;">
 
 <div class="form-group">
      <br>
-  <button type="submit" class="btn btn-success">Submit</button>
+  <button type="submit" class="btn btn-success">Submit To Save Changes</button>
   </div>
   </div>
   </div>
