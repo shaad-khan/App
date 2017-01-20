@@ -53,6 +53,16 @@
 <div class="col-xs-6">
 
 <div class="form-group">
+    <label for="exampleInputEmail1">CreatedBy: <span class="glyphicon glyphicon-info-sign
+"></span></label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="CreatedBy">
+  </div>
+  </div>
+<div class="row clear">
+  
+<div class="col-xs-6">
+
+<div class="form-group">
     <label for="exampleInputEmail1">Client <span class="glyphicon glyphicon-info-sign
 "></span></label>
    <select class="form-control swid">
@@ -62,6 +72,15 @@
   <option>Cronos</option>
   
 </select>
+  </div>
+
+</div>
+<div class="col-xs-6">
+
+<div class="form-group">
+    <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
+"></span></label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>" disabled>
   </div>
 
 </div>
