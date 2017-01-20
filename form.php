@@ -66,7 +66,7 @@
 <div class="col-xs-6">
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Client <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
 "></span></label>
     <select class="form-control" style="width:200px">
   <option>Recall</option>
