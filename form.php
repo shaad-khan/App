@@ -17,7 +17,7 @@
   .clear{
 
 	  padding:10px;
-    padding-top:5px;
+    
 	  
   }
   .glyphicon-info-sign
@@ -59,6 +59,7 @@
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="CreatedBy">
   </div>
   </div>
+  </div>
 
 	<div class="row clear">
 	<!--<div class="col-xs-3">Ticket Id <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
@@ -79,6 +80,7 @@
     <label for="exampleInputEmail1">CreatedBy: <span class="glyphicon glyphicon-info-sign
 "></span></label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="CreatedBy">
+  </div>
   </div>
   </div>
   </form>
