@@ -54,7 +54,7 @@
 <div class="col-xs-6">
 
 <div class="form-group">
-    <label for="exampleInputEmail1">CreatedBy: <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">CreatedBy <span class="glyphicon glyphicon-info-sign
 "></span></label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="CreatedBy">
   </div>
@@ -66,7 +66,7 @@
 <div class="col-xs-6">
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Client :  <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
 "></span></label>
     <select class="form-control">
   <option>Recall</option>
@@ -81,7 +81,7 @@
 <div class="col-xs-6">
 
 <div class="form-group">
-    <label for="exampleInputEmail1">CreationDateTime: <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">CreationDateTime <span class="glyphicon glyphicon-info-sign
 "></span></label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Created Date time">
   </div>
@@ -103,7 +103,7 @@
 <div class="col-xs-6">
 
 <div class="form-group">
-    <label for="exampleInputEmail1">UpdatedBy: <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
 "></span></label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="updatedBy">
   </div>
@@ -147,7 +147,7 @@
 <div class="col-xs-6">
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Resolver<span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Resolver <span class="glyphicon glyphicon-info-sign
 "></span></label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Resolver">
   </div>
@@ -173,7 +173,7 @@
 <div class="col-xs-6">
 
 <div class="form-group">
-    <label for="exampleInputEmail1">ResolvedBy: <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ResolvedBy <span class="glyphicon glyphicon-info-sign
 "></span></label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ResolvedBy">
   </div>
