@@ -268,7 +268,7 @@
     <div class="panel-heading" role="tab" id="headingTwo">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: Ashish Kumar 2 [DateTime:20/01/2017 8:30 pm]
+        <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: Ashish Kumar  [DateTime:20/01/2017 8:30 pm]
         </a>
       </h4>
     </div>
