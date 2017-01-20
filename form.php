@@ -17,6 +17,7 @@
   .clear{
 
 	  padding:10px;
+    padding-top:5px;
 	  
   }
   .glyphicon-info-sign
