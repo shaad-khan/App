@@ -254,7 +254,7 @@
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-  <span class="glyphicon glyphicon-pushpin"></span> Updater Name: Shadab Khan [DateTime:20/01/2017 10:30 pm]
+  <span class="glyphicon glyphicon-tasks"></span> Updater Name: Shadab Khan [DateTime:20/01/2017 10:30 pm]
         </a>
       </h4>
     </div>
