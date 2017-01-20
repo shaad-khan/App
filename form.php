@@ -235,7 +235,7 @@
   </div>
 
 </div>
-<div class="col-xs-6" style="position:relative;left:30px;">
+<div class="col-xs-6" style="position:relative;left:60px;">
 
 <div class="form-group">
      <br>
