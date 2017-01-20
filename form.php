@@ -264,11 +264,11 @@
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
+  <div class="panel panel-info">
     <div class="panel-heading" role="tab" id="headingTwo">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Collapsible Group Item #2
+        <span class="glyphicon glyphicon-pushpin"></span> Updater Name: Ashish Kumar [DateTime:20/01/2017 8:30 pm]
         </a>
       </h4>
     </div>
@@ -282,7 +282,7 @@
     <div class="panel-heading" role="tab" id="headingThree">
       <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Collapsible Group Item #3
+          <span class="glyphicon glyphicon-pushpin"></span> Updater Name: Anmol [DateTime:20/01/2017 11:30 pm]
         </a>
 
       </h4>
