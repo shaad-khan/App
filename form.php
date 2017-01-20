@@ -68,7 +68,7 @@
 <div class="form-group">
     <label for="exampleInputEmail1">Client <span class="glyphicon glyphicon-info-sign
 "></span></label>
-    <select class="form-control">
+    <select class="form-control" style="width:200px">
   <option>Recall</option>
   <option>GatesAir</option>
   <option>BCD</option>
