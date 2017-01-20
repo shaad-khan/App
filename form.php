@@ -238,7 +238,7 @@
 <div class="col-xs-6">
 
 <div class="form-group">
-    
+     <label for="exampleInputEmail1"></label>
   <button type="submit" class="btn btn-primary">Confirm identity</button>
   </div>
   </div>
