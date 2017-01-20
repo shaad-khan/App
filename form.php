@@ -238,8 +238,8 @@
 <div class="col-xs-6">
 
 <div class="form-group">
-     <br/>
-  <button type="submit" class="btn btn-primary">Confirm identity</button>
+     <br>
+  <button type="submit" class="btn btn-success">Submit</button>
   </div>
   </div>
   </div>
