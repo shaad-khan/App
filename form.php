@@ -21,7 +21,7 @@
   }
   .glyphicon-info-sign
 {
-  color:red;
+  color:#5bc0de;
 }
 .swid
 {
