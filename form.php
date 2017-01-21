@@ -152,7 +152,7 @@ td
       <div class="form-group">
     <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-<textarea class="form-control" rows="3" placeholder="Discription" disabled></textarea>
+<textarea class="form-control" rows="4" placeholder="Discription" disabled></textarea>
     
   </div>
       </td>
@@ -160,7 +160,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-<textarea class="form-control" rows="3" placeholder="Comments" ></textarea>
+<textarea class="form-control" rows="5" placeholder="Comments" ></textarea>
     
   </div>
       
