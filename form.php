@@ -138,6 +138,53 @@ td
 
     </td>
   </tr>
+  <tr>
+    <td>
+<div class="form-group">
+    <label for="exampleInputEmail1">Reviewer <span class="glyphicon glyphicon-info-sign
+"></span></label> </td><td>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Reviewer">
+  </div>
+
+      </td>
+       <td>
+
+      <div class="form-group">
+    <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+<textarea class="form-control" rows="3" placeholder="Discription" disabled></textarea>
+    
+  </div>
+      </td>
+       <td>
+<div class="form-group">
+    <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+<textarea class="form-control" rows="3" placeholder="Comments" ></textarea>
+    
+  </div>
+      
+      </td>
+    </tr>
+    <tr>
+<td>
+
+<div class="form-group">
+    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ChangeStatus">
+  </div>
+  </td>
+
+  <td>
+
+  </td>
+  <td>
+
+  </td>
+
+  
+      </tr>
 
   
 </table>
