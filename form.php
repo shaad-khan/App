@@ -112,6 +112,19 @@ td
 "></span></label> </td> <td>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Status">
   </div> </td>
+  <tr>
+<td>
+<div class="form-group">
+    <label for="exampleInputEmail1">Resolver <span class="glyphicon glyphicon-info-sign
+"></span></label>
+</td>
+<td>
+  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Resolver">
+  </div>
+  </td>
+<td>
+
+  </td>
   </tr>
 
   
