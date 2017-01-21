@@ -187,12 +187,10 @@ td
   </div>
 
 </td><td>
-<div class="form-group" >
-    <label for="exampleInputEmail1">Select if waithing for User response<span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
 
-  <td>
-<input type="checkbox" name="vehicle" value="1">
+  <div class="form-group" >
+<label for="exampleInputEmail1">Select if waithing for User response<span class="glyphicon glyphicon-info-sign
+"></span></label><input type="checkbox" name="vehicle" value="1">
 
   </td>
 </tr>
