@@ -32,7 +32,7 @@
 }
 td
 {
-  padding:4px;
+  padding-top:4px;
 }
   </style>
 </head>
