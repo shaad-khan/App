@@ -38,7 +38,7 @@
 <br>
   <div class="panel panel-primary">
     <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
-    <div class="panel-body"><form> 
+    <div class="panel-body"><form class="form-inline"> 
 
 <table>
 <tr><td>
