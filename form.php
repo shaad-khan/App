@@ -56,7 +56,31 @@
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="CreatedBy">
   </div>
   </td>
+  <td>
+
+    <div class="form-group">
+    <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
+"></span></label>
+    <select class="form-control">
+  <option>Recall</option>
+  <option>GatesAir</option>
+  <option>BCD</option>
+  <option>Brinks</option>
+  <option>Cronos</option>
+</select>
+  </div>
+  </td>
 </tr>
+<tr>
+  <td>
+<div class="form-group">
+    <label for="exampleInputEmail1">CreationDateTime <span class="glyphicon glyphicon-info-sign
+"></span></label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Created Date time">
+  </div>
+    </td>
+
+  </tr>
 </table>
 
 
