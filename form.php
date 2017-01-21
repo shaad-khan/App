@@ -82,9 +82,21 @@ td
 "></span></label></td><td>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Created Date time">
   </div>
-    </td>
-
+    </td><td>
+<div class="form-group">
+    <label for="exampleInputEmail1">Project <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="project">
+  </div></td><td>
+<div class="form-group">
+    <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="updatedBy">
+  </div></td>
   </tr>
+
+
+  
 </table>
 
 
