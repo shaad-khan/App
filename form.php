@@ -169,14 +169,14 @@ td
     <tr>
 <td>
 
-<div class="form-group" style="position:relative;left: 253px; top: 8px;">
+<div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ChangeStatus">
   </div>
   </td>
 
-  <td>
+  <td style="position:relative;left: 253px; top: 8px;">
 <div class="form-group">
   <button type="submit" class="btn btn-success">Submit To Save Changes</button>
   </div>
