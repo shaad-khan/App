@@ -123,8 +123,20 @@ td
   </div>
   </td>
 <td>
-
+<div class="form-group">
+    <label for="exampleInputEmail1">ResolvedBy <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ResolvedBy">
+  </div>
   </td>
+  <td>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Shift <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Shift">
+  </div>
+
+    </td>
   </tr>
 
   
