@@ -94,7 +94,25 @@ td
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="updatedBy">
   </div></td>
   </tr>
-
+<tr> <td>
+<div class="form-group">
+    <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
+"></span></label> </td> <td>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Assigned To" >
+  </div> </td>
+ <td>
+<div class="form-group">
+    <label for="exampleInputEmail1">UpadationDateTime <span class="glyphicon glyphicon-info-sign
+"></span></label> </td>
+     <td><input type="email" class="form-control" id="exampleInputEmail1" placeholder="UpadationDateTime">
+  </div> </td>
+ <td>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
+"></span></label> </td> <td>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Status">
+  </div> </td>
+  </tr>
 
   
 </table>
