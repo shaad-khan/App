@@ -16,7 +16,7 @@
   }
   .clear{
 
-    padding:4px;
+    padding:5px;
     
     
   }
