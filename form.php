@@ -34,6 +34,10 @@ td
 {
   padding:4px;
 }
+.container
+{
+      width: 1255px;
+}
   </style>
 </head>
 <body>
