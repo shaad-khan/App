@@ -56,7 +56,8 @@
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="CreatedBy">
   </div>
   </td>
-
+</tr>
+</table>
 
 
   </form> 
