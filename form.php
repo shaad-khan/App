@@ -38,210 +38,25 @@
 <br>
   <div class="panel panel-primary">
     <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
-    <div class="panel-body"><form> <div class="row clear">
-  <!--<div class="col-xs-3">Ticket Id <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-  <div class="col-xs-3">Created By <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-  -->
-<div class="col-xs-6">
+    <div class="panel-body"><form> 
 
+<table>
+<tr><td>
 <div class="form-group">
     <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
 "></span></label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>" disabled>
   </div>
 
-</div>
-<div class="col-xs-6">
+</div></td>
+<td>
 
 <div class="form-group">
     <label for="exampleInputEmail1">CreatedBy <span class="glyphicon glyphicon-info-sign"></span></label>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="CreatedBy">
   </div>
-  </div>
-  </div>
+  </td>
 
-  <div class="row clear">
-  
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
-"></span></label>
-    <select class="form-control">
-  <option>Recall</option>
-  <option>GatesAir</option>
-  <option>BCD</option>
-  <option>Brinks</option>
-  <option>Cronos</option>
-</select>
-  </div>
-
-</div>
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">CreationDateTime <span class="glyphicon glyphicon-info-sign
-"></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Created Date time">
-  </div>
-  </div>
-  </div>
-<!-- ******************************* -->
-
-<div class="row clear">
-  
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">Project <span class="glyphicon glyphicon-info-sign
-"></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="project">
-  </div>
-
-</div>
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
-"></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="updatedBy">
-  </div>
-  </div>
-  </div>
-  <!-- ******************************* -->
-
-<div class="row clear">
-
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
-"></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Assigned To" >
-  </div>
-
-</div>
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">UpadationDateTime <span class="glyphicon glyphicon-info-sign
-"></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="UpadationDateTime">
-  </div>
-  </div>
-  </div>
-  <!-- ******************************* -->
-
-<div class="row clear">
-
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
-"></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Status">
-  </div>
-
-</div>
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">Resolver <span class="glyphicon glyphicon-info-sign
-"></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Resolver">
-  </div>
-  </div>
-  </div>
-  <!-- ******************************* -->
-
-<div class="row clear">
-  
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">Environment <span class="glyphicon glyphicon-info-sign
-"></span></label>
-     <select class="form-control">
-  <option>Prod</option>
-  <option>Non-Prod</option>
-  
-</select>
-  </div>
-
-</div>
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">ResolvedBy <span class="glyphicon glyphicon-info-sign
-"></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ResolvedBy">
-  </div>
-  </div>
-  </div>
-  <!-- ******************************* -->
-
-<div class="row clear">
-  
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">Shift <span class="glyphicon glyphicon-info-sign
-"></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Shift">
-  </div>
-
-</div>
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">Reviewer <span class="glyphicon glyphicon-info-sign
-"></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Reviewer">
-  </div>
-  </div>
-  </div>
-  <!-- ******************************* -->
-<div class="row clear">
-  
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
-"></span></label>
-<textarea class="form-control" rows="3" placeholder="Discription" disabled></textarea>
-    
-  </div>
-  </div>
-  <div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
-"></span></label>
-<textarea class="form-control" rows="3" placeholder="Comments" ></textarea>
-    
-  </div>
-
-</div>
-</div>
-<div class="row clear">
-  
-<div class="col-xs-6">
-
-<div class="form-group">
-    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
-"></span></label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ChangeStatus">
-  </div>
-
-</div>
-<div class="col-xs-6" style="position:relative;left: 253px; top: 8px;">
-
-<div class="form-group">
-     <br>
-  <button type="submit" class="btn btn-success">Submit To Save Changes</button>
-  </div>
-  </div>
-  </div>
 
 
   </form> 
