@@ -40,7 +40,7 @@
     <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
     <div class="panel-body"><form class="form-inline"> 
 
-<table>
+<table style="border:2px">
 <tr><td>
 <div class="form-group">
     <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
