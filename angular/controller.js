@@ -6,7 +6,7 @@ app.controller("Ticket",function($scope,$routeParams,$http,$interval){
 		var id=ID;
 		var url="form.php?ID="+id;
 	//	alert(url);
-	  newwindow=window.open(url,'name','height=600,width=1500');
+	  newwindow=window.open(url,'name','height=600,width=1800');
 	  if (window.focus) {newwindow.focus()}
 	  return false;
 	};
