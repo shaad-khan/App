@@ -187,6 +187,16 @@ td
   </div>
 
 </td>
+<div class="form-group" >
+    <label for="exampleInputEmail1">Select if waithing for User response<span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+
+  <td>
+<input type="checkbox" name="vehicle" value="1">
+
+  </td>
+</tr>
+<tr>
   <td style="position:relative;left: 196px;">
 <div class="form-group">
   <button type="submit" class="btn btn-success">Submit To Save Changes</button>
