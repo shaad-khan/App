@@ -176,7 +176,7 @@ td
   </div>
   </td>
 <td>
-div class="form-group" >
+<div class="form-group" >
     <label for="exampleInputEmail1">Enter Time in Min <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ChangeStatus">
