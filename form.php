@@ -169,7 +169,7 @@ td
     <tr>
 <td>
 
-<div class="form-group">
+<div class="form-group" style="position:relative;left: 253px; top: 8px;">
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ChangeStatus">
