@@ -16,7 +16,7 @@
   }
   .clear{
 
-    padding:2px;
+    padding:4px;
     
     
   }
@@ -203,7 +203,7 @@ td
   </form> 
   <div class="row clear">
  <div class="col-xs-12">
-  
+  <h1>Update History</h1>
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-info">
     <div class="panel-heading" role="tab" id="headingOne">
