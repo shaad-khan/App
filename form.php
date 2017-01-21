@@ -186,7 +186,7 @@ td
     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Time In min">
   </div>
 
-</td>
+</td><td>
 <div class="form-group" >
     <label for="exampleInputEmail1">Select if waithing for User response<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
