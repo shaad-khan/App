@@ -38,7 +38,7 @@
 <br>
   <div class="panel panel-primary">
     <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
-    <div class="panel-body"><form class="orm-inline"> <div class="row clear">
+    <div class="panel-body"><form class="form-inline"> <div class="row clear">
   <!--<div class="col-xs-3">Ticket Id <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
   <div class="col-xs-3">Created By <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
   -->
