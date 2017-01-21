@@ -177,13 +177,13 @@ td
   </td>
 <td>
 <div class="form-group" >
-    <label for="exampleInputEmail1">Enter Time in Min <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ChangeStatus">
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Time In min">
   </div>
 
 </td>
-  <td style="position:relative;left: 253px; top: 8px;">
+  <td style="position:relative;left: 100px;">
 <div class="form-group">
   <button type="submit" class="btn btn-success">Submit To Save Changes</button>
   </div>
