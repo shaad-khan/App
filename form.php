@@ -36,7 +36,7 @@ td
 }
 .container
 {
-      width: 1309px;
+      width: 1259px;
 }
   </style>
 </head>
