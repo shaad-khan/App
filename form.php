@@ -156,7 +156,7 @@ td
       <div class="form-group">
     <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-<textarea class="form-control" rows="3" cols="20" placeholder="Discription" disabled></textarea>
+<textarea class="form-control" rows="3" cols="25" placeholder="Discription" disabled></textarea>
     
   </div>
       </td>
@@ -187,7 +187,7 @@ td
   </div>
 
 </td>
-  <td style="position:relative;left: 100px;">
+  <td style="position:relative;left: 196px;">
 <div class="form-group">
   <button type="submit" class="btn btn-success">Submit To Save Changes</button>
   </div>
