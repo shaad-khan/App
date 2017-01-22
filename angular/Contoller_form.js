@@ -1,6 +1,7 @@
-var app=angular.module("continuity_form",[]);
+var app2=angular.module("continuity_form",[]);
 
-app.controller("Form_data",function($scope,$http,$interval){
+app2.controller("Form_data",function($scope){
+    
     alert($scope.ID);
 /* $interval(callApi, 5000);
 
