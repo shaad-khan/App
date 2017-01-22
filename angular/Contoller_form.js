@@ -14,16 +14,20 @@ $interval(callApi, 1000);
 });
 
 
-app.controller("client",function($scope,servicecall){
+app.controller("client",function($scope,$http){
 //$scope.lists=[];
- $scope.lists=servicecall.serv('Client').then(function(response){
+ /*$scope.lists=servicecall.serv('Client').then(function(response){
    $scope.lists = response;
 });
-console.log($scope.lists);
+console.log($scope.lists);*/
+
+$http.get("https://apps.continuserve.com/webservice/service.php?type=Client").then(function(response){
+     	//$scope.load2='false';
+      $scope.lists=response.data;
 
 });
 
-app.factory("servicecall",function($http){
+/*app.factory("servicecall",function($http){
 var fac={};
 fac.serv=function($url)
 {
@@ -33,5 +37,5 @@ return $http.get("https://apps.continuserve.com/webservice/service.php?type="+$u
 return fac;
 
 
-});
+});*/
 
