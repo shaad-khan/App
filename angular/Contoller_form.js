@@ -1,6 +1,9 @@
 var app=angular.module("continuity_form",[]);
 
 app.controller("Form_data",function($scope,$interval,$http){
+    $http.get("https://apps.continuserve.com/webservice/service.php?type=Client").then(function(response){
+     	//$scope.load2='false';
+      $scope.lists=response.data;
 $interval(callApi, 1000);
 
   function callApi(){
@@ -14,12 +17,12 @@ $interval(callApi, 1000);
 });
 
 
-app.controller("client_data",function($scope,$http){
+/*app.controller("client_data",function($scope,$http){
 //$scope.lists=[];
  /*$scope.lists=servicecall.serv('Client').then(function(response){
    $scope.lists = response;
 });
-console.log($scope.lists);*/
+console.log($scope.lists);
 
 $http.get("https://apps.continuserve.com/webservice/service.php?type=Client").then(function(response){
      	//$scope.load2='false';
