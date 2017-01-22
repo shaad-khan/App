@@ -12,8 +12,8 @@ $interval(callApi, 5000);
       $scope.items=response.data;
 
     });*/
-      console.log($scope.ID);
-   // $scope.ID="xxx";
+      console.log("https://apps.continuserve.com/webservice/ticket_data.php?ID="+$scope.ID);
+
 
   }
 
