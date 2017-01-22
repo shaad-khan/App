@@ -48,7 +48,7 @@ td
 <br>
   <div class="panel panel-primary">
     <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Edit Form For Ticket ID: {{ID}}</div>
-    <div class="panel-body"><form class="form-inline"> 
+    <div class="panel-body"><form class="form-inline" ng-submit="add();"> 
 
 <table>
 <tr><td>

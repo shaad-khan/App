@@ -2,6 +2,10 @@ var app=angular.module("continuity_form",[]);
 
 app.controller("Form_data",function($scope,$interval,$http){
     
+$scope.add=function()
+{
+alert(called);
+};
 
    
 $interval(callApi, 1000);
