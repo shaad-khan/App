@@ -1,6 +1,6 @@
-var app=angular.module("continuity_form",[]);
+var app2=angular.module("continuity_form",[]);
 
-app.controller("Form_data",function($scope,$interval,$http){
+app2.controller("Form_data",function($scope,$interval,$http){
 $interval(callApi, 1000);
 
   function callApi(){
@@ -14,7 +14,7 @@ $interval(callApi, 1000);
 });
 
 
-app.controller("client",function($scope,$http){
+app2.controller("client",function($scope,$http){
 //$scope.lists=[];
  /*$scope.lists=servicecall.serv('Client').then(function(response){
    $scope.lists = response;
