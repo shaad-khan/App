@@ -4,7 +4,7 @@ app.controller("Form_data",function($scope,$interval,$http){
     
 
    
-$interval(callApi, 5000);
+$interval(callApi, 1000);
 
   function callApi(){
     $http.get("https://apps.continuserve.com/webservice/ticket_data.php?ID="+$scope.ID).then(function(response){
