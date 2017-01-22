@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="continuity_form">
 <head>
   <title>Form Template</title>
   <meta charset="utf-8">
@@ -42,10 +42,10 @@ td
 </head>
 <body>
 
-<div class="container">
+<div class="container" ng-controller="Form_data">
 <br>
   <div class="panel panel-primary">
-    <div class="panel-heading">Edit Form For Ticket ID: <?php Echo $ID;?></div>
+    <div class="panel-heading" ng-init="ID=<?php Echo $ID;?>">Edit Form For Ticket ID: <?php Echo $ID;?></div>
     <div class="panel-body"><form class="form-inline"> 
 
 <table>
@@ -53,7 +53,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?" ng-model="t.id" disabled>
+  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>" ng-model="t.id" disabled>
   </div>
 
 </div></td>
