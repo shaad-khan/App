@@ -72,7 +72,7 @@ td
     <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
     <select class="form-control" >
-  <option ng-repeat="list in lists" value="{{list.ID}}">{{list.ID}}</option>
+  <option ng-repeat="ng-repeat="l in ['line 1', 'line 2', 'line 3']"" value="{{l}}">{{l}}</option>
 </select>
   </div>
   </td>
