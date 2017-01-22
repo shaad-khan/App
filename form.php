@@ -70,7 +70,9 @@ td
 
     <div class="form-group" ng-controller="client">
     <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
+"></span></label></td><td><ul>
+        <li ng-repeat="list in lists">{{list.Client_name}}</li>
+    </ul>
     <select class="form-control" >
   <option ng-repeat="list in lists" value="{{list.Client_name}}">{{list.Client_name}}</option>
 </select>
