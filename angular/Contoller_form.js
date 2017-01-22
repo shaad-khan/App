@@ -23,8 +23,8 @@ console.log($scope.lists);*/
 
 $http.get("https://apps.continuserve.com/webservice/service.php?type=Client").then(function(response){
      	//$scope.load2='false';
-      $scope.items2=response.data;
-console.log($scope.item2);
+      $scope.lists=response.data;
+console.log($scope.lists);
 });
 });
 
