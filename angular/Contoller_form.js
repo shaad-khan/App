@@ -4,6 +4,8 @@ app.controller("Form_data",function($scope,$interval,$http){
     $http.get("https://apps.continuserve.com/webservice/service.php?type=Client").then(function(response){
      	//$scope.load2='false';
       $scope.lists=response.data;
+    });
+    
 $interval(callApi, 1000);
 
   function callApi(){
