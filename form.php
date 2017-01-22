@@ -55,7 +55,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>" ng-model="TID" disabled>
+  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>" name="TID" disabled>
   </div>
 
 </div></td>
@@ -63,20 +63,17 @@ td
 
 <div class="form-group">
     <label for="exampleInputEmail1">CreatedBy <span class="glyphicon glyphicon-info-sign"></span></label></td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Resolver}}" ng-model="CName">
+    <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Resolver}}" disabled>
   </div>
   </td>
   <td>
 
-    <div class="form-group">
+    <div class="form-group"ng-controller="client">
     <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <select class="form-control">
-  <option>Recall</option>
-  <option>GatesAir</option>
-  <option>BCD</option>
-  <option>Brinks</option>
-  <option>Cronos</option>
+    <select class="form-control" ng-repeat="list in lists">
+  <option>{{list.Client_name}}</option>
+ 
 </select>
   </div>
   </td>

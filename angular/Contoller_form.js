@@ -16,7 +16,7 @@ $interval(callApi, 1000);
 
 app.controller("client",function($scope,servicecall){
 
-servicecall.service('client');
+servicecall.service('Client');
 
 });
 
@@ -25,7 +25,7 @@ var fac={};
 fac.serv=function($url)
 {
 $http.get("https://apps.continuserve.com/webservice/servcie.php?type="+$url).then(function(response){
-$scope.list=reponse.data;
+$scope.lists=reponse.data;
 });
 
 }
