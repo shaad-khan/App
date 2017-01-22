@@ -13,9 +13,9 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 
 
-    $sql="select * from Master_Ticket_Tab where Target_ID='".$id."'";
-    echo $sql;
-/*$result=$conn->query($sql);
+    $sql="select * from Master_Ticket_Tab where Ticket_ID='".$id."'";
+    //echo $sql;
+$result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
 {
@@ -25,5 +25,5 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 
 
-print(json_encode($rows, JSON_NUMERIC_CHECK));*/
+print(json_encode($rows, JSON_NUMERIC_CHECK));
 ?>
