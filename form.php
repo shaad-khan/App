@@ -44,11 +44,11 @@ td
 </head>
 <body>
 
-<div class="container" ng-controller="Form_data">
+<div class="container">
 <br>
-  <div class="panel panel-primary">
+  <div class="panel panel-primary" ng-controller="Form_data">
     <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Edit Form For Ticket ID: {{ID}}</div>
-    <div class="panel-body"><form class="form-inline" ng-submit="add();"> 
+    <div class="panel-body" ><form class="form-inline" ng-submit="add();"> 
 
 <table>
 <tr><td>
