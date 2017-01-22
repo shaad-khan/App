@@ -4,7 +4,7 @@ app2.controller("Form_data",function($scope){
     
 
     alert($scope.ID);
-    $scope.ID="xxx"
+    $scope.ID="xxx";
 /* $interval(callApi, 5000);
 
   function callApi(){
