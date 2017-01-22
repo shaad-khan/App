@@ -68,7 +68,7 @@ td
   </td>
   <td>
 
-    <div class="form-group"ng-controller="client">
+    <div class="form-group" ng-controller="client">
     <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
     <select class="form-control" ng-repeat="list in lists">
