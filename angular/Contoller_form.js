@@ -1,6 +1,6 @@
 var app2=angular.module("continuity_form",[]);
 
-app2.controller("Form_data",function($scope){
+app2.controller("Form_data",function($scope,$interval){
     
 
    
