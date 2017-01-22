@@ -16,9 +16,7 @@ $interval(callApi, 1000);
 
 app.controller("client",function($scope,servicecall){
 $scope.lists=[];
-servicecall.serv('Client').success(function(data){
-       $scope.lists=data;
-   });
+ $scope.lists=servicecall.serv('Client');
 console.log($scope.lists);
 
 });
