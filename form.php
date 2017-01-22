@@ -63,7 +63,7 @@ td
 
 <div class="form-group">
     <label for="exampleInputEmail1">CreatedBy <span class="glyphicon glyphicon-info-sign"></span></label></td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Resolver}}">
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Resolver}}" ng-model="CName">
   </div>
   </td>
   <td>
