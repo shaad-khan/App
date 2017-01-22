@@ -1,5 +1,5 @@
 <?php
-$id=$_GET["type"];
+$type=$_GET["type"];
 
 $server = "gjtz209gib.database.windows.net";
 $user = "CSL3AppsUser@gjtz209gib";
@@ -13,7 +13,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 
 
-    $sql="select * from $type";
+    $sql="select * from".$type;
     //echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
