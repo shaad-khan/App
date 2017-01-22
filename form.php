@@ -73,7 +73,6 @@ td
 "></span></label></td><td>
     <select class="form-control" ng-repeat="list in lists">
   <option>{{list.Client_name}}</option>
- 
 </select>
   </div>
   </td>
