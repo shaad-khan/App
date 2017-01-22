@@ -53,7 +53,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>" disabled>
+  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?" ng-model="t.id" disabled>
   </div>
 
 </div></td>
