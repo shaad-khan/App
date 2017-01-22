@@ -158,7 +158,7 @@ td
       <div class="form-group">
     <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-<textarea class="form-control" rows="3" cols="25" placeholder="Discription" disabled></textarea>
+<textarea class="form-control" rows="3" cols="25" placeholder="Discription" disabled>{{items[0].Tdiscription}}</textarea>
     
   </div>
       </td>
