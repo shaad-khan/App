@@ -16,7 +16,7 @@ $interval(callApi, 1000);
 
 app.controller("client",function($scope,servicecall){
 
-servicecall.service('Client');
+servicecall.serv('Client');
 
 });
 
