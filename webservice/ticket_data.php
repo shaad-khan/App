@@ -13,7 +13,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 
 
-    $sql="select * from Master_Ticket_Tab where Target_ID='$ID'";
+    $sql="select * from Master_Ticket_Tab where Target_ID='".$ID."'";
     //echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
