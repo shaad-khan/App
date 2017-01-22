@@ -1,13 +1,6 @@
 var app=angular.module("continuity_form",[]);
 
 app.controller("Form_data",function($scope,$interval,$http){
-    
-$scope.add=function()
-{
-console.log("called"+$scope.CName);
-};
-
-   
 $interval(callApi, 1000);
 
   function callApi(){
@@ -16,9 +9,27 @@ $interval(callApi, 1000);
       $scope.items=response.data;
 
     });
-      //console.log("https://apps.continuserve.com/webservice/ticket_data.php?ID="+$scope.ID);
-
-
-  }
+ }
 
 });
+
+
+app.controller("client",function($scope,servicecall){
+
+servicecall.service('client');
+
+});
+
+app.factory("servicecall",function($http){
+var fac={};
+fac.serv=function($url)
+{
+$http.get("https://apps.continuserve.com/webservice/servcie.php?type="+$url).then(function(response){
+$scope.list=reponse.data;
+});
+
+}
+return fac;
+
+});
+
