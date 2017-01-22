@@ -1,7 +1,7 @@
 var app=angular.module("continuity_form",[]);
 
-app.controller("Form_data",function($scope,$interval,$http){
-    $http.get("https://apps.continuserve.com/webservice/service.php?type=Client").then(function(response){
+app.controller("Form_data",function($scope,$interval,$http,servicecall){
+    servicecall.serv("Client").then(function(response){
      	//$scope.load2='false';
       $scope.lists=response.data;
     });
@@ -31,9 +31,9 @@ $http.get("https://apps.continuserve.com/webservice/service.php?type=Client").th
       $scope.lists=response.data;
 console.log($scope.lists);
 });
-});
+});*/
 
-/*app.factory("servicecall",function($http){
+app.factory("servicecall",function($http){
 var fac={};
 fac.serv=function($url)
 {
@@ -43,5 +43,5 @@ return $http.get("https://apps.continuserve.com/webservice/service.php?type="+$u
 return fac;
 
 
-});*/
+});
 
