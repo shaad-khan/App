@@ -26,6 +26,7 @@ $http.get("https://apps.continuserve.com/webservice/service.php?type=Client").th
       $scope.lists=response.data;
 
 });
+});
 
 /*app.factory("servicecall",function($http){
 var fac={};
