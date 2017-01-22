@@ -4,7 +4,7 @@ app.controller("Form_data",function($scope,$interval,$http){
     
 $scope.add=function()
 {
-alert(called);
+alert("called"+t.id);
 };
 
    
