@@ -27,12 +27,11 @@ app.factory("servicecall",function($http){
 var fac={};
 fac.serv=function($url)
 {
-$http.get("https://apps.continuserve.com/webservice/service.php?type="+$url).then(function(response){
-return response.data;
-});
+return $http.get("https://apps.continuserve.com/webservice/service.php?type="+$url);
+};
 
-}
 return fac;
+
 
 });
 
