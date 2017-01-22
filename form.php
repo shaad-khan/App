@@ -47,7 +47,7 @@ td
 <div class="container" ng-controller="Form_data">
 <br>
   <div class="panel panel-primary">
-    <div class="panel-heading" ng-init="ID=<?php Echo $ID;?>">Edit Form For Ticket ID: <?php Echo $ID;?></div>
+    <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Edit Form For Ticket ID: <?php Echo $ID;?></div>
     <div class="panel-body"><form class="form-inline"> 
 
 <table>
