@@ -257,7 +257,7 @@ td
   <td style="position:relative;left: -285px;">
   <div class="material-switch pull-right">
                             <input id="someSwitchOptionInfo" name="someSwitchOption001" type="checkbox"/>
-                            <label for="someSwitchOptionInfo" class="label-success"></label>
+                            <label for="someSwitchOptionInfo" class="label-info"></label>
                         </div>
 
   </td>
