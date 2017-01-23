@@ -136,7 +136,9 @@ td
     <div class="form-group">
     <label for="exampleInputEmail1">Shift <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Shift">
+     <select class="form-control" >
+  <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
+</select>
   </div>
 
     </td>

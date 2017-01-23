@@ -5,6 +5,10 @@ app.controller("Form_data",function($scope,$interval,$http,servicecall){
      	//$scope.load2='false';
       $scope.lists=response.data;
     });
+
+    servicecall.serv("shiftschedule").then(function(response){
+$scope.schedules=response.data;
+    });
     
 $interval(callApi, 1000);
 
