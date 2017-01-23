@@ -26,6 +26,7 @@ app.factory("servicecall",function($http){
 var fac={};
 fac.serv=function($url)
 {
+  console.log($url);
 return $http.get("https://apps.continuserve.com/webservice/service.php?type="+$url);
 };
 
