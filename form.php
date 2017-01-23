@@ -105,7 +105,7 @@ td
   </div> </td>
  <td>
 <div class="form-group">
-    <label for="exampleInputEmail1">UpadationDateTime <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">UpadateDateTime <span class="glyphicon glyphicon-info-sign
 "></span></label> </td>
      <td><input type="email" class="form-control" id="exampleInputEmail1" placeholder="UpadationDateTime">
   </div> </td>
