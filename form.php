@@ -109,7 +109,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">UpadateDateTime <span class="glyphicon glyphicon-info-sign
 "></span></label> </td>
-     <td><input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}">
+     <td><input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" disabled>
   </div> </td>
  <td>
   <div class="form-group">
