@@ -5,7 +5,7 @@ app.controller("Form_data",function($scope,$interval,$http,servicecall){
      	//$scope.load2='false';
       $scope.lists=response.data;
     });
-$scope.date = new Date();
+
     servicecall.serv("shiftschedule").then(function(response){
 $scope.schedules=response.data;
 });
@@ -19,6 +19,7 @@ $scope.projects=response.data;
 $interval(callApi, 1000);
 
   function callApi(){
+    $scope.date = new Date();
     $http.get("https://apps.continuserve.com/webservice/ticket_data.php?ID="+$scope.ID).then(function(response){
      	//$scope.load2='false';
       $scope.items=response.data;
