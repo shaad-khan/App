@@ -90,7 +90,7 @@ td
     <label for="exampleInputEmail1">Project <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
    <select class="form-control" >
-  <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Projecttitle}}</option>
+  <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Project}}</option>
 </select>
   </div></td><td>
 <div class="form-group">
