@@ -83,7 +83,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">CreationDateTime <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{item[0].Cdatetime}}">
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Cdatetime}}">
   </div>
     </td><td>
 <div class="form-group">
