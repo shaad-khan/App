@@ -188,16 +188,26 @@ td
   </div>
 
 </td><td>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+     <select class="form-control" >
+  <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
+</select>
+  </div>
+
+  </td>
+</tr>
+<tr><td>
 <div class="form-group" >
     <label for="exampleInputEmail1">Select if waithing for User response<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
 
   <td style="position:relative;left: -256px;">
-<input type="checkbox" name="vehicle" value="1">
+<input type="checkbox" name="AUI" value="1">
 
   </td>
-</tr>
-<tr>
+</td>
   <td style="position:relative;left: -2px;">
 <div class="form-group">
   <button type="submit" class="btn btn-success">Submit To Save Changes</button>
