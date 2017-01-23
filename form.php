@@ -113,7 +113,7 @@ td
   <div class="form-group">
     <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Status}}" required>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled>
   </div> </td>
   <tr>
 <td>
