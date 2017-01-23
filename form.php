@@ -254,7 +254,7 @@ td
     <label for="exampleInputEmail1">Select if waithing for User response<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
 
-  <td style="position:relative;left: -201px;">
+  <td style="position:relative;left: -285px;">
   <div class="material-switch pull-right">
                             <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
                             <label for="someSwitchOptionSuccess" class="label-success"></label>
