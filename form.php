@@ -210,7 +210,10 @@ td
 "></span></label></td><td>
 
   <td style="position:relative;left: -201px;">
-<input type="checkbox" name="AUI" value="1">
+  <div class="material-switch pull-right">
+                            <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
+                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                        </div>
 
   </td>
 </td></tr><tr>
