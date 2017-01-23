@@ -1,7 +1,10 @@
 var app=angular.module("continuity_form",[]);
 
 app.controller("Form_data",function($scope,$interval,$http,servicecall){
-    $scope.lists=servicecall.serv("Client");
+    servicecall.serv("Client").then(function(response){
+     	//$scope.load2='false';
+      $scope.lists=response.data;
+    });
     
 $interval(callApi, 1000);
 
@@ -19,10 +22,7 @@ app.factory("servicecall",function($http){
 var fac={};
 fac.serv=function($url)
 {
- $http.get("https://apps.continuserve.com/webservice/service.php?type="+$url).then(function(response){
-     	//$scope.load2='false';
-    return response.data;
-    });
+return $http.get("https://apps.continuserve.com/webservice/service.php?type="+$url);
 };
 
 return fac;
