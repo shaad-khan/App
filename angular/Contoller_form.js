@@ -5,14 +5,14 @@ app.controller("Form_data",function($scope,$interval,$http,servicecall){
      	//$scope.load2='false';
       $scope.lists=response.data;
     });
-
+$scope.date = new Date();
     servicecall.serv("shiftschedule").then(function(response){
 $scope.schedules=response.data;
 });
 servicecall.serv("Task_Category").then(function(response){
 $scope.tasks=response.data;
 });
-   servicecall.serv("Project_tab").then(function(response){
+servicecall.serv("Project_tab").then(function(response){
 $scope.projects=response.data;
 }); 
     
