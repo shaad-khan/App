@@ -192,7 +192,7 @@ td
     <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
      <select class="form-control" >
-  <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
+  <option ng-repeat="task in tasks" value="{{task.Category}}">{{task.Category}}</option>
 </select>
   </div>
 
