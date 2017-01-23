@@ -12,7 +12,9 @@ $scope.schedules=response.data;
 servicecall.serv("Task_Category").then(function(response){
 $scope.tasks=response.data;
 });
-    
+   servicecall.serv("Project_tab").then(function(response){
+$scope.projects=response.data;
+}); 
     
 $interval(callApi, 1000);
 

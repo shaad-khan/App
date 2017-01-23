@@ -89,7 +89,9 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Project <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="project">
+   <select class="form-control" >
+  <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Projecttitle}}</option>
+</select>
   </div></td><td>
 <div class="form-group">
     <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
