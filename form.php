@@ -177,7 +177,11 @@ td
 <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ChangeStatus">
+    <select class="form-control" >
+  <option value="WIP">Work In progress</option>
+  <option value="next">Next Status</option>
+  
+</select>
   </div>
   </td>
 <td>
