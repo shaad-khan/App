@@ -203,11 +203,11 @@ td
     <label for="exampleInputEmail1">Select if waithing for User response<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
 
-  <td style="position:relative;left: -256px;">
+  <td style="position:relative;left: -201px;">
 <input type="checkbox" name="AUI" value="1">
 
   </td>
-</td>
+</td></tr><tr>
   <td style="position:relative;left: -2px;">
 <div class="form-group">
   <button type="submit" class="btn btn-success">Submit To Save Changes</button>
