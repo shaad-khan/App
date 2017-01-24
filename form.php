@@ -93,7 +93,7 @@ td
 <br>
   <div class="panel panel-primary" ng-controller="Form_data">
     <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Edit Form For Ticket ID: {{ID}}</div>
-    <div class="panel-body" ><form class="form-inline" ng-submit="add();"> 
+    <div class="panel-body" ><form class="form-inline" action="webservice/add.php"> 
 
 <table>
 <tr><td>
@@ -117,7 +117,7 @@ td
     <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
     
-    <select class="form-control" >
+    <select class="form-control" name="client" >
   <option ng-repeat="list in lists" value="{{list.Client_name}}">{{list.Client_name}}</option>
 </select>
   </div>
@@ -134,49 +134,49 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Project <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-   <select class="form-control" >
+   <select class="form-control" name="project" >
   <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Project}}</option>
 </select>
   </div></td><td>
 <div class="form-group">
     <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="updatedBy">
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="updatedBy" name="uname">
   </div></td>
   </tr>
 <tr> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Assigned To" >
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Assigned To" name="aname" >
   </div> </td>
  <td>
 <div class="form-group">
     <label for="exampleInputEmail1">UpadateDateTime <span class="glyphicon glyphicon-info-sign
 "></span></label> </td>
-     <td><input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" disabled>
+     <td><input type="email" class="form-control" name="utime" id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" disabled>
   </div> </td>
  <td>
   <div class="form-group">
     <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled>
+    <input type="email" class="form-control" name="status" id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled>
   </div> </td>
   <tr>
-<td>
+<!--<td>
 <div class="form-group">
     <label for="exampleInputEmail1">Resolver <span class="glyphicon glyphicon-info-sign
 "></span></label>
 </td>
 <td>
-  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Resolver">
+  <input type="email" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="Resolver">
   </div>
-  </td>
+  </td>-->
 <td>
 <div class="form-group">
     <label for="exampleInputEmail1">ResolvedBy <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ResolvedBy">
+    <input type="email" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="ResolvedBy">
   </div>
   </td>
   <td>
