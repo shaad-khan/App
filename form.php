@@ -243,8 +243,8 @@ td
   <div class="form-group">
     <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-     <select class="form-control" name="tcategory" class="selectpicker">
-     
+     <select class="form-control selectpicker" name="tcategory">
+
   <option ng-repeat="task in tasks" value="{{task.Category}}">{{task.Category}}</option>
 </select>
   </div>
