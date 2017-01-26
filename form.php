@@ -97,6 +97,7 @@ td
 
 <table>
 <tr><td>
+
 <div class="form-group">
     <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
@@ -128,7 +129,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">CreationDateTime <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Cdatetime}}" disabled>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Cdatetime}}" disabled>
   </div>
     </td><td>
 <div class="form-group">
@@ -141,26 +142,26 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="updatedBy" name="uname">
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="updatedBy" name="uname">
   </div></td>
   </tr>
 <tr> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Assigned To" name="aname" >
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Assigned To" name="aname" >
   </div> </td>
  <td>
 <div class="form-group">
     <label for="exampleInputEmail1">UpadateDateTime <span class="glyphicon glyphicon-info-sign
 "></span></label> </td>
-     <td><input type="email" class="form-control" name="utime" id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" disabled>
+     <td><input type="text" class="form-control" name="utime" id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" disabled>
   </div> </td>
  <td>
   <div class="form-group">
     <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td>
-    <input type="email" class="form-control" name="status" id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled>
+    <input type="text" class="form-control" name="status" id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled>
   </div> </td>
   <tr>
 <!--<td>
@@ -176,14 +177,14 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">ResolvedBy <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="email" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="ResolvedBy">
+    <input type="text" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="ResolvedBy">
   </div>
   </td>
   <td>
     <div class="form-group">
     <label for="exampleInputEmail1">Shift <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-     <select class="form-control" >
+     <select class="form-control" name="schedule">
   <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
 </select>
   </div>
@@ -195,7 +196,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Reviewer <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Reviewer">
+    <input type="text" class="form-control" name="reviewer" id="exampleInputEmail1" placeholder="Reviewer">
   </div>
 
       </td>
@@ -204,7 +205,7 @@ td
       <div class="form-group">
     <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-<textarea class="form-control" rows="3" cols="25" placeholder="Discription" disabled>{{items[0].Tdiscription}}</textarea>
+<textarea class="form-control" rows="3" cols="25" name="discription" placeholder="Discription" disabled>{{items[0].Tdiscription}}</textarea>
     
   </div>
       </td>
@@ -212,7 +213,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-<textarea class="form-control" rows="3" cols="30" placeholder="Comments" ></textarea>
+<textarea class="form-control" rows="3" cols="30" name="comments" placeholder="Comments" ></textarea>
     
   </div>
       
@@ -224,7 +225,7 @@ td
 <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <select class="form-control" >
+    <select class="form-control" name="cstatus" >
   <option value="WIP">Work In progress</option>
   <option value="next">Next Status</option>
   
@@ -235,14 +236,14 @@ td
 <div class="form-group" >
     <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Time In min">
+    <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min">
   </div>
 
 </td><td>
   <div class="form-group">
     <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-     <select class="form-control" >
+     <select class="form-control" name="tcategory">
   <option ng-repeat="task in tasks" value="{{task.Category}}">{{task.Category}}</option>
 </select>
   </div>
@@ -256,7 +257,7 @@ td
 
   <td style="position:relative;left: -285px;">
   <div class="material-switch pull-right">
-                            <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox"/>
+                            <input id="someSwitchOptionSuccess" name="AUI" type="checkbox"/>
                             <label for="someSwitchOptionSuccess" class="label-success"></label>
                         </div>
 
