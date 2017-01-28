@@ -15,7 +15,7 @@ var name=$routeParams.email;
 var type=$routeParams.type;
 function statuscheck() {
 	//alert("https://apps.continuserve.com/continuity/App/webservice/status.php?name="+name+"&type="+type);
-	$http.get("https://apps.continuserve.com/continuity/App/webservice/status.php?name="+name+"&type="+type).then(function(response){
+	$http.get("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
 	$scope.load='false';
 		$scope.results=response.data;
 
