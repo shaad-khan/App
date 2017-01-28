@@ -49,6 +49,13 @@ $AUI= $_GET["AUI"];
 
 //$sql="insert into Update_Tab values('$TID','$status','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
-echo $user_session;
+//echo $user_session;
 
+if($uname==$user_session)
+{
+    echo "<script> alert('insert');</script>"
+}
+else{
+     echo "<script> alert('ticket is assigned to user');</script>"
+}
 ?>
