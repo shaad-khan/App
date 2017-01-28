@@ -58,7 +58,7 @@ $sql="select * from User_prof";
 	$resolver=explode("@", $row2['Email']);
 	$r=$row2['Email'];
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Resolver like '".$resolver[0]."' and Status='Classify'";
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver[0]."' and Status='Classify'";
 //echo $sql3;
 
      $result=$conn->query($sql3);
