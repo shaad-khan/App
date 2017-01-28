@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+
+$user_session=$_SESSION["user"];
 $type=$_GET["type"];
 
 $server = "gjtz209gib.database.windows.net";
@@ -43,8 +47,8 @@ $tcategory= $_GET["tcategory"];
 $AUI= $_GET["AUI"];
 
 
-$sql="insert into Update_Tab values('$TID','$status','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory'
+//$sql="insert into Update_Tab values('$TID','$status','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
-
+echo $user_session;
 
 ?>
