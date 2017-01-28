@@ -10,6 +10,9 @@
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
    <script src="https://apps.continuserve.com/angular/Contoller_form.js"></script>
   <?php
+  session_start();
+
+$user_session=$_SESSION["user"];
   $ID=$_GET['ID'];
   ?>
   <style>
@@ -144,14 +147,14 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="updatedBy" name="uname">
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php echo $user_session;?>" name="uname" disabled>
   </div></td>
   </tr>
 <tr> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Assigned To" name="aname" >
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php echo $user_session;?>" name="aname" disabled>
   </div> </td>
  <td>
 <div class="form-group">
