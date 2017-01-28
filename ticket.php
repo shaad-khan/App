@@ -41,7 +41,7 @@
 <td>{{res.Status}}</td>
 <td>{{res.Cdatetime}}</td>
 <td>NA</td>
-<td>{{res.Resolver}}</td>
+<td>{{res.Creator}}</td>
 
     </tr>
  </table
