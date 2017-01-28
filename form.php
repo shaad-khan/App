@@ -146,8 +146,8 @@ td
   </div></td><td>
 <div class="form-group">
     <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php echo $user_session;?>" name="uname" disabled>
+"></span></label></td><td> <input type="hidden" value="<?php echo $user_session;?>" name="uname" disabled>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php echo $user_session;?>"  disabled>
   </div></td>
   </tr>
 <tr> <td>
