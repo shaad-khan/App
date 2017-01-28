@@ -53,9 +53,9 @@ $AUI= $_GET["AUI"];
 
 if($uname==$user_session)
 {
-    echo "<script> alert('insert');</script>"
+    echo "<script> alert('insert');</script>";
 }
 else{
-     echo "<script> alert('ticket is assigned to user');</script>"
+     echo "<script> alert('ticket is assigned to user');</script>";
 }
 ?>
