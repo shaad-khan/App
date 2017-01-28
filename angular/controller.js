@@ -112,7 +112,7 @@ app.controller("table_count",function($scope,$http,$interval){
    vm.Total = 0;
   $interval(callApi, 5000);
   function callApi(){
-    $http.get("https://apps.continuserve.com/continuity/App/webservice/Tab_content.php").then(function(response){
+    $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
      	$scope.load2='false';
       $scope.items=response.data;
     });
