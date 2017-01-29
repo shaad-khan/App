@@ -165,7 +165,7 @@ td
  <td>
   <div class="form-group">
     <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
-"></span></label> </td> <td><input type="text" class="form-control" name="status" value="{{items[0].Status}}"/>
+"></span></label> </td> <td><input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
     <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled/>
   </div> </td>
   <tr>
