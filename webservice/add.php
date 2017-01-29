@@ -107,6 +107,7 @@ if(($tab_status=='WIP') and $AUI!='on' )
 else if(($tab_status=='WIP') and $AUI=='on' )
 {
 $fstatus='WIP';
+$aui_flag=1;
 $fresolver=$user_session;
 }
 else if(($tab_status=='Review'))
