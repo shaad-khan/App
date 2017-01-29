@@ -122,6 +122,11 @@ if($fstatus!=null and $fresolver!=null)
 $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolved_By='$fresolver' where Ticket_ID='$TID'";
 
 }
+else if($fstatus!=null)
+{
+$Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus' where Ticket_ID='$TID'";
+
+}
 
 echo $Master_sql;
 
