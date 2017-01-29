@@ -198,14 +198,14 @@ td
     </td>
   </tr>
   <tr>
-    <td>
+    <!--<td>
 <div class="form-group">
     <label for="exampleInputEmail1">Reviewer <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><td>
     <input type="text" class="form-control" name="reviewer" id="exampleInputEmail1" placeholder="Reviewer">
   </div>
 
-      </td>
+      </td>-->
        <td>
 
       <div class="form-group">
@@ -219,7 +219,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-<textarea class="form-control" rows="3" cols="30" name="comments" placeholder="Comments" ></textarea>
+<textarea class="form-control" rows="3" cols="30" name="comments" placeholder="Comments" required></textarea>
     
   </div>
       
@@ -242,7 +242,7 @@ td
 <div class="form-group" >
     <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min">
+    <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
   </div>
 
 </td><td>
