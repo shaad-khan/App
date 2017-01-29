@@ -118,7 +118,8 @@ else if(($tab_status=='Documentation'))
 {
     $fstatus='Closure';
 }
-if($fstatus!=null and $fresolver!=null)
+
+if(($fstatus!=null) and ($fresolver!=null))
 {
 $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolved_By='$fresolver' where Ticket_ID='$TID'";
 
@@ -131,7 +132,7 @@ $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatu
 
 echo $Master_sql;
 
-   $conn->query($Master_sql);
+   //$conn->query($Master_sql);
 
 //$sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
