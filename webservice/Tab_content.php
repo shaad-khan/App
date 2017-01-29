@@ -83,6 +83,83 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '
 
 }
 
+/*-----------------------------------------------------*/
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver[0]."' and Status='WIP'";
+//echo $sql3;
+
+     $result=$conn->query($sql3);
+//echo $msg;
+  while($row3=$result->fetch())
+{
+	if($row3['ccount']!=0)
+	{
+	$sql="update Status_count set Wip=".$row3['ccount']." where Email like '%".$r."%'";
+	//echo $resolver[0].",Classify: $row3['ccount']";
+	//echo $sql;
+	
+	//=$resolver[0].",Classify: $classify,wip:$wip,aui:$auc";
+
+	}
+  else{
+    $sql="update Status_count set Wip=0 where Email like '%".$r."%'";
+  }
+  $conn->query($sql);
+	//$rows[]=$row3;
+
+
+}
+/*-----------------------------------------------------*/
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver[0]."' and Status='Review'";
+//echo $sql3;
+
+     $result=$conn->query($sql3);
+//echo $msg;
+  while($row3=$result->fetch())
+{
+	if($row3['ccount']!=0)
+	{
+	$sql="update Status_count set Review=".$row3['ccount']." where Email like '%".$r."%'";
+	//echo $resolver[0].",Classify: $row3['ccount']";
+	//echo $sql;
+	
+	//=$resolver[0].",Classify: $classify,wip:$wip,aui:$auc";
+
+	}
+  else{
+    $sql="update Status_count set Review=0 where Email like '%".$r."%'";
+  }
+  $conn->query($sql);
+	//$rows[]=$row3;
+
+
+}
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver[0]."' and Status='Documentation'";
+//echo $sql3;
+
+     $result=$conn->query($sql3);
+//echo $msg;
+  while($row3=$result->fetch())
+{
+	if($row3['ccount']!=0)
+	{
+	$sql="update Status_count set Doc=".$row3['ccount']." where Email like '%".$r."%'";
+	//echo $resolver[0].",Classify: $row3['ccount']";
+	//echo $sql;
+	
+	//=$resolver[0].",Classify: $classify,wip:$wip,aui:$auc";
+
+	}
+  else{
+    $sql="update Status_count set Doc=0 where Email like '%".$r."%'";
+  }
+  $conn->query($sql);
+	//$rows[]=$row3;
+
+
+}
+
+
+
 
 }
 
