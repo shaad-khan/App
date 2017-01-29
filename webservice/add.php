@@ -92,7 +92,7 @@ else if($cstatus=='next')
 {
     $sql_status="select Status from Master_Ticket_Tab where Ticket_ID='$TID'";
     $tab_status='';
-$result=$conn->query($sql);
+$result=$conn->query($sql_status);
 //echo $msg;
   while($row4=$result->fetch())
 {
