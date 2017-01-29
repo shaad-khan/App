@@ -269,6 +269,16 @@ td
                         </div>
 
   </td>
+</td><td>
+<div class="form-group" >
+    <label for="exampleInputEmail1">Release The Ticket<span class="glyphicon glyphicon-info-sign
+"></span></label></td><td><td style="position:relative;left: -285px;">
+  <div class="material-switch pull-right">
+                            <input id="someSwitchOptionSuccess" name="release" type="checkbox"/>
+                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                        </div>
+
+  </td>
 </td></tr><tr>
   <td style="position:relative;left: 453px;">
 <div class="form-group">
