@@ -138,5 +138,6 @@ $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatu
 
 }
 echo $Master_sql;
+$conn->query($Master_sql);
 }
 ?>
