@@ -84,12 +84,34 @@ bkLib.onDomLoaded(function() {
 </script>-->
 
 <style>
+.table-fixed{
+  width: 100%;
+}
 
  tbody{
     height:200px;
     overflow-y:auto;
     width: 100%;
     }
+    thead,tbody,tr,td,th{
+    display:block;
+  }
+  tbody{
+    td{
+      float:left;
+    }
+  }
+  thead {
+    tr{
+      th{
+        float:left;
+       background-color: #f39c12;
+       border-color:#e67e22;
+      }
+    }
+  }
+}
+
 </style>
   </head>
 
