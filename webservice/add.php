@@ -76,16 +76,16 @@ else
     //echo "<script> alert('insert');</script>";
 if($status=='Classify')
 {
-$Master_sql="Update Master_Ticket_Tab set Assigned_To='$user_session', Status='WIP' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session', Status='WIP' where Ticket_ID='$TID'";
 }
  else if(($assigned_To==$user_session) and ($status=='WIP') and ($release==1))
     {
-    $Master_sql="Update Master_Ticket_Tab set Assigned_To='unassigned', Status='WIP' where Ticket_ID='$TID'";
+    $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='WIP' where Ticket_ID='$TID'";
     }
     else if(($assigned_To==$user_session) and ($status=='WIP') and ($release==0))
     {
         
-         $Master_sql="Update Master_Ticket_Tab set Assigned_To='$user_session',Status='WIP' where Ticket_ID='$TID'";
+         $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='WIP' where Ticket_ID='$TID'";
     }
 
 else if($cstatus=='next')
@@ -118,7 +118,7 @@ else if(($tab_status=='Documentation'))
     $fstatus='Closure';
 }
 
-$Master_sql="Update Master_Ticket_Tab set Assigned_To='unassigned',Status='$fstatus',Resolved_By='$fresolver' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolved_By='$fresolver' where Ticket_ID='$TID'";
 
 }
 
