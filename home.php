@@ -36,7 +36,8 @@
                                   Task Report </div><div class="col-xs-4" align="right" ng-hide="load2"><img src="assets/ajax-loader.gif"/>
                                   </div></div></div>
       <div class="panel-body">
-        <table class="table"><tr>
+        <table class="table table-fixed"><tr>
+        <thead>
     <th></th>
       <th>  <span class="glyphicon glyphicon-menu-hamburger"></span>Classify</th>
       <th>WIP</th>
@@ -46,12 +47,9 @@
       <th>Closure</th>
       <th>Total</th>
     </tr>
-    <tr>
-    <!--  <td>Unassigned</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>6</td><td>7</td>-->
-
-
-    </tr>
-    <tbody style="height:200px;overflow-y:auto;width: 100%;">
+    </thead>
+  <tbody style="height:200px;overflow-y:auto;width: 100%;">
+    
     <tr ng-repeat="item in items">
       <td ng-init="email=item.Email.split('@')[0]"><span class="glyphicon glyphicon-user" style="font-size:20px;color:black;padding:5px;"></span>  {{email}}</td><td ng-init="table_count.Total=table_count.Total+item.classify"><a href="#!/ticket/{{email}}/Classify">{{item.Classify}}</a></td>
       <td ng-init="total_Wip=total_Wip+item.Wip"><a href="#ticket/{{email}}/Wip">{{item.Wip}}</a></td>
