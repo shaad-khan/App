@@ -82,6 +82,15 @@ bkLib.onDomLoaded(function() {
   new nicEditor({maxHeight : 200}).panelInstance('area5');
 });
 </script>-->
+
+<style>
+
+ tbody{
+    height:200px;
+    overflow-y:auto;
+    width: 100%;
+    }
+</style>
   </head>
 
   <body>
