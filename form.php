@@ -274,8 +274,8 @@ td
     <label for="exampleInputEmail1">Release The Ticket<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td><td style="position:relative;left: -285px;">
   <div class="material-switch pull-right">
-                            <input id="someSwitchOptionSuccess" name="release" type="checkbox"/>
-                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                            <input  name="release" type="checkbox"/>
+                           
                         </div>
 
   </td>
