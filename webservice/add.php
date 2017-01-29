@@ -53,10 +53,12 @@ $AUI= $_GET["AUI"];
 
 if(($uname!=$user_session)&&($status=='Classify'))
 {
-     echo "<script> alert('ticket is assigned to user');</script>";
+    echo "i am step 1";
+   //  echo "<script> alert('ticket is assigned to user');</script>";
     
 }
 else{
-    echo "<script> alert('insert');</script>";
+      echo "i am step 2";
+    //echo "<script> alert('insert');</script>";
 }
 ?>
