@@ -102,6 +102,7 @@ if(($tab_status=='WIP') and $AUI!='on' )
 {
     $fstatus='Review';
     $fresolver=$user_session;
+    $freviewer=$user_session;
 
 }
 else if(($tab_status=='WIP') and $AUI=='on' )
@@ -141,6 +142,7 @@ if($Master_sql)
 {
 $conn->query($Master_sql);
 }
-
+$update_table_sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$freviewer','$fresolver','','$tcategory','','')";
+echo $update_table_sql;
 }
 ?>
