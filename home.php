@@ -48,7 +48,7 @@
       <th>Total</th>
     </tr>
     </thead>
-  <tbody style="height:200px;overflow-y:auto;width: 100%;">
+  <tbody>
     
     <tr ng-repeat="item in items">
       <td ng-init="email=item.Email.split('@')[0]"><span class="glyphicon glyphicon-user" style="font-size:20px;color:black;padding:5px;"></span>  {{email}}</td><td ng-init="table_count.Total=table_count.Total+item.classify"><a href="#!/ticket/{{email}}/Classify">{{item.Classify}}</a></td>
@@ -61,16 +61,16 @@
 
 
     </tr>
-     
-    <tr><td></td><td>{{table_count.Total}}</td>
+     </tbody>
+   <!-- <tr><td></td><td>{{table_count.Total}}</td>
       <td>{{total_Wip}}</td>
       <td>{{total_Aui}}</td>
       <td>{{total_Review}}</td>
       <td>{{total_Doc}}</td>
 <td>{{total_Closure}}</td>
 <td>{{ttotal}}</td>
-    </tr>
-    </tbody>
+    </tr>-->
+    
     <!--<tr>
       <td>Jaaga</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>6</td><td>7</td>
 
