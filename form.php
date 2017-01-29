@@ -114,6 +114,7 @@ td
 
 <div class="form-group">
     <label for="exampleInputEmail1">CreatedBy <span class="glyphicon glyphicon-info-sign"></span></label></td><td>
+    <input type="hidden" value="{{items[0].Creator}}" name="creator"/>
     <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Creator}}" disabled>
   </div>
   </td>

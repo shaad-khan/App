@@ -18,6 +18,8 @@ $TID  = $_GET["TID"];
 
 $client= $_GET["client"];
 
+$creator=$_GET['creator'];
+
 $project= $_GET["project"];
 
 $uname= $_GET["uname"];
@@ -51,7 +53,7 @@ $AUI= $_GET["AUI"];
 
 //echo $user_session;
 //echo ($uname!=$user_session);//and($status=='Classify'));
-if(($uname!=$user_session))//and($status=='Classify'))
+if(($creator!=$user_session))//and($status=='Classify'))
 {
    echo "i am step 1";
    //  echo "<script> alert('ticket is assigned to user');</script>";
