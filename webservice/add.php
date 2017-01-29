@@ -119,12 +119,12 @@ else if(($tab_status=='Documentation'))
     $fstatus='Closure';
 }
 
-if(($fstatus!=null) and ($fresolver!=null))
+if(($fstatus!='') and ($fresolver!=''))
 {
 $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolved_By='$fresolver' where Ticket_ID='$TID'";
 
 }
-else if($fstatus!=null)
+else if($fstatus!='')
 {
 $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus' where Ticket_ID='$TID'";
 
