@@ -13,6 +13,12 @@
   session_start();
 
 $user_session=$_SESSION["user"];
+if($user_session=='')
+{
+   echo "<script> alert('Session Expired Please Relogin in app');
+     setTimeout(function(){window.close()}, 1000);
+     </script>";
+}
   $ID=$_GET['ID'];
   ?>
   <style>
