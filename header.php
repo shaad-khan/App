@@ -84,6 +84,7 @@ bkLib.onDomLoaded(function() {
 </script>-->
 
 <style>
+/*
 .table-fixed {
   width: 100%;
   background-color: #f3f3f3;
@@ -104,7 +105,7 @@ bkLib.onDomLoaded(function() {
   background-color: #f39c12;
   border-color: #e67e22;
 }
-
+*/
 
 </style>
   </head>
