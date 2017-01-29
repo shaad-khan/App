@@ -169,6 +169,7 @@ td
 "></span></label> </td> <td><input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
     <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled/>
   </div> </td>
+  
   <tr>
 <!--<td>
 <div class="form-group">
