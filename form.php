@@ -154,8 +154,8 @@ td
 <tr> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
-"></span></label> </td> <td>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php echo $user_session;?>" name="aname" disabled>
+"></span></label> </td> <td><input type="hidden" name="assign" value="{{items[0].Assign_To}}"/>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Assign_To}}" name="aname" disabled>
   </div> </td>
  <td>
 <div class="form-group">
@@ -272,9 +272,9 @@ td
 </td><td>
 <div class="form-group" >
     <label for="exampleInputEmail1">Release The Ticket<span class="glyphicon glyphicon-info-sign
-"></span></label></td><td><td style="position:relative;left: -285px;">
+"></span></label></td><td><td style="position:relative;left: -161px;">
 
-                            <input type="checkbox" name="release" />
+                            <input type="checkbox" name="release" value="1" />
                            
                         </div>
 

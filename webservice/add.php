@@ -20,6 +20,11 @@ $client= $_GET["client"];
 
 $creator=$_GET['creator'];
 
+$assigned_To=$_GET['assign'];
+
+
+$release=$_GET['release'];
+
 $project= $_GET["project"];
 
 $uname= $_GET["uname"];
@@ -61,8 +66,63 @@ if(($creator!=$user_session)and($status=='Classify'))
      </script>";
     
 }
-else{
-      echo "i am step 2";
+else 
+{
+    /* update assigncolumn in Main_table */
+
+
+    //echo "i am step 2";
     //echo "<script> alert('insert');</script>";
+if($status=='Classify')
+{
+$Master_sql="Update Master_Ticket_Tab set Assigned_To='$user_session', Status='WIP' where Ticket_ID='$TID'";
+}
+ else if(($assigned_To==$user_session) and ($status=='WIP') and ($release==1))
+    {
+    $Master_sql="Update Master_Ticket_Tab set Assigned_To='unassigned', Status='WIP' where Ticket_ID='$TID'";
+    }
+    else if(($assigned_To==$user_session) and ($status=='WIP') and ($release==0))
+        
+         $Master_sql="Update Master_Ticket_Tab set Assigned_To='$user_session',Status='WIP' where Ticket_ID='$TID'";
+}
+else if($cstatus=='next')
+{
+    $sql_status="select Status from Master_Ticket_Tab where Ticket_ID='$TID'";
+    $tab_status='';
+$result=$conn->query($sql);
+//echo $msg;
+  while($row4=$result->fetch())
+{
+    $tab_status=$row4['Status'];
+}
+if(($tab_status=='WIP') and $AUI==0 )
+{
+    $fstatus='Review';
+    $fresolver=$user_session;
+
+}
+else if(($tab_status=='WIP') and $AUI==1 )
+{
+$fstatus='WIP';
+$fresolver=$user_session;
+}
+else if(($tab_status=='Review'))
+{
+    $fstatus='Documentation';
+}
+else if(($tab_status=='Documentation'))
+{
+    $fstatus='Closure';
+}
+
+$Master_sql="Update Master_Ticket_Tab set Assigned_To='unassigned',Status='$fstatus',Resolved_By='$fresolver' where Ticket_ID='$TID'";
+
+}
+
+echo $Master_sql;
+
+//$sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
+
+
 }
 ?>
