@@ -36,8 +36,8 @@
                                   Task Report </div><div class="col-xs-4" align="right" ng-hide="load2"><img src="assets/ajax-loader.gif"/>
                                   </div></div></div>
       <div class="panel-body">
-        <table class="table table-fixed"><tr>
-        <thead>
+        <table class="table table-fixed">
+        <thead><tr>
     <th></th>
       <th>  <span class="glyphicon glyphicon-menu-hamburger"></span>Classify</th>
       <th>WIP</th>
