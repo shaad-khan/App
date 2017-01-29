@@ -126,6 +126,6 @@ echo $Master_sql;
 
 //$sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
-*/
+
 }
 ?>
