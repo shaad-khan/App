@@ -51,7 +51,7 @@
 
 
     </tr>
-    <tbody>
+    <tbody style="height:200px;overflow-y:auto;width: 100%;">
     <tr ng-repeat="item in items">
       <td ng-init="email=item.Email.split('@')[0]"><span class="glyphicon glyphicon-user" style="font-size:20px;color:black;padding:5px;"></span>  {{email}}</td><td ng-init="table_count.Total=table_count.Total+item.classify"><a href="#!/ticket/{{email}}/Classify">{{item.Classify}}</a></td>
       <td ng-init="total_Wip=total_Wip+item.Wip"><a href="#ticket/{{email}}/Wip">{{item.Wip}}</a></td>
