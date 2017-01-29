@@ -57,7 +57,7 @@ if(($creator!=$user_session)and($status=='Classify'))
 {
    //echo "i am step 1";
      echo "<script> alert('ticket is assigned to $creator');
-     setTimeout(function(){window.close()}, 2000);
+     setTimeout(function(){window.close()}, 1000);
      </script>";
     
 }
