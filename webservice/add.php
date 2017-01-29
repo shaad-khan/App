@@ -142,7 +142,7 @@ if($Master_sql)
 {
 $conn->query($Master_sql);
 }
-$update_table_sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$freviewer','$fresolver','','$tcategory','','')";
+$update_table_sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$freviewer','$fresolver','','$tcategory','','','$comments')";
 echo $update_table_sql;
 $conn->query($update_table_sql);
 }
