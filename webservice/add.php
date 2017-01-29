@@ -82,11 +82,11 @@ $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session', Status='WIP
     {
     $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='WIP' where Ticket_ID='$TID'";
     }
-    else if(($assigned_To==$user_session) and ($status=='WIP') and ($release==0))
+   /* else if(($assigned_To==$user_session) and ($status=='WIP') and ($release==0))
     {
         
          $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='WIP' where Ticket_ID='$TID'";
-    }
+    }*/
 
 else if($cstatus=='next')
 {
