@@ -273,7 +273,7 @@ td
 <div class="form-group" >
     <label for="exampleInputEmail1">Release The Ticket<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td><td >
-  <div class="material-switch pull-right">
+  
                             <input type="checkbox" name="release" />
                            
                         </div>
