@@ -98,13 +98,13 @@ $result=$conn->query($sql_status);
 {
     $tab_status=$row4['Status'];
 }
-if(($tab_status=='WIP') and $AUI==0 )
+if(($tab_status=='WIP') and $AUI!='ON' )
 {
     $fstatus='Review';
     $fresolver=$user_session;
 
 }
-else if(($tab_status=='WIP') and $AUI==1 )
+else if(($tab_status=='WIP') and $AUI=='ON' )
 {
 $fstatus='WIP';
 $fresolver=$user_session;
