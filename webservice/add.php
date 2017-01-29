@@ -56,10 +56,7 @@ $AUI= $_GET["AUI"];
 if(($creator!=$user_session))and($status=='Classify'))
 {
    //echo "i am step 1";
-     echo "<script> alert('ticket is assigned to user');
-     setTimeout(function(){window.close()}, 1000);
-     
-     </script>";
+     echo "<script> alert('ticket is assigned to user');</script>";
     
 }
 else{
