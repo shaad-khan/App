@@ -46,7 +46,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
      $close=0;
 
 //$sql="select * from status_count order by ID desc";
-$sql="select * from User_prof  where Team='L3' or Team='All";
+$sql="select * from User_prof where Team='L3' or Team='All'";
      $result1=$conn->query($sql);
 
 
