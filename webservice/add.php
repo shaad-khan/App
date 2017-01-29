@@ -137,7 +137,10 @@ $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatu
 //$sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
 }
-echo $Master_sql;
+if($Master_sql) 
+{
 $conn->query($Master_sql);
+}
+
 }
 ?>
