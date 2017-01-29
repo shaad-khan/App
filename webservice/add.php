@@ -78,7 +78,7 @@ if($status=='Classify')
 {
 $Master_sql="Update Master_Ticket_Tab set Assigned_To='$user_session', Status='WIP' where Ticket_ID='$TID'";
 }
- else if(($assigned_To==$user_session) and ($status=='WIP') and ($release==1))
+ /*else if(($assigned_To==$user_session) and ($status=='WIP') and ($release==1))
     {
     $Master_sql="Update Master_Ticket_Tab set Assigned_To='unassigned', Status='WIP' where Ticket_ID='$TID'";
     }
@@ -124,6 +124,6 @@ echo $Master_sql;
 
 //$sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
-
+*/
 }
 ?>
