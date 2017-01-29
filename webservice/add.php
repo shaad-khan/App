@@ -50,15 +50,15 @@ $AUI= $_GET["AUI"];
 //$sql="insert into Update_Tab values('$TID','$status','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
 //echo $user_session;
-echo $status=='Classify';
+echo ($uname!=$user_session)and($status=='Classify');
 if(($uname!=$user_session)and($status=='Classify'))
 {
-    echo "i am step 1";
+   // echo "i am step 1";
    //  echo "<script> alert('ticket is assigned to user');</script>";
     
 }
 else{
-      echo "i am step 2";
+     // echo "i am step 2";
     //echo "<script> alert('insert');</script>";
 }
 ?>
