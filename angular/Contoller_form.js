@@ -18,7 +18,7 @@ $scope.projects=response.data;
     
 $interval(callApi, 1000);
 
-  function callApi(){
+  var tableapi=function callApi(){
     $scope.date = new Date();
     $http.get("https://apps.continuserve.com/webservice/ticket_data.php?ID="+$scope.ID).then(function(response){
      	//$scope.load2='false';
@@ -26,6 +26,17 @@ $interval(callApi, 1000);
 
     });
  }
+$scope.$on('$destroy', function () { 
+  
+  
+  if (angular.isDefined(tableapi)) {
+    console.log("i am here he he he he");
+            $interval.cancel(tableapi);
+            stop = undefined;
+          }
+
+ });
+
 
 });
 
