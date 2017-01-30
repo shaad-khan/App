@@ -78,11 +78,11 @@ else
     //echo "<script> alert('insert');</script>";
 if($status=='Classify')
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session', Status='WIP',Client='$client',Project='$project',EnvType='$env' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime="$utime", Status='WIP',Client='$client',Project='$project',EnvType='$env' where Ticket_ID='$TID'";
 }
  else if(($assigned_To==$user_session) and ($status=='WIP') and ($release==1))
     {
-    $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='WIP' where Ticket_ID='$TID'";
+    $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='WIP',Updatetime="$utime" where Ticket_ID='$TID'";
     }
    /* else if(($assigned_To==$user_session) and ($status=='WIP') and ($release==0))
     {
@@ -130,12 +130,12 @@ else if(($tab_status=='Documentation'))
 
 if(($fstatus!='') and ($fresolver!=''))
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fstatus',Resolved_By='$fresolver',Resolver_Dtime='$fdate' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fstatus',Resolved_By='$fresolver',Resolver_Dtime='$fdate',Updatetime="$utime" where Ticket_ID='$TID'";
 
 }
 else if($fstatus!='')
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fstatus' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fstatus',Updatetime="$utime" where Ticket_ID='$TID'";
 
 }
 

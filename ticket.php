@@ -40,7 +40,7 @@
 <td>{{res.Tdiscription}}</td>
 <td>{{res.Status}}</td>
 <td>{{res.Cdatetime}}</td>
-<td>NA</td>
+<td>{{res.Updatetime}}</td>
 <td>{{res.Creator}}</td>
 
     </tr>
