@@ -129,7 +129,7 @@ $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(funct
 
 $scope.$on('$destroy', function () { 
   
-  console.log("i am here"+promise);
+  console.log("i am here he he he");
   $interval.cancel(tableapi);
 
  });
