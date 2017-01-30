@@ -27,7 +27,7 @@ $result=$conn->query($sql);
 
 ob_start("ob_gzhandler");
 
-print(json_encode($rows, JSON_NUMERIC_CHECK));
+print(json_encode($rows));
 ob_end_flush();
 exit;
 ?>
