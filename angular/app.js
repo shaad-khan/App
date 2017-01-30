@@ -3,7 +3,8 @@ var app=angular.module("continuity",["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "home.php"
+        templateUrl : "home.php",
+        controller: 'table_count'
     })
     .when("/ticket/:email/:type", {
         //templateUrl : "ticket.php",
