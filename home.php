@@ -1,3 +1,5 @@
+<script src="angular/HomeController.js"></script>
+
 <div class="row mt">
   <div class="col-md-12">
 <div class="content-panel" id="reload">

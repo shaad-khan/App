@@ -56,7 +56,7 @@ function myFunction1() {
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
         <script src="angular/app.js"></script>
 
-            <script src="angular/controller.js"></script>
+            
     <!-- Custom styles for this Continuitylate -->
     <link href="assets/css/style2.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
