@@ -114,6 +114,7 @@ app.controller("table_count",function($scope,$http,$interval){
  var tableapi= $interval(function(){
 $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
      	$scope.load2='false';
+       console.log("called from interval");
       $scope.items=response.data;
     });  
  }, 500);
