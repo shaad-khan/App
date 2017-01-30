@@ -146,11 +146,16 @@ $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fst
 //$sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
 }
-else{
-$Master_sql="Update Master_Ticket_Tab set Updatetime='$utime' where Ticket_ID='$TID'";
-}
+
+
+
 if($Master_sql) 
 {
+    echo $Master_sql;
+$conn->query($Master_sql);
+}
+else{
+    $Master_sql="Update Master_Ticket_Tab set Updatetime='$utime' where Ticket_ID='$TID'";
     echo $Master_sql;
 $conn->query($Master_sql);
 }
