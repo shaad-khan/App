@@ -129,8 +129,9 @@ $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(funct
 
 $scope.$on('$destroy', function () { 
   
-  console.log("i am here he he he he");
+  
   if (angular.isDefined(tableapi)) {
+    console.log("i am here he he he he");
             $interval.cancel(tableapi);
             tableapi = undefined;
             console.log(tableapi);
