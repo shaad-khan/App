@@ -111,21 +111,26 @@ app.controller("table_count",function($scope,$http,$interval){
   var vm = this;
    vm.Total = 0;
 
- var apicall= $interval(callApi, 500);
-  function callApi(){
+ var tableapi= $interval(function(){
+$http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
+     	$scope.load2='false';
+      $scope.items=response.data;
+    });  
+ }, 500);
+  /*function callApi(){
     $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
      	$scope.load2='false';
       $scope.items=response.data;
-    });
+    });*/
 
 
 
-}
+
 
 $scope.$on('$destroy', function () { 
   
   console.log("i am here");
-  $interval.cancel(apicall);
+  $interval.cancel(tableapi);
 
  });
 
