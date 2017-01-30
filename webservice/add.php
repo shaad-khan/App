@@ -139,13 +139,14 @@ $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fst
 
 }
 
-$Master_sql="Update Master_Ticket_Tab set Updatetime='$utime' where Ticket_ID='$TID'";
+
 
    //$conn->query($Master_sql);
 
 //$sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
 }
+$Master_sql="Update Master_Ticket_Tab set Updatetime='$utime' where Ticket_ID='$TID'";
 if($Master_sql) 
 {
     echo $Master_sql;
