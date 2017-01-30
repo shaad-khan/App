@@ -107,4 +107,34 @@ function callAtInterval2(){
 };
 });
 
+app.controller("table_count",function($scope,$http,$interval){
+  var vm = this;
+   vm.Total = 0;
 
+ var tableapi= $interval(function(){
+$http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
+     	$scope.load2='false';
+      $scope.items=response.data;
+    });  
+ }, 500)
+  /*function callApi(){
+    $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
+     	$scope.load2='false';
+      $scope.items=response.data;
+    });*/
+
+
+
+
+
+$scope.$on('$destroy', function () { 
+  
+  console.log("i am here he he he he");
+  if (angular.isDefined(tableapi)) {
+            $interval.cancel(tableapi);
+            stop = undefined;
+          }
+
+ });
+
+});
