@@ -193,6 +193,17 @@ td
     <input type="text" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="{{items[0].Resolved_By}}" disabled>
   </div>
   </td>
+   <td>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+     <select class="form-control" name="env">
+  <option value="Prod">Prod</option>
+    <option value="Non-Prod">Non-Prod</option>
+</select>
+  </div>
+
+    </td>
   <td>
     <div class="form-group">
     <label for="exampleInputEmail1">Shift <span class="glyphicon glyphicon-info-sign
