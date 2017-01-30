@@ -116,7 +116,7 @@ $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(funct
      	$scope.load2='false';
       $scope.items=response.data;
     });  
- }, 500)
+ }, 500);
   /*function callApi(){
     $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
      	$scope.load2='false';
@@ -133,6 +133,7 @@ $scope.$on('$destroy', function () {
   if (angular.isDefined(tableapi)) {
             $interval.cancel(tableapi);
             tableapi = undefined;
+            console.log(tableapi);
           }
 
  });
