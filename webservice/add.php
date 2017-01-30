@@ -103,6 +103,9 @@ $result=$conn->query($sql_status);
 if(($tab_status=='WIP') and $AUI!='on' )
 {
     $fstatus='Review';
+    date_default_timezone_set('Asia/Kolkata');
+									//$date = date('Ymd H:i:s');
+									$fdate = date('m-d-y H:i:s');
     $fresolver=$user_session;
     $freviewer=$user_session;
 
@@ -111,6 +114,9 @@ else if(($tab_status=='WIP') and $AUI=='on' )
 {
 $fstatus='WIP';
 $aui_flag=1;
+date_default_timezone_set('Asia/Kolkata');
+									//$date = date('Ymd H:i:s');
+									$fdate = date('m-d-y H:i:s');
 $fresolver=$user_session;
 }
 else if(($tab_status=='Review'))
@@ -124,7 +130,7 @@ else if(($tab_status=='Documentation'))
 
 if(($fstatus!='') and ($fresolver!=''))
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fstatus',Resolved_By='$fresolver' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fstatus',Resolved_By='$fresolver',Resolver_Dtime='$fdate' where Ticket_ID='$TID'";
 
 }
 else if($fstatus!='')
@@ -144,7 +150,7 @@ if($Master_sql)
 {
 $conn->query($Master_sql);
 }
-$update_table_sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$freviewer','$fresolver','','$tcategory','','','$comments')";
+$update_table_sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$freviewer','$fresolver','','$tcategory','',$aui_flag,'$comments')";
 echo $update_table_sql;
 $conn->query($update_table_sql);
 }
