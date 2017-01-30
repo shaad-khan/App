@@ -10,7 +10,10 @@ app.controller("Ticket",function($scope,$routeParams,$http,$interval){
 	  if (window.focus) {newwindow.focus()}
 	  return false;
 	};
-$interval(statuscheck, 1000);
+  $http.get("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
+	$scope.load='false';
+		$scope.results=response.data;
+$interval(statuscheck, 5000);
 var name=$routeParams.email;
 var type=$routeParams.type;
 function statuscheck() {
