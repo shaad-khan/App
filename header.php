@@ -84,6 +84,12 @@ bkLib.onDomLoaded(function() {
 </script>-->
 
 <style>
+element.style {
+    width: 14px;
+    /*height: 133px;
+    background-color: rgb(78, 205, 196);*/
+    background-color:#777;
+}
 /*
 .table-fixed {
   width: 100%;
