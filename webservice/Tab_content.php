@@ -168,7 +168,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 {
 	if($row3['ccount']!=0)
 	{
-	$sql="update Status_count set Doc=".$row3['ccount']." where Email like '%".$r."%'";
+	$sql="update Status_count set Closure=".$row3['ccount']." where Email like '%".$r."%'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
 	//echo $sql;
 	
@@ -176,7 +176,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 	}
   else{
-    $sql="update Status_count set Doc=0 where Email like '%".$r."%'";
+    $sql="update Status_count set Closure=0 where Email like '%".$r."%'";
   }
   $conn->query($sql);
 	//$rows[]=$row3;
