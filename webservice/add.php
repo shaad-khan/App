@@ -55,7 +55,7 @@ $ttime= $_GET["ttime"];
 $tcategory= $_GET["tcategory"];
 
 $AUI= $_GET["AUI"];
-
+$aui_flag=0;
 
 //$sql="insert into Update_Tab values('$TID','$status','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
@@ -152,6 +152,6 @@ $conn->query($Master_sql);
 }
 $update_table_sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$freviewer','$fresolver','','$tcategory','',$aui_flag,'$comments')";
 echo $update_table_sql;
-$conn->query($update_table_sql);
+//$conn->query($update_table_sql);
 }
 ?>
