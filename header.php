@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="continuity">
 <?php
-/*session_start();
+session_start();
 if(!$_SESSION["user"])
   {
-    header('Location:https://apps.continuserve.com/continuity/App/');
-  }*/
+    header('Location:https://apps.continuserve.com/');
+  }
 
   include("db.php");
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
