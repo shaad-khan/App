@@ -146,20 +146,13 @@ $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fst
 //$sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
 }
-
-
-
 if($Master_sql) 
 {
-    echo $Master_sql;
-//$conn->query($Master_sql);
+    echo $Master_sql
+$conn->query($Master_sql);
 }
-
 $update_table_sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$freviewer','$fresolver','','$tcategory','',$aui_flag,'$comments')";
 echo $update_table_sql;
 //$conn->query($update_table_sql);
 }
-//echo "<script> alert('Update Done Successfully');
-     setTimeout(function(){window.close()}, 1000);
-     </script>";
 ?>
