@@ -3,8 +3,8 @@ var app=angular.module("continuity",["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "home.php"
-       
+        templateUrl : "home.html",
+        controller: 'table_count'
     })
     .when("/ticket/:email/:type", {
         //templateUrl : "ticket.php",
@@ -13,8 +13,8 @@ app.config(function($routeProvider) {
        //resolve: resolveController('angular/controller.js')
     templateUrl: function(attrs){
          //alert('ticket.php?Email=' + attrs.email);
-               return 'ticket.php?Email=' + attrs.email+"Type="+attrs.type; }
-      
+               return 'ticket.php?Email=' + attrs.email+"Type="+attrs.type; },
+      controller  : 'Ticket'
     })
     .when("/green", {
         templateUrl : "green.htm"
