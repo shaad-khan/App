@@ -130,7 +130,7 @@ else if(($tab_status=='Documentation'))
 
 if(($fstatus!='') and ($fresolver!=''))
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fstatus',Resolved_By='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
 
 }
 else if($fstatus!='')
