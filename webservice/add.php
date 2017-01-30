@@ -148,7 +148,7 @@ $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fst
 }
 if($Master_sql) 
 {
-    echo $Master_sql
+    echo $Master_sql;
 $conn->query($Master_sql);
 }
 $update_table_sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$freviewer','$fresolver','','$tcategory','',$aui_flag,'$comments')";
