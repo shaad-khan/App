@@ -13,7 +13,7 @@ app.config(function($routeProvider) {
        //resolve: resolveController('angular/controller.js')
     templateUrl: function(attrs){
          //alert('ticket.php?Email=' + attrs.email);
-               return 'ticket.php?Email=' + attrs.email+"Type="+attrs.type; },
+               return 'ticket.html'},
       controller  : 'Ticket'
     })
     .when("/green", {
