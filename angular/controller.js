@@ -118,8 +118,15 @@ app.controller("table_count",function($scope,$http,$interval){
       $scope.items=response.data;
     });
 
-$scope.$on('$destroy', function () { $interval.cancel(apicall); });
+
 
 }
+
+$scope.$on('$destroy', function () { 
+  
+  console.log("i am here");
+  $interval.cancel(apicall);
+
+ });
 
 });
