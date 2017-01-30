@@ -10,7 +10,7 @@ app.controller("Ticket",function($scope,$routeParams,$http,$interval){
 	  if (window.focus) {newwindow.focus()}
 	  return false;
 	};
-$interval(statuscheck, 5000);
+$interval(statuscheck, 1000);
 var name=$routeParams.email;
 var type=$routeParams.type;
 function statuscheck() {
@@ -110,7 +110,7 @@ function callAtInterval2(){
 app.controller("table_count",function($scope,$http,$interval){
   var vm = this;
    vm.Total = 0;
-  $interval(callApi, 5000);
+  $interval(callApi, 1000);
   function callApi(){
     $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
      	$scope.load2='false';
