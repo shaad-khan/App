@@ -341,18 +341,7 @@ td
 </select>
   </div>
   </td>
-  <td>
-
-   <div class="form-group" >
-    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
-    <select class="form-control" name="cstatus" >
-  <option value="WIP">Work In progress</option>
-  <option value="next">Next Status</option>
   
-</select>
-  </div>
-  </td>
 </tr>
 <tr>
 <td>
@@ -366,7 +355,18 @@ td
   </div>
 
   </td>
+<td>
 
+   <div class="form-group" >
+    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+    <select class="form-control" name="cstatus" >
+  <option value="WIP">Work In progress</option>
+  <option value="next">Next Status</option>
+  
+</select>
+  </div>
+  </td>
   </tr>
   <tr>
 <td>
