@@ -10,10 +10,10 @@ app.controller("Ticket",function($scope,$routeParams,$http,$interval){
 	  if (window.focus) {newwindow.focus()}
 	  return false;
 	};
-$interval(statuscheck, 1000);
+var ticketapi=$interval(statuscheck, 1000);
 var name=$routeParams.email;
 var type=$routeParams.type;
-var ticketapi=function statuscheck() {
+function statuscheck() {
 	//alert("https://apps.continuserve.com/continuity/App/webservice/status.php?name="+name+"&type="+type);
 	$http.get("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
 	$scope.load='false';
