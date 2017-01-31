@@ -194,7 +194,7 @@ td
     <input type="text" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="{{items[0].Resolved_By}}" disabled>
   </div>
   </td>-->
-   <td colspan="3">
+   <td colspan="2">
 
       <div class="form-group">
     <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
