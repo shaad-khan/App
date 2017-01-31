@@ -121,7 +121,7 @@ $fresolver=$user_session;
 }
 else if(($tab_status=='Review'))
 {
-    $fstatus='Documentation';
+    $fstatus='Doc';
 }
 else if(($tab_status=='Documentation'))
 {
@@ -130,12 +130,12 @@ else if(($tab_status=='Documentation'))
 
 if(($fstatus!='') and ($fresolver!=''))
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
 
 }
 else if($fstatus!='')
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
 
 }
 
