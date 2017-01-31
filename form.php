@@ -374,7 +374,7 @@ td
     <label for="exampleInputEmail1">If waithing for User response<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
 
-  <td style="position:relative;left: -516px;">
+  <td style="position:relative;left: -490px;">
   <div class="material-switch pull-right">
                             <input id="someSwitchOptionSuccess" name="AUI" type="checkbox"/>
                             <label for="someSwitchOptionSuccess" class="label-success"></label>
@@ -396,7 +396,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td colspan="8">
-<textarea class="form-control" rows="3" cols="116" name="comments" placeholder="Comments" required></textarea>
+<textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" required></textarea>
     
   </div> </td>
  
