@@ -1,4 +1,9 @@
 app.controller("Ticket",function($scope,$routeParams,$http,$interval){
+  $http.get("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
+	$scope.load='false';
+		$scope.results=response.data;
+  
+	});
 	(function () {
 //$scope.load='true';
 	}());
@@ -10,19 +15,18 @@ app.controller("Ticket",function($scope,$routeParams,$http,$interval){
 	  if (window.focus) {newwindow.focus()}
 	  return false;
 	};
-var ticketapi=$interval(statuscheck, 3000);
+var ticketapi=$interval(statuscheck, 8000);
 var name=$routeParams.email;
 var type=$routeParams.type;
 function statuscheck() {
-  if(!$scope.results)
-  {
+ 
 	//alert("https://apps.continuserve.com/continuity/App/webservice/status.php?name="+name+"&type="+type);
 	$http.get("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
 	$scope.load='false';
 		$scope.results=response.data;
   
 	});
-  }
+  
 };
 //$scope.email=$routeParams.email;
 //$scope.name="shaad";
@@ -32,7 +36,7 @@ $scope.$on('$destroy', function () {
   
   
   if (angular.isDefined(ticketapi)) {
-    console.log("i am here he he he he");
+    
             $interval.cancel(ticketapi);
             ticketapi = undefined;
           }
@@ -122,17 +126,20 @@ function callAtInterval2(){
 app.controller("table_count",function($scope,$http,$interval){
   var vm = this;
    vm.Total = 0;
-
+$http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
+  
+     	$scope.load2='false';
+      $scope.items=response.data;
+    }); 
  var tableapi= $interval(function(){
-   if(!$scope.items)
-  {
+  
 $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
   console.log("inetval call for ticket count");
      	$scope.load2='false';
       $scope.items=response.data;
     }); 
-  } 
- }, 3000)
+  
+ }, 8000)
   
 
 
