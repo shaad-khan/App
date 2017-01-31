@@ -212,7 +212,7 @@ td
       </tr>
       </table>
       <hr/>
-      <table class="tab2">
+      <table>
         <tr>
    <td>
     <div class="form-group">
