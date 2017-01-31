@@ -33,7 +33,7 @@ $interval(callApi, 1000);
 app.controller("update",function($scope,$interval,$http,servicecall){
 
 
-console.log($scope.ID+"  :i am here");
+console.log(":i am here");
 
 });
 
