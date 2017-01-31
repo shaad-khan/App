@@ -324,14 +324,13 @@ td
 <tr><td>
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>"  disabled>
-
-  <input type="hidden" name="TID" value="<?php Echo $ID;?>"/>
-  </div>
-
-</div></td>
+     <select class="form-control" name="env">
+  <option value="Prod">Prod</option>
+    <option value="Non-Prod">Non-Prod</option>
+</select>
+  </div></td>
 <td>
 
 <div class="form-group">
