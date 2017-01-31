@@ -187,13 +187,26 @@ td
   <input type="email" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="Resolver">
   </div>
   </td>-->
-<td>
+<!--<td>
 <div class="form-group">
     <label for="exampleInputEmail1">ResolvedBy <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
     <input type="text" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="{{items[0].Resolved_By}}" disabled>
   </div>
-  </td>
+  </td>-->
+   <td>
+
+      <div class="form-group">
+    <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+<textarea class="form-control" rows="3" cols="25" name="discription" placeholder="Discription" disabled>{{items[0].Tdiscription}}</textarea>
+    
+  </div>
+      </td>
+      </tr>
+      </table>
+      <table>
+        <tr>
    <td>
     <div class="form-group">
     <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
@@ -225,15 +238,7 @@ td
   </div>
 
       </td>-->
-       <td>
-
-      <div class="form-group">
-    <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
-<textarea class="form-control" rows="3" cols="25" name="discription" placeholder="Discription" disabled>{{items[0].Tdiscription}}</textarea>
-    
-  </div>
-      </td>
+      
        <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
