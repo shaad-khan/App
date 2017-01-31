@@ -440,7 +440,7 @@ td
     <div class="panel-heading" role="tab" id="heading{{update.UID}}">
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{update.UID}}" aria-expanded="false" aria-controls="collapse{{update.UID}}">
-  <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: {{update.UpdatedBy}} [DateTime: {{UpdateTime}}]
+  <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: {{update.UpdatedBy}} [DateTime: {{Update.Time}}]
         </a>
       </h4>
     </div>
