@@ -343,12 +343,13 @@ td
   </td>
   <td>
 
-    <div class="form-group">
-    <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
+   <div class="form-group" >
+    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    
-    <select class="form-control" name="client" >
-  <option ng-repeat="list in lists" value="{{list.Client_name}}">{{list.Client_name}}</option>
+    <select class="form-control" name="cstatus" >
+  <option value="WIP">Work In progress</option>
+  <option value="next">Next Status</option>
+  
 </select>
   </div>
   </td>
