@@ -30,10 +30,10 @@ $interval(callApi, 1000);
 
 });
 
-app.controller("Form_data",function($scope,$interval,$http,servicecall){
+app.controller("update",function($scope,$interval,$http,servicecall){
 
 
-console.log($scope.ID);
+console.log($scope.ID+"  :i am here");
 
 });
 
