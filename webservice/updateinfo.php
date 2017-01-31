@@ -13,7 +13,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 
 
-    $sql="select * from Update_Tab where Ticket_ID='".$id."'";
+    $sql="select * from Update_Tab where TicketId='".$id."'";
     //echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
