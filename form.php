@@ -362,14 +362,6 @@ td
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
   </div>
     </td><td>
-<div class="form-group">
-    <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
-     <select class="form-control selectpicker" name="tcategory">
-
-  <option ng-repeat="task in tasks" value="{{task.Category}}">{{task.Category}}</option>
-</select>
-  </div></td><td>
 <div class="form-group" >
     <label for="exampleInputEmail1">Select if waithing for User response<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
