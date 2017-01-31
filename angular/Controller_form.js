@@ -34,7 +34,7 @@ app.controller("update",function($scope,$interval,$http,servicecall){
 
 
 //console.log($scope.ID +"  :i am here");
-$interval(callApi, 1000);
+$interval(callApi, 30000);
 
   function callApi(){
     $scope.date = new Date();
