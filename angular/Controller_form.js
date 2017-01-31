@@ -34,16 +34,16 @@ app.controller("update",function($scope,$interval,$http,servicecall){
 
 
 //console.log($scope.ID +"  :i am here");
-$interval(callApi, 30000);
+//$interval(callApi, 30000);
 
-  function callApi(){
+ // function callApi(){
     $scope.date = new Date();
     $http.get("https://apps.continuserve.com/webservice/updateinfo.php?ID="+$scope.ID).then(function(response){
      	//$scope.load2='false';
       $scope.updates=response.data;
 
     });
- }
+  //}
 
 });
 

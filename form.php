@@ -437,14 +437,14 @@ td
   <h4>Update History</h4>
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-controller="update" ng-init="ID='<?php Echo $ID;?>'">
   <div class="panel panel-info" ng-repeat="update in updates">
-    <div class="panel-heading" role="tab" id="{{update.UID}}">
+    <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{update.UID}}" aria-expanded="true" aria-controls="collapseOne">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
   <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: Shadab Khan [DateTime:20/01/2017 10:30 pm]
         </a>
       </h4>
     </div>
-    <div id="{{update.UID}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="{{update.UID}}">
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
         {{update.Comments}}
       </div>
