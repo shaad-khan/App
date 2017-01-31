@@ -334,9 +334,11 @@ td
 <td>
 
 <div class="form-group">
-    <label for="exampleInputEmail1">CreatedBy <span class="glyphicon glyphicon-info-sign"></span></label></td><td>
-    <input type="hidden" value="{{items[0].Creator}}" name="creator"/>
-    <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Creator}}" disabled>
+    <label for="exampleInputEmail1">Shift <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+     <select class="form-control" name="schedule">
+  <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
+</select>
   </div>
   </td>
   <td>
