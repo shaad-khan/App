@@ -368,6 +368,21 @@ td
   </td>
 
   </tr>
+  <tr>
+<td>
+<div class="form-group" >
+    <label for="exampleInputEmail1">Select if waithing for User response<span class="glyphicon glyphicon-info-sign
+"></span></label></td><td>
+
+  <td style="position:relative;left: -285px;">
+  <div class="material-switch pull-right">
+                            <input id="someSwitchOptionSuccess" name="AUI" type="checkbox"/>
+                            <label for="someSwitchOptionSuccess" class="label-success"></label>
+                        </div>
+
+  </td>
+
+    </tr>
 <tr>
   <td>
 <div class="form-group" >
