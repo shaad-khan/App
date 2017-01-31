@@ -1,9 +1,5 @@
 app.controller("Ticket",function($scope,$routeParams,$http,$interval){
-  $http.get("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
-	
-		$scope.results=response.data;
   
-	});
 	(function () {
 //$scope.load='true';
 	}());
