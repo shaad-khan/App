@@ -9,6 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
    <script src="https://apps.continuserve.com/angular/Contoller_form.js"></script>
+   <script src="angular/Controller_form.js"></script>
   <?php
   session_start();
 
