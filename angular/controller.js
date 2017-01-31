@@ -15,7 +15,7 @@ app.controller("Ticket",function($scope,$routeParams,$http,$interval){
 	  if (window.focus) {newwindow.focus()}
 	  return false;
 	};
-var ticketapi=$interval(statuscheck, 8000);
+var ticketapi=$interval(statuscheck, 5000);
 var name=$routeParams.email;
 var type=$routeParams.type;
 function statuscheck() {
