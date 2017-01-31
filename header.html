@@ -1,37 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="continuity">
-<?php
-session_start();
-if(!$_SESSION["user"])
-  {
-    header('Location:https://apps.continuserve.com/');
-  }
 
-  include("db.php");
-$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
-$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-$c="";
-$c2="";
-
-date_default_timezone_set('Asia/Kolkata');
-                  $d=date('m/d/y H:i:s');;
- $sql2 = "select count(*) as c from dbo.Continuity where Status like '%pending%' and Comments like '' and (DATEDIFF(day,Weekend, '$d') > 0 or DATEDIFF(day,Weekend, '$d') = 0) and (Wflag=0 or Wflag=1) and Checklist_flag=0 and Assign_team like '%L3%'";
-$result2=$conn->query($sql2);
-//while($row=$result->fetch())
-//echo $sql2."<br>";
- while($row2=$result2->fetch())
-{
-  $c=$row2['c'];
-}
-$sql2 = "select count(*) as c from dbo.Continuity where Status like '%pending%' and Comments like '' and (DATEDIFF(day,Weekend, '$d') > 0 or DATEDIFF(day,Weekend, '$d') = 0) and Checklist_flag=1";
-$result2=$conn->query($sql2);
-//while($row=$result->fetch())
-//echo $sql2;
- while($row2=$result2->fetch())
-{
-  $c2=$row2['c'];
-}
-?>
   <head>
    <!-- <meta http-equiv="refresh" content="20" />-->
     <meta charset="utf-8">
@@ -135,12 +104,9 @@ element.style {
                 <ul class="nav top-menu" >
                     <!-- settings start -->
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#" title='<?php echo "There are $c2 unworked pending checklists";?>' >
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#" title='' >
                             <i class="fa fa-tasks"></i>
-                            <span class="badge bg-theme"><?php
-
-                            echo $c2;
-                            ?>
+                            <span class="badge bg-theme">
 
 
 
@@ -151,46 +117,13 @@ element.style {
                         <ul class="dropdown-menu extended tasks-bar" style="height: 400px; overflow: auto" >
                             <div class="notify-arrow notify-arrow-green" ></div>
                             <li>
-                                <p class="green">You have <?php
-
-                            echo $c2;
-                            ?> pending Checklist tasks</p>
+                                <p class="green"></p>
                             </li>
-                            <?php
-                            $sql2 = "select * from dbo.Continuity where Status like '%pending%' and (DATEDIFF(day,Weekend, '$d') > 0 or DATEDIFF(day,Weekend, '$d') = 0) and Checklist_flag=1 ORDER BY ID DESC";
-$result2=$conn->query($sql2);
-//while($row=$result->fetch())
-//echo $sql2;
- while($row2=$result2->fetch())
-{
-
-?>
+                           
                             <li >
                                 <a href="#">
                                    <div class="task-info" >
-                                        <div class="desc" ><span style='font-size:9px'><?php
-                                        $string = explode(' ', $row2['Message']);
-    if (empty($string) == false) {
-        $string = array_chunk($string, 5);
-        $string = $string[0];
-    }
-    $string = implode(' ', $string);
-   // return $string;
-
-
-
-                                        echo  $string."     [".$row2['Client']."]";?></span></div>
-                                       <!-- <div class="percent">40%</div>-->
-                                        <?php
-                                       if($row2['Comments']=="")
-                                       {
-                                        echo "<img src='assets/img/initiated.png'/>";
-                                      }
-                                      else
-                                      {
-                                      echo "<img src='assets/img/working.png'/>";
-                                    }
-                                    ?>
+                                        <div class="desc" ><span style='font-size:9px'>
                                     </div>
                                    <!-- <div class="progress progress-striped">
                                         <!--<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
@@ -200,8 +133,7 @@ $result2=$conn->query($sql2);
                                     </div>-->
                                 </a>
                             </li>
-                            <?php
-                          }?>
+                           
                             <!--<li>
                                 <a href="index.html#">
                                     <div class="task-info">
@@ -251,52 +183,21 @@ $result2=$conn->query($sql2);
                     <li id="header_inbox_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#" title='<?php echo "There are $c unworked pending issues";?> '>
                             <i class="fa fa-envelope-o"></i>
-                            <span class="badge bg-theme"><?php
-                            echo $c;
-                            ?></span>
+                            <span class="badge bg-theme">
+                        </span>
                         </a>
                         <ul class="dropdown-menu extended inbox" style="height: 400px; overflow: auto">
                             <div class="notify-arrow notify-arrow-green"></div>
                             <li>
-                                <p class="green">You have <?php echo $c." ";?> pending Tasks</p>
+                                <p class="green"></p>
                             </li>
- <?php
-                            $sql2 = "select *  from dbo.Continuity where Status like '%pending%' and (DATEDIFF(day,Weekend, '$d') > 0 or DATEDIFF(day,Weekend, '$d') = 0) and (Wflag=0 or Wflag=1) and Checklist_flag=0 and Assign_team like '%L3%' ORDER BY ID DESC";
-
-$result2=$conn->query($sql2);
-//while($row=$result->fetch())
-//echo $sql2;
- while($row2=$result2->fetch())
-{
-
-?>
+ 
 
 <!---------------------------------------------------------------------------------------------->
  <li >
                                 <a href="#">
                                    <div class="task-info" >
-                                        <div class="desc" ><span style='font-size:9px'><?php
-                                        $string = explode(' ', $row2['Message']);
-    if (empty($string) == false) {
-        $string = array_chunk($string, 5);
-        $string = $string[0];
-    }
-    $string = implode(' ', $string);
-   // return $string;
-
-
-
-                                        echo  $string."     [".$row2['Client']."]";?></span></div>
-                                       <!-- <div class="percent">40%</div>-->
-                                        <?php
-                                       if($row2['Comments']=="")
-                                       {
-                                        echo "<img src='assets/img/initiated.png'/>";
-                                      }
-                                      else
-                                      {
-                                      echo "<img src='assets/img/working.png'/>";
-                                    }
+                                        <div class="desc" ><span style='font-size:9px'>
                                     ?>
                                     </div>
                                    <!-- <div class="progress progress-striped">
@@ -308,10 +209,7 @@ $result2=$conn->query($sql2);
                                 </a>
                             </li>
 
-<?php
 
-}
-?>
 
 
 
@@ -372,18 +270,7 @@ $result2=$conn->query($sql2);
                      <li id="header_inbox_bar2" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#" title='Notice'>
                             <i class="fa fa-envelope-o"></i>
-                            <span class="badge bg-theme"><?php
-                           $sql2 = "select Count(*) as c from dbo.Notice where Team like '%L3%'" ;//where Status like '%pending%' and (DATEDIFF(day,Weekend, '$d') > 0 or DATEDIFF(day,Weekend, '$d') = 0) and (Wflag=0 or Wflag=1) and Checklist_flag=0 and Assign_team like '%L3%' ORDER BY ID DESC";
-$nc=0;
-$result2=$conn->query($sql2);
-//while($row=$result->fetch())
-//echo $sql2;
- while($row2=$result2->fetch())
-{
-    $nc=$row2['c'];
-}
-echo $nc;
-                            ?></span>
+                            <span class="badge bg-theme"></span>
                         </a>
                     </li>
                     <!-- inbox dropdown end -->
@@ -408,26 +295,8 @@ echo $nc;
               <ul class="sidebar-menu" id="nav-accordion">
 
                   <p class="centered"><a href="#">
-                    <?php
-                    if($_SESSION["user"]=="shadab.k")
-                    {
-
-                   echo "<img src='assets/img/shaad.jpg' class='img-circle' width='60'></a></p>";
-                 }
-                 else
-                 {
-                  echo "<img src='assets/img/user.png' class='img-circle' width='60'></a></p>";
-                 }
-                 ?></p>
-                  <h5 class="centered"><?php echo $_SESSION["user"];
-
- if($_SESSION['admin']==1)
-                    {
-                      echo "  (Admin)";
-                    }
-
-
-                  ?></h5>
+                  </p>
+                  <h5 class="centered"></h5>
 
                  <!-- <li class="mt">
                       <a href="index.html">
@@ -456,13 +325,8 @@ echo $nc;
                       <ul class="sub">
                           <li><a  href="home.php">Today's Pending Tasks</a></li>
                           <li><a  href="alerticket.php">TrackServe Alert Tickets</a></li>
-                 <?php
-                 if($_SESSION['admin']==1)
-                    {?>
-                <li><a  href="admin.php">Resolved ticket list</a></li>
-
-               <?php
-           }?>
+                 
+                
 
                           <li><a  href="userapp.php">Tasks Pending For User Confirmation</a></li>
                           <li><a  href="approval.php">Tasks Pending For Approval</a></li>
@@ -492,13 +356,9 @@ echo $nc;
                             <li><a  href="home.php?chk=1&status=1" onclick="myFunction1()">pending</a></li>
                             <li><a  href="home.php?chk=1&status=0" onclick="myFunction1()">Closed</a></li>
                            </ul>
-<?php
-                           if($_SESSION['admin']==1)
-                           {?>
+
                            <li><a  href="notice_create.php">Add_Notice</a></li>
-                          <?php
-                           }
-                           ?>
+                        
                            <li><a  href="Notice_view.php">View_Notice</a></li>
                            <!-- <li><a  href="gallery.php">Video_Gallery</a></li>-->
                       </ul>
