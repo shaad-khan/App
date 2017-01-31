@@ -124,7 +124,7 @@ app.controller("table_count",function($scope,$http,$interval){
    vm.Total = 0;
 
  var tableapi= $interval(function(){
-   if(!$scope.results)
+   if(!$scope.items)
   {
 $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
   console.log("inetval call for ticket count");
