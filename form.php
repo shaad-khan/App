@@ -135,11 +135,16 @@ td
 
     <div class="form-group">
     <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
+"></span></label></td><td ng-if="items[0].Client==''">
     
-    <select class="form-control" name="client" >
+    <select class="form-control" name="client">
   <option ng-repeat="list in lists" value="{{list.Client_name}}">{{list.Client_name}}</option>
 </select>
+  </div>
+  </td>
+  <td ng-if="items[0].Client!=''">
+     <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Client}}" disabled>
+    
   </div>
   </td>
 </tr>
