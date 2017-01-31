@@ -439,12 +439,12 @@ td
   <div class="panel panel-info" ng-repeat="update in updates">
     <div class="panel-heading" role="tab" id="{{update.UID}}">
       <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{update.UID}}" aria-expanded="true" aria-controls="{{update.UID}}">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{update.UID}}" aria-expanded="true" aria-controls="collapseOne">
   <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: Shadab Khan [DateTime:20/01/2017 10:30 pm]
         </a>
       </h4>
     </div>
-    <div id="{{update.UID}}" class="panel-{{update.UID}} {{update.UID}} in" role="tabpanel" aria-labelledby="{{update.UID}}">
+    <div id="{{update.UID}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="{{update.UID}}">
       <div class="panel-body">
         {{update.Comments}}
       </div>
