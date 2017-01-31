@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="continuity">
+<?php
+session_start();
+if(!$_SESSION["user"])
+  {
+    header('Location:https://apps.continuserve.com/');
+  }
 
+  include("db.php");
+$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+$c="";
+$c2="";
+
+date_default_timezone_set('Asia/Kolkata');
+                  $d=date('m/d/y H:i:s');;
+ $sql2 = "select count(*) as c from dbo.Continuity where Status like '%pending%' and Comments like '' and (DATEDIFF(day,Weekend, '$d') > 0 or DATEDIFF(day,Weekend, '$d') = 0) and (Wflag=0 or Wflag=1) and Checklist_flag=0 and Assign_team like '%L3%'";
+$result2=$conn->query($sql2);
+//while($row=$result->fetch())
+//echo $sql2."<br>";
+ while($row2=$result2->fetch())
+{
+  $c=$row2['c'];
+}
+$sql2 = "select count(*) as c from dbo.Continuity where Status like '%pending%' and Comments like '' and (DATEDIFF(day,Weekend, '$d') > 0 or DATEDIFF(day,Weekend, '$d') = 0) and Checklist_flag=1";
+$result2=$conn->query($sql2);
+//while($row=$result->fetch())
+//echo $sql2;
+ while($row2=$result2->fetch())
+{
+  $c2=$row2['c'];
+}
+?>
   <head>
    <!-- <meta http-equiv="refresh" content="20" />-->
     <meta charset="utf-8">
@@ -23,7 +54,7 @@ function myFunction1() {
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-        <script src="app.js"></script>
+        <script src="angular/app.js"></script>
 
             <script src="angular/controller.js"></script>
     <!-- Custom styles for this Continuitylate -->
@@ -104,9 +135,12 @@ element.style {
                 <ul class="nav top-menu" >
                     <!-- settings start -->
                     <li class="dropdown">
-                        <a data-toggle="dropdown" class="dropdown-toggle" href="#" title='' >
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#" title='<?php echo "There are $c2 unworked pending checklists";?>' >
                             <i class="fa fa-tasks"></i>
-                            <span class="badge bg-theme">
+                            <span class="badge bg-theme"><?php
+
+                            echo $c2;
+                            ?>
 
 
 
@@ -117,13 +151,46 @@ element.style {
                         <ul class="dropdown-menu extended tasks-bar" style="height: 400px; overflow: auto" >
                             <div class="notify-arrow notify-arrow-green" ></div>
                             <li>
-                                <p class="green"></p>
+                                <p class="green">You have <?php
+
+                            echo $c2;
+                            ?> pending Checklist tasks</p>
                             </li>
-                           
+                            <?php
+                            $sql2 = "select * from dbo.Continuity where Status like '%pending%' and (DATEDIFF(day,Weekend, '$d') > 0 or DATEDIFF(day,Weekend, '$d') = 0) and Checklist_flag=1 ORDER BY ID DESC";
+$result2=$conn->query($sql2);
+//while($row=$result->fetch())
+//echo $sql2;
+ while($row2=$result2->fetch())
+{
+
+?>
                             <li >
                                 <a href="#">
                                    <div class="task-info" >
-                                        <div class="desc" ><span style='font-size:9px'>
+                                        <div class="desc" ><span style='font-size:9px'><?php
+                                        $string = explode(' ', $row2['Message']);
+    if (empty($string) == false) {
+        $string = array_chunk($string, 5);
+        $string = $string[0];
+    }
+    $string = implode(' ', $string);
+   // return $string;
+
+
+
+                                        echo  $string."     [".$row2['Client']."]";?></span></div>
+                                       <!-- <div class="percent">40%</div>-->
+                                        <?php
+                                       if($row2['Comments']=="")
+                                       {
+                                        echo "<img src='assets/img/initiated.png'/>";
+                                      }
+                                      else
+                                      {
+                                      echo "<img src='assets/img/working.png'/>";
+                                    }
+                                    ?>
                                     </div>
                                    <!-- <div class="progress progress-striped">
                                         <!--<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
@@ -133,7 +200,8 @@ element.style {
                                     </div>-->
                                 </a>
                             </li>
-                           
+                            <?php
+                          }?>
                             <!--<li>
                                 <a href="index.html#">
                                     <div class="task-info">
@@ -183,21 +251,52 @@ element.style {
                     <li id="header_inbox_bar" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#" title='<?php echo "There are $c unworked pending issues";?> '>
                             <i class="fa fa-envelope-o"></i>
-                            <span class="badge bg-theme">
-                        </span>
+                            <span class="badge bg-theme"><?php
+                            echo $c;
+                            ?></span>
                         </a>
                         <ul class="dropdown-menu extended inbox" style="height: 400px; overflow: auto">
                             <div class="notify-arrow notify-arrow-green"></div>
                             <li>
-                                <p class="green"></p>
+                                <p class="green">You have <?php echo $c." ";?> pending Tasks</p>
                             </li>
- 
+ <?php
+                            $sql2 = "select *  from dbo.Continuity where Status like '%pending%' and (DATEDIFF(day,Weekend, '$d') > 0 or DATEDIFF(day,Weekend, '$d') = 0) and (Wflag=0 or Wflag=1) and Checklist_flag=0 and Assign_team like '%L3%' ORDER BY ID DESC";
+
+$result2=$conn->query($sql2);
+//while($row=$result->fetch())
+//echo $sql2;
+ while($row2=$result2->fetch())
+{
+
+?>
 
 <!---------------------------------------------------------------------------------------------->
  <li >
                                 <a href="#">
                                    <div class="task-info" >
-                                        <div class="desc" ><span style='font-size:9px'>
+                                        <div class="desc" ><span style='font-size:9px'><?php
+                                        $string = explode(' ', $row2['Message']);
+    if (empty($string) == false) {
+        $string = array_chunk($string, 5);
+        $string = $string[0];
+    }
+    $string = implode(' ', $string);
+   // return $string;
+
+
+
+                                        echo  $string."     [".$row2['Client']."]";?></span></div>
+                                       <!-- <div class="percent">40%</div>-->
+                                        <?php
+                                       if($row2['Comments']=="")
+                                       {
+                                        echo "<img src='assets/img/initiated.png'/>";
+                                      }
+                                      else
+                                      {
+                                      echo "<img src='assets/img/working.png'/>";
+                                    }
                                     ?>
                                     </div>
                                    <!-- <div class="progress progress-striped">
@@ -209,7 +308,10 @@ element.style {
                                 </a>
                             </li>
 
+<?php
 
+}
+?>
 
 
 
@@ -270,7 +372,18 @@ element.style {
                      <li id="header_inbox_bar2" class="dropdown">
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#" title='Notice'>
                             <i class="fa fa-envelope-o"></i>
-                            <span class="badge bg-theme"></span>
+                            <span class="badge bg-theme"><?php
+                           $sql2 = "select Count(*) as c from dbo.Notice where Team like '%L3%'" ;//where Status like '%pending%' and (DATEDIFF(day,Weekend, '$d') > 0 or DATEDIFF(day,Weekend, '$d') = 0) and (Wflag=0 or Wflag=1) and Checklist_flag=0 and Assign_team like '%L3%' ORDER BY ID DESC";
+$nc=0;
+$result2=$conn->query($sql2);
+//while($row=$result->fetch())
+//echo $sql2;
+ while($row2=$result2->fetch())
+{
+    $nc=$row2['c'];
+}
+echo $nc;
+                            ?></span>
                         </a>
                     </li>
                     <!-- inbox dropdown end -->
@@ -295,8 +408,26 @@ element.style {
               <ul class="sidebar-menu" id="nav-accordion">
 
                   <p class="centered"><a href="#">
-                  </p>
-                  <h5 class="centered"></h5>
+                    <?php
+                    if($_SESSION["user"]=="shadab.k")
+                    {
+
+                   echo "<img src='assets/img/shaad.jpg' class='img-circle' width='60'></a></p>";
+                 }
+                 else
+                 {
+                  echo "<img src='assets/img/user.png' class='img-circle' width='60'></a></p>";
+                 }
+                 ?></p>
+                  <h5 class="centered"><?php echo $_SESSION["user"];
+
+ if($_SESSION['admin']==1)
+                    {
+                      echo "  (Admin)";
+                    }
+
+
+                  ?></h5>
 
                  <!-- <li class="mt">
                       <a href="index.html">
@@ -325,8 +456,13 @@ element.style {
                       <ul class="sub">
                           <li><a  href="home.php">Today's Pending Tasks</a></li>
                           <li><a  href="alerticket.php">TrackServe Alert Tickets</a></li>
-                 
-                
+                 <?php
+                 if($_SESSION['admin']==1)
+                    {?>
+                <li><a  href="admin.php">Resolved ticket list</a></li>
+
+               <?php
+           }?>
 
                           <li><a  href="userapp.php">Tasks Pending For User Confirmation</a></li>
                           <li><a  href="approval.php">Tasks Pending For Approval</a></li>
@@ -356,9 +492,13 @@ element.style {
                             <li><a  href="home.php?chk=1&status=1" onclick="myFunction1()">pending</a></li>
                             <li><a  href="home.php?chk=1&status=0" onclick="myFunction1()">Closed</a></li>
                            </ul>
-
+<?php
+                           if($_SESSION['admin']==1)
+                           {?>
                            <li><a  href="notice_create.php">Add_Notice</a></li>
-                        
+                          <?php
+                           }
+                           ?>
                            <li><a  href="Notice_view.php">View_Notice</a></li>
                            <!-- <li><a  href="gallery.php">Video_Gallery</a></li>-->
                       </ul>
@@ -408,207 +548,3 @@ element.style {
               <!-- sidebar menu end-->
           </div>
       </aside>
-
-
- <section id="main-content">
-          <section class="wrapper">
-<div ng-view>
-
-</div>
-</section>
-</section>
-
-
-
-   <footer class="site-footer">
-          <div class="text-center">
-              2016 - Continuity
-              <a href="home.php#" class="go-top">
-                  <i class="fa fa-angle-up"></i>
-              </a>
-          </div>
-      </footer>
-      <!--footer end-->
-  </section>
-<!---------------------------------------------   -->
-<script language="javascript" type="text/javascript">
-<!--
-function popitup(url) {
-  newwindow=window.open(url,'name','height=200,width=450');
-  if (window.focus) {newwindow.focus()}
-  return false;
-}
-function popitup2(url) {
-  newwindow=window.open(url,'name','height=400,width=600');
-  if (window.focus) {newwindow.focus()}
-  return false;
-}
-/*function popitup3(url) {
-  newwindow=window.open(url,'name','height=600,width=1100');
-  if (window.focus) {newwindow.focus()}
-  return false;
-}*/
-function popitup4(url) {
-  newwindow=window.open(url,'name','height=600,width=900');
-  if (window.focus) {newwindow.focus()}
-  return false;
-}
-// -->
-</script>
-<script src="dateresource/jquery.js"></script>
-<script src="dateresource/jquery.datetimepicker.js"></script>
-<script>/*
-window.onerror = function(errorMsg) {
-  $('#console').html($('#console').html()+'<br>'+errorMsg)
-}*/
-$('#datetimepicker').datetimepicker({
-dayOfWeekStart : 1,
-lang:'en',
-disabledDates:['1986/01/08','1986/01/09','1986/01/10'],
-startDate:  '1986/01/05'
-});
-$('#datetimepicker').datetimepicker({value:'2015/04/15 05:03',step:10});
-
-$('.some_class').datetimepicker();
-
-$('#default_datetimepicker').datetimepicker({
-  formatTime:'H:i',
-  formatDate:'d.m.Y',
-  defaultDate:'8.12.1986', // it's my birthday
-  defaultTime:'10:00',
-  timepickerScrollbar:false
-});
-
-$('#datetimepicker10').datetimepicker({
-  step:5,
-  inline:true
-});
-$('#datetimepicker_mask').datetimepicker({
-  mask:'9999/19/39 29:59'
-});
-
-$('#datetimepicker1').datetimepicker({
-  datepicker:false,
-  format:'H:i',
-  step:5
-});
-$('#datetimepicker2').datetimepicker({
-  yearOffset:222,
-  lang:'ch',
-  timepicker:false,
-  format:'d/m/Y',
-  formatDate:'Y/m/d',
-  minDate:'-1970/01/02', // yesterday is minimum date
-  maxDate:'+1970/01/02' // and tommorow is maximum date calendar
-});
-$('#datetimepicker3').datetimepicker({
-  inline:true
-});
-$('#datetimepicker4').datetimepicker();
-$('#open').click(function(){
-  $('#datetimepicker4').datetimepicker('show');
-});
-$('#close').click(function(){
-  $('#datetimepicker4').datetimepicker('hide');
-});
-$('#reset').click(function(){
-  $('#datetimepicker4').datetimepicker('reset');
-});
-$('#datetimepicker5').datetimepicker({
-  datepicker:false,
-  allowTimes:['12:00','13:00','15:00','17:00','17:05','17:20','19:00','20:00'],
-  step:5
-});
-$('#datetimepicker6').datetimepicker();
-$('#destroy').click(function(){
-  if( $('#datetimepicker6').data('xdsoft_datetimepicker') ){
-    $('#datetimepicker6').datetimepicker('destroy');
-    this.value = 'create';
-  }else{
-    $('#datetimepicker6').datetimepicker();
-    this.value = 'destroy';
-  }
-});
-var logic = function( currentDateTime ){
-  if( currentDateTime.getDay()==6 ){
-    this.setOptions({
-      minTime:'11:00'
-    });
-  }else
-    this.setOptions({
-      minTime:'8:00'
-    });
-};
-$('#datetimepicker7').datetimepicker({
-  onChangeDateTime:logic,
-  onShow:logic
-});
-$('#datetimepicker8').datetimepicker({
-  onGenerate:function( ct ){
-    $(this).find('.xdsoft_date')
-      .toggleClass('xdsoft_disabled');
-  },
-  minDate:'-1970/01/2',
-  maxDate:'+1970/01/2',
-  timepicker:false
-});
-$('#datetimepicker9').datetimepicker({
-  onGenerate:function( ct ){
-    $(this).find('.xdsoft_date.xdsoft_weekend')
-      .addClass('xdsoft_disabled');
-  },
-  weekends:['01.01.2014','02.01.2014','03.01.2014','04.01.2014','05.01.2014','06.01.2014'],
-  timepicker:false
-});
-var dateToDisable = new Date();
-  dateToDisable.setDate(dateToDisable.getDate() + 2);
-$('#datetimepicker11').datetimepicker({
-  beforeShowDay: function(date) {
-    if (date.getMonth() == dateToDisable.getMonth() && date.getDate() == dateToDisable.getDate()) {
-      return [false, ""]
-    }
-
-    return [true, ""];
-  }
-});
-$('#datetimepicker12').datetimepicker({
-  beforeShowDay: function(date) {
-    if (date.getMonth() == dateToDisable.getMonth() && date.getDate() == dateToDisable.getDate()) {
-      return [true, "custom-date-style"];
-    }
-
-    return [true, ""];
-  }
-});
-$('#datetimepicker_dark').datetimepicker({theme:'dark'})
-
-
-</script>
-    <!-- js placed at the end of the document so the pages load faster -->
-    <!-- sumoselect->
-   <!-- <script src="assets/js/jquery.js"></script>-->
-
-
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
-
-
-    <!--common script for all pages-->
-    <script src="assets/js/common-scripts.js"></script>
-
-    <!--script for this page-->
-
- <!-- <script>
-      //custom select box
-
-      $(function(){
-          $('select.styled').customSelect();
-      });
-
-  </script>-->
-
-  </body>
-</html>
-

@@ -13,7 +13,7 @@ app.controller("Ticket",function($scope,$routeParams,$http,$interval){
 $interval(statuscheck, 1000);
 var name=$routeParams.email;
 var type=$routeParams.type;
-function statuscheck() {
+var ticketapi=function statuscheck() {
 	//alert("https://apps.continuserve.com/continuity/App/webservice/status.php?name="+name+"&type="+type);
 	$http.get("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
 	$scope.load='false';
@@ -25,7 +25,16 @@ function statuscheck() {
 //$scope.name="shaad";
 //$scope.type=$routeParams.Type;
 
+$scope.$on('$destroy', function () { 
+  
+  
+  if (angular.isDefined(ticketapi)) {
+    console.log("i am here he he he he");
+            $interval.cancel(ticketapi);
+            ticketapi = undefined;
+          }
 
+ });
 
 });
 
