@@ -10,7 +10,7 @@ app.controller("Ticket",function($scope,$routeParams,$http,$interval){
 	  if (window.focus) {newwindow.focus()}
 	  return false;
 	};
-var ticketapi=$interval(statuscheck, 1000);
+var ticketapi=$interval(statuscheck, 3000);
 var name=$routeParams.email;
 var type=$routeParams.type;
 function statuscheck() {
@@ -126,7 +126,7 @@ $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(funct
      	$scope.load2='false';
       $scope.items=response.data;
     });  
- }, 1500)
+ }, 3000)
   
 
 
