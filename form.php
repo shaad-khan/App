@@ -261,8 +261,8 @@ td
        <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
-<textarea class="form-control" rows="3" cols="30" name="comments" placeholder="Comments" required></textarea>
+"></span></label></td><td colspan="8">
+<textarea class="form-control" rows="3" cols="116" name="comments" placeholder="Comments" required></textarea>
     
   </div>
       
