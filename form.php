@@ -439,7 +439,7 @@ td
   <div class="panel panel-info" ng-repeat="update in updates">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
   <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: {{update.UpdatedBy}} [DateTime: {{UpdateTime}}]
         </a>
       </h4>
