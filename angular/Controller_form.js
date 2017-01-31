@@ -30,6 +30,15 @@ $interval(callApi, 1000);
 
 });
 
+app.controller("Form_data",function($scope,$interval,$http,servicecall){
+
+
+console.log($scope.ID);
+
+});
+
+
+
 app.factory("servicecall",function($http){
 var fac={};
 fac.serv=function($url)

@@ -435,7 +435,7 @@ td
   <div class="row clear">
  <div class="col-xs-12">
   <h4>Update History</h4>
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-controller="update">
   <div class="panel panel-info">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
