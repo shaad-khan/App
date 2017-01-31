@@ -95,6 +95,12 @@ td
     background: inherit;
     left: 20px;
 }
+.tab2>td
+{
+  padding-left:1px;
+
+}
+
   </style>
 </head>
 <body>
@@ -206,7 +212,7 @@ td
       </tr>
       </table>
       <hr/>
-      <table>
+      <table class="tab2">
         <tr>
    <td>
     <div class="form-group">
