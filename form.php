@@ -446,7 +446,7 @@ td
     </div>
     <div id="collapse{{update.UID}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{update.UID}}">
       <div class="panel-body">
-        {{update.Comments}}
+        {{update.Comments}} {{update.UpdateBy}}
       </div>
     </div>
   </div>
