@@ -14,12 +14,15 @@ var ticketapi=$interval(statuscheck, 3000);
 var name=$routeParams.email;
 var type=$routeParams.type;
 function statuscheck() {
+  if(!$scope.results)
+  {
 	//alert("https://apps.continuserve.com/continuity/App/webservice/status.php?name="+name+"&type="+type);
 	$http.get("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
 	$scope.load='false';
 		$scope.results=response.data;
-
+  
 	});
+  }
 };
 //$scope.email=$routeParams.email;
 //$scope.name="shaad";
@@ -121,11 +124,14 @@ app.controller("table_count",function($scope,$http,$interval){
    vm.Total = 0;
 
  var tableapi= $interval(function(){
+   if(!$scope.results)
+  {
 $http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
   console.log("inetval call for ticket count");
      	$scope.load2='false';
       $scope.items=response.data;
-    });  
+    }); 
+  } 
  }, 3000)
   
 
