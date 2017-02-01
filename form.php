@@ -451,7 +451,7 @@ td
   <div class="panel panel-info" ng-repeat="update in updates">
     <div class="panel-heading" role="tab" id="heading{{update.UID}}">
       <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{update.UID}}" aria-expanded="true" aria-controls="collapse{{update.UID}}">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{update.UID}}" aria-expanded="false" aria-controls="collapse{{update.UID}}">
   <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: {{update.UpdateBy}} [DateTime: {{update.UpdateTime}} ]        <span class="glyphicon glyphicon-flag" ng-if="update.AUI_flag==1" style="color:red"></span>
         </a>
       </h4>
