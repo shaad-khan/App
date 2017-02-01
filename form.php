@@ -492,7 +492,7 @@ td
                                     <?php
 //$lk= "/automation/resource/{{ID}}.txt";
 $iparr = split ("CSTKT17", $ID); 
-echo $iparr;
+echo $iparr[1];
 $lk="automation/resource/50063/50063.txt";
 $myfile = fopen("$lk", "r") or die("New Ticket");
 
