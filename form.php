@@ -496,7 +496,7 @@ td
   <div class="panel-heading"></div>
   <div class="panel-body">
     
-                                  <textarea name="email_chain" cols="80" rows="16" id="pw" value="" placeholder="comments" data-theme="a">
+                                 
                                     <?php
 //$lk= "/automation/resource/{{ID}}.txt";
 $iparr = split ("CSTKT17", $ID); 
@@ -513,7 +513,7 @@ fclose($myfile);
 
 ?>
 
-                                </textarea>
+                              
 
                                
   </div>
