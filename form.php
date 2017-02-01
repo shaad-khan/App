@@ -487,7 +487,7 @@ td
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      
+      <div class="panel panel-info">
                                   <textarea name="email_chain" cols="155" rows="16" id="pw" value="" placeholder="comments" data-theme="a">
                                     <?php
 //$lk= "/automation/resource/{{ID}}.txt";
@@ -506,6 +506,8 @@ fclose($myfile);
 ?>
 
                                 </textarea>
+
+                                </div>
     </div>
   </div>
 </div>
