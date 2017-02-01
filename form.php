@@ -489,11 +489,12 @@ td
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h4 class="modal-title" id="myModalLabel">Email Chain</h4>
+      <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-envelope
+">   Email Chain</span></h4>
       </div>
      
      <div class="panel panel-default">
-  <div class="panel-heading"></div>
+  
   <div class="panel-body">
     
                                   <textarea class="form-control" rows="30" cols="100" name="comments" placeholder="Comments" disabled>
@@ -517,7 +518,7 @@ fclose($myfile);
 
                                
   </div>
-  <div class="panel-footer"></div>
+  
 </div>
     </div>
   </div>
