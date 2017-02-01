@@ -50,6 +50,7 @@
     </tr>
     </thead>
   <tbody>
+    
 
     <tr ng-repeat="item in items" ng-class="$index % 2 > 0 ? 'active':''">
       <td ng-init="email=item.Email.split('@')[0]"><span class="glyphicon glyphicon-user" style="font-size:20px;color:black;padding:5px;"></span>  {{email}}</td><td ng-init="table_count.Total=table_count.Total+item.classify"><a href="#!/ticket/{{email}}/Classify">{{item.Classify}}</a></td>
