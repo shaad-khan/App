@@ -460,6 +460,10 @@ td
     <div id="collapse{{update.UID}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{update.UID}}">
       <div class="panel-body">
         {{update.Comments}} 
+
+        <p ng-if="update.Resolver">Resolver Name : [ {{update.Resolver}}]</p>
+        <p>Status :[ {{update.Status}} ]</p>
+        <p>Update Was Done in Shift: [{{update.Shift}}]
       </div>
     </div>
   </div>
