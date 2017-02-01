@@ -80,9 +80,12 @@ if($status=='Classify')
 {
 $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env' where Ticket_ID='$TID'";
 }
- else if(($assigned_To==$user_session) and ($status=='WIP'))
+ else if(($status=='WIP') and ($AUI=='on') )
     {
-    $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='WIP',Updatetime='$utime' where Ticket_ID='$TID'";
+$fstatus='AUI';
+$aui_flag=1;
+        $fresolver=$user_session;
+   // $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
     }
    /* else if(($assigned_To==$user_session) and ($status=='WIP') and ($release==0))
     {
