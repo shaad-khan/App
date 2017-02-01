@@ -491,6 +491,8 @@ td
                                   <textarea name="email_chain" cols="155" rows="16" id="pw" value="" placeholder="comments" data-theme="a">
                                     <?php
 //$lk= "/automation/resource/{{ID}}.txt";
+$iparr = split ("CSTKT17", $ID); 
+echo $iparr;
 $lk="automation/resource/50063/50063.txt";
 $myfile = fopen("$lk", "r") or die("New Ticket");
 
