@@ -489,15 +489,15 @@ td
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon-envelope
-">  EmailChain</span></h4>
+      <h4 class="modal-title" id="myModalLabel">EmailChain <span class="glyphicon glyphicon-envelope
+"> </span></h4>
       </div>
      
      <div class="panel panel-default">
   
   <div class="panel-body">
     
-                                  <textarea class="form-control" rows="30" cols="100" name="comments" placeholder="Comments" disabled>
+                                  <textarea class="form-control" rows="20" cols="100" name="comments" placeholder="Comments" disabled>
                                     <?php
 //$lk= "/automation/resource/{{ID}}.txt";
 $iparr = split ("CSTKT17", $ID); 
