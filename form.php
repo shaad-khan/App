@@ -492,11 +492,11 @@ td
       <h4 class="modal-title" id="myModalLabel">Email Chain</h4>
       </div>
      
-     <div class="panel panel-info">
+     <div class="panel panel-default">
   <div class="panel-heading"></div>
   <div class="panel-body">
     
-                                  <textarea class="form-control" rows="5" cols="100" name="comments" placeholder="Comments" disabled>
+                                  <textarea class="form-control" rows="30" cols="100" name="comments" placeholder="Comments" disabled>
                                     <?php
 //$lk= "/automation/resource/{{ID}}.txt";
 $iparr = split ("CSTKT17", $ID); 
