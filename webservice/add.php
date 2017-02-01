@@ -124,6 +124,15 @@ date_default_timezone_set('Asia/Kolkata');
 									$fdate = date('m-d-y H:i:s');
 $fresolver=$user_session;
 }
+else if(($tab_status=='AUI'))
+{
+$fstatus='Review';
+//$aui_flag=1;
+date_default_timezone_set('Asia/Kolkata');
+									//$date = date('Ymd H:i:s');
+									$fdate = date('m-d-y H:i:s');
+//$fresolver=$user_session;
+}
 else if(($tab_status=='Review'))
 {
     $fstatus='Doc';
