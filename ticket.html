@@ -12,7 +12,7 @@
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
 
-                                   Task Report      <a href="#/" style="color:aqua;font-size:18px;"><span class="glyphicon glyphicon-home"></a></span></div><div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
+                                   Task Report      <a href="#/" style="color:aqua;font-size:18px;"><span class="glyphicon glyphicon-home"></a></span><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button></div><div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
        <div class="panel-body" ng-controller="Ticket">
          <table class="table"><tr>
@@ -48,3 +48,14 @@
 </div>
 </div>
 </div>
+<!--/*************************************** Modal Code*************************************/-->
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
+
+
