@@ -29,10 +29,10 @@
    </tr>
 
 
-    <tr ng-repeat="res in results" ng-class="res.Id">
+    <tr ng-repeat="res in results" ng-class="res.Id % 2 ? 'info':''">
 <td><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
-<td>{{res.Id}} {{res.Client}}</td>
+<td>{{res.Client}}</td>
 <td>{{res.Project}}</td>
 <td>{{res.Tdiscription}}</td>
 <td>{{res.Status}}</td>
