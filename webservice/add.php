@@ -80,7 +80,7 @@ if($status=='Classify')
 {
 $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env' where Ticket_ID='$TID'";
 }
- else if(($assigned_To==$user_session) and ($status=='WIP') and ($release==1))
+ else if(($assigned_To==$user_session) and ($status=='WIP'))
     {
     $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='WIP',Updatetime='$utime' where Ticket_ID='$TID'";
     }
@@ -112,7 +112,7 @@ if(($tab_status=='WIP') and $AUI!='on' )
 }
 else if(($tab_status=='WIP') and $AUI=='on' )
 {
-$fstatus='WIP';
+$fstatus='AUI';
 $aui_flag=1;
 date_default_timezone_set('Asia/Kolkata');
 									//$date = date('Ymd H:i:s');
