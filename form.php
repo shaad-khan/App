@@ -489,10 +489,11 @@ td
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <h4 class="modal-title" id="myModalLabel">This is a test</h4>
+      <h4 class="modal-title" id="myModalLabel"></h4>
       </div>
      
      <div class="panel panel-default">
+  <div class="panel-heading">Email Chain</div>
   <div class="panel-body">
     
                                   <textarea name="email_chain" cols="50" rows="16" id="pw" value="" placeholder="comments" data-theme="a">
