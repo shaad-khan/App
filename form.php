@@ -488,7 +488,7 @@ td
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="panel panel-info">
-                                  <textarea name="email_chain" cols="155" rows="16" id="pw" value="" placeholder="comments" data-theme="a">
+                                  <textarea name="email_chain" cols="50" rows="16" id="pw" value="" placeholder="comments" data-theme="a">
                                     <?php
 //$lk= "/automation/resource/{{ID}}.txt";
 $iparr = split ("CSTKT17", $ID); 
