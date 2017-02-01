@@ -495,7 +495,7 @@ $iparr = split ("CSTKT17", $ID);
 $tid=$iparr[1];
 
 $lk="automation/resource/$tid/$tid.txt";
-echo $lk;
+//echo $lk;
 $myfile = fopen("$lk", "r") or die("New Ticket");
 
 echo fread($myfile,filesize("$lk"));
