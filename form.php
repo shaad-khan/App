@@ -108,7 +108,7 @@ td
 <div class="container">
 <br>
   <div class="panel panel-primary" ng-controller="Form_data">
-    <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Edit Form For Ticket ID: {{ID}}</div>
+    <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Edit Form For Ticket ID: {{ID}}  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button></div>
     <div class="panel-body" ><form class="form-inline" action="webservice/add.php"> 
 
 <table>
@@ -482,5 +482,13 @@ td
   </div>
 </div>
 
+<!--/*************************************** Modal Code*************************************/-->
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
 </body>
 </html>
