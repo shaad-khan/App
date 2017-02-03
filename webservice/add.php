@@ -152,7 +152,7 @@ else if(($tab_status=='Review'))
 else if($tab_status=='Doc')
 {
     $fstatus='Closure';
-    echo $fstatus;
+    //echo $fstatus;
 }
 
 if(($fstatus!='') and ($fresolver!=''))
@@ -163,7 +163,7 @@ $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatu
 else if($fstatus!='')
 {
 $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
-echo $Master_sql;
+//echo $Master_sql;
 }
 
 
@@ -186,7 +186,7 @@ $update_table_sql="insert into Update_Tab values('$TID','$fstatus','$utime','$un
 //echo $update_table_sql;
 $conn->query($update_table_sql);
 }
-/*echo "<script> alert('Updated successfully');
+echo "<script> alert('Updated successfully');
      setTimeout(function(){window.close()}, 1000);
-     </script>";*/
+     </script>";
 ?>
