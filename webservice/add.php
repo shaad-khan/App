@@ -149,9 +149,10 @@ else if(($tab_status=='Review'))
     $fstatus='Doc';
 }
 
-else if(($tab_status=='Doc'))
+else if($tab_status=='Doc')
 {
     $fstatus='Closure';
+    echo $fstatus;
 }
 
 if(($fstatus!='') and ($fresolver!=''))
@@ -185,7 +186,7 @@ $update_table_sql="insert into Update_Tab values('$TID','$fstatus','$utime','$un
 //echo $update_table_sql;
 $conn->query($update_table_sql);
 }
-echo "<script> alert('Updated successfully');
+/*echo "<script> alert('Updated successfully');
      setTimeout(function(){window.close()}, 1000);
-     </script>";
+     </script>";*/
 ?>
