@@ -4,7 +4,7 @@ $username = $_POST["uid"];
 $password = $_POST["pass"];
 $host = "https://continuserve1.sharepoint.com/";
  //$x="";
- if($username=="s.benny@continuserve.com")
+ if($username=="sbenny@continuserve.com")
  {
    $username2="stanly.benny@continuserve.com";
 
