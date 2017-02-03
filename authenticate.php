@@ -11,6 +11,11 @@ if($username=="stanly.benny@continuserve.com")
    $username2="sbenny@continuserve.com";
 
  }
+ if($username=="rajesh.radhakrishnan@continuserve.com")
+ {
+   $username2="rradhakrishnan@continuserve.com";
+
+ }
 //echo $authCookies[0];
 //echo "<br/>".$authCookies[1];
  //header("Location: https://continuserve1.sharepoint.com/_forms/default.aspx?wa=wsignin1.0&".$token);
