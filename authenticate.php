@@ -6,9 +6,15 @@ $host = "https://continuserve1.sharepoint.com/";
  //$x="";
 $token = getSecurityToken($username, $password, $host);
 $authCookies = getAuthCookies($token, $host);
+if($username=="s.benny@continuserve.com")
+ {
+   $username="stanly.benny@continuserve.com";
+
+ }
 //echo $authCookies[0];
 //echo "<br/>".$authCookies[1];
  //header("Location: https://continuserve1.sharepoint.com/_forms/default.aspx?wa=wsignin1.0&".$token);
+ 
 $pieces = explode("@", $username);
 if($authCookies)
 {
