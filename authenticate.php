@@ -14,11 +14,15 @@ $host = "https://continuserve1.sharepoint.com/";
    $username2="rradhakrishnan@continuserve.com";
 
  }
-if($username2!='')
+
+ if($username2!='')
  {
-   $username=$username2;
+$token = getSecurityToken($username2, $password, $host);
  }
-$token = getSecurityToken($username, $password, $host);
+ else
+ {
+   $token = getSecurityToken($username2, $password, $host);
+ }
 $authCookies = getAuthCookies($token, $host);
 
 
