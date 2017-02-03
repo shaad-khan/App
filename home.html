@@ -1,27 +1,4 @@
-<div class="row mt">
-  <div class="col-md-12">
-<div class="content-panel" id="reload">
 
-
-                         <div class="row">
-
-                            <div class="col-xs-6" ng-controller="clientgraph">
-
-                           <div id="donutchart" style="width: 400px; height:250px;"></div>
-                           </div>
-
-                        <div class="col-xs-6" ng-controller="taskgraph">
-
-                           <div id="barchart_values" style="width: 400px; height:250px;"></div>
-
-                         </div>
-                         </div>
-
-                          </div>
-
-
-</div>
-</div>
 <div class="row mt" ng-controller="table_count">
   <div class="col-md-12">
 <div class="content-panel" id="reload"  >
@@ -50,7 +27,7 @@
     </tr>
     </thead>
   <tbody>
-    
+
 
     <tr ng-repeat="item in items" ng-class="$index % 2 > 0 ? 'active':''">
       <td ng-init="email=item.Email.split('@')[0]"><span class="glyphicon glyphicon-user" style="font-size:20px;color:black;padding:5px;"></span>  {{email}}</td><td ng-init="table_count.Total=table_count.Total+item.classify"><a href="#!/ticket/{{email}}/Classify">{{item.Classify}}</a></td>
@@ -102,4 +79,28 @@
                           </div>
 
 
+</div>
+<div class="row mt">
+  <div class="col-md-12">
+<div class="content-panel" id="reload">
+
+
+                         <div class="row">
+
+                            <div class="col-xs-6" ng-controller="clientgraph">
+
+                           <div id="donutchart" style="width: 400px; height:250px;"></div>
+                           </div>
+
+                        <div class="col-xs-6" ng-controller="taskgraph">
+
+                           <div id="barchart_values" style="width: 400px; height:250px;"></div>
+
+                         </div>
+                         </div>
+
+                          </div>
+
+
+</div>
 </div>
