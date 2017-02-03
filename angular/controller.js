@@ -20,7 +20,7 @@ function statuscheck() {
 	$http.get("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
 	$scope.load='false';
 		$scope.results=response.data;
-console.log(response.data.lengt);
+console.log(response.data.length);
   
 	});
   
