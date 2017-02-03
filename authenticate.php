@@ -21,7 +21,7 @@ $token = getSecurityToken($username2, $password, $host);
  }
  else
  {
-   $token = getSecurityToken($username2, $password, $host);
+   $token = getSecurityToken($username, $password, $host);
  }
 $authCookies = getAuthCookies($token, $host);
 
