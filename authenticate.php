@@ -6,9 +6,9 @@ $host = "https://continuserve1.sharepoint.com/";
  //$x="";
 $token = getSecurityToken($username, $password, $host);
 $authCookies = getAuthCookies($token, $host);
-if($username=="s.benny@continuserve.com")
+if($username=="stanly.benny@continuserve.com")
  {
-   $username="stanly.benny@continuserve.com";
+   $username2="sbenny@continuserve.com";
 
  }
 //echo $authCookies[0];
@@ -108,6 +108,10 @@ curl_setopt ($ch, CURLOPT_SSL_VERIFYPEER, 0);
  * @return string
  * @throws Exception
  */
+ if($username2!='')
+ {
+   $username=$username2;
+ }
 function getSecurityToken($username, $password, $endpoint) {
      
     $url = "https://login.microsoftonline.com/extSTS.srf";
