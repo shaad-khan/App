@@ -4,43 +4,61 @@ $username = $_POST["uid"];
 $password = $_POST["pass"];
 $host = "https://continuserve1.sharepoint.com/";
  //$x="";
- if($username=="stanly.benny@continuserve.com")
+ if($username=="s.benny@continuserve.com")
  {
-   $username2="sbenny@continuserve.com";
+   $username2="stanly.benny@continuserve.com";
 
  }
- if($username=="rajesh.radhakrishnan@continuserve.com")
+ if($username=="rradhakrishnan@continuserve.com")
  {
-   $username2="rradhakrishnan@continuserve.com";
+   $username2="rajesh.radhakrishnan@continuserve.com";
 
  }
-
+/*
  if($username2!='')
  {
 $token = getSecurityToken($username2, $password, $host);
+//$username=$username2;
  }
  else
  {
    $token = getSecurityToken($username, $password, $host);
- }
+ }*/
+  $token = getSecurityToken($username, $password, $host);
 $authCookies = getAuthCookies($token, $host);
 
 
 //echo $authCookies[0];
 //echo "<br/>".$authCookies[1];
  //header("Location: https://continuserve1.sharepoint.com/_forms/default.aspx?wa=wsignin1.0&".$token);
- 
-$pieces = explode("@", $username);
+ if($username2!='')
+ {
+$pieces = explode("@", $username2);
+ }
 if($authCookies)
 {
   $_SESSION["user"] = $pieces[0];
-  $_SESSION["email_id"]=$username;
+  if($username2!='')
+ {
+  $_SESSION["email_id"]=$username2;
+ }
+ else
+ {
+    $_SESSION["email_id"]=$username;
+ }
   $_SESSION["pass"] =$password;
   include("db.php"); 
   $f=0;
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-$sql="select * from User_prof where Status=1 and Email like'".$username."'";
+ if($username2!='')
+ {
+$sql="select * from User_prof where Status=1 and Email like'".$username2."'";
+ }
+ else
+ {
+   $sql="select * from User_prof where Status=1 and Email like'".$username."'";
+ }
  $result=$conn->query($sql);
 //while($row=$result->fetch())
  $team="";
