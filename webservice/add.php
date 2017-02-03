@@ -91,8 +91,8 @@ $aui_flag=1;
     }
 else if(($status=='WIP') and ($AUI!='on') )
     {
-$fstatus='AUI';
-$aui_flag=1;
+$fstatus='WIP';
+//$aui_flag=1;
         //$fresolver=$user_session;
         $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
 
