@@ -148,7 +148,7 @@ else if(($tab_status=='Review'))
 {
     $fstatus='Doc';
 }
-else if(($tab_status=='Documentation'))
+else if(($tab_status=='Doc'))
 {
     $fstatus='Closure';
 }
