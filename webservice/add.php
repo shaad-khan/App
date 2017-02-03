@@ -162,7 +162,7 @@ $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatu
 else if($fstatus!='')
 {
 $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
-
+echo $Master_sql;
 }
 
 
