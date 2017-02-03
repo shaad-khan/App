@@ -35,6 +35,9 @@ $authCookies = getAuthCookies($token, $host);
  {
 $pieces = explode("@", $username2);
  }
+ else{
+   $pieces = explode("@", $username);
+ }
 if($authCookies)
 {
   $_SESSION["user"] = $pieces[0];
