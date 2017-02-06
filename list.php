@@ -124,8 +124,8 @@ td
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
 
-                                   Task Report   <div class="col-xs-2" align="right"><iput type="text" ng-model="fill"/></div>  <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
-                                   </div></div></div>
+                                   Task Report   <div class="col-xs-2" align="right"><input type="text" ng-model="fill"/></div>  <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
+                                   </div>
        <div class="panel-body" >
          <table class="table"><tr>
      <th>Ticket_ID</th>
