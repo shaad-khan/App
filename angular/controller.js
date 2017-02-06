@@ -172,7 +172,7 @@ service.serv("https://apps.continuserve.com/webservice/tcount.php").then(functio
       $scope.totals=response.data;
     }); 
   
- }, 2000)
+ }, 8000)
   
 
 
