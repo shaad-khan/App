@@ -241,6 +241,7 @@ $scope.search=function(text)
 {
 x=text;
 };
+console.log(x);
 $scope.pop=function(ID) {
 		var id=ID;
 		var url="list.php?param="+text;
