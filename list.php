@@ -48,7 +48,8 @@ td
 }
 .container
 {
-      width: 1119px;
+     width: 1287px;
+    padding: 20px;
 }
 
 .material-switch > input[type="checkbox"] {
