@@ -113,7 +113,7 @@ td
 <div class="container">
 <div class="row mt" ng-controller="Ticket">
    <div class="col-md-12">
- <div class="content-panel" id="reload" ng-init="param='<?php echo $param;?>'">
+ <div class="content-panel" id="reload" ng-init="param='total'">
 
 
                           <div class="row">
