@@ -178,7 +178,7 @@ service.serv("https://apps.continuserve.com/webservice/tcount.php").then(functio
 
 
 
-/*$scope.$on('$destroy', function () { 
+$scope.$on('$destroy', function () { 
   
   
   if (angular.isDefined(tableapi)) {
@@ -187,7 +187,7 @@ service.serv("https://apps.continuserve.com/webservice/tcount.php").then(functio
             tableapi = undefined;
           }
 
- });*/
+ });
 
 });
 
