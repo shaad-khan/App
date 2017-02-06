@@ -159,6 +159,22 @@ $scope.$on('$destroy', function () {
 app.controller("tcount",function($scope,service,$interval){
   //var vm = this;
    //vm.Total = 0;
+   $scope.showtkt=function($param){
+  if($param=='total')
+  {
+alert($param);
+  }
+  else if($param=='pending')
+  {
+alert($param);
+  }
+  else if($param=='close')
+  {
+alert($param);
+  }
+   
+   };
+
 service.serv("https://apps.continuserve.com/webservice/tcount.php").then(function(response){
   
      //	$scope.load2='false';

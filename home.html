@@ -1,11 +1,11 @@
 
-<div class="row"  ng-controller="tcount" style="margin-bottom:-400px">
+<div class="row mt"  ng-controller="tcount" style="margin-bottom:-400px">
   <div class="col-md-12">
 <div class="col-lg-4 col-md-4 col-sm-4 mb">
 						<div class="panel panel-info">
   <div class="panel-heading">Total no.of tickets</div>
   <div class="panel-body" align="center">
-    <button type="button" class="btn btn-info btn-circle btn-lg">{{totals[0].tcount}}</button>
+    <button type="button" class="btn btn-info btn-circle btn-lg" ng-click="showtkt('total')">{{totals[0].tcount}}</button>
 
   </div>
 </div>
@@ -14,7 +14,7 @@
 						<div class="panel panel-danger">
   <div class="panel-heading">Total no.of pending tickets</div>
   <div class="panel-body" align="center">
-   <button type="button" class="btn btn-danger btn-circle btn-lg"> {{totals[1].pcount}}</button>
+   <button type="button" class="btn btn-danger btn-circle btn-lg" ng-click="showtkt('pending')"> {{totals[1].pcount}}</button>
   </div>
 </div>
 						</div>
@@ -22,7 +22,7 @@
 						<div class="panel panel-success">
   <div class="panel-heading">Total no.of Closed tickets</div>
   <div class="panel-body" align="center">
-   <button type="button" class="btn btn-success btn-circle btn-lg"> {{totals[2].ccount}}</button>
+   <button type="button" class="btn btn-success btn-circle btn-lg" ng-click="showtkt('close')"> {{totals[2].ccount}}</button>
   </div>
 </div>
 						</div>
