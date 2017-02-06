@@ -159,14 +159,14 @@ $scope.$on('$destroy', function () {
 app.controller("tcount",function($scope,service2,$interval){
   //var vm = this;
    //vm.Total = 0;
-service.serv("https://apps.continuserve.com/webservice/tcount.php").then(function(response){
+service2.serv("https://apps.continuserve.com/webservice/tcount.php").then(function(response){
   
      //	$scope.load2='false';
       $scope.totals=response.data;
     }); 
  var tableapi= $interval(function(){
   
-service.serv().then(function(response){
+service2.serv().then(function(response){
   console.log("inetval call for total ticket count");
     // 	$scope.load2='false';
       $scope.totals=response.data;
