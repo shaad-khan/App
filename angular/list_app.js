@@ -1,31 +1,36 @@
 var app=angular.module("list_app",[]);
 
 app.controller("listc",function($scope,$interval,$http,servicecall){
-    
+    var param;
    
        $scope.$watch("testInput", function(){
-        console.log($scope.testInput);
+        param=$scope.testInput;
     });
 
-/*$interval(callApi, 8000);
+
+    //url=https://apps.continuserve.com/webservice/ticket_data.php
+
+
+
+$interval(callApi, 8000);
 
   function callApi(){
     $scope.date = new Date();
-    servicecall.serv("https://apps.continuserve.com/webservice/ticket_data.php?ID="+$scope.ID).then(function(response){
+    servicecall.serv("https://apps.continuserve.com/webservice/list_serv.php?param="+param).then(function(response){
      	//$scope.load2='false';
-      $scope.items=response.data;
+      $scope.results=response.data;
 
     });
- }*/
+ }
 
 
 });
 app.factory("servicecall",function($http){
 var fac={};
-fac.serv=function($url)
+fac.serv=function(url)
 {
-  console.log($url);
-return $http.get($url);
+  console.log(url);
+return $http.get(url);
 };
 
 return fac;
