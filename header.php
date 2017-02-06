@@ -415,10 +415,16 @@ echo $nc;
                   <li> <div class="col-xs-4" style="padding-top: 12px;"><div class="form-group" style="position:relative;left: -80px;">
     
     
-    <input type="Text" class="form-control" ng-model="fill" style="width:202px" placeholder="Filter Box"/><a href="#" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+    <input type="Text" class="form-control" ng-model="fill" style="width:202px" placeholder="Filter Box"/>
     
   </div> </li>
-   
+   <li> <div class="col-xs-2" style="padding-top: 12px;"><div class="form-group" style="position:relative;left: -80px;">
+    
+    
+ <a href="#" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+    
+  </div>
+    </li>
                     <li><a class="logout" href="logout.php">Logout</a></li>
               </ul>
             </div>
