@@ -156,17 +156,17 @@ $scope.$on('$destroy', function () {
 });
 /*-------------------------------------------------------------------------------*/
 
-app.controller("tcount",function($scope,service2,$interval){
+app.controller("tcount",function($scope,service,$interval){
   //var vm = this;
    //vm.Total = 0;
-service2.serv("https://apps.continuserve.com/webservice/tcount.php").then(function(response){
+service.serv("https://apps.continuserve.com/webservice/tcount.php").then(function(response){
   
      //	$scope.load2='false';
       $scope.totals=response.data;
     }); 
  var tableapi= $interval(function(){
   
-service2.serv().then(function(response){
+service.serv().then(function(response){
   console.log("inetval call for total ticket count");
     // 	$scope.load2='false';
       $scope.totals=response.data;
@@ -193,18 +193,6 @@ service2.serv().then(function(response){
 
 
 app.factory("service",function($http)
-{
-var fac={};
-fac.serv=function($url)
-{
-  //console.log($url);
-return $http.get($url);
-};
-
-return fac;
-
-});
-app.factory("service2",function($http)
 {
 var fac={};
 fac.serv=function($url)
