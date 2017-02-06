@@ -162,7 +162,12 @@ app.controller("tcount",function($scope,service,$interval){
    $scope.showtkt=function($param){
   if($param=='total')
   {
-alert($param);
+var url="list.php?param=total";
+	//	alert(url);
+	  newwindow=window.open(url,'name','height=600,width=1500');
+	  if (window.focus) {newwindow.focus()}
+	  return false;
+	
   }
   else if($param=='pending')
   {
