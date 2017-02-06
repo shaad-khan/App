@@ -1,9 +1,9 @@
 var app=angular.module("list_app",[]);
 
-app.controller("Ticket",function($scope,$interval,$http,servicecall){
+app.controller("listc",function($scope,$interval,$http,servicecall){
     
-    console.log($scope.param);
-    
+    console.log("param:"+$scope.p);
+
 /*$interval(callApi, 8000);
 
   function callApi(){
