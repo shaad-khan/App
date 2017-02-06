@@ -98,7 +98,14 @@ element.style {
   line-height: 1.33;
   border-radius: 35px;
 }
-
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
 /*
 .table-fixed {
   width: 100%;
