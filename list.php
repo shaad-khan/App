@@ -126,11 +126,11 @@ td
 
                                    Task Report   
                                    </div>
-                                   <div class="form-group">
+                                   <div class="form-group" style="inline-block:none;width=20px">
     
     
     <input type="Text" class="form-control" ng-model="fill"/>
-    <label for="exampleInputEmail1"> <span class="glyphicon glyphicon-info-sign"></span></label>
+    <label for="exampleInputEmail1"> <span class="glyphicon glyphicon-search-sign"></span></label>
   </div>
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
