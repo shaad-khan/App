@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="continuity_form">
+<html lang="en" ng-app="list_app">
 <head>
   <title>List Data</title>
   <meta charset="utf-8">
@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
    <script src="https://apps.continuserve.com/angular/Contoller_form.js"></script>
-   <script src="angular/Controller_form.js"></script>
+   <script src="angular/list_app.js"></script>
   <?php
   session_start();
 
@@ -113,7 +113,7 @@ td
 <div class="container">
 <div class="row mt" ng-controller="Ticket">
    <div class="col-md-12">
- <div class="content-panel" id="reload">
+ <div class="content-panel" id="reload" ng-init="param='<?php echo $param;?>'">
 
 
                           <div class="row">
@@ -122,9 +122,9 @@ td
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
 
-                                   Task Report      <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;"><span class="glyphicon glyphicon-home"></a></span></div><div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
+                                   Task Report    <img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
-       <div class="panel-body" ng-controller="Ticket">
+       <div class="panel-body" >
          <table class="table"><tr>
      <th>Ticket_ID</th>
      <th>Client</th>
