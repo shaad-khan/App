@@ -24,7 +24,7 @@ $interval(callApi, 8000);
   function callApi(){
     $scope.date = new Date();
     servicecall.serv("https://apps.continuserve.com/webservice/list_serv.php?param="+param).then(function(response){
-     	$scope.load2='false';
+     	$scope.load='false';
       $scope.results=response.data;
 
     });
