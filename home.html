@@ -1,15 +1,30 @@
 
-<div class="row mt" ng-controller="table_count">
+<div class="row mt"  ng-controller="tcount">
   <div class="col-md-12">
 <div class="col-lg-4 col-md-4 col-sm-4 mb">
 						<div class="panel panel-default">
   <div class="panel-heading">Total no.of Closed ticket</div>
-  <div class="panel-body" ng-controller="tcount">
+  <div class="panel-body">
     {{totals[0].tcount}}
   </div>
 </div>
 						</div>
-
+<div class="col-lg-4 col-md-4 col-sm-4 mb">
+						<div class="panel panel-default">
+  <div class="panel-heading">Total no.of Closed ticket</div>
+  <div class="panel-body">
+    {{totals[0].pcount}}
+  </div>
+</div>
+						</div>
+            <div class="col-lg-4 col-md-4 col-sm-4 mb">
+						<div class="panel panel-default">
+  <div class="panel-heading">Total no.of Closed ticket</div>
+  <div class="panel-body">
+    {{totals[0].ccount}}
+  </div>
+</div>
+						</div>
             </div>
             </div>
 
