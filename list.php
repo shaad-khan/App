@@ -130,7 +130,7 @@ td
     
     
     <input type="Text" class="form-control" ng-model="fill" style="width:202px"/>
-    <label for="exampleInputEmail1"> <span class="glyphicon glyphicon-search-sign"></span></label>
+    <label for="exampleInputEmail1"> <span class="glyphicon glyphicon-search"></span></label>
   </div>
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
