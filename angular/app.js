@@ -1,4 +1,4 @@
-var app=angular.module("continuity",["ngRoute"]);
+var app=angular.module("continuity",["ngRoute"],["angularModalService"]);
 
 app.config(function($routeProvider) {
     $routeProvider
