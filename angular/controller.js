@@ -156,23 +156,13 @@ $scope.$on('$destroy', function () {
 });
 /*-------------------------------------------------------------------------------*/
 
-app.controller("tcount",function($scope,service,$interval,ModalService){
+app.controller("tcount",function($scope,service,$interval){
   //var vm = this;
    //vm.Total = 0;
    $scope.showtkt=function($param){
   if($param=='total')
   {
-
-        ModalService.showModal({
-            templateUrl: 'ticket.html',
-            controller: "Ticket"
-        }).then(function(modal) {
-            modal.element.modal();
-            modal.close.then(function(result) {
-                $scope.message = "You said " + result;
-            });
-        });
-  
+alert($param);
   }
   else if($param=='pending')
   {
