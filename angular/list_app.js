@@ -5,7 +5,7 @@ app.controller("listc",function($scope,$interval,$http,servicecall){
    $scope.setparam=funtion(title)
    {
        $scope.p=title;
-   };
+   }
    console.log($scope.p);
 
 /*$interval(callApi, 8000);
