@@ -127,7 +127,7 @@ td
                                    Task Report </div><div class="col-xs-4"><div class="form-group">
     
     
-    <input type="Text" class="form-control" ng-model="fill" style="width:202px"/>
+    <p><input type="Text" class="form-control" ng-model="fill" style="width:202px"/><label for="exampleInputEmail1"> <span class="glyphicon glyphicon-search"></span></label></p>
     
   </div> 
                                    </div>
