@@ -3,7 +3,9 @@ var app=angular.module("list_app",[]);
 app.controller("listc",function($scope,$interval,$http,servicecall){
     
    
-      console.log($scope.testInput);
+       $scope.$watch("testInput", function(){
+        console.log($scope.testInput);
+    });
 
 /*$interval(callApi, 8000);
 
