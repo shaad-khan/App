@@ -124,7 +124,7 @@ td
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-2">
 
-                                   Task Report </div><div class="col-xs-4"><div class="form-group">
+                                   Task Report </div><div class="col-xs-4" align="right"><div class="form-group">
     
     
     <input type="Text" class="form-control" ng-model="fill" style="width:202px" placeholder="filter box"/>
