@@ -233,3 +233,51 @@ return $http.get($url);
 return fac;
 
 });
+
+
+app.controller("searchcontrol",function($scope,service,$interval){
+var x;
+$scope.search=function(text)
+{
+x=text;
+};
+$scope.pop=function(ID) {
+		var id=ID;
+		var url="list.php?param="+text;
+	//	alert(url);
+	  newwindow=window.open(url,'name','height=600,width=1500');
+	  if (window.focus) {newwindow.focus()}
+	  return false;
+	};
+
+/*service.serv("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
+  
+     	$scope.load2='false';
+      $scope.items=response.data;
+    }); 
+ var tableapi= $interval(function(){
+  
+service.serv("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
+  console.log("inetval call for ticket count");
+     	$scope.load2='false';
+      $scope.items=response.data;
+    }); 
+  
+ }, 8000)
+  
+
+
+
+
+$scope.$on('$destroy', function () { 
+  
+  
+  if (angular.isDefined(tableapi)) {
+    console.log("i am here he he he he");
+            $interval.cancel(tableapi);
+            tableapi = undefined;
+          }
+
+ });*/
+
+});

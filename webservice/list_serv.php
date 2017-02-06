@@ -20,9 +20,13 @@ else if($param=='pending')
 
     $sql="select * from Master_Ticket_Tab where Status!='Closure' order by UpdateTime desc";
 }
-else
+else if($param=='close')
 {
      $sql="select * from Master_Ticket_Tab where Status='Closure' order by UpdateTime desc";
+}
+else
+{
+    $sql="select * from Master_Ticket_Tab where Status='$param' order by UpdateTime desc"; 
 }
     //echo $sql;
     
