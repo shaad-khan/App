@@ -154,3 +154,53 @@ $scope.$on('$destroy', function () {
  });
 
 });
+/*-------------------------------------------------------------------------------*/
+
+app.controller("tcount",function($scope,service,$interval){
+  //var vm = this;
+   //vm.Total = 0;
+service.serv().then(function(response){
+  
+     //	$scope.load2='false';
+      $scope.totals=response.data;
+    }); 
+ var tableapi= $interval(function(){
+  
+service.serv().then(function(response){
+  console.log("inetval call for ticket count");
+    // 	$scope.load2='false';
+      $scope.totals=response.data;
+    }); 
+  
+ }, 8000)
+  
+
+
+
+
+$scope.$on('$destroy', function () { 
+  
+  
+  if (angular.isDefined(tableapi)) {
+    //console.log("i am here he he he he");
+            $interval.cancel(tableapi);
+            tableapi = undefined;
+          }
+
+ });
+
+});
+
+
+app.factory("service",function($http)
+{
+var fac={};
+fac.serv=function()
+{
+  //console.log($url);
+return $http.get("https://apps.continuserve.com/webservice/tcount.php");
+};
+
+return fac;
+
+});
