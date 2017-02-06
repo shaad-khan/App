@@ -1,4 +1,4 @@
-app.controller("Ticket",function($scope,$routeParams,$http,$interval){
+app.controller("Ticket",function($scope,$routeParams,service,$interval){
   
 	(function () {
 //$scope.load='true';
@@ -17,7 +17,7 @@ var type=$routeParams.type;
 function statuscheck() {
  
 	//alert("https://apps.continuserve.com/continuity/App/webservice/status.php?name="+name+"&type="+type);
-	$http.get("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
+service.serv("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
 	$scope.load='false';
 		$scope.results=response.data;
 console.log(response.data.length);
@@ -120,17 +120,17 @@ function callAtInterval2(){
 };
 });
 
-app.controller("table_count",function($scope,$http,$interval){
+app.controller("table_count",function($scope,service,$interval){
   var vm = this;
    vm.Total = 0;
-$http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
+service.serv("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
   
      	$scope.load2='false';
       $scope.items=response.data;
     }); 
  var tableapi= $interval(function(){
   
-$http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
+service.serv("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
   console.log("inetval call for ticket count");
      	$scope.load2='false';
       $scope.items=response.data;
@@ -159,7 +159,7 @@ $scope.$on('$destroy', function () {
 app.controller("tcount",function($scope,service,$interval){
   //var vm = this;
    //vm.Total = 0;
-service.serv().then(function(response){
+service.serv("https://apps.continuserve.com/webservice/tcount.php").then(function(response){
   
      //	$scope.load2='false';
       $scope.totals=response.data;
@@ -195,10 +195,10 @@ $scope.$on('$destroy', function () {
 app.factory("service",function($http)
 {
 var fac={};
-fac.serv=function()
+fac.serv=function($url)
 {
   //console.log($url);
-return $http.get("https://apps.continuserve.com/webservice/tcount.php");
+return $http.get($url);
 };
 
 return fac;
