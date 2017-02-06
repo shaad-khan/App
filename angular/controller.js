@@ -172,7 +172,7 @@ service.serv().then(function(response){
       $scope.totals=response.data;
     }); 
   
- }, 8000)
+ }, 2000)
   
 
 
