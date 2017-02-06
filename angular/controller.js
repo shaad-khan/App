@@ -167,7 +167,7 @@ service.serv("https://apps.continuserve.com/webservice/tcount.php").then(functio
  var tableapi= $interval(function(){
   
 service.serv().then(function(response){
-  console.log("inetval call for ticket count");
+  console.log("inetval call for total ticket count");
     // 	$scope.load2='false';
       $scope.totals=response.data;
     }); 
