@@ -6,7 +6,14 @@ app.controller("listc",function($scope,$interval,$http,servicecall){
        $scope.$watch("testInput", function(){
         param=$scope.testInput;
     });
-
+	$scope.pop=function(ID) {
+		var id=ID;
+		var url="form.php?ID="+id;
+	//	alert(url);
+	  newwindow=window.open(url,'name','height=600,width=1500');
+	  if (window.focus) {newwindow.focus()}
+	  return false;
+	};
 
     //url=https://apps.continuserve.com/webservice/ticket_data.php
 
