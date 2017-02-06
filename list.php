@@ -167,10 +167,7 @@ td
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
 
-                                   Task Report   <div class="search">
-<input type="text" class="form-control input-sm" maxlength="64" placeholder="Search" />
- <button type="submit" class="btn btn-primary btn-sm">Search</button>
-</div>   
+                                   Task Report   
                                    </div>
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
