@@ -110,10 +110,10 @@ td
 </head>
 <body>
 
-<div class="container">
-<div class="row mt" ng-controller="listc">
+<div class="container"  ng-controller="listc" ng-init="p='total'">
+<div class="row mt">
    <div class="col-md-12">
- <div class="content-panel" id="reload" ng-init="p='total'">
+ <div class="content-panel" id="reload" >
 
 
                           <div class="row">
