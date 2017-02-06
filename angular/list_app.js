@@ -3,6 +3,7 @@ var app=angular.module("list_app",[]);
 app.controller("Ticket",function($scope,$interval,$http,servicecall){
     
     console.log($scope.param);
+    
 /*$interval(callApi, 8000);
 
   function callApi(){
