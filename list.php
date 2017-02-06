@@ -111,7 +111,7 @@ td
 <body>
 
 <div class="container">
-<div class="row mt" ng-controller="Ticket">
+<div class="row mt" ng-controller="listc">
    <div class="col-md-12">
  <div class="content-panel" id="reload" ng-init="p='total'">
 
