@@ -128,7 +128,7 @@ td
     
     
     <input type="Text" class="form-control" ng-model="fill" style="width:202px"/>
-    <label for="exampleInputEmail1"> <span class="glyphicon glyphicon-search"></span></label>
+    
   </div> 
                                    </div>
                                    
