@@ -111,7 +111,7 @@ td
 <body>
 
 <div class="container"  ng-controller="listc"  ng-init="myText='Hello World!'">
-
+{{myText}}
 </div>
 </body>
 </html>
