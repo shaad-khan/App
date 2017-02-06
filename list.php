@@ -132,7 +132,7 @@ td
   </div> 
                                    </div>
                                    
-                                    <div class="col-xs-4" style="position:relative;right: 100%;"ng-hide="load"><img src="assets/ajax-loader.gif"/>
+                                    <div class="col-xs-4" style="position:relative;right: 300px;" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
        <div class="panel-body" >
          <table class="table"><tr>
