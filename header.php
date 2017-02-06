@@ -409,6 +409,13 @@ echo $nc;
                 <!--  notification end -->
             </div>
             <div class="top-menu">
+<div class="col-xs-4"><div class="form-group" style="position:relative;left: -80px;">
+    
+    
+    <input type="Text" class="form-control" ng-model="fill" style="width:202px" placeholder="Filter Box"/>
+    
+  </div> 
+
               <ul class="nav pull-right top-menu">
                     <li><a class="logout" href="logout.php">Logout</a></li>
               </ul>
