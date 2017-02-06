@@ -110,8 +110,9 @@ td
 </head>
 <body>
 
-<div class="container"  ng-controller="listc" ng-init="setparam('<?php echo $param;?>')">
+<div class="container"  ng-controller="listc" >
 <div class="row mt">
+    <input type="hidden" id="testInput" ng-model="testInput" ng-init="testInput='<?php echo $param;?>'" />
    <div class="col-md-12">
  <div class="content-panel" id="reload" >
 
