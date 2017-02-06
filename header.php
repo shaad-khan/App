@@ -418,6 +418,8 @@ echo $nc;
     <input type="Text" class="form-control" ng-model="fill" style="width:202px" placeholder="Filter Box"/>
     
   </div> </li>
+   <li> <a href="#" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+    </li>
                     <li><a class="logout" href="logout.php">Logout</a></li>
               </ul>
             </div>
