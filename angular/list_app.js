@@ -2,7 +2,7 @@ var app=angular.module("list_app",[]);
 
 app.controller("listc",function($scope,$interval,$http,servicecall){
     
-    console.log("param:"+$scope.p);
+    console.log("param:"+$scope.myText);
 
 /*$interval(callApi, 8000);
 
