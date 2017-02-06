@@ -171,11 +171,19 @@ var url="list.php?param=total";
   }
   else if($param=='pending')
   {
-alert($param);
+var url="list.php?param=pending";
+	//	alert(url);
+	  newwindow=window.open(url,'name','height=600,width=1500');
+	  if (window.focus) {newwindow.focus()}
+	  return false;
   }
   else if($param=='close')
   {
-alert($param);
+var url="list.php?param=close";
+	//	alert(url);
+	  newwindow=window.open(url,'name','height=600,width=1500');
+	  if (window.focus) {newwindow.focus()}
+	  return false;
   }
    
    };
