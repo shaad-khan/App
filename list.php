@@ -111,54 +111,7 @@ td
 <body>
 
 <div class="container"  ng-controller="listc" ng-init="p='total'">
-<div class="row mt">
-   <div class="col-md-12">
- <div class="content-panel" id="reload" >
 
-
-                          <div class="row">
-
-                             <div class="col-xs-12" style="padding-left:40px;padding-right:40px;">
-                               <div class="panel panel-primary">
-                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
-
-                                   Task Report    <img src="assets/ajax-loader.gif"/>
-                                   </div></div></div>
-       <div class="panel-body" >
-         <table class="table"><tr>
-     <th>Ticket_ID</th>
-     <th>Client</th>
-     <th>Project</th>
-     <th>Discription</th>
-     <th>Status</th>
-     <th>Creation_DateTime</th>
-     <th>Last_Update_DateTime</th>
-     <th>Creator</th>
-
-
-   </tr>
-
-
-    <tr ng-repeat="res in results" ng-class="$index % 2 > 0 ? 'active':''">
-<td><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
-</span> {{res.Ticket_ID}}</button></td>
-<td>{{res.Client}}</td>
-<td>{{res.Project}}</td>
-<td>{{res.Tdiscription}}</td>
-<td>{{res.Status}}</td>
-<td>{{res.Cdatetime}}</td>
-<td>{{res.Updatetime}}</td>
-<td>{{res.Creator}}</td>
-
-    </tr>
- </table
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 </div>
 </body>
 </html>
