@@ -124,14 +124,14 @@ td
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
 
-                                   Task Report   
-                                   </div>
-                                   <div class="form-group">
+                                   Task Report  <div class="form-group">
     
     
     <input type="Text" class="form-control" ng-model="fill" style="width:202px"/>
     <label for="exampleInputEmail1"> <span class="glyphicon glyphicon-search"></span></label>
-  </div>
+  </div> 
+                                   </div>
+                                   
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
        <div class="panel-body" >
