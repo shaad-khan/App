@@ -178,7 +178,7 @@ service.serv().then(function(response){
 
 
 
-$scope.$on('$destroy', function () { 
+/*$scope.$on('$destroy', function () { 
   
   
   if (angular.isDefined(tableapi)) {
@@ -187,7 +187,7 @@ $scope.$on('$destroy', function () {
             tableapi = undefined;
           }
 
- });
+ });*/
 
 });
 
