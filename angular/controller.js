@@ -156,7 +156,7 @@ $scope.$on('$destroy', function () {
 });
 /*-------------------------------------------------------------------------------*/
 
-app.controller("tcount",function($scope,service,$interval){
+app.controller("tcount",function($scope,service2,$interval){
   //var vm = this;
    //vm.Total = 0;
 service.serv("https://apps.continuserve.com/webservice/tcount.php").then(function(response){
@@ -193,6 +193,18 @@ service.serv().then(function(response){
 
 
 app.factory("service",function($http)
+{
+var fac={};
+fac.serv=function($url)
+{
+  //console.log($url);
+return $http.get($url);
+};
+
+return fac;
+
+});
+app.factory("service2",function($http)
 {
 var fac={};
 fac.serv=function($url)
