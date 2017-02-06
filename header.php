@@ -408,10 +408,10 @@ echo $nc;
                 </ul>
                 <!--  notification end -->
             </div>
-            <div class="top-menu">
+            <div class="top-menu" ng-controller="searchcontrol">
 
 
-              <ul class="nav pull-right top-menu">
+              <ul class="nav pull-right top-menu" >
                   <li> <div class="col-xs-4" style="padding-top: 12px;"><div class="form-group" style="position:relative;left: -80px;">
     
     
