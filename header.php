@@ -106,7 +106,7 @@ element.style {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 30px;
+  border-radius: 25px;
 }
 /*
 .table-fixed {
