@@ -10,7 +10,7 @@ app.controller("Ticket",function($scope,$routeParams,service,$interval,$location
 	  newwindow=window.open(url,'name','height=600,width=1500');
 	  if (window.focus) {newwindow.focus()}
 	  return false;
-    $location.path("#/");
+    $location.path("https://apps.continuserve.com");
 	};
 var ticketapi=$interval(statuscheck, 5000);
 var name=$routeParams.email;
