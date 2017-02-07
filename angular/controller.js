@@ -237,9 +237,9 @@ return fac;
 
 app.controller("searchcontrol",function($scope,service,$interval){
 var x;
-$scope.search=function(text)
+$scope.search=function()
 {
-var url="list.php?param="+text;
+var url="list.php?param=";
 		alert(url);
 	  newwindow=window.open(url,'name','height=600,width=1500');
 	  if (window.focus) {newwindow.focus()}
