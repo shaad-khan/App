@@ -415,7 +415,7 @@ echo $nc;
                   <li> <div class="col-xs-4" style="padding-top: 12px;"><div class="form-group" style="position:relative;left: -80px;">
     
     
-    <input type="Text" class="form-control" ng-model="fill" style="width:202px" placeholder="Filter Box"/>
+    <input type="Text" class="form-control" ng-model="fill" style="width:202px" placeholder="search Box"/>
     
   </div> </li>
    <li> <div class="col-xs-2" style="padding-top: 12px;"><div class="form-group" style="position:relative;left: -99px;">
