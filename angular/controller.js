@@ -227,9 +227,9 @@ $scope.search=function(text)
 {
 var url="list.php?param="+text;
 		alert(url);
-	 /* newwindow=window.open(url,'name','height=600,width=1500');
+	  newwindow=window.open(url,'name','height=600,width=1500');
 	  if (window.focus) {newwindow.focus()}
-	  return false;*/
+	  return false;
 };
 
 
