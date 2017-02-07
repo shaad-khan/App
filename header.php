@@ -421,7 +421,7 @@ echo $nc;
    <li> <div class="col-xs-2" style="padding-top: 21px;"><div class="form-group" style="position:relative;left: -80px;">
     
     
- <a href="#" style="text-decoration:none" ng-click="search(fill)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+ <button style="text-decoration:none" ng-click="search(fill)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
     
   </div>
     </li>
