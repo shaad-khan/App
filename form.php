@@ -501,11 +501,12 @@ fclose($myfile);
 <div class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-       <div class="modal-header">
+       <div class="modal-header"> <h4 class="modal-title" id="myModalLabel">Update History <span class="glyphicon glyphicon-envelope
+"> </span></h4>
          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
      </div> <div class="row clear">
  <div class="col-xs-12">
-  <h4>Update History</h4>
+  
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-controller="update" ng-init="ID='<?php Echo $ID;?>'">
   <div class="panel panel-info" ng-repeat="update in updates">
     <div class="panel-heading" role="tab" id="heading{{update.UID}}">
