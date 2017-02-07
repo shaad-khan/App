@@ -409,7 +409,11 @@ td
   <td>
 <div class="form-group" >
     <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
+"></span></label></td><td ng-if="items[0].Status=='Classify'">
+    <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" disabled>
+  </div>
+    </td>
+    <td ng-if="items[0].Status!='Classify'">
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
   </div>
     </td>
@@ -417,7 +421,11 @@ td
 <tr> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td colspan="8">
+"></span></label></td><td colspan="8" ng-if="items[0].Status=='Classify'" >
+<textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" disabled></textarea>
+    
+  </div> </td>
+  <td colspan="8" ng-if="items[0].Status!='Classify'" >
 <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" required></textarea>
     
   </div> </td>
