@@ -454,47 +454,7 @@ td
 
 
   </form> 
-  <div class="row clear">
- <div class="col-xs-12">
-  <h4>Update History</h4>
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-controller="update" ng-init="ID='<?php Echo $ID;?>'">
-  <div class="panel panel-info" ng-repeat="update in updates">
-    <div class="panel-heading" role="tab" id="heading{{update.UID}}">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{update.UID}}" aria-expanded="false" aria-controls="collapse{{update.UID}}">
-  <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: {{update.UpdateBy}} [DateTime: {{update.UpdateTime}} ]    [ <span class="glyphicon glyphicon-bookmark" style="color:green"></span><span style="color:green">Type Of Task Done:{{update.TaskName}}</span>  ]    <span class="glyphicon glyphicon-flag" ng-if="update.AUI_flag==1" style="color:red"></span>
-        </a>
-      </h4>
-    </div>
-    <div id="collapse{{update.UID}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{update.UID}}">
-      <div class="panel-body">
-        {{update.Comments}} 
-
-        <p ng-if="update.Resolver">Resolver Name : [ {{update.Resolver}}]</p>
-        <p>Status :[ {{update.Status}} ]</p>
-        <p>Update Was Done in Shift: [{{update.Shift}}]
-      </div>
-    </div>
-  </div>
  
-  </div>
-  <!--
-  <div class="row clear">
-  <div class="col-xs-3">Project <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-  <div class="col-xs-3">Updated By <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-  
-  </div>
-  <div class="row clear">
-  <div class="col-xs-3 ">Assigned To <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-  <div class="col-xs-3">Updated Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
-  
-  </div>
-  <div class="row clear">
-  <div class="col-xs-3">Assigned To <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
-  <div class="col-xs-3">Updated Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
-  </div>-->
-  </div>
-</div>
 
 <!--/*************************************** Modal Code*************************************/-->
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -541,7 +501,47 @@ fclose($myfile);
 <div class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      ...
+      <div class="row clear">
+ <div class="col-xs-12">
+  <h4>Update History</h4>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-controller="update" ng-init="ID='<?php Echo $ID;?>'">
+  <div class="panel panel-info" ng-repeat="update in updates">
+    <div class="panel-heading" role="tab" id="heading{{update.UID}}">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{update.UID}}" aria-expanded="false" aria-controls="collapse{{update.UID}}">
+  <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: {{update.UpdateBy}} [DateTime: {{update.UpdateTime}} ]    [ <span class="glyphicon glyphicon-bookmark" style="color:green"></span><span style="color:green">Type Of Task Done:{{update.TaskName}}</span>  ]    <span class="glyphicon glyphicon-flag" ng-if="update.AUI_flag==1" style="color:red"></span>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse{{update.UID}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{update.UID}}">
+      <div class="panel-body">
+        {{update.Comments}} 
+
+        <p ng-if="update.Resolver">Resolver Name : [ {{update.Resolver}}]</p>
+        <p>Status :[ {{update.Status}} ]</p>
+        <p>Update Was Done in Shift: [{{update.Shift}}]
+      </div>
+    </div>
+  </div>
+ 
+  </div>
+  <!--
+  <div class="row clear">
+  <div class="col-xs-3">Project <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
+  <div class="col-xs-3">Updated By <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
+  
+  </div>
+  <div class="row clear">
+  <div class="col-xs-3 ">Assigned To <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
+  <div class="col-xs-3">Updated Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
+  
+  </div>
+  <div class="row clear">
+  <div class="col-xs-3">Assigned To <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
+  <div class="col-xs-3">Updated Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
+  </div>-->
+  </div>
+</div>
     </div>
   </div>
 </div>
