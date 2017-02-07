@@ -239,17 +239,13 @@ app.controller("searchcontrol",function($scope,service,$interval){
 var x;
 $scope.search=function(text)
 {
-x=text;
-};
-console.log(x);
-$scope.pop=function(ID) {
-		var id=ID;
-		var url="list.php?param="+text;
+var url="list.php?param="+text;
 	//	alert(url);
 	  newwindow=window.open(url,'name','height=600,width=1500');
 	  if (window.focus) {newwindow.focus()}
 	  return false;
-	};
+};
+//console.log(x);
 
 /*service.serv("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
   
