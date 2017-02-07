@@ -423,7 +423,7 @@ echo $nc;
     
  <button type="button" class="btn btn-primary" ng-click="search(fill)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
     
-  </div>
+  </div>{{fill}}
     </li>
                     <li><a class="logout" href="logout.php">Logout</a></li>
               </ul>
