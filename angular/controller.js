@@ -1,4 +1,4 @@
-app.controller("Ticket",function($scope,$routeParams,service,$interval){
+app.controller("Ticket",function($scope,$routeParams,service,$interval,$location){
   
 	(function () {
 //$scope.load='true';
@@ -10,6 +10,7 @@ app.controller("Ticket",function($scope,$routeParams,service,$interval){
 	  newwindow=window.open(url,'name','height=600,width=1500');
 	  if (window.focus) {newwindow.focus()}
 	  return false;
+    $location.path("#/");
 	};
 var ticketapi=$interval(statuscheck, 5000);
 var name=$routeParams.email;
