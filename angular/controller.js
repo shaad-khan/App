@@ -4,7 +4,7 @@ app.controller("Ticket",function($scope,$routeParams,service,$interval,$location
 //$scope.load='true';
 	}());
 	$scope.pop=function(ID) {
-    $location.url("#!/");
+     window.location=("https://apps.continuserve.com/main.php#!/");
 		var id=ID;
 		var url="form.php?ID="+id;
 	//	alert(url);
