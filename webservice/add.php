@@ -187,9 +187,27 @@ if($fstatus=='')
 }
 $update_table_sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$freviewer','$fresolver','','$tcategory','',$aui_flag,'$comments')";
 //echo $update_table_sql;
+$f=1;
 $conn->query($update_table_sql);
+
+$tsql="select TimeTaken from Update_Tab where TicketId='$TID'";
+$result=$conn->query($tsql);
+while($row1=$result->fetch())
+{
+  $total=$total+$row1['TimeTaken'];
+  }
+ $s="Update Master_Ticket_Tab set TotalTime=$total where Ticket_ID='$TID'";
+$conn->query($s); 
 }
+if($f==1)
+{
 echo "<script> alert('Updated successfully');
      setTimeout(function(){window.close()}, 1000);
      </script>";
+}
+else{
+    echo "<script> alert('Updation failed');
+     setTimeout(function(){window.close()}, 1000);
+     </script>";
+}
 ?>
