@@ -197,6 +197,7 @@ while($row1=$result->fetch())
   $total=$total+$row1['TimeTaken'];
   }
  $s="Update Master_Ticket_Tab set Total_time=$total where Ticket_ID='$TID'";
+ 
 $conn->query($s); 
 }
 if($f2==1)
