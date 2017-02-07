@@ -237,13 +237,13 @@ return fac;
 
 app.controller("searchcontrol",function($scope,service,$interval){
 var x;
-$scope.search=function()
+$scope.search=function(text)
 {
-var url="list.php?param=";
+var url="list.php?param="+text;
 		alert(url);
-	  newwindow=window.open(url,'name','height=600,width=1500');
+	 /* newwindow=window.open(url,'name','height=600,width=1500');
 	  if (window.focus) {newwindow.focus()}
-	  return false;
+	  return false;*/
 };
 //console.log(x);
 
