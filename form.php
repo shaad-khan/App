@@ -100,6 +100,11 @@ td
   padding-left:1px;
 
 }
+.form-control {
+
+  height: 28px;
+  
+}
 
   </style>
 </head>
@@ -338,11 +343,14 @@ td
 
 <div class="form-group">
     <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
+"></span></label></td><td ng-if="items[0].EnvType==''">
      <select class="form-control" name="env">
   <option value="Prod">Prod</option>
     <option value="Non-Prod">Non-Prod</option>
 </select>
+  </div></td>
+  <td ng-if="items[0].EnvType!=''">
+     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].EnvType}}" disabled>
   </div></td>
 <td>
 
