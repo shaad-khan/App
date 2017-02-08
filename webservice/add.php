@@ -56,6 +56,7 @@ $tcategory= $_GET["tcategory"];
 
 $AUI= $_GET["AUI"];
 $aui_flag=0;
+$attime=$_GET['attime'];
 
 //$sql="insert into Update_Tab values('$TID','$status','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
@@ -198,7 +199,14 @@ while($row1=$result->fetch())
   }
  $s="Update Master_Ticket_Tab set Total_time=$total where Ticket_ID='$TID'";
  
-$conn->query($s); 
+$conn->query($s);
+if($attime!='')
+{
+    $s="Update Master_Ticket_Tab set Total_client_time=$attime where Ticket_ID='$TID'";
+ 
+$conn->query($s);
+}
+
 }
 if($f2==1)
 {
