@@ -14,6 +14,7 @@
   session_start();
 
 $user_session=$_SESSION["user"];
+$admin=$_SESSION["admin"];
 if($user_session=='')
 {
    echo "<script> alert('Session Expired Please Relogin in app');
@@ -423,6 +424,17 @@ td
   </div>
   
     </td>
+  <?php
+  if($admin==1)
+  {?>
+    <td ng-if="items[0].Status=='Closure'"><div class="form-group" >
+    <label for="exampleInputEmail1">Total Client Time</label>
+    <input type="number" class="form-control" name="attime" id="exampleInputEmail1" placeholder="{{items[0].Total_time}} min" required>
+  </div>
+  
+    </td>
+    <?php
+  }?>
   </tr>
 <tr> <td>
 <div class="form-group">
