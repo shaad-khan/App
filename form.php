@@ -413,7 +413,7 @@ td
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" disabled>
   </div>
     </td>
-    <td ng-if="items[0].Status!='Classify' && items[0]!='Closure'">
+    <td ng-if="items[0].Status!='Classify' && items[0].Status!='Closure'">
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
   </div>
 
