@@ -416,6 +416,12 @@ td
     <td ng-if="items[0].Status!='Classify'">
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
   </div>
+
+    </td>
+     <td ng-if="items[0].Status=='Closure'">
+    <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="{{items[0].Total_time}} min" disabled>
+  </div>
+  
     </td>
   </tr>
 <tr> <td>
