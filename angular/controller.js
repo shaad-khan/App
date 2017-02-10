@@ -3,12 +3,6 @@ app.controller("Ticket",function($scope,$routeParams,service,$interval,$location
 	(function () {
 //$scope.load='true';
 	}());
-$scope.push=function(param)
-{
-alert(param);
-console.log(param);
-}
-
 	$scope.pop=function(ID) {
      window.location=("https://apps.continuserve.com/main.php#!/");
 		var id=ID;
