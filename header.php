@@ -108,12 +108,7 @@ element.style {
   line-height: 1.33;
   border-radius: 25px;
 }
-.btn span.glyphicon {    			
-	opacity: 0;				
-}
-.btn.active span.glyphicon {				
-	opacity: 1;				
-}
+
 /*
 .table-fixed {
   width: 100%;
