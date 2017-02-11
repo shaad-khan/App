@@ -1,7 +1,7 @@
-app.controller("Ticket",function($scope,$routeParams,service,$interval,$location){
+app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$rootScope){
   $scope.push=function(text)
   {
-alert(text);
+alert(text+$rootScope.user);
   };
 	(function () {
 //$scope.load='true';
@@ -226,8 +226,9 @@ $scope.$on('$destroy', function () {
 });
 
 
-app.controller("searchcontrol",function($scope,service,$interval){
+app.controller("searchcontrol",function($scope,service,$interval,$rootScope){
 var x;
+$rootScope.user=$scope.user;
 $scope.search=function(text)
 {
 var url="list.php?param="+text;
