@@ -412,7 +412,7 @@ echo $nc;
             <div class="top-menu" >
 
 <div ng-controller="searchcontrol">
-              <ul class="nav pull-right top-menu" ng-init="user=<?php echo $_SESSION['user'];?>">
+              <ul class="nav pull-right top-menu" >
                   <li> <div class="col-xs-4" style="padding-top: 12px;"><div class="form-group" style="position:relative;left: -80px;">
     
     
