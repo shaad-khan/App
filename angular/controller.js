@@ -1,7 +1,7 @@
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location){
-  $scope.push=function()
+  $scope.push=function(text)
   {
-alert($scope.check);
+alert(text);
   };
 	(function () {
 //$scope.load='true';
