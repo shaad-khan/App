@@ -142,8 +142,8 @@ element.style {
       TOP BAR CONTENT & NOTIFICATIONS
       *********************************************************************************************************************************************************** -->
       <!--header start-->
-      <header class="header black-bg">
-              <div class="sidebar-toggle-box">
+      <header class="header black-bg" >
+              <div class="sidebar-toggle-box" ng-init="user=<?php echo $_SESSION['user'];?>">
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
@@ -412,7 +412,7 @@ echo $nc;
             <div class="top-menu" >
 
 <div ng-controller="searchcontrol">
-              <ul class="nav pull-right top-menu" >
+              <ul class="nav pull-right top-menu">
                   <li> <div class="col-xs-4" style="padding-top: 12px;"><div class="form-group" style="position:relative;left: -80px;">
     
     
