@@ -92,7 +92,7 @@ $sql="select Ticket_ID,Tdiscription,Status,Blocker_name from Master_Ticket_Tab w
 //echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
-$e="<table><tr><th>Ticket_ID</th><th>ticketDiscription</th><th>Status</th><th>Previous_Blocker_Name</th></tr>";
+$e="<table border='3px'><tr><th>Ticket_ID</th><th>ticketDiscription</th><th>Status</th><th>Previous_Blocker_Name</th></tr>";
   while($row=$result->fetch())
 {
     $tid=$row['Ticket_ID'];
