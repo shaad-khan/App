@@ -89,6 +89,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
 $sql="select Ticket_ID,Tdiscription,Status,Blocker_name from Master_Ticket_Tab where Bnoti=1";
+echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
   while($row=$result->fetch())
