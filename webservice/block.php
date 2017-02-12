@@ -59,8 +59,8 @@ while($r=$res->fetch())
   {
       $usql="update Master_Ticket_Tab set Blocker_flag=0 where Ticket_ID='$tic'";
      $conn->query($usql);
-     echo $usql;
-   // sendemail($tic);
+     //echo $usql;
+   sendemail($tic);
   }  
 }
 }
@@ -87,8 +87,8 @@ $result=$conn->query($sql);
 }
 
 
-require 'class/class.phpmailer.php';
-  require 'class/class.smtp.php';
+require './class/class.phpmailer.php';
+  require './class/class.smtp.php';
 
 
  $mail = new PHPMailer(); // create a new object
