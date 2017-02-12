@@ -20,7 +20,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
     $sql="update Master_Ticket_Tab set Blocker_name='name',Blocker_flag=1,Blocker_datetime='$edate' where Ticket_ID='$ID'";
 
-     
+     echo $sql;
 $conn->query($sql);
 
 ?>
