@@ -87,8 +87,8 @@ $result=$conn->query($sql);
 }
 
 
-require './class/class.phpmailer.php';
-  require './class/class.smtp.php';
+require 'class/class.phpmailer.php';
+  require 'class/class.smtp.php';
 
 
  $mail = new PHPMailer(); // create a new object
