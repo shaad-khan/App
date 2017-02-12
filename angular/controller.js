@@ -8,7 +8,7 @@ app.controller("Ticket",function($scope,$routeParams,service,$interval,$location
     });
   };
 
-  $scope.status=function(text)
+  $scope.stat=function(text)
   {
     /*$http.get("https://apps.continuserve.com/webservice/block.php?ID="+text+"&status=1").then(function(response){
      	//$scope.load2='false';
@@ -16,7 +16,7 @@ app.controller("Ticket",function($scope,$routeParams,service,$interval,$location
  console.log(response.data);
     });*/
     alert(text);
-  }
+  };
 	(function () {
 //$scope.load='true';
 	}());
