@@ -144,7 +144,8 @@ $mail->AddCC("shadab.k@continuserve.com");
     }   
     else{
 $sup="update Master_Ticket_Tab set Bnoti=0 where Ticket_ID=$tid";
-$conn->query($sup);
+echo $sup;
+//$conn->query($sup);
 
     } 
 
