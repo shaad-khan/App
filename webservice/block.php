@@ -7,7 +7,7 @@ date_default_timezone_set('Asia/Kolkata');
 									//$date = date('Ymd H:i:s');
 									$fdate = date('m-d-y H:i:s');
 
-echo date("Y-m-d H:i:s", strtotime('+3 hours', strtotime($now)));
+echo "date:".date("Y-m-d H:i:s", strtotime('+3 hours', strtotime($now)));
 
 
 $server = "gjtz209gib.database.windows.net";
