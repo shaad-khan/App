@@ -101,7 +101,7 @@ $e="<table border='3px'><tr><th>Ticket_ID</th><th>ticketDiscription</th><th>Stat
     $bn=$row['Blocker_name'];
 
 
-
+$f=1;
 
 
 $e=$e."<tr><td>$tid</td><td>$sub</td><td>$status</td><td>$bn</td></tr>";
@@ -147,12 +147,14 @@ $mail->AddCC("shadab.k@continuserve.com");
 //$mail->AddCC("npai@continuserve.com");
 //$mail->AddCC("stanly.benny@continuserve.com");
 //$mail->AddCC("shadab.k@continuserve.com");
+if($f==1)
+{
  if(!$mail->Send())
     {
     echo "Mailer Error: " . $mail->ErrorInfo;
     }   
     
-
+}
 
 
 
