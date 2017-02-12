@@ -1,21 +1,11 @@
-app.controller("Ticket",function($scope,$routeParams,service,$interval,$location){
+app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
   $scope.push=function(text)
   {
-
-    var data = {
-ID: text
-
-};
-    $http.put('webservice/block.php', JSON.stringify(data)).then(function (response) {
-if (response.data)
-$scope.msg = "Put Data Method Executed Successfully!";
-}, function (response) {
-$scope.msg = "Service not Exists";
-$scope.statusval = response.status;
-$scope.statustext = response.statusText;
-$scope.headers = response.headers();
-});
-
+    $http.get("https://apps.continuserve.com/webservice/block.php?ID="+text).then(function(response){
+     	//$scope.load2='false';
+      //$scope.updates=response.data;
+ console.log(response.data);
+    });
   };
 	(function () {
 //$scope.load='true';
