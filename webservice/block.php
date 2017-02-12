@@ -143,9 +143,9 @@ $mail->AddCC("shadab.k@continuserve.com");
     echo "Mailer Error: " . $mail->ErrorInfo;
     }   
     else{
-$sup="update Master_Ticket_Tab set Bnoti=0 where Ticket_ID=$tid";
-echo $sup;
-//$conn->query($sup);
+$sup="update Master_Ticket_Tab set Bnoti=0 where Ticket_ID='$tid'";
+//echo $sup;
+$conn->query($sup);
 
     } 
 
