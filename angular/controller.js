@@ -10,12 +10,12 @@ app.controller("Ticket",function($scope,$routeParams,service,$interval,$location
 
   $scope.stat=function(text)
   {
-    /*$http.get("https://apps.continuserve.com/webservice/block.php?ID="+text+"&status=1").then(function(response){
+    $http.get("https://apps.continuserve.com/webservice/block.php?ID="+text+"&status=1").then(function(response){
      	//$scope.load2='false';
       //$scope.updates=response.data;
  console.log(response.data);
-    });*/
-    alert(text);
+    });
+    //alert(text);
   };
 	(function () {
 //$scope.load='true';
