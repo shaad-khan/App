@@ -1,7 +1,21 @@
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location){
   $scope.push=function(text)
   {
-alert(text+$scope.user);
+
+    var data = {
+ID: text
+
+};
+    $http.put('webservice/block.php', JSON.stringify(data)).then(function (response) {
+if (response.data)
+$scope.msg = "Put Data Method Executed Successfully!";
+}, function (response) {
+$scope.msg = "Service not Exists";
+$scope.statusval = response.status;
+$scope.statustext = response.statusText;
+$scope.headers = response.headers();
+});
+
   };
 	(function () {
 //$scope.load='true';
