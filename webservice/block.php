@@ -35,6 +35,7 @@ else if($status==1 && $unblock==0)
 
 	$rows[]=$row4;
 }
+}
 else if($unblock==1)
 {
 
