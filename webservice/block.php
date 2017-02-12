@@ -104,7 +104,7 @@ $e="<table><tr><th>Ticket_ID</th><th>ticketDiscription</th><th>Status</th><th>Pr
 
 
 
-$e=$e+"<tr><td>$tid</td><td>$sub</td><td>$status</td><td>$bn</td></tr>";
+$e=$e."<tr><td>$tid</td><td>$sub</td><td>$status</td><td>$bn</td></tr>";
 
 $sup="update Master_Ticket_Tab set Bnoti=0 where Ticket_ID='$tid'";
 //echo $sup;
@@ -112,7 +112,7 @@ $conn->query($sup);
 
 
 }
-$e=$e+"</table>";
+$e=$e."</table>";
 echo $e;
 require 'class/class.phpmailer.php';
   require 'class/class.smtp.php';
