@@ -50,7 +50,7 @@ $result=$conn->query($bsql);
   while($row=$result->fetch())
 {
     $tic=$row['Ticket_ID'];
-$sql="select (DATEDIFF(minute, '".$row['Block_datetime']."', '$fdate') / 60) % 24 'Hours' from Master_Ticket_tab where Ticket_ID='$tic'";
+$sql="select (DATEDIFF(minute, '".$row['Block_datetime']."', '$fdate') / 60) % 24 'Hours' from Master_Ticket_tab where Ticket_ID='$tic' and Blocker_flag=1";
 //echo $sql;
 $res=$conn->query($sql);
 while($r=$res->fetch())
