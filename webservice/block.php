@@ -44,7 +44,7 @@ exit;
 else if($unblock==1)
 {
 
-$bsql="select Block_datetime from Master_Ticket_Tab";
+$bsql="select Block_datetime,Ticket_ID from Master_Ticket_Tab";
 $result=$conn->query($bsql);
 //echo $msg;
   while($row=$result->fetch())
