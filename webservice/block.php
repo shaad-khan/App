@@ -125,7 +125,7 @@ $mail->MsgHTML($e);
 //$mail->AddAttachment($file_to_attach);
 //$mail->AddAttachment(  , 'NameOfFile.pdf' );
 //$mail->AddReplyTo('');
-$mail->AddAddress('L3_CS@continuserve.com');
+//$mail->AddAddress('L3_CS@continuserve.com');
 $mail->AddCC("shadab.k@continuserve.com");
 //$mail->AddCC("npai@continuserve.com");
 //$mail->AddCC("stanly.benny@continuserve.com");
