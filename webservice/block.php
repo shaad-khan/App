@@ -9,6 +9,7 @@ date_default_timezone_set('Asia/Kolkata');
 
 echo date("Y-m-d H:i:s", strtotime('+3 hours', $fdate));
 
+
 $server = "gjtz209gib.database.windows.net";
 $user = "CSL3AppsUser@gjtz209gib";
 $pwd = "C0ntinue2$3rve";
