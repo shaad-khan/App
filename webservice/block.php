@@ -124,7 +124,7 @@ $mail->From = "SSShelpdesk@continuserve.com"; // the authenticated account
 $mail->FromName = "SSShelpdesk@continuserve.com"; // the user's email ?
 $mail->Subject = $sub;
 
-$e="Block on Ticket-ID: $tic has being revoked [previous blocker was $bn] </br>Thank you,<br/>helpdesk";
+$e="Block on Ticket-ID: $tid has being revoked [previous blocker was $bn] </br>Thank you,<br/>helpdesk";
 
 
 $mail->MsgHTML($e);
