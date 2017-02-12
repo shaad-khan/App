@@ -5,9 +5,9 @@ $name=$_SESSION['user'];
 
 date_default_timezone_set('Asia/Kolkata');
 									//$date = date('Ymd H:i:s');
-									$fdate = date('m-d-y H:i:s');
+									$fdate = date('Y-m-d H:i:s');
 
-echo "date:".date("Y-m-d H:i:s", strtotime('+3 hours', strtotime($now)));
+echo "date:".date("Y-m-d H:i:s", strtotime('+3 hours', strtotime($fdate)));
 
 
 $server = "gjtz209gib.database.windows.net";
