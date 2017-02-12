@@ -31,7 +31,7 @@ $result=$conn->query($sql);
 
 	$rows[]=$row4;
 }
-$sql="select count(*) as ccount from Master_Ticket_Tab where Status='Closure'";
+$sql="select count(*) as ccount from Master_Ticket_Tab where Status='Close'";
     //echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
