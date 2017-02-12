@@ -51,7 +51,7 @@ $result=$conn->query($bsql);
 {
     $tic=$row['Ticket_ID'];
 $sql="select (DATEDIFF(minute, '".$row['Block_datetime']."', '$fdate') / 60) % 24 'Hours'";
-echo $sql;
+//echo $sql;
 $res=$conn->query($sql);
 while($r=$res->fetch())
 {
