@@ -84,29 +84,7 @@ function sendemail() {
 $user = "CSL3AppsUser@gjtz209gib";
 $pwd = "C0ntinue2$3rve";
 $db = "CSL2AppsDB";
-require 'class/class.phpmailer.php';
-  require 'class/class.smtp.php';
 
-
- $mail = new PHPMailer(); // create a new object
-$mail->IsSMTP(); // enable SMTP
-$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
-$mail->SMTPAuth = true; // authentication enabled
-$mail->SMTPSecure = "tls";
-$mail->Host = "smtp.office365.com";
-$mail->Port = 587;
-$mail->IsHTML(true);
-//$mail->Username = "CS_Connect@continuserve.com";
-//$mail->Password = "Password1$";
-//$mail->SetFrom=('L3Alerts@continuserve.com');
-
-$mail->Username = "SSShelpdesk@continuserve.com";
-$mail->Password = "Welcome123456";
-//$mail->SetFrom=('L3Alerts@continuserve.com');
-$mail->CharSet = 'UTF-8';
-$mail->From = "SSShelpdesk@continuserve.com"; // the authenticated account
-$mail->FromName = "SSShelpdesk@continuserve.com"; // the user's email ?
-$mail->Subject = "The List of Ticket whose Block status are revoked";
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
@@ -135,6 +113,30 @@ $conn->query($sup);
 
 }
 $e=$e+"</table>";
+echo $e;
+require 'class/class.phpmailer.php';
+  require 'class/class.smtp.php';
+
+
+ $mail = new PHPMailer(); // create a new object
+$mail->IsSMTP(); // enable SMTP
+$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+$mail->SMTPAuth = true; // authentication enabled
+$mail->SMTPSecure = "tls";
+$mail->Host = "smtp.office365.com";
+$mail->Port = 587;
+$mail->IsHTML(true);
+//$mail->Username = "CS_Connect@continuserve.com";
+//$mail->Password = "Password1$";
+//$mail->SetFrom=('L3Alerts@continuserve.com');
+
+$mail->Username = "SSShelpdesk@continuserve.com";
+$mail->Password = "Welcome123456";
+//$mail->SetFrom=('L3Alerts@continuserve.com');
+$mail->CharSet = 'UTF-8';
+$mail->From = "SSShelpdesk@continuserve.com"; // the authenticated account
+$mail->FromName = "SSShelpdesk@continuserve.com"; // the user's email ?
+$mail->Subject = "The List of Ticket whose Block status are revoked";
 $mail->MsgHTML($e);
 //$file_to_attach = 'report/report.html';
 //$mail->AddAttachment($file_to_attach);
