@@ -156,6 +156,11 @@ else if($tab_status=='Doc')
     $fstatus='Closure';
     //echo $fstatus;
 }
+else if($tab_status=='Closure')
+{
+    $fstatus='Close';
+    //echo $fstatus;
+}
 
 if(($fstatus!='') and ($fresolver!=''))
 {

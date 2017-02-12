@@ -22,7 +22,7 @@ else if($param=='pending')
 }
 else if($param=='close')
 {
-     $sql="select * from Master_Ticket_Tab where Status='Closure' order by UpdateTime desc";
+     $sql="select * from Master_Ticket_Tab where Status='Close' order by UpdateTime desc";
 }
 else
 {
