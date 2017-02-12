@@ -50,11 +50,11 @@ $result=$conn->query($bsql);
   while($row=$result->fetch())
 {
 $sql="select (DATEDIFF(minute, '".$row['Block_datetime']."', '$fdate') / 60) % 24 'Hours'";
-echo $sql;
+//echo $sql;
 $res=$conn->query($sql);
 while($r=$res->fetch())
 {
-  if($r['Hours']==0)
+  if($r['Hours']!=0)
   {
       $usql="update Master_Ticket_Tab set Blocker_flag=0 where Ticket_ID='".$row['Ticket_ID']."'";
      // $conn->query($usql);
