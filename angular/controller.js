@@ -13,7 +13,7 @@ app.controller("Ticket",function($scope,$routeParams,service,$interval,$location
     $http.get("https://apps.continuserve.com/webservice/block.php?ID="+text+"&status=1").then(function(response){
      	//$scope.load2='false';
       //$scope.updates=response.data;
- alert("text ticket is blocked by ".response.data[0].Blocker_name);
+ alert("text ticket is blocked by "+response.data[0].Blocker_name);
     });
     //alert(text);
   };
