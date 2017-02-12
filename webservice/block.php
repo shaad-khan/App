@@ -99,7 +99,12 @@ $result=$conn->query($sql);
     $status=$row['Status'];
     $bn=$row['Blocker_name'];
 
+    $sup="update Master_Ticket_Tab set Bnoti=0 where Ticket_ID='$tid'";
+//echo $sup;
+$conn->query($sup);
 
+
+/*
 
 require 'class/class.phpmailer.php';
   require 'class/class.smtp.php';
@@ -147,7 +152,7 @@ $sup="update Master_Ticket_Tab set Bnoti=0 where Ticket_ID='$tid'";
 //echo $sup;
 $conn->query($sup);
 
-    } 
+    } */
 
 
 
