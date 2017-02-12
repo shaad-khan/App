@@ -57,63 +57,11 @@ while($r=$res->fetch())
 {
   if($r['Hours']==0)
   {
-      $usql="update Master_Ticket_Tab set Blocker_flag=0 where Ticket_ID='$tic'";
+      $usql="update Master_Ticket_Tab set Blocker_flag=0,Bnoti=1 where Ticket_ID='$tic' ";
      $conn->query($usql);
-     echo $usql;
+     
    //sendemail($tic);
 /*-------------------------------------------------------*/
-require 'class/class.phpmailer.php';
-  require 'class/class.smtp.php';
-
-
- $mail = new PHPMailer(); // create a new object
-$mail->IsSMTP(); // enable SMTP
-$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
-$mail->SMTPAuth = true; // authentication enabled
-$mail->SMTPSecure = "tls";
-$mail->Host = "smtp.office365.com";
-$mail->Port = 587;
-$mail->IsHTML(true);
-//$mail->Username = "CS_Connect@continuserve.com";
-//$mail->Password = "Password1$";
-//$mail->SetFrom=('L3Alerts@continuserve.com');
-
-$mail->Username = "SSShelpdesk@continuserve.com";
-$mail->Password = "Welcome123456";
-//$mail->SetFrom=('L3Alerts@continuserve.com');
-$mail->CharSet = 'UTF-8';
-$mail->From = "SSShelpdesk@continuserve.com"; // the authenticated account
-$mail->FromName = "SSShelpdesk@continuserve.com"; // the user's email ?
-$mail->Subject = $sub;
-
-$e="Block on Ticket-ID: $tic has being revoked [previous blocker was $bn] </br>Thank you,<br/>helpdesk";
-/*
-$myfile = fopen("report.html", "r") or die("Unable to open file!");
-// Output one line until end-of-file
-while(!feof($myfile)) {
-  $e=$e.fgets($myfile);
-}
-fclose($myfile);*/
-
-$mail->MsgHTML($e);
-//$file_to_attach = 'report/report.html';
-//$mail->AddAttachment($file_to_attach);
-//$mail->AddAttachment(  , 'NameOfFile.pdf' );
-//$mail->AddReplyTo('');
-//$mail->AddAddress('L3_CS@continuserve.com');
-$mail->AddCC("shadab.k@continuserve.com");
-//$mail->AddCC("npai@continuserve.com");
-//$mail->AddCC("stanly.benny@continuserve.com");
-//$mail->AddCC("shadab.k@continuserve.com");
- if(!$mail->Send())
-    {
-    echo "Mailer Error: " . $mail->ErrorInfo;
-    }    
-    else{
-        echo "email send";
-    }
-
-
 
 
 
@@ -128,10 +76,10 @@ $mail->AddCC("shadab.k@continuserve.com");
   }  
 }
 }
-
+sendemail();
 }
 
-function sendemail($tic) {
+function sendemail() {
     $server = "gjtz209gib.database.windows.net";
 $user = "CSL3AppsUser@gjtz209gib";
 $pwd = "C0ntinue2$3rve";
@@ -140,15 +88,16 @@ $db = "CSL2AppsDB";
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-$sql="select Tdiscription,Status,Blocker_name from Master_Ticket_Tab where Ticket_ID='$tic'";
+$sql="select Ticket_ID,Tdiscription,Status,Blocker_name from Master_Ticket_Tab where Bnoti=1";
 $result=$conn->query($sql);
 //echo $msg;
   while($row=$result->fetch())
 {
+    $tid=$row['Ticket_ID'];
     $sub=$row['Tdiscription'];
     $status=$row['Status'];
     $bn=$row['Blocker_name'];
-}
+
 
 
 require 'class/class.phpmailer.php';
@@ -176,13 +125,7 @@ $mail->FromName = "SSShelpdesk@continuserve.com"; // the user's email ?
 $mail->Subject = $sub;
 
 $e="Block on Ticket-ID: $tic has being revoked [previous blocker was $bn] </br>Thank you,<br/>helpdesk";
-/*
-$myfile = fopen("report.html", "r") or die("Unable to open file!");
-// Output one line until end-of-file
-while(!feof($myfile)) {
-  $e=$e.fgets($myfile);
-}
-fclose($myfile);*/
+
 
 $mail->MsgHTML($e);
 //$file_to_attach = 'report/report.html';
@@ -197,11 +140,17 @@ $mail->AddCC("shadab.k@continuserve.com");
  if(!$mail->Send())
     {
     echo "Mailer Error: " . $mail->ErrorInfo;
-    }    
+    }   
+    else{
+$sup="update Master_Ticket_Tab set Bnoti=0 where Ticket_ID=$tid";
+$conn->query($sup);
+
+    } 
 
 
 
 
+}
 }
 
 
