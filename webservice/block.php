@@ -109,6 +109,9 @@ $mail->AddCC("shadab.k@continuserve.com");
     {
     echo "Mailer Error: " . $mail->ErrorInfo;
     }    
+    else{
+        echo "email send";
+    }
 
 
 
