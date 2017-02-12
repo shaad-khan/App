@@ -7,7 +7,7 @@ date_default_timezone_set('Asia/Kolkata');
 									//$date = date('Ymd H:i:s');
 									$fdate = date('Y-m-d H:i:s');
 
-echo "date:".date("Y-m-d H:i:s", strtotime('+3 hours', strtotime($fdate)));
+ $edate=date("Y-m-d H:i:s", strtotime('+5 hours', strtotime($fdate)));
 
 
 $server = "gjtz209gib.database.windows.net";
@@ -18,6 +18,9 @@ $db = "CSL2AppsDB";
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-    $sql="update Master_Ticket_Tab set Blocker_name='name',Blocker_flag=1,Blocker_datetime=''";
+    $sql="update Master_Ticket_Tab set Blocker_name='name',Blocker_flag=1,Blocker_datetime='$edate'";
+
+     
+$conn->query($sql);
 
 ?>
