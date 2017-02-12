@@ -84,28 +84,6 @@ function sendemail() {
 $user = "CSL3AppsUser@gjtz209gib";
 $pwd = "C0ntinue2$3rve";
 $db = "CSL2AppsDB";
-
-$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
-    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-
-$sql="select Ticket_ID,Tdiscription,Status,Blocker_name from Master_Ticket_Tab where Bnoti=1";
-echo $sql;
-$result=$conn->query($sql);
-//echo $msg;
-  while($row=$result->fetch())
-{
-    $tid=$row['Ticket_ID'];
-    $sub=$row['Tdiscription'];
-    $status=$row['Status'];
-    $bn=$row['Blocker_name'];
-
-    $sup="update Master_Ticket_Tab set Bnoti=0 where Ticket_ID='$tid'";
-//echo $sup;
-$conn->query($sup);
-
-
-/*
-
 require 'class/class.phpmailer.php';
   require 'class/class.smtp.php';
 
@@ -128,11 +106,35 @@ $mail->Password = "Welcome123456";
 $mail->CharSet = 'UTF-8';
 $mail->From = "SSShelpdesk@continuserve.com"; // the authenticated account
 $mail->FromName = "SSShelpdesk@continuserve.com"; // the user's email ?
-$mail->Subject = $sub;
+$mail->Subject = "The List of Ticket whose Block status are revoked";
+$conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
+    $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-$e="Block on Ticket-ID: $tid has being revoked [previous blocker was $bn] </br>Thank you,<br/>helpdesk";
+$sql="select Ticket_ID,Tdiscription,Status,Blocker_name from Master_Ticket_Tab where Bnoti=1";
+//echo $sql;
+$result=$conn->query($sql);
+//echo $msg;
+$e="<table><tr><th>Ticket_ID</th><th>ticketDiscription</th><th>Status</th><th>Previous_Blocker_Name</th></tr>";
+  while($row=$result->fetch())
+{
+    $tid=$row['Ticket_ID'];
+    $sub=$row['Tdiscription'];
+    $status=$row['Status'];
+    $bn=$row['Blocker_name'];
 
 
+
+
+
+$e=$e+"<tr><td>$tid</td><td>$sub</td><td>$status</td><td>$bn</td></tr>";
+
+$sup="update Master_Ticket_Tab set Bnoti=0 where Ticket_ID='$tid'";
+//echo $sup;
+$conn->query($sup);
+
+
+}
+$e=$e+"</table>";
 $mail->MsgHTML($e);
 //$file_to_attach = 'report/report.html';
 //$mail->AddAttachment($file_to_attach);
@@ -147,18 +149,13 @@ $mail->AddCC("shadab.k@continuserve.com");
     {
     echo "Mailer Error: " . $mail->ErrorInfo;
     }   
-    else{
-$sup="update Master_Ticket_Tab set Bnoti=0 where Ticket_ID='$tid'";
-//echo $sup;
-$conn->query($sup);
-
-    } */
+    
 
 
 
 
 }
-}
+
 
 
 
