@@ -18,9 +18,9 @@ $db = "CSL2AppsDB";
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-    $sql="update Master_Ticket_Tab set Blocker_name='name',Blocker_flag=1,Blocker_datetime='$edate' where Ticket_ID='$ID'";
+    $sql="update Master_Ticket_Tab set Blocker_name='name',Blocker_flag=1,Blocker_datetime='$edate' where Ticket_ID='$Id'";
 
      echo $sql;
-//$conn->query($sql);
+$conn->query($sql);
 
 ?>
