@@ -6,7 +6,7 @@ $u=$_SESSION['user'];
 ?>
 
 
- <div class="row mt" ng-controller="Ticket">
+ <div class="row mt" ng-controller="Ticket" ng-init="u=<?php echo $u;?>">
    <div class="col-md-12">
  <div class="content-panel" id="reload">
 
@@ -40,9 +40,9 @@ $u=$_SESSION['user'];
     <tr ng-repeat="res in results" ng-class="$index % 2 > 0 ? 'active':''">
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>-->
-<td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))&&((<?php echo $u;?>!=res.Blocker_name))"><button class="btn btn-default" ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
+<td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))&&((u!=res.Blocker_name))"><button class="btn btn-default" ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
-<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))&&((<?php echo $u;?>!=res.Blocker_name))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
+<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))&&((u==res.Blocker_name))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
 <td ng-if="((res.Status=='Review')||(res.Status=='Doc') ||(res.Status=='Closure')||(res.Status=='Classify'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
