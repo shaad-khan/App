@@ -56,6 +56,7 @@ $tcategory= $_GET["tcategory"];
 
 $AUI= $_GET["AUI"];
 $aui_flag=0;
+$attime=$_GET['attime'];
 
 //$sql="insert into Update_Tab values('$TID','$status','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
@@ -80,22 +81,23 @@ if($status=='Classify')
 {
 $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env' where Ticket_ID='$TID'";
 }
- else if(($status=='WIP') and ($AUI=='on') )
+ else if(($status=='WIP') and ($AUI=='on') and ($cstatus!='next'))
     {
 $fstatus='AUI';
 $aui_flag=1;
         $fresolver=$user_session;
+        
         $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
 
    // $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
     }
-else if(($status=='WIP') and ($AUI=='on') )
+else if(($status=='WIP') and ($AUI!='on') and ($cstatus!='next' ))
     {
 $fstatus='WIP';
 
 //$aui_flag=1;
         //$fresolver=$user_session;
-        $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
+        $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
 
    // $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
     }
@@ -154,6 +156,11 @@ else if($tab_status=='Doc')
     $fstatus='Closure';
     //echo $fstatus;
 }
+else if($tab_status=='Closure')
+{
+    $fstatus='Close';
+    //echo $fstatus;
+}
 
 if(($fstatus!='') and ($fresolver!=''))
 {
@@ -187,9 +194,36 @@ if($fstatus=='')
 }
 $update_table_sql="insert into Update_Tab values('$TID','$fstatus','$utime','$uname','$schedule','$client','$project','$ttime','$freviewer','$fresolver','','$tcategory','',$aui_flag,'$comments')";
 //echo $update_table_sql;
+
 $conn->query($update_table_sql);
+$f2=1;
+$tsql="select TimeTaken from Update_Tab where TicketId='$TID'";
+$result=$conn->query($tsql);
+while($row1=$result->fetch())
+{
+  $total=$total+$row1['TimeTaken'];
+  }
+ $s="Update Master_Ticket_Tab set Total_time=$total where Ticket_ID='$TID'";
+ 
+$conn->query($s);
+if($attime!='')
+{
+    $s="Update Master_Ticket_Tab set Total_client_time=$attime where Ticket_ID='$TID'";
+ 
+$conn->query($s);
 }
+
+}
+if($f2==1)
+{
 echo "<script> alert('Updated successfully');
      setTimeout(function(){window.close()}, 1000);
      </script>";
+}
+else
+{
+    echo "<script> alert('Updation failed');
+     setTimeout(function(){window.close()}, 1000);
+     </script>";
+}
 ?>

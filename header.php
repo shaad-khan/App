@@ -48,8 +48,10 @@ function myFunction1() {
 </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    
 <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
@@ -90,6 +92,23 @@ element.style {
     background-color: rgb(78, 205, 196);*/
     background-color:#777;
 }
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
 /*
 .table-fixed {
   width: 100%;
@@ -123,8 +142,8 @@ element.style {
       TOP BAR CONTENT & NOTIFICATIONS
       *********************************************************************************************************************************************************** -->
       <!--header start-->
-      <header class="header black-bg">
-              <div class="sidebar-toggle-box">
+      <header class="header black-bg" >
+              <div class="sidebar-toggle-box" ng-init="user=<?php echo $_SESSION['user'];?>">
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
@@ -390,10 +409,26 @@ echo $nc;
                 </ul>
                 <!--  notification end -->
             </div>
-            <div class="top-menu">
+            <div class="top-menu" >
+
+<div ng-controller="searchcontrol">
               <ul class="nav pull-right top-menu">
+                  <li> <div class="col-xs-4" style="padding-top: 12px;"><div class="form-group" style="position:relative;left: -80px;">
+    
+    
+    <input type="Text" class="form-control" ng-model="fill" style="width:202px" placeholder="search Box"/>
+    
+  </div> </li>
+   <li> <div class="col-xs-2" style="padding-top: 12px;"><div class="form-group" style="position:relative;left: -99px;">
+    
+    
+ <button type="button" class="btn btn-primary" ng-click="search(fill)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+    
+  </div>
+    </li>
                     <li><a class="logout" href="logout.php">Logout</a></li>
               </ul>
+            </div>
             </div>
         </header>
       <!--header end-->

@@ -1,15 +1,40 @@
-app.controller("Ticket",function($scope,$routeParams,$http,$interval){
-  
+app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
+ $scope.setuser=function(text)
+ {
+$scope.u=text;
+console.log($scope.u);
+ };
+
+  $scope.push=function(text)
+  {
+    $http.get("https://apps.continuserve.com/webservice/block.php?ID="+text).then(function(response){
+     	//$scope.load2='false';
+      //$scope.updates=response.data;
+ console.log(response.data);
+    });
+  };
+
+  $scope.stat=function(text)
+  {
+    $http.get("https://apps.continuserve.com/webservice/block.php?ID="+text+"&status=1").then(function(response){
+     	//$scope.load2='false';
+      //$scope.updates=response.data;
+ alert(text+" ticket is blocked by "+response.data[0].Blocker_name);
+    });
+    //alert(text);
+  };
 	(function () {
 //$scope.load='true';
 	}());
 	$scope.pop=function(ID) {
+     window.location=("https://apps.continuserve.com/main.php#!/");
 		var id=ID;
 		var url="form.php?ID="+id;
 	//	alert(url);
 	  newwindow=window.open(url,'name','height=600,width=1500');
 	  if (window.focus) {newwindow.focus()}
 	  return false;
+    
 	};
 var ticketapi=$interval(statuscheck, 5000);
 var name=$routeParams.email;
@@ -17,7 +42,7 @@ var type=$routeParams.type;
 function statuscheck() {
  
 	//alert("https://apps.continuserve.com/continuity/App/webservice/status.php?name="+name+"&type="+type);
-	$http.get("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
+service.serv("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
 	$scope.load='false';
 		$scope.results=response.data;
 console.log(response.data.length);
@@ -120,17 +145,17 @@ function callAtInterval2(){
 };
 });
 
-app.controller("table_count",function($scope,$http,$interval){
+app.controller("table_count",function($scope,service,$interval){
   var vm = this;
    vm.Total = 0;
-$http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
+service.serv("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
   
      	$scope.load2='false';
       $scope.items=response.data;
     }); 
  var tableapi= $interval(function(){
   
-$http.get("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
+service.serv("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
   console.log("inetval call for ticket count");
      	$scope.load2='false';
       $scope.items=response.data;
@@ -154,3 +179,103 @@ $scope.$on('$destroy', function () {
  });
 
 });
+/*-------------------------------------------------------------------------------*/
+
+app.controller("tcount",function($scope,service,$interval){
+  //var vm = this;
+   //vm.Total = 0;
+   $scope.showtkt=function($param){
+  if($param=='total')
+  {
+var url="list.php?param=total";
+	//	alert(url);
+	  newwindow=window.open(url,'name','height=600,width=1500');
+	  if (window.focus) {newwindow.focus()}
+	  return false;
+	
+  }
+  else if($param=='pending')
+  {
+var url="list.php?param=pending";
+	//	alert(url);
+	  newwindow=window.open(url,'name','height=600,width=1500');
+	  if (window.focus) {newwindow.focus()}
+	  return false;
+  }
+  else if($param=='close')
+  {
+var url="list.php?param=close";
+	//	alert(url);
+	  newwindow=window.open(url,'name','height=600,width=1500');
+	  if (window.focus) {newwindow.focus()}
+	  return false;
+  }
+   
+   };
+
+service.serv("https://apps.continuserve.com/webservice/tcount.php").then(function(response){
+  
+     //	$scope.load2='false';
+      $scope.totals=response.data;
+    }); 
+ var tableapi= $interval(function(){
+  
+service.serv("https://apps.continuserve.com/webservice/tcount.php").then(function(response){
+ // console.log("inetval call for total ticket count");
+    // 	$scope.load2='false';
+      $scope.totals=response.data;
+    }); 
+  
+ }, 8000)
+  
+
+
+
+
+$scope.$on('$destroy', function () { 
+  
+  
+  if (angular.isDefined(tableapi)) {
+    //console.log("i am here he he he he");
+            $interval.cancel(tableapi);
+            tableapi = undefined;
+          }
+
+ });
+
+});
+
+
+app.controller("searchcontrol",function($scope,service,$interval){
+var x;
+
+$scope.search=function(text)
+{
+var url="list.php?param="+text;
+		//alert(url);
+	  newwindow=window.open(url,'List','height=600,width=1500');
+	  if (window.focus) {newwindow.focus()}
+	  return false;
+};
+
+
+});
+
+
+
+
+
+app.factory("service",function($http)
+{
+var fac={};
+fac.serv=function($url)
+{
+  //console.log($url);
+return $http.get($url);
+};
+
+return fac;
+
+});
+
+

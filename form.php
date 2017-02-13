@@ -14,6 +14,7 @@
   session_start();
 
 $user_session=$_SESSION["user"];
+$admin=$_SESSION["admin"];
 if($user_session=='')
 {
    echo "<script> alert('Session Expired Please Relogin in app');
@@ -100,6 +101,11 @@ td
   padding-left:1px;
 
 }
+.form-control {
+
+  height: 28px;
+  
+}
 
   </style>
 </head>
@@ -109,6 +115,7 @@ td
 <br>
   <div class="panel panel-primary" ng-controller="Form_data">
     <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Edit Form For Ticket ID: {{ID}}  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-paperclip
+"></span></button> <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2"><span class="glyphicon glyphicon-comment
 "></span></button></div>
     <div class="panel-body" ><form class="form-inline" action="webservice/add.php"> 
 
@@ -338,11 +345,14 @@ td
 
 <div class="form-group">
     <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
+"></span></label></td><td ng-if="items[0].EnvType==''">
      <select class="form-control" name="env">
   <option value="Prod">Prod</option>
     <option value="Non-Prod">Non-Prod</option>
 </select>
+  </div></td>
+  <td ng-if="items[0].EnvType!=''">
+     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].EnvType}}" disabled>
   </div></td>
 <td>
 
@@ -368,16 +378,26 @@ td
   </div>
 
   </td>
-<td>
+<td ng-if="((items[0].Status=='Classify')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
+"></span></label></td><td ng-if="((items[0].Status=='Classify')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
     <select class="form-control" name="cstatus" >
   <option value="WIP">Work In progress</option>
   <option value="next">Next Status</option>
   
 </select>
+  </div>
+  </td>
+  <td ng-if="((items[0].Status=='Review')||(items[0].Status=='Doc')||(items[0].Status=='Closure'))">
+
+   <div class="form-group" >
+    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td ng-if="((items[0].Status=='Review')||(items[0].Status=='Doc')||(items[0].Status=='Closure'))">
+  
+<input type="hidden" name="cstatus" value="next"/>
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Next Status" disabled>
   </div>
   </td>
   </tr>
@@ -400,15 +420,40 @@ td
   <td>
 <div class="form-group" >
     <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
-"></span></label></td><td>
-    <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
+"></span></label></td><td ng-if="items[0].Status=='Classify'">
+    <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" disabled>
   </div>
     </td>
+    <td ng-if="items[0].Status!='Classify' && items[0].Status!='Closure'">
+    <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
+  </div>
+
+    </td>
+     <td ng-if="items[0].Status=='Closure'">
+    <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="{{items[0].Total_time}} min" disabled>
+  </div>
+  
+    </td>
+  <?php
+  if($admin==1)
+  {?>
+    <td ng-if="items[0].Status=='Closure'"><div class="form-group" >
+    <label for="exampleInputEmail1">Total Client Time</label>
+    <input type="number" class="form-control" name="attime" id="exampleInputEmail1" placeholder="{{items[0].Total_time}} min" required>
+  </div>
+  
+    </td>
+    <?php
+  }?>
   </tr>
 <tr> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td colspan="8">
+"></span></label></td><td colspan="8" ng-if="items[0].Status=='Classify'" >
+<textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" disabled></textarea>
+    
+  </div> </td>
+  <td colspan="8" ng-if="items[0].Status!='Classify'" >
 <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" required></textarea>
     
   </div> </td>
@@ -445,47 +490,7 @@ td
 
 
   </form> 
-  <div class="row clear">
- <div class="col-xs-12">
-  <h4>Update History</h4>
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-controller="update" ng-init="ID='<?php Echo $ID;?>'">
-  <div class="panel panel-info" ng-repeat="update in updates">
-    <div class="panel-heading" role="tab" id="heading{{update.UID}}">
-      <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{update.UID}}" aria-expanded="false" aria-controls="collapse{{update.UID}}">
-  <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: {{update.UpdateBy}} [DateTime: {{update.UpdateTime}} ]    [ <span class="glyphicon glyphicon-bookmark" style="color:green"></span><span style="color:green">Type Of Task Done:{{update.TaskName}}</span>  ]    <span class="glyphicon glyphicon-flag" ng-if="update.AUI_flag==1" style="color:red"></span>
-        </a>
-      </h4>
-    </div>
-    <div id="collapse{{update.UID}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{update.UID}}">
-      <div class="panel-body">
-        {{update.Comments}} 
-
-        <p ng-if="update.Resolver">Resolver Name : [ {{update.Resolver}}]</p>
-        <p>Status :[ {{update.Status}} ]</p>
-        <p>Update Was Done in Shift: [{{update.Shift}}]
-      </div>
-    </div>
-  </div>
  
-  </div>
-  <!--
-  <div class="row clear">
-  <div class="col-xs-3">Project <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-  <div class="col-xs-3">Updated By <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-  
-  </div>
-  <div class="row clear">
-  <div class="col-xs-3 ">Assigned To <span class="glyphicon glyphicon-info-sign"></span> </div><div class="col-xs-3"><input type="text"/></div>
-  <div class="col-xs-3">Updated Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
-  
-  </div>
-  <div class="row clear">
-  <div class="col-xs-3">Assigned To <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
-  <div class="col-xs-3">Updated Date Time <span class="glyphicon glyphicon-info-sign"></span></div><div class="col-xs-3"><input type="text"/></div>
-  </div>-->
-  </div>
-</div>
 
 <!--/*************************************** Modal Code*************************************/-->
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -528,5 +533,43 @@ fclose($myfile);
     </div>
   </div>
 </div>
+
+<div class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+       <div class="modal-header"> 
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="myModalLabel">Update History <span class="glyphicon glyphicon-comment
+"> </span></h4>
+     </div> <div class="row clear">
+ <div class="col-xs-12">
+  
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-controller="update" ng-init="ID='<?php Echo $ID;?>'">
+  <div class="panel panel-info" ng-repeat="update in updates">
+    <div class="panel-heading" role="tab" id="heading{{update.UID}}">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{update.UID}}" aria-expanded="false" aria-controls="collapse{{update.UID}}">
+  <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: {{update.UpdateBy}} [DateTime: {{update.UpdateTime}} ]    [ <span class="glyphicon glyphicon-bookmark" style="color:green"></span><span style="color:green">Type Of Task Done:{{update.TaskName}}</span>  ]    <span class="glyphicon glyphicon-flag" ng-if="update.AUI_flag==1" style="color:red"></span>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse{{update.UID}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{update.UID}}">
+      <div class="panel-body">
+        {{update.Comments}} 
+
+        <p ng-if="update.Resolver">Resolver Name : [ {{update.Resolver}}]</p>
+        <p>Status :[ {{update.Status}} ]</p>
+        <p>Update Was Done in Shift: [{{update.Shift}}]
+      </div>
+    </div>
+  </div>
+ 
+  </div>
+  
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
