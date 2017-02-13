@@ -378,24 +378,24 @@ td
   </div>
 
   </td>
-<td ng-if="(items[0].Status=='Classify')||(items[0].Status=='WIP')||(items[0].Status=='AUI')">
+<td ng-if="((items[0].Status=='Classify')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-    
+    <select class="form-control" name="cstatus" >
+  <option value="WIP">Work In progress</option>
+  <option value="next">Next Status</option>
+  
+</select>
   </div>
   </td>
-  <td ng-if="(items[0].Status=='Review')||(items[0].Status=='Doc')||(items[0].Status=='Closure')">
+  <td ng-if="((items[0].Status=='Review')||(items[0].Status=='Doc')||(items[0].Status=='Closure'))">
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-   <!-- <select class="form-control" name="cstatus" >
   
-  <option value="next" >Next Status</option>
-  
-</select>-->
 <input type="hidden" name="cstatus" value="next"/>
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Next Status" disabled>
   </div>
