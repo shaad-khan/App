@@ -1,4 +1,8 @@
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
+ $scope.$watch("u", function(){
+        console.log($scope.u);
+    });
+
   $scope.push=function(text)
   {
     $http.get("https://apps.continuserve.com/webservice/block.php?ID="+text).then(function(response){

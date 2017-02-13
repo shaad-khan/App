@@ -17,7 +17,7 @@ $u=$_SESSION['user'];
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
 
-                                  <span class="glyphicon glyphicon-menu-hamburger"></span>{{u}} L3 Support Team 
+                                  <span class="glyphicon glyphicon-menu-hamburger"></span> L3 Support Team 
 
                                     <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span></div>
