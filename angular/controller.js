@@ -1,8 +1,9 @@
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
- $scope.$watch("u", function(){
-        console.log("username"+$scope.u);
-
-    });
+ $scope.setuser=function(text)
+ {
+$scope.u=text;
+console.log($scope.u);
+ };
 
   $scope.push=function(text)
   {

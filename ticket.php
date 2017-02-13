@@ -6,7 +6,7 @@ $u=$_SESSION['user'];
 ?>
 
 
- <div class="row mt"  ng-init="u=<?php echo $u;?>">
+ <div class="row mt"  ng-init="setuser('<?php echo $u;?>')">
    <div class="col-md-12">
  <div class="content-panel" id="reload">
 
