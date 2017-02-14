@@ -407,7 +407,7 @@ td
     <label for="exampleInputEmail1">If waithing for User response<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
 
-  <td style="position:relative;left: -416px;">
+  <td style="position:relative;left: -365px;">
   <div class="material-switch pull-right">
                             <input id="someSwitchOptionSuccess" name="AUI" type="checkbox"/>
                             <label for="someSwitchOptionSuccess" class="label-success"></label>
