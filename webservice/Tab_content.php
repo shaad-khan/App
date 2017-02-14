@@ -224,9 +224,9 @@ $result=$conn->query($sql);
 
 	$row[]=$row4;
 }
-foreach($x in $row)
+foreach($i=0;$i<sizeof($row);$i++)
 {
-	print($x);
+	print($row[$i]);
 }
 /*ob_start("ob_gzhandler");
 
