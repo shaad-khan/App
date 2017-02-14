@@ -224,7 +224,10 @@ $result=$conn->query($sql);
 
 	$row[]=$row4;
 }
-print($row);
+foreach($x in $row)
+{
+	print($x);
+}
 /*ob_start("ob_gzhandler");
 
 print(json_encode($rows, JSON_NUMERIC_CHECK));
