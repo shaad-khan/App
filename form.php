@@ -404,7 +404,7 @@ td
   <tr>
 <td>
 <div class="form-group" >
-    <label for="exampleInputEmail1">If waithing for User response<span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">If awaiting for User response<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
 
   <td style="position:relative;left: -365px;">
