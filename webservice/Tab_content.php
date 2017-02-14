@@ -222,7 +222,7 @@ $result=$conn->query($sql);
   while($row4=$result->fetch())
 {
 
-	$row[]=$row4);
+	$row[]=$row4;
 }
 print($row);
 /*ob_start("ob_gzhandler");
