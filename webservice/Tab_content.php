@@ -216,21 +216,18 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 }
 
-$sql="select ID,Email,ISNULL(Classify,0) as Classify,ISNULL(Wip,0) as Wip ,ISNULL(Aui,0) as Aui,ISNULL(Review,0) as Review,ISNULL(Doc,0) as Doc,ISNULL(Closure,0) as Closure,ISNULL(Total,0) as Total from status_count order by ID desc FOR JSON AUTO";
+$sql="select ID,Email,ISNULL(Classify,0) as Classify,ISNULL(Wip,0) as Wip ,ISNULL(Aui,0) as Aui,ISNULL(Review,0) as Review,ISNULL(Doc,0) as Doc,ISNULL(Closure,0) as Closure,ISNULL(Total,0) as Total from status_count order by ID desc";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
 {
 
-	$row[]=$row4;
+	$rows[]=$row4;
 }
-foreach($i=0;$i<sizeof($row);$i++)
-{
-	print($row[$i]);
-}
-/*ob_start("ob_gzhandler");
+
+ob_start("ob_gzhandler");
 
 print(json_encode($rows, JSON_NUMERIC_CHECK));
 ob_end_flush();
-exit;*/
+exit;
 ?>
