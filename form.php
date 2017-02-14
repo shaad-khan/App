@@ -373,7 +373,7 @@ td
 "></span></label></td><td>
      <select class="form-control selectpicker" name="tcategory">
 
-  <option ng-repeat="task in tasks" value="{{task.Category}}">{{task.Category}}</option>
+  <option ng-repeat="task in tasks | filter : items[0].Status" value="{{task.Category}}">{{task.Category}}</option>
 </select>
   </div>
 
