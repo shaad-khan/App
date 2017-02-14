@@ -1,6 +1,6 @@
    <footer class="site-footer">
           <div class="text-center">
-              2016 - Continuity
+              2017 - Continuity
               <a href="home.php#" class="go-top">
                   <i class="fa fa-angle-up"></i>
               </a>
