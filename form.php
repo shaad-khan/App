@@ -225,7 +225,7 @@ td
       <div class="form-group">
     <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td colspan="8">
-<textarea class="form-control" rows="3" cols="116" name="discription" placeholder="Discription" disabled>{{items[0].Tdiscription}}</textarea>
+<textarea class="form-control" rows="3" cols="125" name="discription" placeholder="Discription" disabled>{{items[0].Tdiscription}}</textarea>
     
   </div>
       </td>
@@ -407,7 +407,7 @@ td
     <label for="exampleInputEmail1">If waithing for User response<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
 
-  <td style="position:relative;left: -490px;">
+  <td style="position:relative;left: -416px;">
   <div class="material-switch pull-right">
                             <input id="someSwitchOptionSuccess" name="AUI" type="checkbox"/>
                             <label for="someSwitchOptionSuccess" class="label-success"></label>
