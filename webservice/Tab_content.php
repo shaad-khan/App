@@ -222,9 +222,9 @@ $result=$conn->query($sql);
   while($row4=$result->fetch())
 {
 
-	print($row4);
+	$row[]=$row4);
 }
-
+print($row);
 /*ob_start("ob_gzhandler");
 
 print(json_encode($rows, JSON_NUMERIC_CHECK));
