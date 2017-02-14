@@ -148,14 +148,14 @@ function callAtInterval2(){
 app.controller("table_count",function($scope,service,$interval){
   var vm = this;
    vm.Total = 0;
-service.serv("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
+service.serv("https://apps.continuserve.com/webservice/test.php").then(function(response){
   
      	$scope.load2='false';
       $scope.items=response.data;
     }); 
  var tableapi= $interval(function(){
   
-service.serv("https://apps.continuserve.com/webservice/Tab_content.php").then(function(response){
+service.serv("https://apps.continuserve.com/webservice/test.php").then(function(response){
   console.log("inetval call for ticket count");
      	$scope.load2='false';
       $scope.items=response.data;
