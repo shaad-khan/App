@@ -22,10 +22,10 @@ $res=$conn->query($s);
 //echo $msg;
   while($row=$res->fetch())
 {
-    echo $row['d'].$row['TaskName'].$row['count']."<br/>";
+   $x[]=$row;
 
 }
 }
-
+print(json_encode($x, JSON_NUMERIC_CHECK));
 
 ?>
