@@ -393,7 +393,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 if($cl_tkt!=null)
 {
-  $sql="update Master_Ticket_tab set Cticket=$cl_tkt where Ticket_ID='$TID'";
+  $sql="update Master_Ticket_tab set Cticket='$cl_tkt' where Ticket_ID='$TID'";
  $conn->query($sql);
 }
 
