@@ -22,7 +22,7 @@ $res=$conn->query($s);
 //echo $msg;
   while($row=$res->fetch())
 {
-    if($row4['Category']=='Project Migration')
+    if($row4['Category']=='SQL execution')
     {
    $x[]=$row;
     }
