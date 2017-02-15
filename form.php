@@ -414,10 +414,10 @@ td
                         </div>
 
   </td>
-<td ng-if="$items[0].Status=='Classify'">
+<td >
 <div class="form-group" >
     <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="$items[0].Status=='Classify'">
+"></span></label></td><td >
  <input type="text" class="form-control" id="exampleInputEmail1" name="client_tkt" placeholder="Client Ticket Number optional" />
   </td>
     </tr>
