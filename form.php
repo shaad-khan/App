@@ -117,7 +117,7 @@ td
     <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Edit Form For Ticket ID: {{ID}}  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-paperclip
 "></span></button> <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2"><span class="glyphicon glyphicon-comment
 "></span></button></div>
-    <div class="panel-body" ><form class="form-inline" action="webservice/add.php"> 
+    <div class="panel-body" ><form class="form-inline" action="webservice/add.php" method="POST"> 
 
 <table>
 <tr><td>

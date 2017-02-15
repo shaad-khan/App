@@ -3,7 +3,7 @@
 session_start();
 
 $user_session=$_SESSION["user"];
-$type=$_GET["type"];
+$type=$_POST["type"];
 
 $server = "gjtz209gib.database.windows.net";
 $user = "CSL3AppsUser@gjtz209gib";
@@ -14,51 +14,51 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
     
-$TID  = $_GET["TID"];
+$TID  = $_POST["TID"];
 
-$env=$_GET['env'];
+$env=$_POST['env'];
 
-$client= $_GET["client"];
+$client= $_POST["client"];
 
-$creator=$_GET['creator'];
+$creator=$_POST['creator'];
 
-$assigned_To=$_GET['assign'];
-
-
-$release=$_GET['release'];
-
-$project= $_GET["project"];
-
-$uname= $_GET["uname"];
-
-$aname= $_GET["aname"];
-
-$utime= $_GET["utime"];
-
-$status= $_GET["status"];
-
-$resolver= $_GET["resolver"];
-
-$schedule= $_GET["schedule"];
-
-$reviewer= $_GET["reviewer"];
+$assigned_To=$_POST['assign'];
 
 
-$discription= $_GET["discription"];
+$release=$_POST['release'];
 
-$comments= $_GET["comments"];
+$project= $_POST["project"];
 
-$cstatus= $_GET["cstatus"];
+$uname= $_POST["uname"];
 
-$ttime= $_GET["ttime"];
+$aname= $_POST["aname"];
 
-$tcategory= $_GET["tcategory"];
+$utime= $_POST["utime"];
 
-$AUI= $_GET["AUI"];
+$status= $_POST["status"];
+
+$resolver= $_POST["resolver"];
+
+$schedule= $_POST["schedule"];
+
+$reviewer= $_POST["reviewer"];
+
+
+$discription= $_POST["discription"];
+
+$comments= $_POST["comments"];
+
+$cstatus= $_POST["cstatus"];
+
+$ttime= $_POST["ttime"];
+
+$tcategory= $_POST["tcategory"];
+
+$AUI= $_POST["AUI"];
 $aui_flag=0;
-$attime=$_GET['attime'];
+$attime=$_POST['attime'];
 
-$cl_tkt=$_GET['client_tkt'];
+$cl_tkt=$_POST['client_tkt'];
 
 //$sql="insert into Update_Tab values('$TID','$status','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
