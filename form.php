@@ -414,6 +414,7 @@ td
                         </div>
 
   </td>
+  
 <td ng-if="$items[0].Status=='Classify'">
 <div class="form-group" >
     <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
