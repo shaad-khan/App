@@ -23,7 +23,9 @@ $res=$conn->query($s);
   while($row=$res->fetch())
 {
     if($row['TaskName']=='Project Migration')
+    {
    $x[]=$row;
+    }
 
 }
 }
