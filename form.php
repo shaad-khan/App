@@ -402,10 +402,10 @@ td
   </td>
   </tr>
   <tr>
-<td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
+<td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')">
 <div class="form-group"  >
     <label for="exampleInputEmail1">If awaiting for User response<span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
+"></span></label></td><td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')">
 
   <td style="position:relative;left: -365px;">
   <div class="material-switch pull-right">
