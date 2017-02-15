@@ -58,6 +58,8 @@ $AUI= $_GET["AUI"];
 $aui_flag=0;
 $attime=$_GET['attime'];
 
+$cl_tkt=$_GET['client_tkt'];
+
 //$sql="insert into Update_Tab values('$TID','$status','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
 //echo $user_session;
@@ -389,7 +391,11 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 }
 
-
+if($cl_tkt!=null)
+{
+  $sql="update Master_Ticket_tab set Cticket=$cl_tkt where Ticket_ID='$TID'";
+ $conn->query($sql);
+}
 
 
 
