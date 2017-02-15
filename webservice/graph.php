@@ -15,7 +15,7 @@ $result=$conn->query($sql);
   while($row4=$result->fetch())
 {
 
-$s="SELECT  DISTINCT  cast(updatetime as date) as d,count(TaskName) as count FROM Update_Tab WHERE UpdateTime >= DATEADD(day,-7, GETDATE()) and UpdateBy='$user_session' and TaskName ='".$row4['Category']."' group by TaskName,cast(updatetime as date)";
+$s="SELECT  DISTINCT  cast(updatetime as date) as time,count(TaskName) as y FROM Update_Tab WHERE UpdateTime >= DATEADD(day,-7, GETDATE()) and UpdateBy='$user_session' and TaskName ='".$row4['Category']."' group by TaskName,cast(updatetime as date)";
  //echo $s;
 
 $res=$conn->query($s);
