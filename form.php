@@ -460,6 +460,20 @@ td
     <?php
   }?>
   </tr>
+
+<?php 
+
+if($_SESSION['Doc']==1)
+{?>
+  <tr ng-if="items[0].Resolver==<?php echo $user;?>">
+    <div class="form-group" >
+    <label for="exampleInputEmail1">Upload Documentation file (File size < 5 mb )</label>
+    <input type="file" class="form-control" name="dfile"/>
+  </div>
+  
+    </tr>
+    <?php
+}?>
 <tr> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
