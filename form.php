@@ -117,7 +117,7 @@ td
     <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Edit Form For Ticket ID: {{ID}}  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-envelope
 "></span></button> <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2"><span class="glyphicon glyphicon-comment
 "></span></button></div>
-    <div class="panel-body" ><form class="form-inline" action="webservice/add.php" method="POST"> 
+    <div class="panel-body" ng-init="User='<?php Echo $user;?>'"><form class="form-inline" action="webservice/add.php" method="POST"> 
 
 <table>
 <tr><td>
@@ -465,7 +465,7 @@ td
 
 if($_SESSION['Doc']==1)
 {?>
-  <tr ng-if="items[0].Resolver==<?php echo $user;?>"><td>
+  <tr ng-if="items[0].Resolver == User"><td>
     <div class="form-group" >
     <label for="exampleInputEmail1">Upload Documentation file (File size < 5 mb )</label>
     <input type="file" class="form-control" name="dfile"/>
