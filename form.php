@@ -467,7 +467,7 @@ if($_SESSION['Doc']==1)
 {?>
   <tr ng-if="items[0].Resolver == User"><td>
     <div class="form-group" >
-    <label for="exampleInputEmail1">Upload Documentation file (File size < 5 mb )</label></td></td>
+    <label for="exampleInputEmail1">Upload Documentation file (File size < 5 mb )</label></td><td>
     <input type="file" class="form-control" name="dfile"/>
   </div>
   </td>
