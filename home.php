@@ -90,10 +90,13 @@ $close=$_SESSION['Closure'];
         
         {{item.Review}}</td>
         <?php
-        }
+        }?>
+
+        <td ng-init="total_Doc=total_Doc+item.Doc">
+          <?php
         if($doc==1)
         {?>
-      <td ng-init="total_Doc=total_Doc+item.Doc"><a href="#!/ticket/{{email}}/Doc">{{item.Doc}}</td>
+      <a href="#!/ticket/{{email}}/Doc">{{item.Doc}}</td>
       <?php
         }
         else
@@ -101,11 +104,13 @@ $close=$_SESSION['Closure'];
         
        {{item.Doc}}</td>
         <?php
-        }
+        }?>
+        <td ng-init="total_Closure=total_Closure+item.Closure">
+          <?php
         if($close==1)
         {?>
         
-      <td ng-init="total_Closure=total_Closure+item.Closure"><a href="#!/ticket/{{email}}/Closure">{{item.Closure}}</a></td>
+      <a href="#!/ticket/{{email}}/Closure">{{item.Closure}}</a></td>
       <?php
         }
         else{?>
