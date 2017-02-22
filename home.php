@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+$rev=$_SESSION['Review'];
+$doc=$_SESSION['Doc'];
+$close=$_SESSION['Closure'];
+?>
+
 
 <div class="row mt"  ng-controller="tcount" style="margin-bottom:-400px">
   <div class="col-md-12">
@@ -65,10 +74,45 @@
     <tr ng-repeat="item in items" ng-class="$index % 2 > 0 ? 'active':''">
       <td ng-init="email=item.Email.split('@')[0]"><span class="glyphicon glyphicon-user" style="font-size:20px;color:black;padding:5px;"></span>  {{item.Name}}</td><td ng-init="table_count.Total=table_count.Total+item.classify"><a href="#!/ticket/{{email}}/Classify">{{item.Classify}}</a></td>
       <td ng-init="total_Wip=total_Wip+item.Wip"><a href="#!/ticket/{{email}}/Wip"> {{item.Wip}}</a></td>
-      <td ng-init="total_Aui=total_Aui+item.Aui"><a href="#!/ticket/{{email}}/Aui">{{item.Aui}}</td>
-      <td ng-init="total_Review=total_Review+item.Review"><a href="#!/ticket/{{email}}/Review">{{item.Review}}</td>
+      <td ng-init="total_Aui=total_Aui+item.Aui"><a href="#!/ticket/{{email}}/Aui">{{item.Aui}}</a></td>
+      
+      <td ng-init="total_Review=total_Review+item.Review" >
+        
+        
+        <?php 
+        if($rev==1)
+        {?>
+        <a href="#!/ticket/{{email}}/Review">{{item.Review}}</a></td>
+        <?php
+        }
+        else
+        {?>
+        
+        {{item.Review}}</td>
+        <?php
+        }
+        if($doc==1)
+        {?>
       <td ng-init="total_Doc=total_Doc+item.Doc"><a href="#!/ticket/{{email}}/Doc">{{item.Doc}}</td>
-      <td ng-init="total_Closure=total_Closure+item.Closure"><a href="#!/ticket/{{email}}/Closure">{{item.Closure}}</td>
+      <?php
+        }
+        else
+        {?>
+        
+       {{item.Doc}}</td>
+        <?php
+        }
+        if($close==1)
+        {?>
+        
+      <td ng-init="total_Closure=total_Closure+item.Closure"><a href="#!/ticket/{{email}}/Closure">{{item.Closure}}</a></td>
+      <?php
+        }
+        else{?>
+          {{item.Closure}}</td>
+        <?php 
+        }
+        ?>
     <td ng-init="total= item.Classify+item.Wip+item.Aui+item.Review+item.Doc+item.Closure; controller.ttotal=controller.ttotal+total;">{{total}}</td>
 
 

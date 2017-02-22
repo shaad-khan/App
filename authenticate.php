@@ -70,6 +70,9 @@ $sql="select * from User_prof where Status=1 and Email like'".$username2."'";
 {
 $f=$row['Admin'];
 $team=$row['Team'];
+$_SESSION['Review']=$row['Review'];
+$_SESSION['Doc']=$row['Doc'];
+$_SESSION['Closure']=$row['Closure'];
 }
 if($f)
 {
