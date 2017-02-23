@@ -4,7 +4,7 @@ $tid=$_GET['tid'];
     $zip = new ZipArchive;
     $download = 'download.zip';
     $zip->open($download, ZipArchive::CREATE);
-    foreach (glob("repo/$tid*") as $file) {
+    foreach (glob("repo/$tid*.rar") as $file) {
          /* Add appropriate path to read content of zip */
          echo $file;
         $zip->addFile($file);
