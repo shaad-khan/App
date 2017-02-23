@@ -82,9 +82,26 @@ $errors= array();
 $the_mode = '0777';
 mkdir($the_path,$the_mode, true);
 echo $the_path."/".$file_name."<br/>";
+$path=$the_path.'/'.$file_name;
          move_uploaded_file($file_tmp,$the_path."/".$file_name);
 
          echo "Success";
+$sql_status="select * from repo where tid='$TID'";
+    //$tab_status='';
+$result=$conn->query($sql_status);
+//echo $msg;
+  while($row4=$result->fetch())
+{
+  $x=1;
+}
+if($x!=1)
+{
+  $sql="insert into repo values('$TID','$path')";
+}
+else{
+  $sql="update repo set link='$path' where tid='$TID'";
+}
+$conn->query($sql);
       }else{
          print_r($errors);
       }
