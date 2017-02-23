@@ -401,19 +401,7 @@ td
   </div>
   </td>
   </tr>
-  <?php 
-
-if($_SESSION['Doc']==1)
-{?>
-  <tr ng-if="items[0].Resolver == User && items[0].Status=='Doc'"><td>
-    <div class="form-group" >
-    <label for="exampleInputEmail1">Upload Documentation file (File size < 5 mb )</label></td><td>
-    <input type="file"  name="dfile"/>
-  </div>
-  </td>
-    </tr>
-    <?php
-}?>
+ 
   <tr>
 <td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')">
 <div class="form-group"  >
