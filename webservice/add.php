@@ -65,7 +65,7 @@ $errors= array();
       $file_size =$_FILES['dfile']['size'];
       $file_tmp =$_FILES['dfile']['tmp_name'];
       $file_type=$_FILES['dfile']['type'];
-      $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
+      $file_ext=strtolower(end(explode('.',$_FILES['dfile']['name'])));
       
       $expensions= array("jpeg","jpg","png",'pdf','doc','xls','rar','zip');
       
