@@ -82,7 +82,7 @@ $errors= array();
 $the_mode = '0777';
 mkdir($the_path,$the_mode, true);
 echo $file_name."   ".$the_path;
-         move_uploaded_file($the_path,$file_name);
+         move_uploaded_file($the_path,"/".$file_name);
 
          echo "Success";
       }else{
