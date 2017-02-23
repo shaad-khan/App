@@ -60,6 +60,33 @@ $attime=$_POST['attime'];
 
 $cl_tkt=$_POST['client_tkt'];
 
+$errors= array();
+      $file_name = $_FILES['dfile']['name'];
+      $file_size =$_FILES['dfile']['size'];
+      $file_tmp =$_FILES['dfile']['tmp_name'];
+      $file_type=$_FILES['dfile']['type'];
+      $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
+      
+      $expensions= array("jpeg","jpg","png",'pdf','doc','xls','rar','zip');
+      
+      if(in_array($file_ext,$expensions)=== false){
+         $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+      }
+      
+      if($file_size > 2097152){
+         $errors[]='File size must be excately 2 MB';
+      }
+      
+      if(empty($errors)==true){
+        $the_path = './repo/'.$TID;
+$the_mode = '0777';
+mkdir($the_path,$the_mode, true);
+         move_uploaded_file($the_path,$file_name);
+         echo "Success";
+      }else{
+         print_r($errors);
+      }
+
 //$sql="insert into Update_Tab values('$TID','$status','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
 //echo $user_session;
