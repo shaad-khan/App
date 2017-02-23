@@ -401,6 +401,19 @@ td
   </div>
   </td>
   </tr>
+  <?php 
+
+if($_SESSION['Doc']==1)
+{?>
+  <tr ng-if="items[0].Resolver == User"><td>{{User}}
+    <div class="form-group" >
+    <label for="exampleInputEmail1">Upload Documentation file (File size < 5 mb )</label></td><td>
+    <input type="file" class="form-control" name="dfile"/>
+  </div>
+  </td>
+    </tr>
+    <?php
+}?>
   <tr>
 <td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')">
 <div class="form-group"  >
@@ -461,19 +474,7 @@ td
   }?>
   </tr>
 
-<?php 
 
-if($_SESSION['Doc']==1)
-{?>
-  <tr ng-if="items[0].Resolver == User"><td>{{User}}
-    <div class="form-group" >
-    <label for="exampleInputEmail1">Upload Documentation file (File size < 5 mb )</label></td><td>
-    <input type="file" class="form-control" name="dfile"/>
-  </div>
-  </td>
-    </tr>
-    <?php
-}?>
 <tr> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
