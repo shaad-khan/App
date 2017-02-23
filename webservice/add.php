@@ -81,11 +81,11 @@ $errors= array();
         $the_path = '../repo/'.$TID;
 $the_mode = '0777';
 mkdir($the_path,$the_mode, true);
-echo $the_path."/".$file_name."<br/>";
+//echo $the_path."/".$file_name."<br/>";
 $path=$the_path.'/'.$file_name;
          move_uploaded_file($file_tmp,$the_path."/".$file_name);
 
-         echo "Success";
+       //  echo "Success";
 $sql_status="select * from repo where tid='$TID'";
     //$tab_status='';
 $result=$conn->query($sql_status);
@@ -447,9 +447,9 @@ if($cl_tkt!=null)
 
 
     /*----------------------------------------------------------------------------------------*/
-/*echo "<script> alert('Updated successfully');
+echo "<script> alert('Updated successfully');
      setTimeout(function(){window.close()}, 1000);
-     </script>";*/
+     </script>";
 }
 else
 {
