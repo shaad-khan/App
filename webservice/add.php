@@ -81,7 +81,9 @@ $errors= array();
         $the_path = '../repo/'.$TID;
 $the_mode = '0777';
 mkdir($the_path,$the_mode, true);
+echo $file_name."   ".$the_path;
          move_uploaded_file($the_path,$file_name);
+
          echo "Success";
       }else{
          print_r($errors);
