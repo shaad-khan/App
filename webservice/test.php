@@ -1,7 +1,5 @@
 <?php
-session_start();
-$t=$_SESSION["team"];
-echo $t;
+
 $server = "gjtz209gib.database.windows.net";
 $user = "CSL3AppsUser@gjtz209gib";
 $pwd = "C0ntinue2$3rve";
