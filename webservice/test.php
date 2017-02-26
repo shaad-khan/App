@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+$t=$_SESSION["team"];
 $server = "gjtz209gib.database.windows.net";
 $user = "CSL3AppsUser@gjtz209gib";
 $pwd = "C0ntinue2$3rve";
@@ -47,7 +48,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '
 }
 }
     
-$sql="select ID,Email,ISNULL(Classify,0) as Classify,ISNULL(Wip,0) as Wip ,ISNULL(Aui,0) as Aui,ISNULL(Review,0) as Review,ISNULL(Doc,0) as Doc,ISNULL(Closure,0) as Closure,ISNULL(Total,0) as Total,Name from status_count order by ID desc";
+$sql="select ID,Email,ISNULL(Classify,0) as Classify,ISNULL(Wip,0) as Wip ,ISNULL(Aui,0) as Aui,ISNULL(Review,0) as Review,ISNULL(Doc,0) as Doc,ISNULL(Closure,0) as Closure,ISNULL(Total,0) as Total,Name from status_count where Team ='$t' order by ID desc";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
