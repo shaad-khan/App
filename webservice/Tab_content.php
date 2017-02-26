@@ -1,6 +1,8 @@
 <?php
 //$d=$_GET["d"];
 //$t=$_GET["t"];
+session_start();
+$t=$_SESSION["team"];
 $msg=$_GET["MSG"];
 $msg=str_replace("'", "&apos;", $msg);
 //$msg2=$msg;
@@ -48,7 +50,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 //$sql="select * from status_count order by ID desc";
 
 
-$sql="select ID,Email,ISNULL(Classify,0) as Classify,ISNULL(Wip,0) as Wip ,ISNULL(Aui,0) as Aui,ISNULL(Review,0) as Review,ISNULL(Doc,0) as Doc,ISNULL(Closure,0) as Closure,ISNULL(Total,0) as Total from status_count order by ID desc";
+$sql="select ID,Email,ISNULL(Classify,0) as Classify,ISNULL(Wip,0) as Wip ,ISNULL(Aui,0) as Aui,ISNULL(Review,0) as Review,ISNULL(Doc,0) as Doc,ISNULL(Closure,0) as Closure,ISNULL(Total,0) as Total from status_count where Team like '$t' order by ID desc";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
