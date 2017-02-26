@@ -73,6 +73,8 @@ $team=$row['Team'];
 $_SESSION['Review']=$row['Review'];
 $_SESSION['Doc']=$row['Doc'];
 $_SESSION['Closure']=$row['Closure'];
+$_SESSION["team"]=$team;
+
 }
 if($f)
 {
