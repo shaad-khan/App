@@ -79,7 +79,7 @@ $_SESSION["team"]=$team;
 if($f)
 {
 $_SESSION["admin"]=1;
-$_SESSION["team"]=$team;
+//$_SESSION["team"]=$team;
 }
 if(($team=="L3")||($f==1))
 {
