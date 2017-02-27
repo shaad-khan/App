@@ -103,7 +103,7 @@ else{
 }
 $conn->query($sql);
       }else{
-         print_r($errors);
+        // print_r($errors);
       }
 
 //$sql="insert into Update_Tab values('$TID','$status','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
