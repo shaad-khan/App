@@ -63,6 +63,7 @@ function myFunction1() {
     <link href="assets/css/style2.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -489,8 +490,8 @@ echo $nc;
                           <span>Task List</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="home.php">Today's Pending Tasks</a></li>
-                          <li><a  href="alerticket.php">TrackServe Alert Tickets</a></li>
+                          <li><a  href="">Your Today's Task List </a></li>
+                          <!--<li><a  href="alerticket.php">TrackServe Alert Tickets</a></li>
                  <?php
                  if($_SESSION['admin']==1)
                     {?>
