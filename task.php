@@ -16,7 +16,7 @@ $u=$_SESSION['user'];
 
                              <div class="col-xs-12" style="padding-left: 21px;padding-right: 21px;">
                                <div class="panel panel-primary">
-                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-3">
+                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-4">
 
                                   <span class="glyphicon glyphicon-menu-hamburger"></span> Task List for <?php echo $u;?>
 
@@ -44,7 +44,7 @@ $u=$_SESSION['user'];
                                     
                                     <div class="form-group">
             
-         <button type="button" class="btn btn-primary" ng-click="search(fill)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+         <button type="button" class="btn btn-primary" ng-click="search(fill)"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></button>
           
           </div>
                                     
