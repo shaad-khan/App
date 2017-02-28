@@ -10,12 +10,15 @@ $server = "gjtz209gib.database.windows.net";
 $user = "CSL3AppsUser@gjtz209gib";
 $pwd = "C0ntinue2$3rve";
 $db = "CSL2AppsDB";
+date_default_timezone_set('Asia/Kolkata');
+									//$date = date('Ymd H:i:s');
+									$fdate = date('Y-m-d');
 
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     if(($s=='')&&($e==''))
     {
-$sql="select * from Master_Ticket_Tab where RESOLVER='$u'";
+$sql="select * from Master_Ticket_Tab where RESOLVER='$u' and Updatetime='$fdate'";
     }
     else
     {
