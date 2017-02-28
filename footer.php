@@ -39,6 +39,7 @@ function popitup4(url) {
 window.onerror = function(errorMsg) {
   $('#console').html($('#console').html()+'<br>'+errorMsg)
 }*/
+alert("hello");
 $('#datetimepicker').datetimepicker({
 dayOfWeekStart : 1,
 lang:'en',
