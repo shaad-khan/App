@@ -22,14 +22,15 @@ $u=$_SESSION['user'];
 
                                     <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span></div>
-                                   <div class="col-xs-6">
-                                    
+                                   <div class="col-xs-12">
+                                    <div class="row">
                                     <div class="col-md-4 col-md-offset-2 demo">
             
            <input type="text" class="some_class" value="" id="some_class_1" name="date" style="color:black"/>
           
           </div>
                                     
+                                    </div>
                                     </div>
 
 
