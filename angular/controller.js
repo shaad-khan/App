@@ -269,7 +269,7 @@ app.controller("Task",function($scope,service,$interval){
 var x;
 service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(function(response){
   
-     //	$scope.load2='false';
+     	$scope.load='false';
       $scope.tasks=response.data;
     }); 
 
