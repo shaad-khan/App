@@ -36,7 +36,9 @@ function popitup4(url) {
 </script>
 <script type="text/javascript">
           $(document).ready(function () {
+            alert("hi");
              $(function () {
+               alert("hi2");
                // $('#datetimepicker2').datetimepicker();
 $('input[name="daterange"]').daterangepicker();
             });
