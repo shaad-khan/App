@@ -3,6 +3,9 @@ session_start();
 
 
 $u = $_SESSION["user"];
+
+$s=$_GET['sdate'];
+$e=$_GET['edate'];
 $server = "gjtz209gib.database.windows.net";
 $user = "CSL3AppsUser@gjtz209gib";
 $pwd = "C0ntinue2$3rve";
@@ -10,7 +13,14 @@ $db = "CSL2AppsDB";
 
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    if(($s=='')&&($e==''))
+    {
 $sql="select * from Master_Ticket_Tab where RESOLVER='$u'";
+    }
+    else
+    {
+      $sql="select * from Master_Ticket_Tab where (RESOLVER='$u') and (Updatetime between '$s' and '$e')";
+    }
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
