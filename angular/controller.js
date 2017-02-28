@@ -272,7 +272,10 @@ service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(func
      	$scope.load='false';
       $scope.tasks=response.data;
     }); 
-
+$scope.search=function(s,e)
+{
+  alert("startdate:"+s+"  Enddate:"+e);
+}
 
 });
 

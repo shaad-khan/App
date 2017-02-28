@@ -26,7 +26,7 @@ $u=$_SESSION['user'];
                                     
                                     
             <div class="form-group">
-           <input type="text" class="form-control" value="" id="some_class_1" name="date" style="color:black" placeholder="Start date"/>
+           <input type="text" class="form-control" value="" id="some_class_1" name="date" style="color:black" placeholder="Start date" ng-model="sdate"/>
           
           </div>
                                     
@@ -35,7 +35,7 @@ $u=$_SESSION['user'];
                                     
                                     <div class="form-group">
             
-           <input type="text" class="form-control" value="" id="some_class_2" name="date" style="color:black" placeholder="End date"/>
+           <input type="text" class="form-control" value="" id="some_class_2" name="date" style="color:black" placeholder="End date" ng-model="edate"/>
           
           </div>
                                     
@@ -44,7 +44,7 @@ $u=$_SESSION['user'];
                                     
                                     <div class="form-group">
             
-         <button type="button" class="btn btn-primary" ng-click="search(fill)"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></button>
+         <button type="button" class="btn btn-primary" ng-click="search(sdate,edate)"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></button>
           
           </div>
                                     
