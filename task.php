@@ -25,19 +25,19 @@ $u=$_SESSION['user'];
                                    <div class="col-xs-2">
                                     
                                     
+            <div class="form-group">
+           <input type="text" class="fornm-control" value="" id="some_class_1" name="date" style="color:black" placeholder="Start date"/>
+          
+          </div>
+                                    
+                                    </div> 
+                                     <div class="col-xs-2">To
+                                    
+                                    <div class="form-group">
             
-           <input type="text" class="some_class" value="" id="some_class_1" name="date" style="color:black" placeholder="Start date"/>
+           <input type="text" class="form-control" value="" id="some_class_2" name="date" style="color:black" placeholder="End date"/>
           
-          
-                                    
-                                    </div> To
-                                     <div class="col-xs-2">
-                                    
-                                    
-            
-           <input type="text" class="some_class" value="" id="some_class_2" name="date" style="color:black" placeholder="end date"/>
-          
-          
+          </div>
                                     
                                     </div>
 
