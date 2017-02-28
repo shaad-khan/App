@@ -40,7 +40,7 @@ $u=$_SESSION['user'];
           </div>
                                     
                                     </div>
-                                    <div class="col-xs-2" style="width:10px">
+                                    <div class="col-xs-2" >
                                     
                                     <div class="form-group">
             
@@ -49,7 +49,7 @@ $u=$_SESSION['user'];
           </div>
                                     
                                     </div>
-                                     <div class="col-xs-2">
+                                     <div class="col-xs-2" style="width:6.7px">
                                     
                                     <div class="form-group">
             <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-plus
