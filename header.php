@@ -99,11 +99,7 @@ bkLib.onDomLoaded(function() {
   new nicEditor({maxHeight : 200}).panelInstance('area5');
 });
 </script>-->
- <script type="text/javascript">
-          $(document).ready(function () {
-                $('#datetimepicker1').datetimepicker();
-            });
-        </script>
+ 
 <style>
 element.style {
     width: 14px;
