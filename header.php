@@ -45,7 +45,6 @@ $result2=$conn->query($sql2);
    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 <!-- Optional theme -->
-
 <script>
 function myFunction1() {
     document.getElementById("demo").innerHTML = "Checklist Task";
