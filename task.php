@@ -62,8 +62,8 @@ $u=$_SESSION['user'];
 
 
 
-                                    <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
-                                   </div></div></div>
+                                   <!-- <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
+                                   </div>--></div></div>
        <div class="panel-body" ng-controller="Task">
          <table class="table"><tr>
      <th>Ticket_ID</th>
