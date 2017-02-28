@@ -8,17 +8,9 @@
       </footer>
       <!--footer end-->
   </section>
-  <script type="text/javascript">
-  
-          $(document).ready(function () {
-             $(function() {
-    $('input[name="daterange"]').daterangepicker();
-});
-          });
-        </script>
-<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
+<!---------------------------------------------   -->
 <script language="javascript" type="text/javascript">
-
+<!--
 function popitup(url) {
   newwindow=window.open(url,'name','height=200,width=450');
   if (window.focus) {newwindow.focus()}
@@ -42,7 +34,13 @@ function popitup4(url) {
 // -->
 
 </script>
-
+<script type="text/javascript">
+          $(document).ready(function () {
+             $(function () {
+                $('#datetimepicker2').datetimepicker();
+            });
+          });
+        </script>
 <!--<script src="dateresource/jquery.js"></script>
 <script src="dateresource/jquery.datetimepicker.js"></script>
 <script>/*
@@ -177,14 +175,14 @@ $('#datetimepicker_dark').datetimepicker({theme:'dark'})
    <script src="assets/js/jquery.js"></script>-->
 
 
-   <!-- <script src="assets/js/bootstrap.min.js"></script>-->
-    <!--<script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="assets/js/jquery.scrollTo.min.js"></script>
     <!--<script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>-->
 
 
     <!--common script for all pages-->
-    <!--<script src="assets/js/common-scripts.js"></script>-->
+    <script src="assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
 
