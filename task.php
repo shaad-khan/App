@@ -16,7 +16,7 @@ $u=$_SESSION['user'];
 
                              <div class="col-xs-12" style="padding-left: 21px;padding-right: 21px;">
                                <div class="panel panel-primary">
-                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-3">
+                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-2">
 
                                   <span class="glyphicon glyphicon-menu-hamburger"></span> Task List for <?php echo $u;?>
 
@@ -31,7 +31,7 @@ $u=$_SESSION['user'];
           </div>
                                     
                                     </div> 
-                                     <div class="col-xs-3">
+                                     <div class="col-xs-2">
                                     
                                     <div class="form-group">
             
