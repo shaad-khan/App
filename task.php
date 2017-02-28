@@ -31,7 +31,7 @@ $u=$_SESSION['user'];
           </div>
                                     
                                     </div> 
-                                     <div class="col-xs-3">To
+                                     <div class="col-xs-3">
                                     
                                     <div class="form-group">
             
