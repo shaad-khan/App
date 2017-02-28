@@ -42,7 +42,7 @@ $result2=$conn->query($sql2);
 
     <title>Continuity App</title>
  <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
- <script src="assets/js/jquery-1.8.3.min.js"></script>
+<script src="dateresource/jquery.js"></script>
  <script src="dateresource/jquery.datetimepicker.js"></script>
    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bo
    <script src="dateresource/jquery.datetimepicker.js"></script>otstrap.min.css">
