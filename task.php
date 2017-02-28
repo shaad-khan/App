@@ -94,7 +94,7 @@ $u=$_SESSION['user'];
 </td>-->
     </tr>
     <tr>
-    <td colspan="6">Total Time Spend</td><td>{{getTotal()}} min approx {{taskhour}} hours </td></tr>
+    <td colspan="6">Total Time Spend</td><td>{{getTotal()}} min approx {{taskhour}} hours {{getHrs(taskhour)}} </td></tr>
  </table
 </div>
 </div>
