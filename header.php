@@ -113,7 +113,7 @@ element.style {
   line-height: 1.33;
   border-radius: 25px;
 }
-.col-xs-2.add
+.col-xs-2.add2
 {
 width:-17.4%;
 }
