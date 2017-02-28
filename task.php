@@ -16,21 +16,20 @@ $u=$_SESSION['user'];
 
                              <div class="col-xs-12" style="padding-left: 21px;padding-right: 21px;">
                                <div class="panel panel-primary">
-                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
+                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-5">
 
                                   <span class="glyphicon glyphicon-menu-hamburger"></span> Task List for <?php echo $u;?>
 
                                     <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span></div>
-                                   <div class="col-xs-12">
-                                    <div class="row">
-                                    <div class="col-md-4 col-md-offset-2 demo">
-            
-           <input type="text" class="some_class" value="" id="some_class_1" name="date" style="color:black"/>
-          
-          </div>
+                                   <div class="col-xs-4">
                                     
-                                    </div>
+                                    
+            
+           <input type="text" class="some_class" value="" id="some_class_1" name="date"/>
+          
+          
+                                    
                                     </div>
 
 
