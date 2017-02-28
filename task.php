@@ -94,7 +94,7 @@ $u=$_SESSION['user'];
 </td>-->
     </tr>
     <tr>
-    <td colspan="6">Total Time Spend</td><td ng-init="t=getTotal()">{{getTotal()}} min approx {{getHrs(t)}} </td></tr>
+    <td colspan="6">Total Time Spend</td><td >{{getTotal()}} min approx {{getTota()/60}} </td></tr>
  </table
 </div>
 </div>

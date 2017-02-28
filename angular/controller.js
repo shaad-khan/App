@@ -292,12 +292,7 @@ $scope.getTotal = function(){
     //console.log("total="+total);
     return total;
 }
-$scope.getHrs = function(x){
-    
-    //$scope.taskhour=$total/60;
-    //console.log("total="+total);
-    return x/60;
-}
+
 
 
 });
