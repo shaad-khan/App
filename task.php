@@ -22,7 +22,7 @@ $u=$_SESSION['user'];
 
                                     <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span></div>
-                                   <div class="col-xs-4">
+                                   <div class="col-xs-2">
                                     
                                     
             
@@ -31,11 +31,11 @@ $u=$_SESSION['user'];
           
                                     
                                     </div> To
-                                     <div class="col-xs-4">
+                                     <div class="col-xs-2">
                                     
                                     
             
-           <input type="text" class="some_class" value="" id="some_class_1" name="date" style="color:black" placeholder="end date"/>
+           <input type="text" class="some_class" value="" id="some_class_2" name="date" style="color:black" placeholder="end date"/>
           
           
                                     
@@ -102,6 +102,7 @@ window.onerror = function(errorMsg) {
 //alert("hello");
  $(function() {
           $('#some_class_1').datetimepicker();
+           $('#some_class_2').datetimepicker();
          });
 
          </script>
