@@ -7,6 +7,15 @@ $u=$_SESSION['user'];
 
 
  <div class="row mt"  ng-init="setuser('<?php echo $u;?>')">
+  <div class="col-xs-6">
+                                    
+                                    <div class="col-md-4 col-md-offset-2 demo">
+            
+           <input type="text" class="some_class" value="" id="some_class_1" name="date"/>
+          
+          </div>
+                                    
+                                    </div>
    <div class="col-md-12">
  <div class="content-panel" id="reload">
 
@@ -21,15 +30,7 @@ $u=$_SESSION['user'];
 
                                     <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span></div>
-                                    <div class="col-xs-6">
-                                    
-                                    <div class="col-md-4 col-md-offset-2 demo">
-            
-           <input type="text" class="some_class" value="" id="some_class_1" name="date"/>
-            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-          </div>
-                                    
-                                    </div>
+                                   
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
        <div class="panel-body" ng-controller="Task">
