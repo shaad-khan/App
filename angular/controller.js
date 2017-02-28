@@ -282,6 +282,15 @@ $scope.search=function(s,e)
     }); 
 }
 
+$scope.getTotal = function(){
+    var total = 0;
+    for(var i = 0; i < $scope.tasks.length; i++){
+        var product = $scope.tasks[i];
+        total +=  product.TimeTaken;
+    }
+    return total;
+}
+
 });
 
 
