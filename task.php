@@ -23,7 +23,11 @@ $u=$_SESSION['user'];
                                     <span class="glyphicon glyphicon-home"></a></span></div>
                                     <div class="col-xs-3">
                                     
-                                   <input type="text" name="daterange" value="01/01/2015 - 01/31/2015" />
+                                    <div class="col-md-4 col-md-offset-2 demo">
+            <h4>Your Date Range Picker</h4>
+            <input type="text" id="config-demo" class="form-control">
+            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+          </div>
                                     
                                     
                                     </div>
