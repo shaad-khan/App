@@ -118,7 +118,7 @@ $u=$_SESSION['user'];
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background: #000d1a; color:white;">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="color: #f2f2f2;">&times;</span></button>
         <h4 class="modal-title" id="exampleModalLabel">Adhoc Task Entry Form</h4>
       </div>
       <div class="modal-body">
