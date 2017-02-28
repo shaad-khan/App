@@ -94,7 +94,7 @@ $u=$_SESSION['user'];
 </td>-->
     </tr>
     <tr>
-    <td colspan="6">Total Time Spend</td><td >{{getTotal()}} min approx {{(+getTota())/60}} hours </td></tr>
+    <td colspan="6">Total Time Spend</td><td >{{getTotal()}} min approx {{((getTota())/60)|number:0}} hours </td></tr>
  </table
 </div>
 </div>
