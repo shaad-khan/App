@@ -39,8 +39,12 @@ function popitup4(url) {
 window.onerror = function(errorMsg) {
   $('#console').html($('#console').html()+'<br>'+errorMsg)
 }
-alert("hello");
-$('#datetimepicker').datetimepicker({
+//alert("hello");
+ $(function() {
+          $('#some_class_1').datetimepicker();
+         });
+
+/*$('#datetimepicker').datetimepicker({
 dayOfWeekStart : 1,
 lang:'en',
 disabledDates:['1986/01/08','1986/01/09','1986/01/10'],
@@ -48,7 +52,7 @@ startDate:  '1986/01/05'
 });
 $('#datetimepicker').datetimepicker({value:'2015/04/15 05:03',step:10});
 
-$('#some_class_1').datetimepicker();
+
 
 $('#default_datetimepicker').datetimepicker({
   formatTime:'H:i',
@@ -160,7 +164,7 @@ $('#datetimepicker12').datetimepicker({
   }
 });
 $('#datetimepicker_dark').datetimepicker({theme:'dark'})
-
+*/
 
 </script>
     <!-- js placed at the end of the document so the pages load faster -->
