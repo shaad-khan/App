@@ -274,7 +274,11 @@ service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(func
     }); 
 $scope.search=function(s,e)
 {
-  alert("startdate:"+s+"  Enddate:"+e);
+  service.serv("https://apps.continuserve.com/webservice/task_serv.php?sdate="+s+"&edate="+e).then(function(response){
+  
+     	$scope.load='false';
+      $scope.tasks=response.data;
+    }); 
 }
 
 });
