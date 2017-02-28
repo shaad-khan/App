@@ -33,7 +33,7 @@ function popitup4(url) {
 }
 // 
 </script>-->
-<script src="dateresource/jquery.js"></script>
+<!--<script src="dateresource/jquery.js"></script>-->
 <script src="dateresource/jquery.datetimepicker.js"></script>
 <script>/*
 window.onerror = function(errorMsg) {
