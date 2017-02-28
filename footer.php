@@ -37,7 +37,7 @@ function popitup4(url) {
 <script type="text/javascript">
           $(document).ready(function () {
              $(function () {
-                $('#datetimepicker1').datetimepicker();
+                $('#datetimepicker2').datetimepicker();
               
             });
           });
