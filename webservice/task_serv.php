@@ -18,11 +18,12 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     if(($s=='')&&($e==''))
     {
-$sql="select * from Master_Ticket_Tab where RESOLVER='$u' and Updatetime='$fdate'";
+      $sql="select m.Tdiscription,m.Ticket_ID,m.Client,u.Status,u.UpdateTime,u.TimeTaken from master_ticket_tab as m ,update_Tab as u where m.Ticket_ID=u.TicketId and u.UpdateBy='$u'"
+//$sql="select * from Master_Ticket_Tab where Resolver='$u' and Resolver_Dtime='$fdate'";
     }
     else
     {
-      $sql="select * from Master_Ticket_Tab where (RESOLVER='$u') and (Updatetime between '$s' and '$e')";
+      $sql="select * from Master_Ticket_Tab where (Resolver='$u') and (Resolver_Dtime between '$s' and '$e')";
     }
 $result=$conn->query($sql);
 //echo $msg;
