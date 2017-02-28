@@ -86,13 +86,15 @@ $u=$_SESSION['user'];
 <td>{{res.Status}}</td>
 
 <td>{{res.UpdateTime}}</td>
-<td>{{res.TimeTaken}} min</td>
+<td ng-init="total=total+res.TimeTaken">{{res.TimeTaken}} min</td>
 
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="push(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></sbutton>
 </td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
 </td>-->
     </tr>
+    <tr>
+    <td colspan="5">Total Time Spend</td><td>{{total}}</td></tr>
  </table
 </div>
 </div>
