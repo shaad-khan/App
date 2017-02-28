@@ -114,6 +114,18 @@ element.style {
   border-radius: 25px;
 }
 
+.modal {
+    position: fixed;
+    top: 39px;
+    right: -126px;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
 /*
 .table-fixed {
   width: 100%;
