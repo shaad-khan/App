@@ -490,7 +490,7 @@ echo $nc;
                           <span>Task List</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="#!/task"><span class="glyphicon glyphicon-list-alt"></span> Your Task List </a></li>
+                          <li><a  href="#!/task"><span class="glyphicon glyphicon-object-align-right"></span> Your Task List </a></li>
                           <!--<li><a  href="alerticket.php">TrackServe Alert Tickets</a></li>
                  <?php
                  if($_SESSION['admin']==1)
