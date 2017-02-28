@@ -34,7 +34,9 @@ function popitup4(url) {
 // -->
 
 </script>
-<script type="text/javascript">
+
+<script type="text/javascript" src="assets/require.js" data-main="assets/main.js"></script>
+<!--<script type="text/javascript">
          
              $(function () {
                alert("hi2");
@@ -177,7 +179,7 @@ $('#datetimepicker_dark').datetimepicker({theme:'dark'})
    <script src="assets/js/jquery.js"></script>-->
 
 
-  <!--  <script src="assets/js/bootstrap.min.js"></script>
+  <!--  <script src="assets/js/bootstrap.min.js"></script>-->
     <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="assets/js/jquery.scrollTo.min.js"></script>
     <!--<script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>-->
