@@ -198,6 +198,5 @@ $('#datetimepicker_dark').datetimepicker({theme:'dark'})
       });
 
   </script>-->
-
   </body>
 </html>
