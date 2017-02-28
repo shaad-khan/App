@@ -94,7 +94,7 @@ $u=$_SESSION['user'];
 </td>-->
     </tr>
     <tr>
-    <td colspan="5">Total Time Spend</td><td>{{gettotal()}}</td></tr>
+    <td colspan="5">Total Time Spend</td><td>{{getTotal()}}</td></tr>
  </table
 </div>
 </div>
