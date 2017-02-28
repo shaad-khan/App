@@ -52,24 +52,9 @@ function myFunction1() {
 </script>
 
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-  
-
-<!--<link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>-->
+<link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-
-      <link rel="stylesheet" type="text/css" media="all" href="assets/daterangepicker.css" />
     <!-- Bootstrap core CSS -->
-  <!--<script src="https://code.jquery.com/jquery-1.11.3.min"></script>
- <script type="text/javascript" src="https://apps.continuserve.com/assets/daterangepicker.js"></script>
-<script type="text/javascript" src="assets/moment.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
- 
-<!-- Include Date Range Picker -->
-<!--<script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />-->
-
-
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -79,10 +64,7 @@ function myFunction1() {
     <!-- Custom styles for this Continuitylate -->
     <link href="assets/css/style2.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
-   <!-- <link href="assets/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>-->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
