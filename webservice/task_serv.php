@@ -10,7 +10,7 @@ $db = "CSL2AppsDB";
 
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-$sq="select * from Master_Ticket_Tab where RESOLVER='$u'"
+$sql="select * from Master_Ticket_Tab where RESOLVER='$u'";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
