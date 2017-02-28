@@ -22,7 +22,7 @@ $u=$_SESSION['user'];
 
                                     <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span></div>
-                                   <div class="col-xs-2">
+                                   <div class="col-xs-3">
                                     
                                     
             <div class="form-group">
@@ -31,7 +31,7 @@ $u=$_SESSION['user'];
           </div>
                                     
                                     </div> 
-                                     <div class="col-xs-2">To
+                                     <div class="col-xs-3">To
                                     
                                     <div class="form-group">
             
