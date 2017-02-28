@@ -38,10 +38,6 @@ function popitup4(url) {
           $(document).ready(function () {
              $(function () {
                 $('#datetimepicker1').datetimepicker();
-
-                $('.input-daterange input').each(function() {
-    $(this).datepicker('clearDates');
-});
             });
           });
         </script>
