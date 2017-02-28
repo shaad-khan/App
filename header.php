@@ -88,7 +88,7 @@ bkLib.onDomLoaded(function() {
 });
 </script>-->
  <script type="text/javascript">
-            $(function () {
+          $(document).ready(function () {
                 $('#datetimepicker1').datetimepicker();
             });
         </script>
