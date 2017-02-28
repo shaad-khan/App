@@ -28,9 +28,7 @@ $u=$_SESSION['user'];
         <div class='col-sm-3'>
             <div class="form-group">
                 <input type="text" name="daterange" value="01/01/2015 - 01/31/2015" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
+                    
                
             </div>
         </div>
