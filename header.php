@@ -62,6 +62,7 @@ function myFunction1() {
 
             <script src="angular/controller.js"></script>
     <!-- Custom styles for this Continuitylate -->
+    <script src="assets/jquery-1.8.3.min.js"></script>
     <link href="assets/css/style2.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
