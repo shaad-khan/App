@@ -29,7 +29,6 @@ $u=$_SESSION['user'];
             <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
           </div>
                                     
-                                    
                                     </div>
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>

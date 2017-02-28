@@ -1,8 +1,8 @@
 requirejs.config({
     "paths": {
       "jquery": "https://code.jquery.com/jquery-1.11.3.min",
-      "moment": "assets/moment",
-      "daterangepicker": "assets/daterangepicker"
+      "moment": "https://apps.continuserve.com/assets/moment",
+      "daterangepicker": "https://apps.continuserve.com/assets/daterangepicker"
     }
 });
 
