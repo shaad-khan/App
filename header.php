@@ -126,6 +126,13 @@ element.style {
     -webkit-overflow-scrolling: touch;
     outline: 0;
 }
+.close:hover, .close:focus {
+    color: #f2f2f2;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
 /*
 .table-fixed {
   width: 100%;
