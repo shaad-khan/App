@@ -24,7 +24,7 @@ $u=$_SESSION['user'];
                                     <div class="col-xs-3">
                                     
                                     <div class="col-md-4 col-md-offset-2 demo">
-            <h4>Your Date Range Picker</h4>
+            
             <input type="text" id="config-demo" class="form-control">
             <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
           </div>
