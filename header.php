@@ -41,9 +41,9 @@ $result2=$conn->query($sql2);
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Continuitylate, Theme, Responsive, Fluid, Retina">
 
     <title>Continuity App</title>
- 
+ <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
+<link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
 <!-- Optional theme -->
 <script>
 function myFunction1() {
@@ -52,7 +52,7 @@ function myFunction1() {
 </script>
 
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-<link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
+
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
