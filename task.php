@@ -27,12 +27,11 @@ $u=$_SESSION['user'];
     <div class="row">
         <div class='col-sm-3'>
             <div class="form-group">
-                <div class='input-group date' id='datetimepicker2'>
-                    <input type='text' class="form-control" />
+                <input type="text" name="daterange" value="01/01/2015 - 01/31/2015" />
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
-                </div>
+               
             </div>
         </div>
        
