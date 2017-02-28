@@ -288,10 +288,10 @@ $scope.getTotal = function(){
         var product = $scope.tasks[i];
         total +=  product.TimeTaken;
     }
-    console.log("total="+total);
+    //console.log("total="+total);
     return total;
 };
-
+$scope.taskhour=$scope.getTotal/60;
 });
 
 
