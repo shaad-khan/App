@@ -42,7 +42,10 @@ $result2=$conn->query($sql2);
 
     <title>Continuity App</title>
  <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
-   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <script src="assets/js/jquery-1.8.3.min.js"></script>
+ <script src="dateresource/jquery.datetimepicker.js"></script>
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bo
+   <script src="dateresource/jquery.datetimepicker.js"></script>otstrap.min.css">
 <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
 <!-- Optional theme -->
 <script>
@@ -62,7 +65,7 @@ function myFunction1() {
 
             <script src="angular/controller.js"></script>
     <!-- Custom styles for this Continuitylate -->
-    <script src="assets/js/jquery-1.8.3.min.js"></script>
+    
     <link href="assets/css/style2.css" rel="stylesheet">
     <link href="assets/css/style-responsive.css" rel="stylesheet">
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
