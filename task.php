@@ -25,7 +25,7 @@ $u=$_SESSION['user'];
                                     
                                     <div class="col-md-4 col-md-offset-2 demo">
             
-            <input type="text" id="config-demo" class="form-control">
+           <input type="text" class="some_class" value="" id="some_class_1" name="date"/>
             <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
           </div>
                                     
