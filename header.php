@@ -61,7 +61,7 @@ function myFunction1() {
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     
-<link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
+<!--<link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 
     <!-- Bootstrap core CSS -->
