@@ -10,9 +10,11 @@
   </section>
   <script type="text/javascript">
   
-         $(function() {
+          $(document).ready(function () {
+             $(function() {
     $('input[name="daterange"]').daterangepicker();
 });
+          });
         </script>
 <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
 <script language="javascript" type="text/javascript">
