@@ -85,8 +85,8 @@ $u=$_SESSION['user'];
 <td>{{res.Tdiscription}}</td>
 <td>{{res.Status}}</td>
 
-<td>{{res.Updatetime}}</td>
-<td>{{res.Total_time}} min</td>
+<td>{{res.UpdateTime}}</td>
+<td>{{res.TimeTaken}} min</td>
 
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="push(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></sbutton>
 </td>
