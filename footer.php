@@ -38,6 +38,7 @@ function popitup4(url) {
           $(document).ready(function () {
              $(function () {
                 $('#datetimepicker1').datetimepicker();
+              
             });
           });
         </script>
