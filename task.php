@@ -26,7 +26,7 @@ $u=$_SESSION['user'];
                                     
                                     
             <div class="form-group">
-           <input type="text" class="fornm-control" value="" id="some_class_1" name="date" style="color:black" placeholder="Start date"/>
+           <input type="text" class="form-control" value="" id="some_class_1" name="date" style="color:black" placeholder="Start date"/>
           
           </div>
                                     
