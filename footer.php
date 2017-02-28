@@ -8,8 +8,8 @@
       </footer>
       <!--footer end-->
   </section>
-<!---------------------------------------------   -->
-<script language="javascript" type="text/javascript">
+
+<!--<script language="javascript" type="text/javascript">
 
 function popitup(url) {
   newwindow=window.open(url,'name','height=200,width=450');
@@ -31,8 +31,8 @@ function popitup4(url) {
   if (window.focus) {newwindow.focus()}
   return false;
 }
-// -->
-</script>
+// 
+</script>-->
 <script src="dateresource/jquery.js"></script>
 <script src="dateresource/jquery.datetimepicker.js"></script>
 <script>/*
