@@ -40,6 +40,15 @@ $u=$_SESSION['user'];
           </div>
                                     
                                     </div>
+                                    <div class="col-xs-2">
+                                    
+                                    <div class="form-group">
+            
+         <button type="button" class="btn btn-primary" ng-click="search(fill)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          
+          </div>
+                                    
+                                    </div>
 
 
 
