@@ -23,18 +23,7 @@ $u=$_SESSION['user'];
                                     <span class="glyphicon glyphicon-home"></a></span></div>
                                     <div class="col-xs-3">
                                     
-                                    <div class="container">
-    <div class="row">
-        <div class='col-sm-3'>
-            <div class="form-group">
-                <input type="text" name="daterange" value="01/01/2015 - 01/31/2015" />
-                    
-               
-            </div>
-        </div>
-       
-    </div>
-</div>
+                                   <input type="text" name="daterange" value="01/01/2015 - 01/31/2015" />
                                     
                                     
                                     </div>
