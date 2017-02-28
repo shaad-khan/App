@@ -26,7 +26,7 @@ $u=$_SESSION['user'];
                                     
                                     
             
-           <input type="text" class="some_class" value="" id="some_class_1" name="date"/>
+           <input type="text" class="some_class" value="" id="some_class_1" name="date" style="color:black" placeholder="Start_date"/>
           
           
                                     
