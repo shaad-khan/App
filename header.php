@@ -41,18 +41,7 @@ $result2=$conn->query($sql2);
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Continuitylate, Theme, Responsive, Fluid, Retina">
 
     <title>Continuity App</title>
-<script>
-function myFunction1() {
-    document.getElementById("demo").innerHTML = "Checklist Task";
-}
-</script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    
-<link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-<script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 <!-- Optional theme -->
@@ -63,6 +52,19 @@ function myFunction1() {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>                       
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<script>
+function myFunction1() {
+    document.getElementById("demo").innerHTML = "Checklist Task";
+}
+</script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    
+<link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    
 
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <!--external css-->
