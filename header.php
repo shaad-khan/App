@@ -46,8 +46,6 @@ $result2=$conn->query($sql2);
 
 <!-- Optional theme -->
 
-
-
 <script>
 function myFunction1() {
     document.getElementById("demo").innerHTML = "Checklist Task";
