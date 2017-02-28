@@ -288,8 +288,9 @@ $scope.getTotal = function(){
         var product = $scope.tasks[i];
         total +=  product.TimeTaken;
     }
+    console.log("total="+total);
     return total;
-}
+};
 
 });
 
