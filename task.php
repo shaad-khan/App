@@ -125,7 +125,12 @@ $u=$_SESSION['user'];
         <form>
           <div class="form-group">
             <label for="recipient-name" class="control-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
+             
+            
+           <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="End date" ng-model="edate"/>
+          
+          
+           
           </div>
           <div class="form-group">
             <label for="message-text" class="control-label">Message:</label>
@@ -149,6 +154,7 @@ window.onerror = function(errorMsg) {
  $(function() {
           $('#some_class_1').datetimepicker();
            $('#some_class_2').datetimepicker();
+            $('#some_class_3').datetimepicker();
          });
 
          </script>
