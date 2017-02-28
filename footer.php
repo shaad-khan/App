@@ -33,6 +33,11 @@ function popitup4(url) {
 }
 // -->
 </script>
+<script type="text/javascript">
+          $(document).ready(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
 <script src="dateresource/jquery.js"></script>
 <!--<script src="dateresource/jquery.datetimepicker.js"></script>
 <script>/*
