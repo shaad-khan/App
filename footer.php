@@ -8,7 +8,14 @@
       </footer>
       <!--footer end-->
   </section>
-<!---------------------------------------------   -->
+  <script type="text/javascript">
+          $(document).ready(function () {
+             $(function () {
+                $('#datetimepicker2').datetimepicker();
+            });
+          });
+        </script>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
 <script language="javascript" type="text/javascript">
 <!--
 function popitup(url) {
@@ -34,14 +41,7 @@ function popitup4(url) {
 // -->
 
 </script>
-<script type="text/javascript">
-          $(document).ready(function () {
-             $(function () {
-                $('#datetimepicker2').datetimepicker();
-              
-            });
-          });
-        </script>
+
 <!--<script src="dateresource/jquery.js"></script>
 <script src="dateresource/jquery.datetimepicker.js"></script>
 <script>/*
