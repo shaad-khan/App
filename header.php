@@ -54,11 +54,12 @@ function myFunction1() {
 }
 </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
     
 <!--<link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>-->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
-   <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
       <link rel="stylesheet" type="text/css" media="all" href="assets/daterangepicker.css" />
     <!-- Bootstrap core CSS -->
   

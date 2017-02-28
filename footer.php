@@ -35,7 +35,7 @@ function popitup4(url) {
 
 </script>
 
-<script type="text/javascript" src="assets/require.js" data-main="assets/main.js"></script>
+<script type="text/javascript" src="assets/require.js" data-main="main.js"></script>
 <!--<script type="text/javascript">
          
              $(function () {
