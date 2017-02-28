@@ -34,11 +34,11 @@ function popitup4(url) {
 // 
 </script>-->
 <!--<script src="dateresource/jquery.js"></script>-->
-<script src="dateresource/jquery.datetimepicker.js"></script>
-<script>/*
+
+<script>
 window.onerror = function(errorMsg) {
   $('#console').html($('#console').html()+'<br>'+errorMsg)
-}*/
+}
 alert("hello");
 $('#datetimepicker').datetimepicker({
 dayOfWeekStart : 1,
@@ -48,7 +48,7 @@ startDate:  '1986/01/05'
 });
 $('#datetimepicker').datetimepicker({value:'2015/04/15 05:03',step:10});
 
-$('.some_class').datetimepicker();
+$('#some_class_1').datetimepicker();
 
 $('#default_datetimepicker').datetimepicker({
   formatTime:'H:i',
