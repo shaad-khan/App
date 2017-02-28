@@ -99,7 +99,6 @@ bkLib.onDomLoaded(function() {
   new nicEditor({maxHeight : 200}).panelInstance('area5');
 });
 </script>-->
- 
 <style>
 element.style {
     width: 14px;
