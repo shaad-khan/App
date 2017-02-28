@@ -59,9 +59,9 @@ function myFunction1() {
 
       <link rel="stylesheet" type="text/css" media="all" href="assets/daterangepicker.css" />
     <!-- Bootstrap core CSS -->
-  
-  <!--  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min"></script>
+ <script type="text/javascript" src="https://apps.continuserve.com/assets/daterangepicker.js"></script>
+<script type="text/javascript" src="assets/moment.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" />
  
 <!-- Include Date Range Picker -->
