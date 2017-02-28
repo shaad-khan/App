@@ -23,7 +23,7 @@ $u=$_SESSION['user'];
                                     <span class="glyphicon glyphicon-home"></a></span></div>
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
-       <div class="panel-body" ng-controller="task">
+       <div class="panel-body" ng-controller="Task">
          <table class="table"><tr>
      <th>Ticket_ID</th>
      <th>Client</th>

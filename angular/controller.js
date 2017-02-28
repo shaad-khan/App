@@ -104,9 +104,11 @@ function callAtInterval(){
 
 });
 
-app.controller("taskgraph", function($scope,$http,$interval){
+app.controller("taskgraph", function($scope,$http,$interval,service){
 	 var x=0;
-
+service.serv("https://apps.continuserve.com/webservice/service.php?type=Task_Category").then(function(response){
+var tasks=response.data;
+});
 $interval(callAtInterval2, 30000);
 function callAtInterval2(){
    console.log("called");
@@ -257,6 +259,19 @@ var url="list.php?param="+text;
 	  if (window.focus) {newwindow.focus()}
 	  return false;
 };
+
+
+});
+
+
+/*------------------------------------------------------------------*/
+app.controller("Task",function($scope,service,$interval){
+var x;
+service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(function(response){
+  
+     //	$scope.load2='false';
+      $scope.tasks=response.data;
+    }); 
 
 
 });
