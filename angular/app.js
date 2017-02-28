@@ -16,8 +16,9 @@ app.config(function($routeProvider) {
                return 'ticket.php'},
       controller  : 'Ticket'
     })
-    .when("/green", {
-        templateUrl : "green.htm"
+    .when("/task", {
+        templateUrl : "task.php",
+         controller: 'task'
     })
     .when("/blue", {
         templateUrl : "blue.htm"
