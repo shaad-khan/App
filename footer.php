@@ -9,9 +9,11 @@
       <!--footer end-->
   </section>
   <script type="text/javascript">
+  
           $(document).ready(function () {
-             $(function () {
-                $('#datetimepicker2').datetimepicker();
+            var j = jQuery.noConflict();
+             j(function () {
+                j('#datetimepicker2').datetimepicker();
             });
           });
         </script>
