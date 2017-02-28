@@ -80,3 +80,16 @@ $u=$_SESSION['user'];
 </div>
 </div>
 </div>
+
+
+
+<script>
+window.onerror = function(errorMsg) {
+  $('#console').html($('#console').html()+'<br>'+errorMsg)
+}
+//alert("hello");
+ $(function() {
+          $('#some_class_1').datetimepicker();
+         });
+
+         </script>
