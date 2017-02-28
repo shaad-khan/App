@@ -10,7 +10,7 @@
   </section>
 <!---------------------------------------------   -->
 <script language="javascript" type="text/javascript">
-<!--
+
 function popitup(url) {
   newwindow=window.open(url,'name','height=200,width=450');
   if (window.focus) {newwindow.focus()}
@@ -32,20 +32,8 @@ function popitup4(url) {
   return false;
 }
 // -->
-
 </script>
-
-
-<!--<script type="text/javascript">
-         
-             $(function () {
-               alert("hi2");
-               // $('#datetimepicker2').datetimepicker();
-$('input[name="daterange"]').daterangepicker();
-            });
-          
-        </script>
-<!--<script src="dateresource/jquery.js"></script>
+<script src="dateresource/jquery.js"></script>
 <script src="dateresource/jquery.datetimepicker.js"></script>
 <script>/*
 window.onerror = function(errorMsg) {
@@ -176,17 +164,17 @@ $('#datetimepicker_dark').datetimepicker({theme:'dark'})
 </script>
     <!-- js placed at the end of the document so the pages load faster -->
     <!-- sumoselect->
-   <script src="assets/js/jquery.js"></script>-->
+   <!-- <script src="assets/js/jquery.js"></script>-->
 
 
-   <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="assets/js/jquery.scrollTo.min.js"></script>
-    <!--<script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>-->
+    <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
 
 
     <!--common script for all pages-->
-    <!--<script src="assets/js/common-scripts.js"></script>-->
+    <script src="assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
 
@@ -198,5 +186,6 @@ $('#datetimepicker_dark').datetimepicker({theme:'dark'})
       });
 
   </script>-->
+
   </body>
 </html>
