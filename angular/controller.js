@@ -274,6 +274,7 @@ service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(func
     }); 
 $scope.search=function(s,e)
 {
+  console.log("https://apps.continuserve.com/webservice/task_serv.php?sdate="+s+"&edate="+e);
   service.serv("https://apps.continuserve.com/webservice/task_serv.php?sdate="+s+"&edate="+e).then(function(response){
   
      	$scope.load='false';
