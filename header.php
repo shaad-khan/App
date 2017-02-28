@@ -53,6 +53,14 @@ $result2=$conn->query($sql2);
 <!-- Include Date Range Picker -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+<script type="text/javascript">
+  
+          $(document).ready(function () {
+             $(function() {
+    $('input[name="daterange"]').daterangepicker();
+});
+          });
+        </script>
 <script>
 function myFunction1() {
     document.getElementById("demo").innerHTML = "Checklist Task";
