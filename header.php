@@ -41,7 +41,7 @@ $result2=$conn->query($sql2);
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Continuitylate, Theme, Responsive, Fluid, Retina">
 
     <title>Continuity App</title>
- <script src="assets/js/bootstrap.min.js"></script>
+ 
    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 <!-- Optional theme -->
