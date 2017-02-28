@@ -113,7 +113,10 @@ element.style {
   line-height: 1.33;
   border-radius: 25px;
 }
-
+.col-xs-2.add
+{
+width:-17.4%;
+}
 /*
 .table-fixed {
   width: 100%;
