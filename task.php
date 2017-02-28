@@ -21,7 +21,7 @@ $u=$_SESSION['user'];
 
                                     <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span></div>
-                                    <div class="col-xs-3">
+                                    <div class="col-xs-6">
                                     
                                     <div class="col-md-4 col-md-offset-2 demo">
             
