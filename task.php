@@ -16,7 +16,7 @@ $u=$_SESSION['user'];
 
                              <div class="col-xs-12" style="padding-left: 21px;padding-right: 21px;">
                                <div class="panel panel-primary">
-                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-4">
+                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-3">
 
                                   <span class="glyphicon glyphicon-menu-hamburger"></span> Task List for <?php echo $u;?>
 
@@ -46,6 +46,16 @@ $u=$_SESSION['user'];
             
          <button type="button" class="btn btn-primary" ng-click="search(sdate,edate)"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></button>
           
+          </div>
+                                    
+                                    </div>
+                                     <div class="col-xs-2">
+                                    
+                                    <div class="form-group">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-plus
+" aria-hidden="true"></span></button>
+        <!-- <button type="button" class="btn btn-primary" ng-click="add(sdate,edate)"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></button>
+          -->
           </div>
                                     
                                     </div>
@@ -104,7 +114,13 @@ $u=$_SESSION['user'];
 </div>
 </div>
 
-
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      ...
+    </div>
+  </div>
+</div>
 
 <script>
 window.onerror = function(errorMsg) {
