@@ -33,22 +33,18 @@ echo $sql3;
 	if($row3['ccount']!=0)
 	{
 	$sql="update Status_count set Classify=".$row3['ccount']." where Email like '%".$r."%'";
-	//echo $resolver[0].",Classify: $row3['ccount']";
-	//echo $sql;
 	
-	//=$resolver[0].",Classify: $classify,wip:$wip,aui:$auc";
 
 	}
   else{
     $sql="update Status_count set Classify=0 where Email like '%".$r."%'";
   }
   echo $sql;
- // $conn->query($sql);
-	//$rows[]=$row3;
+ 
 
 
 }
 
-
+}
 
 ?>
