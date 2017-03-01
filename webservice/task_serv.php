@@ -23,8 +23,9 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     }
     else
     {
-      $sql="select m.Tdiscription,m.Ticket_ID,m.Client,u.Status,u.UpdateTime,u.TimeTaken,m.Project from master_ticket_tab as m ,update_Tab as u where m.Ticket_ID=u.TicketId and u.UpdateBy='$u' and (Resolver='$u') and (u.UpdateTime between '$s' and '$e')";
+      $sql="select m.Tdiscription,m.Ticket_ID,m.Client,u.Status,u.UpdateTime,u.TimeTaken,m.Project from master_ticket_tab as m ,update_Tab as u where m.Ticket_ID=u.TicketId and u.UpdateBy='$u' and (u.Resolver='$u') and (u.UpdateTime between '$s' and '$e')";
     }
+    echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
