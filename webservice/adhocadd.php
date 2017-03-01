@@ -3,7 +3,8 @@
 
 session_start();
 
-$user_session=$_SESSION["user"];
+
+$u=$_SESSION["user"];
 
 
 $ptype=$_POST['ptype'];
