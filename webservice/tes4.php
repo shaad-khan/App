@@ -63,7 +63,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
   else{
     $sql="update Status_count set Wip=0 where Email like '%".$r."%'";
   }
-  $sql;
+  echo $sql;
   //$conn->query($sql);
 	//$rows[]=$row3;
 
