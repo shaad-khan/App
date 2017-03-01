@@ -305,7 +305,7 @@ $scope.getTotal = function(){
   h = h < 10 ? '0' + h : h;
   m = m < 10 ? '0' + m : m;
     //$scope.taskhour=$total/60;
-    //console.log("total="+total);
+    console.log("total="+h + ':' + m);
     return  h + ':' + m;
 }
 $scope.getatotal = function(){
