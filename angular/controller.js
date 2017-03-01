@@ -282,12 +282,12 @@ $scope.search=function(s,e)
  // $scope.tasks='';
   //$scope.atask='';
   console.log("https://apps.continuserve.com/webservice/task_serv.php?sdate="+s+"& edate="+e);
-  service.serv("https://apps.continuserve.com/webservice/task_serv.php?sdate="+s+"& edate="+e).then(function(response){
+  $http.get("https://apps.continuserve.com/webservice/task_serv.php?sdate="+s+"& edate="+e).then(function(response){
   
      	$scope.load='false';
       $scope.tasks=response.data;
     }); 
-    service.serv("https://apps.continuserve.com/webservice/task_aserv.php?sdate="+s+"& edate="+e).then(function(response){
+    $http.get("https://apps.continuserve.com/webservice/task_aserv.php?sdate="+s+"& edate="+e).then(function(response){
   
      	$scope.load='false';
       $scope.atask=response.data;
