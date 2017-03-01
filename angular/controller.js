@@ -326,7 +326,7 @@ var config = {
 $http.post('https://apps.continuserve.com/webservice/adhocadd.php', data, config)
             .then(function (data, status, headers, config) {
                 $scope.PostDataResponse = data;
-                console.log($scope.PostDataResponse[0].Ticket_ID);
+                console.log($scope.PostDataResponse.Ticket_ID);
             });
             
 
