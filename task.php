@@ -103,7 +103,7 @@ $u=$_SESSION['user'];
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
 </td>-->
     </tr>
-    <tr>
+    <tr style="background:#428bca;color:white">
     <td colspan="6">Total Time Spend</td><td >{{getTotal()}} hours approx </td></tr>
  </table
 </div>
