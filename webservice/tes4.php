@@ -39,7 +39,7 @@ echo $sql3;
   else{
     $sql="update Status_count set Classify=0 where Email like '%".$r."%'";
   }
-  echo $sql;
+  //echo $sql;
  
 
 
