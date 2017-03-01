@@ -267,7 +267,7 @@ var url="list.php?param="+text;
 /*------------------------------------------------------------------*/
 app.controller("Task",function($scope,service,$interval,$http){
 var x;
-service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(function(response){
+/*service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(function(response){
   
      	//$scope.load='false';
       $scope.tasks=response.data;
@@ -276,7 +276,7 @@ service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(func
   
      //	$scope.load='false';
       $scope.atask=response.data;
-    });
+    });*/
 $scope.search=function(s,e)
 {
   $scope.tasks={};
