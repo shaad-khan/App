@@ -296,31 +296,31 @@ $scope.search=function(s,e)
 
 $scope.getTotal = function(){
     var total1 = 0;
-    for(var i = 0; i < $scope.tasks.length; i++){
-        var product = $scope.tasks[i];
-        total1 +=  product.TimeTaken;
+    for(var i1 = 0; i1 < $scope.tasks.length; i1++){
+        var product1 = $scope.tasks[i];
+        total1 +=  product1.TimeTaken;
     }
-    var h = Math.floor(total1 / 60);
-  var m = total1 % 60;
-  h = h < 10 ? '0' + h : h;
-  m = m < 10 ? '0' + m : m;
+    var h1 = Math.floor(total1 / 60);
+  var m1 = total1 % 60;
+  h1 = h1 < 10 ? '0' + h1 : h1;
+  m1 = m1 < 10 ? '0' + m1 : m1;
     //$scope.taskhour=$total/60;
     console.log("total="+h + ':' + m);
-    return  h + ':' + m;
+    return  h1 + ':' + m1;
 }
 $scope.getatotal = function(){
     var total2 = 0;
-    for(var i = 0; i < $scope.atask.length; i++){
-        var product = $scope.atask[i];
-        total2 +=  product.Total_time;
+    for(var i2 = 0; i2 < $scope.atask.length; i2++){
+        var product2 = $scope.atask[i];
+        total2 +=  product2.Total_time;
     }
-    var h = Math.floor(total2 / 60);
-  var m = total2 % 60;
-  h = h < 10 ? '0' + h : h;
-  m = m < 10 ? '0' + m : m;
+    var h2 = Math.floor(total2 / 60);
+  var m2 = total2 % 60;
+  h2 = h2 < 10 ? '0' + h2 : h2;
+  m2 = m2 < 10 ? '0' + m2 : m2;
     //$scope.taskhour=$total/60;
     console.log("total="+h + ':' + m);
-    return  h + ':' + m;
+    return  h2 + ':' + m2;
 }
 
 
