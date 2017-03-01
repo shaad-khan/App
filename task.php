@@ -103,8 +103,8 @@ $u=$_SESSION['user'];
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
 </td>-->
     </tr>
-    <tr style="background:#428bca;color:white" ng-if="getTotal()">
-    <td colspan="6">Total Time Spend</td><td >{{getTotal()}}  </td></tr>
+    <tr style="background:#428bca;color:white" ng-init="getTotal()">
+    <td colspan="6"></td><td > </td></tr>
 <tr ng-repeat="res in atask" ng-class="$index % 2 > 0 ? 'active':''">
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>

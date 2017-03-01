@@ -265,9 +265,9 @@ var url="list.php?param="+text;
 
 
 /*------------------------------------------------------------------*/
-app.controller("Task",function($scope,service,$interval){
+app.controller("Task",function($scope,service,$interval,$rootScope){
 var x;
-/*service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(function(response){
+service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(function(response){
   
      	//$scope.load='false';
       $scope.tasks=response.data;
@@ -276,7 +276,7 @@ var x;
   
      //	$scope.load='false';
       $scope.atask=response.data;
-    });*/
+    });
 $scope.search=function(s,e)
 {
   console.log("https://apps.continuserve.com/webservice/task_serv.php?sdate="+s+"& edate="+e);
@@ -295,32 +295,29 @@ $scope.search=function(s,e)
 }
 
 $scope.getTotal = function(){
-    var total1 = 0;
-    for(var i1 = 0; i1 < $scope.tasks.length; i1++){
-        var product1 = $scope.tasks[i1];
-        total1 +=  product1.TimeTaken;
+    var total = 0;
+    for(var i = 0; i < $scope.tasks.length; i++){
+        var product = $scope.tasks[i];
+        total +=  product.TimeTaken;
     }
-    var h1 = Math.floor(total1 / 60);
-  var m1 = total1 % 60;
-  h1 = h1 < 10 ? '0' + h1 : h1;
-  m1 = m1 < 10 ? '0' + m1 : m1;
-    //$scope.taskhour=$total/60;
-    console.log("total="+h1 + ':' + m1);
-    return  h1 + ':' + m1;
+    $rootScope.ftotal=total;
+  
+    return  h + ':' + m;
 }
 $scope.getatotal = function(){
-    var total2 = 0;
-    for(var i2 = 0; i2 < $scope.atask.length; i2++){
-        var product2 = $scope.atask[i2];
-        total2 +=  product2.Total_time;
+    var total = 0;
+    for(var i = 0; i < $scope.atask.length; i++){
+        var product = $scope.atask[i];
+        total +=  product.Total_time;
     }
-    var h2 = Math.floor(total2 / 60);
-  var m2 = total2 % 60;
-  h2 = h2 < 10 ? '0' + h2 : h2;
-  m2 = m2 < 10 ? '0' + m2 : m2;
+    var time=$rootScope.ftotal+total;
+    var h = Math.floor(time / 60);
+  var m = time % 60;
+  h = h < 10 ? '0' + h : h;
+  m = m < 10 ? '0' + m : m;
     //$scope.taskhour=$total/60;
-    console.log("total="+h2 + ':' + m2);
-    return  h2 + ':' + m2;
+    //console.log("total="+total);
+    return  h + ':' + m;;
 }
 
 
