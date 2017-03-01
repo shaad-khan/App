@@ -265,7 +265,7 @@ var url="list.php?param="+text;
 
 
 /*------------------------------------------------------------------*/
-app.controller("Task",function($scope,service,$interval){
+app.controller("Task",function($scope,service,$interval,$http){
 var x;
 /*service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(function(response){
   
