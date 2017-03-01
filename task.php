@@ -132,7 +132,7 @@ $u=$_SESSION['user'];
     <tr style="background:#428bca;color:white" ng-if="getatotal()">
     <td colspan="6">Total Time Spend</td><td >{{getatotal()}} </td></tr>
 
- </table
+ </table>
 </div>
 </div>
 </div>
