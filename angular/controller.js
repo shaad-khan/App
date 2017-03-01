@@ -303,7 +303,7 @@ service.serv("https://apps.continuserve.com/webservice/service.php?type=Client")
       $scope.lists=response.data;
 
 });
-servicecall.serv("https://apps.continuserve.com/webservice/service.php?type=Project_tab").then(function(response){
+service.serv("https://apps.continuserve.com/webservice/service.php?type=Project_tab").then(function(response){
 $scope.projects=response.data;
 }); 
 });
