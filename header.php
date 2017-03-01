@@ -116,7 +116,7 @@ element.style {
 
 .modal {
     position: fixed;
-    top: 39px;
+    top: -4px;
     right: -126px;
     bottom: 0;
     left: 0;
