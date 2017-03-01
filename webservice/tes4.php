@@ -54,7 +54,7 @@ echo $sql3;
 {
 	if($row3['ccount']!=0)
 	{
-	$sql="update Status_count set Wip=".$row3['ccount']." where Email like '%".$r."%'";
+	$sql="update Status_count set Wip=".$row3['ccount']." where Email like '".$r."%'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
 	//echo $sql;
 	
