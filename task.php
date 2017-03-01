@@ -153,6 +153,15 @@ $u=$_SESSION['user'];
            
           </div>
           <div class="form-group">
+            <label for="recipient-name" class="control-label">Total Time Spent </label>
+             
+            
+           <input type="number" class="form-control" value="" placeholder="in min" required/>
+          
+          
+           
+          </div>
+          <div class="form-group">
             <label for="recipient-name" class="control-label">Select Date:</label>
              
             
