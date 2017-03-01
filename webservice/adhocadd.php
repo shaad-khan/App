@@ -70,7 +70,7 @@ $sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Projec
 
 $conn->query($sql);
 
-$sql="select Top 1 Ticket_ID from Master_Ticket_Tab where aflag=1";
+$sql="select Top 1 Ticket_ID from Master_Ticket_Tab where aflag=1 order by Id desc";
 $result=$conn->query($sql);
 //echo $msg;
   while($row3=$result->fetch())
