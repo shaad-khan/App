@@ -304,7 +304,7 @@ $scope.getaTotal = function(){
         total +=  product.Total_time;
     }
     //$scope.taskhour=$total/60;
-    //console.log("total="+total);
+    console.log("total="+total);
     return Math.ceil(total/60);
 }
 
