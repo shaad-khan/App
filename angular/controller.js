@@ -279,8 +279,8 @@ var x;
     });*/
 $scope.search=function(s,e)
 {
- // $scope.tasks='';
-  //$scope.atask='';
+  $scope.tasks={};
+  $scope.atask={};
   console.log("https://apps.continuserve.com/webservice/task_serv.php?sdate="+s+"& edate="+e);
   $http.get("https://apps.continuserve.com/webservice/task_serv.php?sdate="+s+"& edate="+e).then(function(response){
   
