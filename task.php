@@ -124,12 +124,11 @@ $u=$_SESSION['user'];
       <div class="modal-body">
         <form>
         <div class="form-group">
-            <label for="recipient-name" class="control-label">Select Client</label>
+            <label for="recipient-name" class="control-label">Environment Type</label>
              
             
-           <select class="form-control" name="client">
-  <option ng-repeat="list in lists" value="{{list.Client_name}}">{{list.Client_name}}</option>
-</select>
+           <input type="text" class="form-control" value="General" placeholder="General" disabled/>
+          
           
            
           </div>
@@ -143,11 +142,21 @@ $u=$_SESSION['user'];
           
            
           </div>
-          <div class="form-group">
-            <label for="recipient-name" class="control-label">Recipient:</label>
+           <div class="form-group">
+            <label for="recipient-name" class="control-label">Select Task Type</label>
              
             
-           <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="End date" ng-model="edate"/>
+           <select class="form-control" name="project" >
+  <option ng-repeat="tt in tts" value="{{tt.Task}}">{{tt.Task}}</option>
+</select>
+          
+           
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Select Date:</label>
+             
+            
+           <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="edate"/>
           
           
            

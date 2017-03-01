@@ -298,9 +298,9 @@ $scope.getTotal = function(){
 });
 
 app.controller("addtask",function($scope,$interval,$http,service){
-service.serv("https://apps.continuserve.com/webservice/service.php?type=Client").then(function(response){
+service.serv("https://apps.continuserve.com/webservice/service.php?type=Adhoc_task").then(function(response){
      	//$scope.load2='false';
-      $scope.lists=response.data;
+      $scope.tts=response.data;
 
 });
 service.serv("https://apps.continuserve.com/webservice/service.php?type=Project_tab").then(function(response){
