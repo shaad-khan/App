@@ -62,7 +62,7 @@ echo $sql3;
 
 	}
   else{
-    $sql="update Status_count set Wip=0 where Email like '%".$r."%'";
+    $sql="update Status_count set Wip=0 where Email like '".$r."%'";
   }
   echo $sql;
   $conn->query($sql);
