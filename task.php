@@ -176,7 +176,10 @@ $u=$_SESSION['user'];
           </div>
         </form>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer" ng-if="PostDataResponse.Ticket_ID">
+      <div class="row">
+      <div class="col-md-3">{{PostDataResponse.Ticket_ID}} created</div>
+      </div>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" ng-click="adhoc_add(projecttype,tasktype,tspent,adate,amessage)">Add Task</button>
       </div>
