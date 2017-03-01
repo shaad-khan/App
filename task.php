@@ -44,7 +44,7 @@ $u=$_SESSION['user'];
                                     
                                     <div class="form-group">
             
-         <button type="button" class="btn btn-primary" ng-click="search(sdate,edate)"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Add Adhoc Task</button>
+         <button type="button" class="btn btn-primary" ng-click="search(sdate,edate)"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> </button>
           
           </div>
                                     
@@ -53,7 +53,7 @@ $u=$_SESSION['user'];
                                     
                                     <div class="form-group">
             <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-plus
-" aria-hidden="true"></span></button>
+" aria-hidden="true"></span>Add Adhoc Task</button>
         <!-- <button type="button" class="btn btn-primary" ng-click="add(sdate,edate)"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></button>
           -->
           </div>
