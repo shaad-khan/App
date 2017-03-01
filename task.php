@@ -123,7 +123,7 @@ $u=$_SESSION['user'];
 <td>{{task.Tdiscription}}</td>
 <td>{{task.Status}}</td>
 
-<td>{{task.UpdateTime}}</td>
+<td>{{task.Updatetime}}</td>
 <td >{{task.Total_time}} min</td>
 
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="push(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></sbutton>
