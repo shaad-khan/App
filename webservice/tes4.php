@@ -21,7 +21,7 @@ $sql="select * from User_prof where Team='L3' or Team='All'";
 
 	//$resolver=explode("@", $row2['Email']);
   $resolver=$row2['sessionId'];
-		$r=$row2['Email'];
+		$r=$row2['sessionId']."@continuserve.com";
 
 $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver."' and Status='Classify'";
 //echo $sql3;
