@@ -290,7 +290,7 @@ $scope.getTotal = function(){
     }
     //$scope.taskhour=$total/60;
     //console.log("total="+total);
-    return total;
+    return total/60;
 }
 
 
@@ -333,9 +333,9 @@ $http.post('https://apps.continuserve.com/webservice/adhocadd.php', data, config
                     "<hr />headers: " + header +
                     "<hr />config: " + config;
             });
-        };
 
 };
+
 
 
 
