@@ -295,13 +295,13 @@ $scope.search=function(s,e)
 }
 
 $scope.getTotal = function(){
-    var total = 0;
+    var total1 = 0;
     for(var i = 0; i < $scope.tasks.length; i++){
         var product = $scope.tasks[i];
-        total +=  product.TimeTaken;
+        total1 +=  product.TimeTaken;
     }
-    var h = Math.floor(total / 60);
-  var m = total % 60;
+    var h = Math.floor(total1 / 60);
+  var m = total1 % 60;
   h = h < 10 ? '0' + h : h;
   m = m < 10 ? '0' + m : m;
     //$scope.taskhour=$total/60;
@@ -309,13 +309,13 @@ $scope.getTotal = function(){
     return  h + ':' + m;
 }
 $scope.getatotal = function(){
-    var total = 0;
+    var total2 = 0;
     for(var i = 0; i < $scope.atask.length; i++){
         var product = $scope.atask[i];
-        total +=  product.Total_time;
+        total2 +=  product.Total_time;
     }
-    var h = Math.floor(total / 60);
-  var m = total % 60;
+    var h = Math.floor(total2 / 60);
+  var m = total2 % 60;
   h = h < 10 ? '0' + h : h;
   m = m < 10 ? '0' + m : m;
     //$scope.taskhour=$total/60;
