@@ -265,7 +265,7 @@ var url="list.php?param="+text;
 
 
 /*------------------------------------------------------------------*/
-app.controller("Task",function($scope,service,$interval,$rootScope){
+app.controller("Task",function($scope,service,$interval){
 var x;
 service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(function(response){
   
@@ -300,9 +300,13 @@ $scope.getTotal = function(){
         var product = $scope.tasks[i];
         total +=  product.TimeTaken;
     }
-    $rootScope.ftotal=total;
-  
-    return  h + ':' + m;
+    var h = Math.floor(total / 60);
+  var m = total % 60;
+  h = h < 10 ? '0' + h : h;
+  m = m < 10 ? '0' + m : m;
+    //$scope.taskhour=$total/60;
+    //console.log("total="+total);
+    return  h + ':' + m;;
 }
 $scope.getatotal = function(){
     var total = 0;
@@ -310,9 +314,8 @@ $scope.getatotal = function(){
         var product = $scope.atask[i];
         total +=  product.Total_time;
     }
-    var time=$rootScope.ftotal+total;
-    var h = Math.floor(time / 60);
-  var m = time % 60;
+    var h = Math.floor(total / 60);
+  var m = total % 60;
   h = h < 10 ? '0' + h : h;
   m = m < 10 ? '0' + m : m;
     //$scope.taskhour=$total/60;
