@@ -177,7 +177,7 @@ $u=$_SESSION['user'];
         </form>
       </div>
       <div class="modal-footer" >
-      <div class="row" ng-if="PostDataResponse[0].Ticket_ID">
+      <div class="row">
       <div class="col-md-3">{{PostDataResponse[0].Ticket_ID}} created</div>
       </div>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
