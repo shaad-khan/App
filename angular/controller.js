@@ -301,7 +301,7 @@ $scope.getTotal = function(){
         total +=  product.TimeTaken;
     }
     var h = Math.floor(total / 60);
-  var m = minutes % 60;
+  var m = total % 60;
   h = h < 10 ? '0' + h : h;
   m = m < 10 ? '0' + m : m;
     //$scope.taskhour=$total/60;
@@ -315,7 +315,7 @@ $scope.getatotal = function(){
         total +=  product.Total_time;
     }
     var h = Math.floor(total / 60);
-  var m = minutes % 60;
+  var m = total % 60;
   h = h < 10 ? '0' + h : h;
   m = m < 10 ? '0' + m : m;
     //$scope.taskhour=$total/60;
