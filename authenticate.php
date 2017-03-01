@@ -74,6 +74,7 @@ $_SESSION['Review']=$row['Review'];
 $_SESSION['Doc']=$row['Doc'];
 $_SESSION['Closure']=$row['Closure'];
 $_SESSION["team"]=$team;
+$_SESSION['user']=$row['sessionId'];
 
 }
 if($f)
