@@ -308,7 +308,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '
 }
 
 /*-----------------------------------------------------*/
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver[0]."' and Status='WIP'";
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='WIP'";
 //echo $sql3;
 
      $result=$conn->query($sql3);
