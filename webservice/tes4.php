@@ -24,7 +24,7 @@ $sql="select * from User_prof where Team='L3' or Team='All'";
 	$r=$row2['sessionId'];
 
 $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver."' and Status='Classify'";
-echo $sql3;
+//echo $sql3;
 
      $result=$conn->query($sql3);
 //echo $msg;
@@ -45,7 +45,7 @@ echo $sql3;
 
 }
 $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='WIP'";
-//echo $sql3;
+echo $sql3;
 
      $result=$conn->query($sql3);
 //echo $msg;
