@@ -136,7 +136,7 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Select Project</label>
              
             
-           <select class="form-control" name="project" >
+           <select class="form-control" name="project" ng-model='projecttype' >
   <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Project}}</option>
 </select>
           
@@ -146,7 +146,7 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Select Task Type</label>
              
             
-           <select class="form-control" name="project" >
+           <select class="form-control" name="project"  ng-model='tasktype'>
   <option ng-repeat="tt in tts" value="{{tt.Task}}">{{tt.Task}}</option>
 </select>
           
@@ -156,7 +156,7 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Total Time Spent </label>
              
             
-           <input type="number" class="form-control" value="" placeholder="in min" required/>
+           <input type="number" class="form-control" value="" placeholder="in min" ng-model="tspent" required/>
           
           
            
@@ -165,20 +165,20 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Select Date:</label>
              
             
-           <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="edate"/>
+           <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="adate"/>
           
           
            
           </div>
           <div class="form-group">
             <label for="message-text" class="control-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <textarea class="form-control" id="message-text" ng-model='amessage'></textarea>
           </div>
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Add Task</button>
+        <button type="button" class="btn btn-primary" ng-click="adhoc_add(projecttype,tasktype,tspent,adate,amessage)">Add Task</button>
       </div>
     </div>
   </div>
