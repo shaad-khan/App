@@ -295,7 +295,7 @@ $scope.getTotal = function(){
     }
     //$scope.taskhour=$total/60;
     //console.log("total="+total);
-    return Math.ceil(total/60);
+    return parseFloat(Math.round(total/60)).toFixed(2);
 }
 $scope.getatotal = function(){
     var total = 0;
@@ -305,7 +305,7 @@ $scope.getatotal = function(){
     }
     //$scope.taskhour=$total/60;
     console.log("total="+total);
-    return Math.ceil(total/60);
+    return parseFloat(Math.round(total/60)).toFixed(2);
 }
 
 
