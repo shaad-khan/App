@@ -297,7 +297,13 @@ $scope.getTotal = function(){
 
 });
 
+app.controller("addtask",function($scope,$interval,$http,service){
+service.serv("https://apps.continuserve.com/webservice/service.php?type=Client").then(function(response){
+     	//$scope.load2='false';
+      $scope.lists=response.data;
 
+});
+});
 
 
 

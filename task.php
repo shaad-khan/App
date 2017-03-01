@@ -114,7 +114,7 @@ $u=$_SESSION['user'];
 </div>
 </div>
 
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" ng-controller="addtask">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background: #000d1a; color:white;">
@@ -123,6 +123,16 @@ $u=$_SESSION['user'];
       </div>
       <div class="modal-body">
         <form>
+        <div class="form-group">
+            <label for="recipient-name" class="control-label">Enter Client</label>
+             
+            
+           <select class="form-control" name="client">
+  <option ng-repeat="list in lists" value="{{list.Client_name}}">{{list.Client_name}}</option>
+</select>
+          
+           
+          </div>
           <div class="form-group">
             <label for="recipient-name" class="control-label">Recipient:</label>
              
