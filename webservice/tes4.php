@@ -40,6 +40,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '
     $sql="update Status_count set Classify=0 where Email like '%".$r."%'";
   }
   //echo $sql;
+  $conn->query($sql);
  
 
 
@@ -64,7 +65,7 @@ echo $sql3;
     $sql="update Status_count set Wip=0 where Email like '%".$r."%'";
   }
   echo $sql;
-  //$conn->query($sql);
+  $conn->query($sql);
 	//$rows[]=$row3;
 
 
