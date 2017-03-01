@@ -105,7 +105,7 @@ $u=$_SESSION['user'];
     </tr>
     <tr style="background:#428bca;color:white" ng-if="gettotal()">
     <td colspan="6">Total Time Spend</td><td >{{getTotal()}}  </td></tr>
-<tr ng-repeat="res in atask" ng-class="$index % 2 > 0 ? 'active':''" ng-init="total=0">
+<tr ng-repeat="res in atask" ng-class="$index % 2 > 0 ? 'active':''">
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))&&((u!=res.Blocker_name))"><button class="btn btn-default" ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
