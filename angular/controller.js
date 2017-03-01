@@ -315,7 +315,7 @@ $scope.getTotal = function(){
   }
   else
   {
-    return {};
+    return "00:00";
   }
 }
 $scope.getatotal = function(){
@@ -335,7 +335,7 @@ $scope.getatotal = function(){
     return  h + ':' + m;
   }
   else{
-    return {};
+    return "00:00";
   }
 }
 
