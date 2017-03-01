@@ -44,7 +44,7 @@ $u=$_SESSION['user'];
                                     
                                     <div class="form-group">
             
-         <button type="button" class="btn btn-primary" ng-click="search(sdate,edate)"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></button>
+         <button type="button" class="btn btn-primary" ng-click="search(sdate,edate)"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Add Adhoc Task</button>
           
           </div>
                                     
