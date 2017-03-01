@@ -124,11 +124,21 @@ $u=$_SESSION['user'];
       <div class="modal-body">
         <form>
         <div class="form-group">
-            <label for="recipient-name" class="control-label">Enter Client</label>
+            <label for="recipient-name" class="control-label">Select Client</label>
              
             
            <select class="form-control" name="client">
   <option ng-repeat="list in lists" value="{{list.Client_name}}">{{list.Client_name}}</option>
+</select>
+          
+           
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Select Project</label>
+             
+            
+           <select class="form-control" name="project" >
+  <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Project}}</option>
 </select>
           
            
