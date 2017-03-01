@@ -64,8 +64,8 @@ $u=$_SESSION['user'];
 
                                    <!-- <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div>--></div></div>
-       <div class="panel-body" ng-controller="Task">
-         <table class="table"><tr>
+       <div class="panel-body" ng-controller="Task" >
+         <table class="table" ><tr>
      <th>Ticket_ID</th>
      <th>Client</th>
      <th>Project</th>
@@ -105,7 +105,9 @@ $u=$_SESSION['user'];
     </tr>
     <tr style="background:#428bca;color:white" ng-if="getTotal()">
     <td colspan="6">Total Time Spend</td><td >{{getTotal()}}  </td></tr>
-<tr ng-repeat="res in atask" ng-class="$index % 2 > 0 ? 'active':''">
+    </table>
+    <table class="table" >
+<tr ng-repeat="task in atask" ng-class="$index % 2 > 0 ? 'active':''">
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))&&((u!=res.Blocker_name))"><button class="btn btn-default" ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
@@ -115,14 +117,14 @@ $u=$_SESSION['user'];
 <td ng-if="((res.Status=='Review')||(res.Status=='Doc') ||(res.Status=='Closure')||(res.Status=='Classify'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>-->
 <td ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
-</span> {{res.Ticket_ID}}</td>
-<td>{{res.Client}}</td>
-<td>{{res.Project}}</td>
-<td>{{res.Tdiscription}}</td>
-<td>{{res.Status}}</td>
+</span> {{task.Ticket_ID}}</td>
+<td>{{task.Client}}</td>
+<td>{{task.Project}}</td>
+<td>{{task.Tdiscription}}</td>
+<td>{{task.Status}}</td>
 
-<td>{{res.UpdateTime}}</td>
-<td >{{res.Total_time}} min</td>
+<td>{{task.UpdateTime}}</td>
+<td >{{task.Total_time}} min</td>
 
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="push(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></sbutton>
 </td>
