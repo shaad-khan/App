@@ -8,7 +8,7 @@ $u=$_SESSION["user"];
 
 
 $ptype=$_POST['ptype'];
-$type=$_POST['ttype'];
+$ttype=$_POST['ttype'];
 $tspent=$_POST['tspent'];
 $adate=$_POST['adate'];
 $amessage=$_POST['amessage'];
