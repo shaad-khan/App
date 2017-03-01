@@ -25,7 +25,7 @@ $sql="select * from Master_Ticket_Tab where Resolver='$u' and cast(Resolver_Dtim
     }
     else
     {
-      $sql="select * from Master_Ticket_Tab where (Resolver='$u') and (Resolver_Dtime between '$s' and '$e')";
+      $sql="select * from Master_Ticket_Tab where (Resolver='$u') and (Resolver_Dtime between '$s' and '$e') and aflag=1";
     }
 $result=$conn->query($sql);
 //echo $sql;
