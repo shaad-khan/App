@@ -130,7 +130,7 @@ $u=$_SESSION['user'];
 </td>-->
     </tr>
     <tr style="background:#428bca;color:white">
-    <td colspan="6">Total Time Spend</td><td >{{getTotal()}} hours approx </td></tr>
+    <td colspan="6">Total Time Spend</td><td >{{getatotal()}} hours approx </td></tr>
 
  </table
 </div>

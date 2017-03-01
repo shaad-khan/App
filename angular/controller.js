@@ -297,7 +297,16 @@ $scope.getTotal = function(){
     //console.log("total="+total);
     return Math.ceil(total/60);
 }
-
+$scope.getaTotal = function(){
+    var total = 0;
+    for(var i = 0; i < $scope.atask.length; i++){
+        var product = $scope.atask[i];
+        total +=  product.Total_time;
+    }
+    //$scope.taskhour=$total/60;
+    //console.log("total="+total);
+    return Math.ceil(total/60);
+}
 
 
 });
