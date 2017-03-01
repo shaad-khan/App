@@ -281,6 +281,7 @@ $scope.search=function(s,e)
 {
   $scope.tasks={};
   $scope.atask={};
+  
   console.log("https://apps.continuserve.com/webservice/task_serv.php?sdate="+s+"& edate="+e);
   $http.get("https://apps.continuserve.com/webservice/task_serv.php?sdate="+s+"& edate="+e).then(function(response){
   
@@ -302,13 +303,20 @@ $scope.getTotal = function(){
         var product = $scope.tasks[i];
         total +=  product.TimeTaken;
     }
+    if(total>0)
+    {
     var h = Math.floor(total / 60);
   var m = total % 60;
   h = h < 10 ? '0' + h : h;
   m = m < 10 ? '0' + m : m;
     //$scope.taskhour=$total/60;
     //console.log("total="+total);
-    return  h + ':' + m;;
+    return  h + ':' + m;
+  }
+  else
+  {
+    return {};
+  }
 }
 $scope.getatotal = function(){
     var total = 0;
@@ -316,13 +324,19 @@ $scope.getatotal = function(){
         var product = $scope.atask[i];
         total +=  product.Total_time;
     }
+    if(total>0)
+    {
     var h = Math.floor(total / 60);
   var m = total % 60;
   h = h < 10 ? '0' + h : h;
   m = m < 10 ? '0' + m : m;
     //$scope.taskhour=$total/60;
     //console.log("total="+total);
-    return  h + ':' + m;;
+    return  h + ':' + m;
+  }
+  else{
+    return {};
+  }
 }
 
 
