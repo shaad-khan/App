@@ -68,6 +68,14 @@ $id=$row3['id'];
 
 $sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Project,Resolver,CTicket,Cdatetime,Resolver_Dtime,EnvType,Reviewer,Assign_to,Creator,Updatetime,Repo,aflag,Total_time,atype)values('$tk','$amessage','General','General','$ptype','','','$adate','','','','$u','$u','$adate','',1,$tspent,'$ttype')";
 
-echo $sql;
+$conn->query($sql);
 
+$sql="select Top 1 Ticket_ID from Master_Ticket_Tab where aflag=1";
+$result=$conn->query($sql);
+//echo $msg;
+  while($row3=$result->fetch())
+{
+$rows[]=$row3;
+}
+print(json_encode($rows, JSON_NUMERIC_CHECK));
 ?>
