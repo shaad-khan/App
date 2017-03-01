@@ -290,7 +290,7 @@ $scope.getTotal = function(){
     }
     //$scope.taskhour=$total/60;
     //console.log("total="+total);
-    return total/60;
+    return total;
 }
 
 
