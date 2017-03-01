@@ -21,7 +21,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
       if(($s=='')&&($e==''))
     {
      // $sql="select m.Tdiscription,m.Ticket_ID,m.Client,u.Status,u.UpdateTime,u.TimeTaken,m.Project from master_ticket_tab as m ,update_Tab as u where m.Ticket_ID=u.TicketId and u.UpdateBy='$u'";
-$sql="select * from Master_Ticket_Tab where Resolver='$u' and Resolver_Dtime='$fdate' and aflag=1";
+$sql="select * from Master_Ticket_Tab where Resolver='$u' and cast(Resolver_Dtime AS DATE)='$fdate' and aflag=1";
     }
     else
     {
