@@ -278,10 +278,11 @@ $sql="select * from User_prof where Team='L3' or Team='All'";
 
 
 
-	$resolver=explode("@", $row2['Email']);
-	$r=$row2['Email'];
+	//$resolver=explode("@", $row2['Email']);
+  $resolver=$row2['sessionId'];
+	$r=$row2['sessionId'];
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver[0]."' and Status='Classify'";
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver."' and Status='Classify'";
 //echo $sql3;
 
      $result=$conn->query($sql3);
@@ -332,7 +333,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 }
 /*-----------------------------------------------------*/
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver[0]."' and Status='Review'";
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Review'";
 //echo $sql3;
 
      $result=$conn->query($sql3);
@@ -358,7 +359,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 }
 
 /*-----------------------------------------------------*/
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver[0]."' and Status='AUI'";
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='AUI'";
 //echo $sql3;
 
      $result=$conn->query($sql3);
@@ -384,7 +385,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 }
 
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver[0]."' and Status='Doc'";
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Doc'";
 //echo $sql3;
 
      $result=$conn->query($sql3);
@@ -408,7 +409,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 
 }
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver[0]."' and Status='Closure'";
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Closure'";
 //echo $sql3;
 
      $result=$conn->query($sql3);
