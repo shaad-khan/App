@@ -418,6 +418,20 @@ td
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Next Status" disabled>
   </div>
   </td>
+  <td>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Select Team <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td ng-if="items[0].team==''">
+   <select class="form-control" name="team" >
+  <option ng-repeat="team in teams" value="{{team.Team}}">{{team.Team}}</option>
+</select>
+  </div></td>
+  
+  <td ng-if="items[0].team!=''">
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].team}}" disabled>
+  </div></td>
+
+  </td>
   </tr>
   <?php 
 

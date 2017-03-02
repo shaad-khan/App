@@ -59,6 +59,7 @@ $aui_flag=0;
 $attime=$_POST['attime'];
 
 $cl_tkt=$_POST['client_tkt'];
+$team=$_POST['team'];
 
 $errors= array();
       $file_name = $_FILES['dfile']['name'];
@@ -127,7 +128,7 @@ else
     //echo "<script> alert('insert');</script>";
 if($status=='Classify')
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team' where Ticket_ID='$TID'";
 }
  else if(($status=='WIP') and ($AUI=='on') and ($cstatus!='next'))
     {

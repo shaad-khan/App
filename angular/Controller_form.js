@@ -15,6 +15,9 @@ $scope.tasks=response.data;
 servicecall.serv("Project_tab").then(function(response){
 $scope.projects=response.data;
 }); 
+servicecall.serv("Team").then(function(response){
+$scope.teams=response.data;
+}); 
     
 $interval(callApi, 1000);
 
