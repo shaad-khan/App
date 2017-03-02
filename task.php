@@ -104,7 +104,7 @@ $u=$_SESSION['user'];
 </td>-->
     </tr>
     <tr style="background:#428bca;color:white" ng-if="getTotal()" ng-init="tot1=getTotal()">
-    <td colspan="5">Total Time Spent</td><td colspan="4">{{getTotal()}}  hh:mm <span class="glyphicon glyphicon-time"></span> </td></tr>
+    <td colspan="5">Total Time Spent On Tickets</td><td colspan="4">{{getTotal()}}  hh:mm <span class="glyphicon glyphicon-time"></span> </td></tr>
     </table>
     <table class="table" >
 <tr ng-repeat="task in atask" ng-class="$index % 2 > 0 ? 'active':''" ng-if="atask!=null">
@@ -132,7 +132,7 @@ $u=$_SESSION['user'];
 </td>-->
     </tr>
     <tr style="background:#428bca;color:white" ng-if="getatotal()"ng-init="tot2=getatotal();">
-    <td colspan="6" >Total Time Spent</td><td colspan="4">{{getatotal()}} hh:mm <span class="glyphicon glyphicon-time"></span></td></tr>
+    <td colspan="6" >Total Time Spent On Adhoc Task</td><td colspan="4">{{getatotal()}} hh:mm <span class="glyphicon glyphicon-time"></span></td></tr>
 
  </table>
  <div class="panel-footer" ng-if="getGrandtotal() !=0" style="background-color:#001a33;color:white">Grand total for all task      {{getGrandtotal()}} hh:mm   <span class="glyphicon glyphicon-time"></span></div>
