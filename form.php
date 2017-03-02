@@ -418,7 +418,7 @@ td
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Next Status" disabled>
   </div>
   </td>
-  <td>
+  <td ng-if="items[0].Status=='Classify'">
   <div class="form-group">
     <label for="exampleInputEmail1">Select Team {{items[0].team}} <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].team==null">
@@ -427,7 +427,7 @@ td
 </select>
   </div></td>
   
-  <td ng-if="items[0].team!=null">
+  <td ng-if="items[0].team!=null&& items[0].Status=='Classify'">
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].team}}" disabled>
   </div></td>
 
