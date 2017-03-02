@@ -167,7 +167,7 @@ $close=$_SESSION['Closure'];
 <div class="content-panel" id="reload">
 
 
-                         <div class="row">
+                     <!--    <div class="row">
 
                             <div class="col-xs-6" ng-controller="clientgraph">
 
@@ -179,7 +179,7 @@ $close=$_SESSION['Closure'];
                            <div id="barchart_values" style="width: 400px; height:250px;"></div>
 
                          </div>
-                         </div>
+                         </div>-->
 
                           </div>
 
