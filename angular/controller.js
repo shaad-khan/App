@@ -355,6 +355,8 @@ $scope.getGrandtotal=function()
   return $rootScope.h + ":" + $rootScope.m;
 }
 else{
+   $rootScope.h=0;
+  $rootScope.m=0;
   return 0;
 }
 }
