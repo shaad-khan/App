@@ -295,13 +295,13 @@ $result2=$conn->query($sql2);
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#" title='<?php echo "There are $c unworked pending issues";?> '>
                             <i class="fa fa-envelope-o"></i>
                             <span class="badge bg-theme"><?php
-                            echo $c;
+                           // echo $c;
                             ?></span>
                         </a>
                         <ul class="dropdown-menu extended inbox" style="height: 400px; overflow: auto">
                             <div class="notify-arrow notify-arrow-green"></div>
                             <li>
-                                <p class="green">You have <?php echo $c." ";?> pending Tasks</p>
+                               <!-- <p class="green">You have <?php echo $c." ";?> pending Tasks</p>-->
                             </li>
  <?php
                             $sql2 = "select *  from dbo.Continuity where Status like '%pending%' and (DATEDIFF(day,Weekend, '$d') > 0 or DATEDIFF(day,Weekend, '$d') = 0) and (Wflag=0 or Wflag=1) and Checklist_flag=0 and Assign_team like '%L3%' ORDER BY ID DESC";
