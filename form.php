@@ -422,8 +422,8 @@ td
   <div class="form-group">
     <label for="exampleInputEmail1">Select Team <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].team==''">
-   <select class="form-control" name="team" >
-  <option ng-repeat="t in teams" value="{{t.Team}}">{{t.Team}}</option>
+   <select class="form-control" name="cteam" >
+  <option ng-repeat="t in cteams" value="{{t.Team}}">{{t.Team}}</option>
 </select>
   </div></td>
   

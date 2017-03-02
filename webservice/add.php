@@ -59,7 +59,7 @@ $aui_flag=0;
 $attime=$_POST['attime'];
 
 $cl_tkt=$_POST['client_tkt'];
-$team=$_POST['team'];
+$team=$_POST['cteam'];
 
 $errors= array();
       $file_name = $_FILES['dfile']['name'];
