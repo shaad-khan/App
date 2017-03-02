@@ -427,7 +427,7 @@ td
 </select>
   </div></td>
   
-  <td ng-if="items[0].team!=null">
+  <td ng-if="items[0].team!=''">
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].team}}" disabled>
   </div></td>
 
