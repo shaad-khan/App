@@ -136,7 +136,7 @@ $u=$_SESSION['user'];
 
  </table>
 </div>
-<div class="panel-footer">Grand total for all task {{tot1+tot2}}</div>
+<div class="panel-footer">Grand total for all task {{getGrandtotal()}} hh:mm</div>
 </div>
 </div>
 </div>

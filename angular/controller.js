@@ -265,7 +265,7 @@ var url="list.php?param="+text;
 
 
 /*------------------------------------------------------------------*/
-app.controller("Task",function($scope,service,$interval,$http){
+app.controller("Task",function($scope,service,$interval,$http,$rootScope){
 var x;
 /*service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(function(response){
   
@@ -309,6 +309,8 @@ $scope.getTotal = function(){
   var m = total % 60;
   h = h < 10 ? '0' + h : h;
   m = m < 10 ? '0' + m : m;
+  $rootScope.h=h;
+  $rootScope.m=m;
     //$scope.taskhour=$total/60;
     //console.log("total="+total);
     return  h + ':' + m;
@@ -330,6 +332,8 @@ $scope.getatotal = function(){
   var m = total % 60;
   h = h < 10 ? '0' + h : h;
   m = m < 10 ? '0' + m : m;
+  $rootScope.h=$rootScope.h+h;
+  $rootScope.m=$rootScope.m+m;
     //$scope.taskhour=$total/60;
     //console.log("total="+total);
     return  h + ':' + m;
@@ -338,7 +342,10 @@ $scope.getatotal = function(){
     return "00:00";
   }
 }
-
+$scope.getGrandtotal=function()
+{
+  return $rootScope.h + ":" + $rootScope.m;
+}
 
 });
 
