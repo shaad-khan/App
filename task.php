@@ -103,8 +103,8 @@ $u=$_SESSION['user'];
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
 </td>-->
     </tr>
-    <tr style="background:#428bca;color:white" ng-if="getTotal()">
-    <td colspan="6">Total Time Spent</td><td >{{getTotal()}}  hh:mm <span class="glyphicon glyphicon-time"></span> </td></tr>
+    <tr style="background:#428bca;color:white" ng-if="getTotal()" ng-init="tot1=getTotal()">
+    <td colspan="6" style="width: 70px;">Total Time Spent</td><td >{{getTotal()}}  hh:mm <span class="glyphicon glyphicon-time"></span> </td></tr>
     </table>
     <table class="table" >
 <tr ng-repeat="task in atask" ng-class="$index % 2 > 0 ? 'active':''" ng-if="atask!=null">
@@ -131,11 +131,12 @@ $u=$_SESSION['user'];
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
 </td>-->
     </tr>
-    <tr style="background:#428bca;color:white" ng-if="getatotal()">
-    <td colspan="6">Total Time Spent</td><td >{{getatotal()}} hh:mm <span class="glyphicon glyphicon-time"></span></td></tr>
+    <tr style="background:#428bca;color:white" ng-if="getatotal()"ng-init="tot2=getatotal();">
+    <td colspan="6" style="width: 70px;">Total Time Spent</td><td >{{getatotal()}} hh:mm <span class="glyphicon glyphicon-time"></span></td></tr>
 
  </table>
 </div>
+<div class="panel-footer">Grand total for all task {{tot1+tot2}}</div>
 </div>
 </div>
 </div>
