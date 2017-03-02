@@ -344,6 +344,7 @@ $scope.getatotal = function(){
 }
 $scope.getGrandtotal=function()
 {
+  console.log($rootScope.h + ":" + $rootScope.m);
   return $rootScope.h + ":" + $rootScope.m;
 }
 
