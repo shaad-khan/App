@@ -307,10 +307,11 @@ $scope.getTotal = function(){
     {
     var h = Math.floor(total / 60);
   var m = total % 60;
-  h = h < 10 ? '0' + h : h;
-  m = m < 10 ? '0' + m : m;
   $rootScope.h=h;
   $rootScope.m=m;
+  h = h < 10 ? '0' + h : h;
+  m = m < 10 ? '0' + m : m;
+  
     //$scope.taskhour=$total/60;
     //console.log("total="+total);
     return  h + ':' + m;
@@ -330,10 +331,11 @@ $scope.getatotal = function(){
     {
     var h = Math.floor(total / 60);
   var m = total % 60;
-  h = h < 10 ? '0' + h : h;
-  m = m < 10 ? '0' + m : m;
   $rootScope.h=$rootScope.h+h;
   $rootScope.m=$rootScope.m+m;
+  h = h < 10 ? '0' + h : h;
+  m = m < 10 ? '0' + m : m;
+  
     //$scope.taskhour=$total/60;
     //console.log("total="+total);
     return  h + ':' + m;
@@ -344,9 +346,12 @@ $scope.getatotal = function(){
 }
 $scope.getGrandtotal=function()
 {
+   
   //console.log($rootScope.h + ":" + $rootScope.m);
   if($rootScope.h>0 || $rootScope.m>0)
   {
+    $rootScope.h = $rootScope.h < 10 ? '0' + $rootScope.h : $rootScope.h;
+ $rootScope.m = $rootScope.m < 10 ? '0' +$rootScope.m : $rootScope.m;
   return $rootScope.h + ":" + $rootScope.m;
 }
 else{
