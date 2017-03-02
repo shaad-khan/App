@@ -135,8 +135,9 @@ $u=$_SESSION['user'];
     <td colspan="6" >Total Time Spent</td><td colspan="4">{{getatotal()}} hh:mm <span class="glyphicon glyphicon-time"></span></td></tr>
 
  </table>
+ <div class="panel-footer">Grand total for all task {{getGrandtotal()}} hh:mm</div>
 </div>
-<div class="panel-footer">Grand total for all task {{getGrandtotal()}} hh:mm</div>
+
 </div>
 </div>
 </div>
