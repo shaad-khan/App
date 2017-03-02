@@ -423,11 +423,11 @@ td
     <label for="exampleInputEmail1">Select Team <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].team==''">
    <select class="form-control" name="team" >
-  <option ng-repeat="team in teams" value="{{team.Team}}">{{team.Team}}</option>
+  <option ng-repeat="t in teams" value="{{t.Team}}">{{t.Team}}</option>
 </select>
   </div></td>
   
-  <td ng-if="items[0].team!=''">
+  <td ng-if="items[0].team!=null">
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].team}}" disabled>
   </div></td>
 
