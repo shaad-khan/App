@@ -182,7 +182,7 @@ element.style {
                             <i class="fa fa-tasks"></i>
                             <span class="badge bg-theme"><?php
 
-                            echo $c2;
+                           // echo $c2;
                             ?>
 
 
@@ -196,7 +196,7 @@ element.style {
                             <li>
                                 <p class="green">You have <?php
 
-                            echo $c2;
+                           // echo $c2;
                             ?> pending Checklist tasks</p>
                             </li>
                             <?php
