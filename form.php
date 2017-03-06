@@ -12,7 +12,6 @@
    <script src="angular/Controller_form.js"></script>
   <?php
   session_start();
-
 $user_session=$_SESSION["user"];
 $admin=$_SESSION["admin"];
 if($user_session=='')
