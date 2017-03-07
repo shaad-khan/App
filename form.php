@@ -503,13 +503,20 @@ if($_SESSION['Doc']==1)
     </td>
     <?php
   }?>
+<td ng-if="items[0].Status=='Close'"><div class="form-group" >
+    <label for="exampleInputEmail1">Total Client Time</label>
+    <input type="number" class="form-control" name="attime" id="exampleInputEmail1" placeholder="{{items[0].Total_client_time}} min" disabled>
+  </div>
+  
+    </td>
+  
   </tr>
 
 
 <tr> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td colspan="8" ng-if="items[0].Status=='Classify'" >
+"></span></label></td><td colspan="8" ng-if="items[0].Status=='Classify' || items[0].Status='Close'" >
 <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" disabled></textarea>
     
   </div> </td>
@@ -520,6 +527,7 @@ if($_SESSION['Doc']==1)
  
 
   <tr>
+  
 <!--<td>
 <div class="form-group">
     <label for="exampleInputEmail1">Resolver <span class="glyphicon glyphicon-info-sign
