@@ -521,7 +521,7 @@ if($_SESSION['Doc']==1)
 <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" disabled></textarea>
     
   </div> </td>
-  <td colspan="8" ng-if="items[0].Status!='Classify' || items[0].Status!='Close'" >
+  <td colspan="8" ng-if="items[0].Status!='Classify' && items[0].Status!='Close'">
 <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" required></textarea>
     
   </div> </td>
