@@ -22,7 +22,7 @@ $result=$conn->query($sql);
 
 	$rows[]=$row4;
 }
-$sql="select count(*) as pcount from Master_Ticket_Tab where Status!='Closure' and Status!='Close'";
+$sql="select count(*) as pcount from Master_Ticket_Tab where  Status!='Close'";
     //echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
