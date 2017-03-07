@@ -478,11 +478,11 @@ if($_SESSION['Doc']==1)
   <td>
 <div class="form-group" >
     <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status=='Classify' || items[0].Status=='Close'">
+"></span></label></td><td ng-if="items[0].Status=='Classify'">
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" disabled>
   </div>
     </td>
-    <td ng-if="items[0].Status!='Classify' || items[0].Status!='Closure'">
+    <td ng-if="items[0].Status!='Classify' || items[0].Status!='Closure' || items[0].Status!='Close'">
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
   </div>
 
@@ -517,7 +517,7 @@ if($_SESSION['Doc']==1)
 <tr> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td colspan="8" ng-if="items[0].Status=='Classify' || items[0].Status='Close'" >
+"></span></label></td><td colspan="8" ng-if="items[0].Status=='Classify' || items[0].Status=='Close'" >
 <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" disabled></textarea>
     
   </div> </td>
