@@ -482,7 +482,7 @@ if($_SESSION['Doc']==1)
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" disabled>
   </div>
     </td>
-    <td ng-if="items[0].Status!='Classify' || items[0].Status!='Closure' || items[0].Status!='Close'">
+    <td ng-if="items[0].Status!='Classify' && items[0].Status!='Closure' && items[0].Status!='Close'">
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
   </div>
 
