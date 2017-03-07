@@ -66,7 +66,7 @@ $id=$row3['id'];
                                    $tk='CSADHOC'.$date4.$id;
                                   } 
 
-$sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Project,Resolver,CTicket,Cdatetime,Resolver_Dtime,EnvType,Reviewer,Assign_to,Creator,Updatetime,Repo,aflag,Total_time,atype)values('$tk','$amessage','General','General','$ptype','$u','','$adate','$adate','General','','$u','$u','$adate','',1,$tspent,'$ttype')";
+$sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Project,Resolver,CTicket,Cdatetime,Resolver_Dtime,EnvType,Reviewer,Assign_to,Creator,Updatetime,Repo,aflag,Total_time,atype)values('$tk','$amessage','Close','General','$ptype','$u','','$adate','$adate','General','','$u','$u','$adate','',1,$tspent,'$ttype')";
 
 $conn->query($sql);
 
