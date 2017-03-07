@@ -119,6 +119,7 @@ $u=$_SESSION['user'];
 <td ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{task.Ticket_ID}}</td>
 <td>{{task.Client}}</td>
+<td>{{task.Project}}</td>
 <td>{{task.atype}}</td>
 <td>{{task.Tdiscription}}</td>
 <td>{{task.Status}}</td>
