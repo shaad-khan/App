@@ -548,7 +548,8 @@ if($_SESSION['Doc']==1)
    <td >
 
       <div class="form-group">
-  <button type="submit" class="btn btn-success">Submit To Save Changes</button>
+  <button type="submit" class="btn btn-success" ng-if="items[0].Status=='Close'" disabled>Submit To Save Changes</button>
+  <button type="submit" class="btn btn-success" ng-if="items[0].Status!='Close'">Submit To Save Changes</button>
   </div>
       </td>
       </tr>
