@@ -106,6 +106,9 @@ td
   height: 28px;
   
 }
+.col-md-12{
+      width: 113%;
+}
 
   </style>
 </head>
