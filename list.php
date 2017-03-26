@@ -123,7 +123,7 @@ td
 
                           <div class="row">
 
-                             <div class="col-xs-12" style="padding-left:40px;padding-right:40px;">
+                             <div class="col-xs-12" style="padding-left:7px;padding-right:40px;">
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-2">
 
