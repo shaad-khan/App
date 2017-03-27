@@ -75,7 +75,7 @@ $u=$_SESSION['user'];
 <td>{{res.ctype}}</td>
 <td>{{res.sname}}</td>
 <td>{{res.Environment}}</td>
-<td>{{res.uid}}</td>-->
+<td>{{res.uid}}</td>
 
 <td>{{res.Password}}</td>
 
