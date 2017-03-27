@@ -66,13 +66,13 @@ $u=$_SESSION['user'];
                                    </div>--></div></div>
        <div class="panel-body" ng-controller="Task" >
          <table class="table" ><tr>
-     <th>Ticket_ID</th>
      <th>Client</th>
-     <th>Project</th>
-     <th>Discription</th>
-     <th>Status</th>
-     <th>DateTime</th>
-     <th>Time Spend</th>
+     <th>Connection Type</th>
+     <th>ServerName</th>
+     <th>Environment</th>
+     <th>User ID</th>
+     <th>Password</th>
+    <!-- <th>Time Spend</th>-->
      
 
 
@@ -89,21 +89,21 @@ $u=$_SESSION['user'];
 <td ng-if="((res.Status=='Review')||(res.Status=='Doc') ||(res.Status=='Closure')||(res.Status=='Classify'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>-->
 <td ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
-</span> {{res.Ticket_ID}}</td>
-<td>{{res.Client}}</td>
-<td>{{res.Project}}</td>
-<td>{{res.Tdiscription}}</td>
-<td>{{res.Status}}</td>
+</span> {{res.Client}</td>
+<td>{{res.Connection Type}}</td>
+<td>{{res.Server Name}}</td>
+<td>{{res.Environment}}</td>
+<td>{{res.User ID}}</td>
 
-<td>{{res.UpdateTime}}</td>
-<td >{{res.TimeTaken}} min</td>
+<td>{{res.Password}}</td>
+
 
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="push(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></sbutton>
 </td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
 </td>-->
-    </tr>
-    <tr style="background:#428bca;color:white" ng-if="getTotal()" ng-init="tot1=getTotal()">
+   <!-- </tr>
+   <!-- <tr style="background:#428bca;color:white" ng-if="getTotal()" ng-init="tot1=getTotal()">
     <td colspan="5">Total Time Spent On Tickets</td><td colspan="4">{{getTotal()}}  hh:mm <span class="glyphicon glyphicon-time"></span> </td></tr>
     </table>
     <table class="table" >
@@ -115,7 +115,7 @@ $u=$_SESSION['user'];
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))&&((u==res.Blocker_name))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
 <td ng-if="((res.Status=='Review')||(res.Status=='Doc') ||(res.Status=='Closure')||(res.Status=='Classify'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
-</span> {{res.Ticket_ID}}</button></td>-->
+</span> {{res.Ticket_ID}}</button></td>
 <td ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{task.Ticket_ID}}</td>
 <td>{{task.Client}}</td>
@@ -132,12 +132,11 @@ $u=$_SESSION['user'];
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
 </td>-->
     </tr>
-    <tr style="background:#428bca;color:white" ng-if="getatotal()"ng-init="tot2=getatotal();">
+   <!-- <tr style="background:#428bca;color:white" ng-if="getatotal()"ng-init="tot2=getatotal();">
     <td colspan="6" >Total Time Spent On Adhoc Task</td><td colspan="4">{{getatotal()}} hh:mm <span class="glyphicon glyphicon-time"></span></td></tr>
-
+-->
  </table>
- <div class="panel-footer" ng-if="getGrandtotal() !=0" style="background-color:#001a33;color:white">Grand total for all task      {{getGrandtotal()}} hh:mm   <span class="glyphicon glyphicon-time"></span></div>
-</div>
+
 
 </div>
 </div>
