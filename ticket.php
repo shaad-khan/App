@@ -2,6 +2,7 @@
 
 session_start();
 $u=$_SESSION['user'];
+$admin=$_SESSION["admin"];
 
 ?>
 
@@ -58,6 +59,9 @@ $u=$_SESSION['user'];
 <td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="push(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></sbutton>
 </td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
+</td>
+<td ng-if="<?php echo $admin;?>==1">
+<button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
 </td>
     </tr>
  </table
