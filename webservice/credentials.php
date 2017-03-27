@@ -64,7 +64,7 @@ $u=$_SESSION['user'];
 
                                    <!-- <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div>--></div></div>
-       <div class="panel-body">
+       <div class="panel-body" ng-controller="credentials" >
          <table class="table" ><tr>
      <th>Client</th>
      <th>Connection Type</th>
