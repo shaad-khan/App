@@ -10,14 +10,14 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 
 
-$sql="SELECT [Client]
+$sql="select [Client]
       ,[Connection Type] as ctype
       ,[Server Name] as sname
       ,[Environment]
       ,[User ID] as uid
       ,[Password]
      
-  FROM [dbo].[Credential]";
+  from [dbo].[Credential]";
 
     $result=$conn->query($sql);
 //echo $msg;
