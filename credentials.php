@@ -31,39 +31,14 @@ $u=$_SESSION['user'];
           </div>
                                     
                                     </div> 
-                                    <!-- <div class="col-xs-2">
-                                    
-                                    <div class="form-group">
-            
-           <input type="text" class="form-control" value="" id="some_class_2" name="date" style="color:black" placeholder="End date" ng-model="edate"/>
-          
-          </div>
-                                    
-                                    </div>
-                                    <div class="col-xs-2" >
-                                    
-                                    <div class="form-group">
-            
-         <button type="button" class="btn btn-primary" ng-click="search(sdate,edate)"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> </button>
-          
-          </div>
-                                    
-                                    </div>
-                                     <div class="col-xs-2">
-                                    
-                                    <div class="form-group">
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-plus
-" aria-hidden="true"></span>Add Adhoc Task</button>
-        <!-- <button type="button" class="btn btn-primary" ng-click="add(sdate,edate)"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></button>
-          -->
+                                
           </div>
                                     
                                     </div>
 
 
 
-                                   <!-- <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
-                                   </div>--></div></div>
+                                   </div></div>
        <div class="panel-body">
          <table class="table" ><tr>
      <th>Client</th>
@@ -72,7 +47,7 @@ $u=$_SESSION['user'];
      <th>Environment</th>
      <th>User ID</th>
      <th>Password</th>
-    <!-- <th>Time Spend</th>-->
+    
      
 
 
