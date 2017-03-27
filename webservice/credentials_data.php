@@ -19,10 +19,10 @@ $sql="select * from Credential";
 
 	$rows[]=$row4;
 }
-//ob_start("ob_gzhandler");
+ob_start("ob_gzhandler");
 
 print(json_encode($rows, JSON_NUMERIC_CHECK));
-//ob_end_flush();
-//exit;
+ob_end_flush();
+exit;
 
     ?>
