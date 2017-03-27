@@ -61,7 +61,7 @@ $admin=$_SESSION["admin"];
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
 </td>
 <td ng-if="<?php echo $admin;?>==1">
-<button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
+<button class="btn btn-danger" ng-click="remove(res.Ticket_ID)"><span class="glyphicon glyphicon-remove"></span></button>
 </td>
     </tr>
  </table
