@@ -18,7 +18,7 @@ $u=$_SESSION['user'];
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-4">
 
-                                  <span class="glyphicon glyphicon-menu-hamburger"></span> Task List for <?php echo $u;?>
+                                  <span class="glyphicon glyphicon-menu-hamburger"></span> credentials
 
                                     <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span></div>
