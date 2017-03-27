@@ -89,9 +89,9 @@ $u=$_SESSION['user'];
 <td ng-if="((res.Status=='Review')||(res.Status=='Doc') ||(res.Status=='Closure')||(res.Status=='Classify'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>-->
 <td ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
-</span> {{res.Client}</td>
-<!--<td>{{res.Connection Type}}</td>
-<td>{{res.Server Name}}</td>
+</span> {{res.Client}}</td>
+<td>{{res.Connection Type}}</td>
+<!--<td>{{res.Server Name}}</td>
 <td>{{res.Environment}}</td>
 <td>{{res.User ID}}</td>-->
 
