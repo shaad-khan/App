@@ -15,11 +15,12 @@ console.log($scope.u);
   };
 $scope.remove=function(text)
   {
-    alert(text);
+   // alert(text);
     $http.get("https://apps.continuserve.com/webservice/remove.php?ID="+text).then(function(response){
      	//$scope.load2='false';
       //$scope.updates=response.data;
  alert(text+" ticket is deleted successfully");
+ $scope.results={};
     });
     //alert(text);
   };
