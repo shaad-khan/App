@@ -231,9 +231,7 @@ element.style {
 
                   ?></h5>
 
-                  <li class="mt">
-                      <li><a  href="#!/credentials"><span class="glyphicon glyphicon-tasks"></span> Credentials </a></li>
-                  </li>
+                  
 <!--
                   <li class="sub-menu">
                       <a href="javascript:;" >
@@ -302,6 +300,9 @@ element.style {
                            <li><a  href="Notice_view.php">View_Notice</a></li>
                            <!-- <li><a  href="gallery.php">Video_Gallery</a></li>-->
                       </ul>
+                  </li>
+                  <li class="mt">
+                      <li><a  href="#!/credentials"><span class="glyphicon glyphicon-tasks"></span> Credentials </a></li>
                   </li>
                   <!--<li class="sub-menu">
                       <a href="javascript:;" >
