@@ -8,13 +8,13 @@ $u=$_SESSION['user'];
 
  <div class="row mt"  ng-init="setuser('<?php echo $u;?>')">
   
-   <div class="col-md-12">
+   <div class="col-md-12" style="width: 102%;">
  <div class="content-panel" id="reload">
 
 
                           <div class="row">
 
-                             <div class="col-xs-12" style="padding-left: 19px;padding-right: 19px;width: 102%;">
+                             <div class="col-xs-12" style="padding-left: 19px;padding-right: 19px;">
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-4">
 
