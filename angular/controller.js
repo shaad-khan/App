@@ -198,7 +198,7 @@ service.serv("https://apps.continuserve.com/webservice/credentials_data.php").th
   
      //	$scope.load2='false';
       $scope.creds=response.data;
-      console.log($scope.creds);
+      console.log($scope.creds[0].Client);
     }); 
 
 
