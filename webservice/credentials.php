@@ -64,7 +64,7 @@ $u=$_SESSION['user'];
 
                                    <!-- <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div>--></div></div>
-       <div class="panel-body" ng-controller="Task" >
+       <div class="panel-body">
          <table class="table" ><tr>
      <th>Client</th>
      <th>Connection Type</th>
@@ -145,7 +145,7 @@ $u=$_SESSION['user'];
 </div>
 </div>
 
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" ng-controller="addtask">
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background: #000d1a; color:white;">
