@@ -90,10 +90,10 @@ $u=$_SESSION['user'];
 </span> {{res.Ticket_ID}}</button></td>-->
 <td ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Client}</td>
-<td>{{res.Connection Type}}</td>
+<!--<td>{{res.Connection Type}}</td>
 <td>{{res.Server Name}}</td>
 <td>{{res.Environment}}</td>
-<td>{{res.User ID}}</td>
+<td>{{res.User ID}}</td>-->
 
 <td>{{res.Password}}</td>
 
