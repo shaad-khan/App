@@ -64,7 +64,7 @@ $u=$_SESSION['user'];
 
                                    <!-- <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div>--></div></div>
-       <div class="panel-body" ng-controller="credentials" >
+       <div class="panel-body">
          <table class="table" ><tr>
      <th>Client</th>
      <th>Connection Type</th>
@@ -79,7 +79,7 @@ $u=$_SESSION['user'];
    </tr>
 
 
-    <tr ng-repeat="res in creds" ng-class="$index % 2 > 0 ? 'active':''" >
+    <tr ng-repeat="res in creds  | filter:ftext " ng-class="$index % 2 > 0 ? 'active':''" >
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))&&((u!=res.Blocker_name))"><button class="btn btn-default" ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
@@ -90,10 +90,10 @@ $u=$_SESSION['user'];
 </span> {{res.Ticket_ID}}</button></td>-->
 <td ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Client}}</td>
-<td>{{res.Connection Type}}</td>
-<!--<td>{{res.Server Name}}</td>
+<td>{{res.ctype}}</td>
+<td>{{res.sname}}</td>
 <td>{{res.Environment}}</td>
-<td>{{res.User ID}}</td>-->
+<td>{{res.uid}}</td>-->
 
 <td>{{res.Password}}</td>
 
