@@ -10,7 +10,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 
 
-$sql="select * from Credentials";
+$sql="select * from Credential";
 
     $result=$conn->query($sql);
 //echo $msg;
