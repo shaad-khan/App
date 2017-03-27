@@ -191,7 +191,19 @@ $scope.$on('$destroy', function () {
  });
 
 });
+
 /*-------------------------------------------------------------------------------*/
+app.controller("credentials",function($scope,service,$interval){
+service.serv("https://apps.continuserve.com/webservice/credentials_data.php").then(function(response){
+  
+     //	$scope.load2='false';
+      $scope.creds=response.data;
+    }); 
+
+
+})
+
+/*______________________________________________________________________________*/
 
 app.controller("tcount",function($scope,service,$interval){
   //var vm = this;

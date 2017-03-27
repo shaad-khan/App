@@ -16,6 +16,16 @@ app.config(function($routeProvider) {
                return 'ticket.php'},
       controller  : 'Ticket'
     })
+    .when("/credentials", {
+        //templateUrl : "ticket.php",
+				//controller: "Ticket"
+				//template: "helo there"
+       //resolve: resolveController('angular/controller.js')
+    templateUrl: 
+         //alert('ticket.php?Email=' + attrs.email);
+               'credentials.php',
+      controller  : 'credentials'
+    })
     .when("/task", {
         templateUrl : "task.php",
          controller: 'Task'
