@@ -231,13 +231,10 @@ element.style {
 
                   ?></h5>
 
-                 <!-- <li class="mt">
-                      <a href="index.html">
-                          <i class="fa fa-dashboard"></i>
-                          <span>Dashboard</span>
-                      </a>
+                  <li class="mt">
+                      <li><a  href="#!/credentials"><span class="glyphicon glyphicon-tasks"></span> Credentials </a></li>
                   </li>
-
+<!--
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-desktop"></i>
@@ -257,7 +254,7 @@ element.style {
                       </a>
                       <ul class="sub">
                           <li><a  href="#!/task"><span class="glyphicon glyphicon-tasks"></span> Your Task List </a></li>
-                           <li><a  href="#!/credentials"><span class="glyphicon glyphicon-tasks"></span> Credentials </a></li>
+                           
                           <!--<li><a  href="alerticket.php">TrackServe Alert Tickets</a></li>
                  <?php
                  if($_SESSION['admin']==1)
