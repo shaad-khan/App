@@ -13,7 +13,15 @@ console.log($scope.u);
  console.log(response.data);
     });
   };
-
+$scope.remove=function(text)
+  {
+    $http.get("https://apps.continuserve.com/webservice/remove.php?ID="+text).then(function(response){
+     	//$scope.load2='false';
+      //$scope.updates=response.data;
+ alert(text+" ticket is deleted successfully");
+    });
+    //alert(text);
+  };
   $scope.stat=function(text)
   {
     $http.get("https://apps.continuserve.com/webservice/block.php?ID="+text+"&status=1").then(function(response){
