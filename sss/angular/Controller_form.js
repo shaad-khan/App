@@ -23,7 +23,7 @@ $interval(callApi, 1000);
 
   function callApi(){
     $scope.date = new Date();
-    $http.get("https://apps.continuserve.com/apptest/webservice/ticket_data.php?ID="+$scope.ID).then(function(response){
+    $http.get("https://apps.continuserve.com/sss/webservice/ticket_data.php?ID="+$scope.ID).then(function(response){
      	//$scope.load2='false';
       $scope.items=response.data;
 
@@ -35,7 +35,7 @@ $interval(callApi, 1000);
 
 app.controller("update",function($scope,$interval,$http,servicecall){
 
-$http.get("https://apps.continuserve.com/apptest/webservice/updateinfo.php?ID="+$scope.ID).then(function(response){
+$http.get("https://apps.continuserve.com/sss/webservice/updateinfo.php?ID="+$scope.ID).then(function(response){
      	//$scope.load2='false';
       $scope.updates=response.data;
 
@@ -45,7 +45,7 @@ $interval(callApi, 10000);
 
   function callApi(){
     $scope.date = new Date();
-    $http.get("https://apps.continuserve.com/apptest/webservice/updateinfo.php?ID="+$scope.ID).then(function(response){
+    $http.get("https://apps.continuserve.com/sss/webservice/updateinfo.php?ID="+$scope.ID).then(function(response){
      	//$scope.load2='false';
       $scope.updates=response.data;
 
@@ -61,7 +61,7 @@ var fac={};
 fac.serv=function($url)
 {
   console.log($url);
-return $http.get("https://apps.continuserve.com/apptest/webservice/service.php?type="+$url);
+return $http.get("https://apps.continuserve.com/sss/webservice/service.php?type="+$url);
 };
 
 return fac;

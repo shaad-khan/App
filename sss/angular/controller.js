@@ -7,7 +7,7 @@ console.log($scope.u);
 
   $scope.push=function(text)
   {
-    $http.get("https://apps.continuserve.com/apptest/webservice/block.php?ID="+text).then(function(response){
+    $http.get("https://apps.continuserve.com/sss/webservice/block.php?ID="+text).then(function(response){
      	//$scope.load2='false';
       //$scope.updates=response.data;
  console.log(response.data);
@@ -16,7 +16,7 @@ console.log($scope.u);
 
   $scope.stat=function(text)
   {
-    $http.get("https://apps.continuserve.com/apptest/webservice/block.php?ID="+text+"&status=1").then(function(response){
+    $http.get("https://apps.continuserve.com/sss/webservice/block.php?ID="+text+"&status=1").then(function(response){
      	//$scope.load2='false';
       //$scope.updates=response.data;
  alert(text+" ticket is blocked by "+response.data[0].Blocker_name);
@@ -27,7 +27,7 @@ console.log($scope.u);
 //$scope.load='true';
 	}());
 	$scope.pop=function(ID) {
-     window.location=("https://apps.continuserve.com/apptest/main.php#!/");
+     window.location=("https://apps.continuserve.com/sss/main.php#!/");
 		var id=ID;
 		var url="form.php?ID="+id;
 	//	alert(url);
@@ -41,8 +41,8 @@ var name=$routeParams.email;
 var type=$routeParams.type;
 function statuscheck() {
  
-	//alert("https://apps.continuserve.com/apptest/continuity/App/webservice/status.php?name="+name+"&type="+type);
-service.serv("https://apps.continuserve.com/apptest/webservice/status.php?name="+name+"&type="+type).then(function(response){
+	//alert("https://apps.continuserve.com/sss/continuity/App/webservice/status.php?name="+name+"&type="+type);
+service.serv("https://apps.continuserve.com/sss/webservice/status.php?name="+name+"&type="+type).then(function(response){
 	$scope.load='false';
 		$scope.results=response.data;
 console.log(response.data.length);
@@ -106,7 +106,7 @@ function callAtInterval(){
 
 app.controller("taskgraph", function($scope,$http,$interval,service){
 	 var x=0;
-service.serv("https://apps.continuserve.com/apptest/webservice/service.php?type=Task_Category").then(function(response){
+service.serv("https://apps.continuserve.com/sss/webservice/service.php?type=Task_Category").then(function(response){
 var tasks=response.data;
 });
 $interval(callAtInterval2, 30000);
@@ -150,14 +150,14 @@ function callAtInterval2(){
 app.controller("table_count",function($scope,service,$interval){
   var vm = this;
    vm.Total = 0;
-service.serv("https://apps.continuserve.com/apptest/webservice/test.php").then(function(response){
+service.serv("https://apps.continuserve.com/sss/webservice/test.php").then(function(response){
   
      	$scope.load2='false';
       $scope.items=response.data;
     }); 
  var tableapi= $interval(function(){
   
-service.serv("https://apps.continuserve.com/apptest/webservice/test.php").then(function(response){
+service.serv("https://apps.continuserve.com/sss/webservice/test.php").then(function(response){
   console.log("inetval call for ticket count");
      	$scope.load2='false';
       $scope.items=response.data;
@@ -215,14 +215,14 @@ var url="list.php?param=close";
    
    };
 
-service.serv("https://apps.continuserve.com/apptest/webservice/tcount.php").then(function(response){
+service.serv("https://apps.continuserve.com/sss/webservice/tcount.php").then(function(response){
   
      //	$scope.load2='false';
       $scope.totals=response.data;
     }); 
  var tableapi= $interval(function(){
   
-service.serv("https://apps.continuserve.com/apptest/webservice/tcount.php").then(function(response){
+service.serv("https://apps.continuserve.com/sss/webservice/tcount.php").then(function(response){
  // console.log("inetval call for total ticket count");
     // 	$scope.load2='false';
       $scope.totals=response.data;
@@ -267,12 +267,12 @@ var url="list.php?param="+text;
 /*------------------------------------------------------------------*/
 app.controller("Task",function($scope,service,$interval,$http,$rootScope){
 var x;
-/*service.serv("https://apps.continuserve.com/apptest/webservice/task_serv.php").then(function(response){
+/*service.serv("https://apps.continuserve.com/sss/webservice/task_serv.php").then(function(response){
   
      	//$scope.load='false';
       $scope.tasks=response.data;
     });
-     service.serv("https://apps.continuserve.com/apptest/webservice/task_aserv.php").then(function(response){
+     service.serv("https://apps.continuserve.com/sss/webservice/task_aserv.php").then(function(response){
   
      //	$scope.load='false';
       $scope.atask=response.data;
@@ -282,13 +282,13 @@ $scope.search=function(s,e)
   $scope.tasks={};
   $scope.atask={};
   
-  console.log("https://apps.continuserve.com/apptest/webservice/task_serv.php?sdate="+s+"& edate="+e);
-  $http.get("https://apps.continuserve.com/apptest/webservice/task_serv.php?sdate="+s+"& edate="+e).then(function(response){
+  console.log("https://apps.continuserve.com/sss/webservice/task_serv.php?sdate="+s+"& edate="+e);
+  $http.get("https://apps.continuserve.com/sss/webservice/task_serv.php?sdate="+s+"& edate="+e).then(function(response){
   
      	$scope.load='false';
       $scope.tasks=response.data;
     }); 
-    $http.get("https://apps.continuserve.com/apptest/webservice/task_aserv.php?sdate="+s+"& edate="+e).then(function(response){
+    $http.get("https://apps.continuserve.com/sss/webservice/task_aserv.php?sdate="+s+"& edate="+e).then(function(response){
   
      	$scope.load='false';
       $scope.atask=response.data;
@@ -364,12 +364,12 @@ else{
 });
 
 app.controller("addtask",function($scope,$interval,$http,service){
-service.serv("https://apps.continuserve.com/apptest/webservice/service.php?type=Adhoc_task").then(function(response){
+service.serv("https://apps.continuserve.com/sss/webservice/service.php?type=Adhoc_task").then(function(response){
      	//$scope.load2='false';
       $scope.tts=response.data;
 
 });
-service.serv("https://apps.continuserve.com/apptest/webservice/service.php?type=Project_tab").then(function(response){
+service.serv("https://apps.continuserve.com/sss/webservice/service.php?type=Project_tab").then(function(response){
 $scope.projects=response.data;
 });
 
@@ -389,7 +389,7 @@ var config = {
                 }
             }
 
-$http.post('https://apps.continuserve.com/apptest/webservice/adhocadd.php', data, config)
+$http.post('https://apps.continuserve.com/sss/webservice/adhocadd.php', data, config)
             .then(function (data, status, headers, config) {
                 $scope.res= data.data;
                 //console.log($scope.res[0].Ticket_ID);
