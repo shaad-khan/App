@@ -18,6 +18,7 @@ if($param=='total')
 else if($param=='pending')
 {
 
+
     $sql="select * from Master_Ticket_Tab where Status!='Close' and team='SSS' order by UpdateTime desc";
 }
 else if($param=='close')
