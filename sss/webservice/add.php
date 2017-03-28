@@ -334,6 +334,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 }
 /*-----------------------------------------------------*/
+
 $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Review' and and team='SSS'";
 //echo $sql3;
 
@@ -377,7 +378,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 	}
   else{
-    $sql="update Status_count set Aui=0 where Email like '%".$r."%'";
+    $sql="update Status_count set Aui=0 where Email like '%".$r."%' and Team='SSS'";
   }
   $conn->query($sql);
 	//$rows[]=$row3;
