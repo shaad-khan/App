@@ -19,7 +19,7 @@ $u=$_SESSION['user'];
 
                                   <span class="glyphicon glyphicon-menu-hamburger"></span> L3 Support Team 
 
-                                    <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
+                                    <a href="https://apps.continuserve.com/sss/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span></div>
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>

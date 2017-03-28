@@ -20,7 +20,7 @@ $u=$_SESSION['user'];
 
                                   <span class="glyphicon glyphicon-menu-hamburger"></span> Task List for <?php echo $u;?>
 
-                                    <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
+                                    <a href="https://apps.continuserve.com/sss/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span></div>
                                    <div class="col-xs-2">
                                     
