@@ -13,20 +13,20 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 if($param=='total')
 {
-     $sql="select * from Master_Ticket_Tab";
+     $sql="select * from Master_Ticket_Tab where team='SSS'";
 }
 else if($param=='pending')
 {
 
-    $sql="select * from Master_Ticket_Tab where Status!='Closure' order by UpdateTime desc";
+    $sql="select * from Master_Ticket_Tab where Status!='Closure' and team='SSS' order by UpdateTime desc";
 }
 else if($param=='close')
 {
-     $sql="select * from Master_Ticket_Tab where Status='Close' order by UpdateTime desc";
+     $sql="select * from Master_Ticket_Tab where Status='Close' and team='SSS' order by UpdateTime desc";
 }
 else
 {
-    $sql="select * from Master_Ticket_Tab where Status='$param' or Ticket_ID='$param' or Tdiscription like '".$param."%' or Client='$param' or Project='$param' or Resolver like '".$param."%' or EnvType='$param' or Reviewer like '".$param."%' or Assign_to like '".$param."%' or Creator like '".$param."%' order by UpdateTime desc"; 
+    $sql="select * from Master_Ticket_Tab where (Status='$param' or Ticket_ID='$param' or Tdiscription like '".$param."%' or Client='$param' or Project='$param' or Resolver like '".$param."%' or EnvType='$param' or Reviewer like '".$param."%' or Assign_to like '".$param."%' or Creator like '".$param."%') and team='SSS' order by UpdateTime desc"; 
 }
     //echo $sql;
     
