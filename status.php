@@ -43,7 +43,17 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 //$sql="select Email,ISNULL(Classify,0) as Classify,ISNULL(Wip,0) as Wip ,ISNULL(Aui,0) as Aui,ISNULL(Review,0) as Review,ISNULL(Doc,0) as Doc,ISNULL(Closure,0) as Closure,ISNULL(Total,0) as Total from status_count where Classify!=''";
 
-    $sql="select * from Master_Ticket_Tab where Resolver like '".$name."' and Status like '".$type."'";
+   if($type=='Classify')
+{
+    $sql="select * from Master_Ticket_Tab where Assign_to like '".$name."' and Status like '".$type."' order by Updatetime desc";
+   
+
+}//$sql="select Email,ISNULL(Classify,0) as Classify,ISNULL(Wip,0) as Wip ,ISNULL(Aui,0) as Aui,ISNULL(Review,0) as Review,ISNULL(Doc,0) as Doc,ISNULL(Closure,0) as Closure,ISNULL(Total,0) as Total from status_count where Classify!=''";
+else
+{
+    $sql="select * from Master_Ticket_Tab where Assign_to like '".$name."' and Status like '".$type."' and team='L3' order by Updatetime desc";
+    //echo $sql;
+}
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
