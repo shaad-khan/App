@@ -10,10 +10,15 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
     
-
-
+if($type=='Team')
+{
+  $sql="select * from ".$type;
+}
+else
+{
 
     $sql="select * from ".$type." where Team!='SSS' or Team='L3,SSS' or Team='L3'";
+}
     //echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
