@@ -11,10 +11,15 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
     
 
+if($type=='Team')
+{
+  $sql="select * from ".$type;
+}
+else{
 
-
-    $sql="select * from ".$type."where Team='SSS' or Team='L3,SSS'";
+    $sql="select * from ".$type." where Team='SSS' or Team='L3,SSS'";
     //echo $sql;
+}
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
