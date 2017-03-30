@@ -292,7 +292,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '
 {
 	if($row3['ccount']!=0)
 	{
-	$sql="update Status_count set Classify=".$row3['ccount']." where Email like '%".$r."%' and and Team='L3'";
+	$sql="update Status_count set Classify=".$row3['ccount']." where Email like '%".$r."%' and Team='L3'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
 	//echo $sql;
 	
