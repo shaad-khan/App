@@ -283,7 +283,7 @@ $sql="select * from User_prof where Team='L3' or Team='All'";
   $resolver=$row2['sessionId'];
 	$r=$row2['sessionId']."@continuserve.com";
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver."' and Status='Classify'";
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver."' and Status='Classify' orand team='L3'";
 //echo $sql3;
 
      $result=$conn->query($sql3);
@@ -292,7 +292,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '
 {
 	if($row3['ccount']!=0)
 	{
-	$sql="update Status_count set Classify=".$row3['ccount']." where Email like '%".$r."%'";
+	$sql="update Status_count set Classify=".$row3['ccount']." where Email like '%".$r."%' and and Team='L3'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
 	//echo $sql;
 	
@@ -300,7 +300,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '
 
 	}
   else{
-    $sql="update Status_count set Classify=0 where Email like '%".$r."%'";
+    $sql="update Status_count set Classify=0 where Email like '%".$r."%' and Team='L3'";
   }
   $conn->query($sql);
 	//$rows[]=$row3;
