@@ -13,7 +13,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 
 
-    $sql="select * from ".$type;
+    $sql="select * from ".$type."where Team!='SSS'";
     //echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
