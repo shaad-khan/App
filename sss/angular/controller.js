@@ -13,7 +13,17 @@ console.log($scope.u);
  console.log(response.data);
     });
   };
-
+$scope.remove=function(text)
+  {
+   // alert(text);
+    $http.get("https://apps.continuserve.com/sss/webservice/remove.php?ID="+text).then(function(response){
+     	//$scope.load2='false';
+      //$scope.updates=response.data;
+ alert(text+" ticket is deleted successfully");
+ $scope.results={};
+    });
+    //alert(text);
+  };
   $scope.stat=function(text)
   {
     $http.get("https://apps.continuserve.com/sss/webservice/block.php?ID="+text+"&status=1").then(function(response){
@@ -181,7 +191,20 @@ $scope.$on('$destroy', function () {
  });
 
 });
+
 /*-------------------------------------------------------------------------------*/
+app.controller("credentials",function($scope,service,$interval){
+service.serv("https://apps.continuserve.com/sss/webservice/credentials_data.php").then(function(response){
+  
+     //	$scope.load2='false';
+      $scope.creds=response.data;
+      console.log($scope.creds[0].Client);
+    }); 
+
+
+})
+
+/*______________________________________________________________________________*/
 
 app.controller("tcount",function($scope,service,$interval){
   //var vm = this;
