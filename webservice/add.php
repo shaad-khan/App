@@ -283,7 +283,7 @@ $sql="select * from User_prof where Team='L3' or Team='All'";
   $resolver=$row2['sessionId'];
 	$r=$row2['sessionId']."@continuserve.com";
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where (Creator like '".$resolver."' and Status='Classify') or (team='L3')";
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where (Creator like '".$resolver."' and Status='Classify')";
 //echo $sql3;
 
      $result=$conn->query($sql3);
