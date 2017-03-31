@@ -171,7 +171,7 @@ element.style {
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="#" class="logo"><b><span style="color:white"><!--<img src="assets/img/continuity.jpg"/>--> </span></b><!--<span style="text-transform: uppercase;">| L3</span><span style="text-transform: lowercase;"> Application For Handling Shift</span>--></a>
+            <a href="#" class="logo"><b><span style="color:white"><img src="assets/img/continuity.jpg"/> </span></b><!--<span style="text-transform: uppercase;">| L3</span><span style="text-transform: lowercase;"> Application For Handling Shift</span>--></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu" >
                
