@@ -15,7 +15,7 @@ app.controller("listc",function($scope,$interval,$http,servicecall){
 	  return false;
 	};
 
-    //url=https://apps.continuserve.com/sss/webservice/ticket_data.php
+    //url=https://apps.continuserve.com/DBA/webservice/ticket_data.php
 
 
 
@@ -23,7 +23,7 @@ $interval(callApi, 8000);
 
   function callApi(){
     $scope.date = new Date();
-    servicecall.serv("https://apps.continuserve.com/sss/webservice/list_serv.php?param="+param).then(function(response){
+    servicecall.serv("https://apps.continuserve.com/DBA/webservice/list_serv.php?param="+param).then(function(response){
      	$scope.load='false';
       $scope.results=response.data;
 
