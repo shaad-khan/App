@@ -51,7 +51,7 @@ $id=$row3['id'];
 
                                   {
                                   // $msg2=$msg2.' CSTKT'.$date4.'00'.$id;
-                                   $tk='CSADHOC'.$date4.'00'.$id;
+                                   $tk='CADHOC'.$date4.'00'.$id;
                                   } 
                                    if($id>=1000&&$id<10000)
 
@@ -65,8 +65,7 @@ $id=$row3['id'];
                                  //  $msg2=$msg2.' CSTKT'.$date4.$id;
                                    $tk='CSADHOC'.$date4.$id;
                                   } 
-if($u!=null)
-{
+
 $sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Project,Resolver,CTicket,Cdatetime,Resolver_Dtime,EnvType,Reviewer,Assign_to,Creator,Updatetime,Repo,aflag,Total_time,atype)values('$tk','$amessage','Close','General','$ptype','$u','','$adate','$adate','General','','$u','$u','$adate','',1,$tspent,'$ttype')";
 
 $conn->query($sql);
@@ -79,8 +78,4 @@ $result=$conn->query($sql);
 $rows[]=$row3;
 }
 print(json_encode($rows, JSON_NUMERIC_CHECK));
-}
-else{
-  echo "<script> alert('Session expired please re-login');setTimeout(function () { win.close();}, 6000);</script>";
-}
 ?>
