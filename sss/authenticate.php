@@ -82,7 +82,7 @@ if($f)
 $_SESSION["admin"]=1;
 //$_SESSION["team"]=$team;
 }
-if(($team=="SSS")&&($f==1))
+if(($team=="SSS")||($f==1))
 {
   header('Location:https://apps.continuserve.com/sss/main.php');
 }
