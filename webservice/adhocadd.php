@@ -51,7 +51,7 @@ $id=$row3['id'];
 
                                   {
                                   // $msg2=$msg2.' CSTKT'.$date4.'00'.$id;
-                                   $tk='CADHOC'.$date4.'00'.$id;
+                                   $tk='CSADHOC'.$date4.'00'.$id;
                                   } 
                                    if($id>=1000&&$id<10000)
 
