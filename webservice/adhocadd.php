@@ -81,6 +81,6 @@ $rows[]=$row3;
 print(json_encode($rows, JSON_NUMERIC_CHECK));
 }
 else{
-  echo "<script> alert('Session expired pase re-login');setTimeout(function () { win.close();}, 6000);</script>";
+  echo "<script> alert('Session expired please re-login');setTimeout(function () { win.close();}, 6000);</script>";
 }
 ?>
