@@ -98,7 +98,7 @@ element.style {
     background-color:#777;
 }
 .btn-circle.btn-xl {
-  width: 70px;
+  width: 90px;
   height: 70px;
   padding: 10px 16px;
   font-size: 24px;
