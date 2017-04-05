@@ -17,7 +17,7 @@ if($type=='Team')
 else
 {
 
-    $sql="select * from ".$type." where Team!='SSS' or Team='L3,SSS' or Team='L3'";
+    $sql="select * from ".$type." where Team='L3,SSS' or Team='L3'";
 }
     //echo $sql;
 $result=$conn->query($sql);
