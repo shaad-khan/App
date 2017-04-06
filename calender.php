@@ -59,18 +59,18 @@ $u=$_GET['user'];
 				<ul class="list-group" style="padding-top:9px;">
 					<li class="list-group-item" style="background-color: #030d21;
     color: beige;">
-   
-    Date: {{datesel}}
+    <span class="badge" style="background-color: #357ebd;">{{datesel}}</span>
+    Date: 
   </li>
   <li class="list-group-item" style="background-color: #030d21;
     color: beige;">
     <span class="badge" style="background-color: #357ebd;">{{tot.tcount}}</span>
-    Total ticket count
+    Total ticket count:
   </li>
   <li class="list-group-item" style="background-color: #030d21;
     color: beige;">
     <span class="badge" style="background-color: #357ebd;">{{tot.ttime}} min</span>
-    Total time spent for the day
+    Total time spent for the day:
   </li>
 </ul>
 <div class="list-group">
