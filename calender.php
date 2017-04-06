@@ -164,7 +164,9 @@ $u=$_GET['user'];
 		</div>
 	</div>
 
-	<script type="text/javascript" src="components/jquery/jquery.min.js"></script>
+	
+</div>
+<script type="text/javascript" src="components/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="components/underscore/underscore-min.js"></script>
 	<script type="text/javascript" src="components/bootstrap3/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="components/jstimezonedetect/jstz.min.js"></script>
@@ -234,6 +236,7 @@ date=date.toISOString().substring(0, 10);
                         //Do whatever you want. probably, a $.post or something to add the record on your db
 												alert(clicked_date);
                         $scope.datesel=clicked_date;
+												console.log($scope.datesel);
                         //	$('#calender .cal-momth-day').html("<small class='cal-events-num badge badge-important pull-left'>119</small>");
                         }
                     )};
@@ -329,6 +332,5 @@ console.log(e);
 			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 		})();
 	</script>
-</div>
 </body>
 </html>
