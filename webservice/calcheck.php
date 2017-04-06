@@ -14,9 +14,30 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $type=$_GET['type'];
 if($type==1)
 {
-  $sql="select count(*) from Master_Ticket_Tab where Resolver like '%".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
+  $sql="select count(*) as c from Master_Ticket_Tab where Resolver like '%".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
+$result=$conn->query($sql);
+//echo $msg;
+  while($row4=$result->fetch())
+{
+
+	$tcount=$row4['c'];
 }
-echo $sql;
+$sql="select sum(TOTAL_TIME) as t from Master_Ticket_Tab where Resolver like '%".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
+$result=$conn->query($sql);
+//echo $msg;
+  while($row4=$result->fetch())
+{
+
+	$ttime=$row4['t'];
+}
+$rows=array('tcount'=>$tcount,'ttime'=>$ttime);
+ob_start("ob_gzhandler");
+
+print(json_encode($rows, JSON_NUMERIC_CHECK));
+ob_end_flush();
+exit;
+}
+//echo $sql;
 /*else
 {
 
