@@ -25,7 +25,7 @@ $admin=$_SESSION["admin"];
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
        <div class="panel-body" style="height: 900px;">
-         <iframe class="embed-responsive-item" src="calender.php" style="width:100%;height:100%;"></iframe>
+         <iframe class="embed-responsive-item" src="calender.php" frameBorder="0" style="width:100%;height:100%;"></iframe>
 </div>
 </div>
 </div>
