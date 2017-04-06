@@ -64,12 +64,12 @@ $u=$_GET['user'];
   </li>
   <li class="list-group-item" style="background-color: #030d21;
     color: beige;">
-    <span class="badge" style="background-color: #357ebd;">{{tot[0].tcount}}</span>
+    <span class="badge" style="background-color: #357ebd;">{{tot.tcount}}</span>
     Total ticket count
   </li>
   <li class="list-group-item" style="background-color: #030d21;
     color: beige;">
-    <span class="badge" style="background-color: #357ebd;">{{tot[0].tcount}} min</span>
+    <span class="badge" style="background-color: #357ebd;">{{tot.tcount}} min</span>
     Total time spent for the day
   </li>
 </ul>
@@ -192,6 +192,8 @@ date=date.toISOString().substring(0, 10);
 											$http.get("https://apps.continuserve.com/webservice/calcheck.php?date="+clicked_date+"&type=1&u=niraj").then(function(response){
      	//$scope.load2='false';
       $scope.tot=response.data;
+			console.log($scope.tot);
+				$scope.$apply();
 
 });
 												$scope.$apply();
