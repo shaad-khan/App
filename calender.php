@@ -64,12 +64,12 @@ $u=$_GET['user'];
   </li>
   <li class="list-group-item" style="background-color: #030d21;
     color: beige;">
-    <span class="badge" style="background-color: #357ebd;">14</span>
+    <span class="badge" style="background-color: #357ebd;">{{tot[0].tcount}}</span>
     Total ticket count
   </li>
   <li class="list-group-item" style="background-color: #030d21;
     color: beige;">
-    <span class="badge" style="background-color: #357ebd;">20</span>
+    <span class="badge" style="background-color: #357ebd;">{{tot[0].tcount}} min</span>
     Total time spent for the day
   </li>
 </ul>
@@ -85,16 +85,7 @@ $u=$_GET['user'];
     <span class="badge" style="background-color: #357ebd;">20</span>
     Migration
   </li>
-   <li class="list-group-item" style="background-color: #030d21;
-    color: beige;">
-    <span class="badge" style="background-color: #357ebd;">14</span>
-    Total ticket count
-  </li>
-  <li class="list-group-item" style="background-color: #030d21;
-    color: beige;">
-    <span class="badge" style="background-color: #357ebd;">20</span>
-    Total time spent for the day
-  </li>
+   
 </div>
 			</div>
 
@@ -198,9 +189,9 @@ date=date.toISOString().substring(0, 10);
 												alert(clicked_date);
                         $scope.datesel=clicked_date;
 											//	console.log($scope.datesel);
-											$http.get("https://apps.continuserve.com/webservice/calcheck?date="+clicked_date+"&type=1&u=<?php echo $u;?>").then(function(response){
+											$http.get("https://apps.continuserve.com/webservice/calcheck?date="+clicked_date+"&type=1&u=niraj").then(function(response){
      	//$scope.load2='false';
-      $scope.tts=response.data;
+      $scope.tot=response.data;
 
 });
 												$scope.$apply();
