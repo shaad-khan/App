@@ -46,7 +46,7 @@ $u=$_GET['user'];
 		</div>
 
 		<h3></h3>
-		<small><?php echo $u;?> {{datesel}}</small>
+		<small><?php echo $u;?></small>
 	</div>
 
 	<div class="row" >
@@ -197,7 +197,7 @@ date=date.toISOString().substring(0, 10);
                         //Do whatever you want. probably, a $.post or something to add the record on your db
 												alert(clicked_date);
                         $scope.datesel=clicked_date;
-												console.log($scope.datesel);
+											//	console.log($scope.datesel);
 												$scope.$apply();
                         //	$('#calender .cal-momth-day').html("<small class='cal-events-num badge badge-important pull-left'>119</small>");
                         }
