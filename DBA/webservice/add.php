@@ -271,7 +271,7 @@ if($f2==1)
 $sql="select * from User_prof where Team='DBA' or Team='All'";
      $result1=$conn->query($sql);
 
-echo $sql;
+//echo $sql;
 
   while($row2=$result1->fetch())
 
@@ -320,14 +320,14 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 	{
 	$sql="update Status_count set Wip=".$row3['ccount']." where Email like '%".$r."%' and Team='DBA'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
-	echo $sql;
+	//echo $sql;
 	
 	//=$resolver[0].",Classify: $classify,wip:$wip,aui:$auc";
 
 	}
   else{
     $sql="update Status_count set Wip=0 where Email like '%".$r."%' and Team='DBA'";
-    echo $sql;
+   // echo $sql;
   }
   $conn->query($sql);
 	//$rows[]=$row3;
