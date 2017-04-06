@@ -1,31 +1,29 @@
-<?php
+<!DOCTYPE html>
+<html ng-app="cal">
+<head>
+	<title>Twitter Bootstrap jQuery Calendar component</title>
 
-session_start();
-$u=$_SESSION['user'];
-$admin=$_SESSION["admin"];
+	<meta name="description" content="Full view calendar component for twitter bootstrap with year, month, week, day views.">
+	<meta name="keywords" content="jQuery,Bootstrap,Calendar,HTML,CSS,JavaScript,responsive,month,week,year,day">
+	<meta name="author" content="Serhioromano">
+	<meta charset="UTF-8">
 
-?>
-
-
- <!--<div class="row mt"  ng-init="setuser('<?php echo $u;?>')">
-   <div class="col-md-12">
- <div class="content-panel" id="reload">
-
-
-                          <div class="row">
-
-                             <div class="col-xs-12" style="padding-left: 21px;padding-right: 21px;">
-                               <div class="panel panel-primary">
-                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
-
-                                  <span class="glyphicon glyphicon-menu-hamburger"></span> L3 Support Team 
-
-                                    <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
-                                    <span class="glyphicon glyphicon-home"></a></span></div>
-                                    <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
-                                   </div></div></div>
-       <!--<div class="panel-body" >-->
-         <div class="container" ng-controller="demo">
+	<link rel="stylesheet" href="components/bootstrap3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="components/bootstrap3/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/calendar.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+	<style type="text/css">
+		.btn-twitter {
+			padding-left: 30px;
+			background: rgba(0, 0, 0, 0) url(https://platform.twitter.com/widgets/images/btn.27237bab4db188ca749164efd38861b0.png) -20px 9px no-repeat;
+		}
+		.btn-twitter:hover {
+			background-position:  -21px -16px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
 	<!--<div class="jumbotron">
 		<h1>Bootstrap Calendar Demo</h1>
 
@@ -59,7 +57,7 @@ $admin=$_SESSION["admin"];
 	</div>
 
 	<div class="row">
-		<div class="col-md-9" >
+		<div class="col-md-9" ng-controller="demo">
 			<div id="calendar"></div>
 		</div>
 		<div class="col-md-3">
@@ -162,15 +160,171 @@ $admin=$_SESSION["admin"];
 			</div>
 		</div>
 	</div>
-<!--</div>-->
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
+	<script type="text/javascript" src="components/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="components/underscore/underscore-min.js"></script>
+	<script type="text/javascript" src="components/bootstrap3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="components/jstimezonedetect/jstz.min.js"></script>
+	<script type="text/javascript" src="js/language/bg-BG.js"></script>
+	<script type="text/javascript" src="js/language/nl-NL.js"></script>
+	<script type="text/javascript" src="js/language/fr-FR.js"></script>
+	<script type="text/javascript" src="js/language/de-DE.js"></script>
+	<script type="text/javascript" src="js/language/el-GR.js"></script>
+	<script type="text/javascript" src="js/language/it-IT.js"></script>
+	<script type="text/javascript" src="js/language/hu-HU.js"></script>
+	<script type="text/javascript" src="js/language/pl-PL.js"></script>
+	<script type="text/javascript" src="js/language/pt-BR.js"></script>
+	<script type="text/javascript" src="js/language/ro-RO.js"></script>
+	<script type="text/javascript" src="js/language/es-CO.js"></script>
+	<script type="text/javascript" src="js/language/es-MX.js"></script>
+	<script type="text/javascript" src="js/language/es-ES.js"></script>
+	<script type="text/javascript" src="js/language/es-CL.js"></script>
+	<script type="text/javascript" src="js/language/es-DO.js"></script>
+	<script type="text/javascript" src="js/language/ru-RU.js"></script>
+	<script type="text/javascript" src="js/language/sk-SR.js"></script>
+	<script type="text/javascript" src="js/language/sv-SE.js"></script>
+	<script type="text/javascript" src="js/language/zh-TW.js"></script>
+	<script type="text/javascript" src="js/language/cs-CZ.js"></script>
+	<script type="text/javascript" src="js/language/ko-KR.js"></script>
+	<script type="text/javascript" src="js/language/id-ID.js"></script>
+	<script type="text/javascript" src="js/language/th-TH.js"></script>
+	<script type="text/javascript" src="js/calendar.js"></script>
+	<!--<script type="text/javascript" src="js/app.js"></script>-->
+<script type="text/javascript">
+			
+var app=angular.module("cal",[]);
+app.controller("demo",function()
+{
+
+	(function($) {
+
+	"use strict";
+var date=new Date();
+date=date.toISOString().substring(0, 10);
+//alert(date);
+	var options = {
+		events_source: 'http://csmonitoring-dev.azurewebsites.net/coyote/event.php',
+		view: 'month',
+		tmpl_path: 'tmpls/',
+		tmpl_cache: false,
+		day:date,
+		onAfterEventsLoad: function(events) {
+			if(!events) {
+				return;
+			}
+			var list = $('#eventlist');
+			list.html('');
+
+			$.each(events, function(key, val) {
+				$(document.createElement('li'))
+					.html('<a href="' + val.url + '">' + val.title + '</a>')
+					.appendTo(list);
+			});
+		},
+		onAfterViewLoad: function(view) {
+			$('.page-header h3').text(this.getTitle());
+			$('.btn-group button').removeClass('active');
+			$('button[data-calendar-view="' + view + '"]').addClass('active');
+			if(view == "month") {
+                    $("#calendar .cal-month-day").click(function(e) {
+                        var clicked_date = $(this).find('span').attr('data-cal-date');
+                        //Do whatever you want. probably, a $.post or something to add the record on your db
+                        alert(clicked_date);
+                        	$('#calender .cal-momth-day').html("<small class='cal-events-num badge badge-important pull-left'>119</small>");
+                        }
+                    )};
+		},
+		classes: {
+			months: {
+				general: 'label'
+			}
+		}
+	};
+
+	var calendar = $('#calendar').calendar(options);
+calendar.setOptions({modal: '#events-modal'});
+	$('.btn-group button[data-calendar-nav]').each(function() {
+		var $this = $(this);
+		$this.click(function() {
+			calendar.navigate($this.data('calendar-nav'));
+		});
+	});
+
+	$('.btn-group button[data-calendar-view]').each(function() {
+		var $this = $(this);
+		$this.click(function() {
+			calendar.view($this.data('calendar-view'));
+		});
+	});
+
+	$('#first_day').change(function(){
+		var value = $(this).val();
+		value = value.length ? parseInt(value) : null;
+		calendar.setOptions({first_day: value});
+		calendar.view();
+	});
+
+	$('#language').change(function(){
+		calendar.setLanguage($(this).val());
+		calendar.view();
+	});
+
+	$('#events-in-modal').change(function(){
+		var val = $(this).is(':checked') ? $(this).val() : null;
+		console.log(val);
+		calendar.setOptions({modal: val});
+	});
+	$('#format-12-hours').change(function(){
+		var val = $(this).is(':checked') ? true : false;
+		calendar.setOptions({format12: val});
+		calendar.view();
+	});
+	$('#show_wbn').change(function(){
+		var val = $(this).is(':checked') ? true : false;
+		calendar.setOptions({display_week_numbers: val});
+		calendar.view();
+	});
+	$('#show_wb').change(function(){
+		var val = $(this).is(':checked') ? true : false;
+		calendar.setOptions({weekbox: val});
+		calendar.view();
+	});
+	$('#events-modal .modal-header, #events-modal .modal-footer').click(function(e){
+		//e.preventDefault();
+		//e.stopPropagation();
+	});
+}(jQuery));
+})
+
+	</script>
+	<script type="text/javascript">
+/*$(document).on("click",".cal-month-day",function(e) {
+      var w = parseInt($(".cal-day-inmonth").css("width"));
+      var x = e.offsetX;
+      var cols = 8; // Really. There are 7 days in a week + 1 header column.
+      var clickedColumn = Math.floor(x / (w/cols));
+      // The date can be found from columns.
+      var dateCol = $(".cal-row-head").find("div").eq(clickedColumn).find("span");
+      var date = dateCol.attr("data-cal-date");
+
+      // Find out the hour clicked
+      var hourtxt = $(this).find(".cal-cell1 b").text()
+      console.log(e.innerText);
+
+console.log(e);
+      console.log(date + " " + hourtxt);
+    });
+*/
 
 
 
-
-
+		var disqus_shortname = 'bootstrapcalendar'; // required: replace example with your forum shortname
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
+</div>
+</body>
+</html>
