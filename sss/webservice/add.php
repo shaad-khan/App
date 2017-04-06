@@ -456,7 +456,7 @@ echo "<script> alert('Updated successfully');
 }
 else
 {
-    /*echo "<script> alert('Updation failed');
+    echo "<script> alert('Updation failed');
      setTimeout(function(){window.close()}, 1000);
      </script>";
 }
