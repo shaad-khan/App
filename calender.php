@@ -232,6 +232,7 @@ date=date.toISOString().substring(0, 10);
                     $("#calendar .cal-month-day").click(function(e) {
                         var clicked_date = $(this).find('span').attr('data-cal-date');
                         //Do whatever you want. probably, a $.post or something to add the record on your db
+												alert(clicked_date);
                         $scope.datesel=clicked_date;
                         //	$('#calender .cal-momth-day').html("<small class='cal-events-num badge badge-important pull-left'>119</small>");
                         }
