@@ -198,6 +198,7 @@ date=date.toISOString().substring(0, 10);
 												alert(clicked_date);
                         $scope.datesel=clicked_date;
 												console.log($scope.datesel);
+												$scope.$apply();
                         //	$('#calender .cal-momth-day').html("<small class='cal-events-num badge badge-important pull-left'>119</small>");
                         }
                     )};
