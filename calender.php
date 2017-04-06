@@ -21,6 +21,9 @@
 			background-position:  -21px -16px;
 		}
 	</style>
+	<?php
+$u=$_GET['user'];
+	?>
 </head>
 <body>
 <div class="container">
@@ -203,7 +206,7 @@ var date=new Date();
 date=date.toISOString().substring(0, 10);
 //alert(date);
 	var options = {
-		events_source: 'https://csmonitoring-dev.azurewebsites.net/coyote/event.php',
+		events_source: 'https://csmonitoring-dev.azurewebsites.net/coyote/event.php?u=<?php echo $u;?>',
 		view: 'month',
 		tmpl_path: 'tmpls/',
 		tmpl_cache: false,
