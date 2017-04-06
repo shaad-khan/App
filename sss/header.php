@@ -41,7 +41,10 @@ $result2=$conn->query($sql2);
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Continuitylate, Theme, Responsive, Fluid, Retina">
 
     <title>Continuity App</title>
-    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="components/bootstrap3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="components/bootstrap3/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/calendar.css">
+    
  <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
 <style type="text/css">
 		.btn-twitter {
