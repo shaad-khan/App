@@ -27,17 +27,7 @@ $u=$_GET['user'];
 </head>
 <body>
 <div class="container" ng-controller="demo">
-	<!--<div class="jumbotron">
-		<h1>Bootstrap Calendar Demo</h1>
-
-		<p>Bootstrap based full view calendar. Template based.</p>
-
-		<a class="btn btn-default btn-primary" href="https://github.com/Serhioromano/bootstrap-calendar">Fork on GitHub</a>
-		<a class="btn btn-default" href="index.html">Use bootstrap 2</a>
-		<a href="https://twitter.com/serhioromano" class="btn btn-default btn-twitter" data-show-count="false" data-size="large">Follow @serhioromano</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-		</script>
-	</div>-->
+	
 
 	<div class="page-header">
 
@@ -56,7 +46,7 @@ $u=$_GET['user'];
 		</div>
 
 		<h3></h3>
-		<small><?php echo $u;?></small>
+		<small><?php echo $u;?> {{datesel}}</small>
 	</div>
 
 	<div class="row" >
@@ -65,36 +55,7 @@ $u=$_GET['user'];
 		</div>
 		<div class="col-md-3">
 			<div class="row">
-				<!--<select id="first_day" class="form-control">
-					<option value="" selected="selected">First day of week language-dependant</option>
-					<option value="2">First day of week is Sunday</option>
-					<option value="1">First day of week is Monday</option>
-				</select>
-				<!--<select id="language" class="form-control">
-					<option value="">Select Language (default: en-US)</option>
-					<option value="bg-BG">Bulgarian</option>
-					<option value="nl-NL">Dutch</option>
-					<option value="fr-FR">French</option>
-					<option value="de-DE">German</option>
-					<option value="el-GR">Greek</option>
-					<option value="hu-HU">Hungarian</option>
-					<option value="id-ID">Bahasa Indonesia</option>
-					<option value="it-IT">Italian</option>
-					<option value="pl-PL">Polish</option>
-					<option value="pt-BR">Portuguese (Brazil)</option>
-					<option value="ro-RO">Romania</option>
-					<option value="es-CO">Spanish (Colombia)</option>
-					<option value="es-MX">Spanish (Mexico)</option>
-					<option value="es-ES">Spanish (Spain)</option>
-					<option value="es-CL">Spanish (Chile)</option>
-					<option value="es-DO">Spanish (República Dominicana)</option>
-					<option value="ru-RU">Russian</option>
-					<option value="sk-SR">Slovak</option>
-					<option value="sv-SE">Swedish</option>
-					<option value="ko-KR">Korean</option>
-					<option value="zh-TW">繁體中文</option>
-					<option value="th-TH">Thai (Thailand)</option>
-				</select>--><br>
+				<br>
 				<ul class="list-group" style="padding-top:9px;">
 					<li class="list-group-item" style="background-color: #030d21;
     color: beige;">
