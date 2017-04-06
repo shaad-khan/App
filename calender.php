@@ -49,7 +49,7 @@ $u=$_GET['user'];
 		<small><?php echo $u;?></small>
 	</div>
 
-	<div class="row" >
+	<div class="row" ng-if="datesel!=null">
 		<div class="col-md-9" >
 			<div id="calendar"></div>
 		</div>
@@ -186,7 +186,7 @@ date=date.toISOString().substring(0, 10);
                     $("#calendar .cal-month-day").click(function(e) {
                         var clicked_date = $(this).find('span').attr('data-cal-date');
                         //Do whatever you want. probably, a $.post or something to add the record on your db
-												alert(clicked_date);
+										//		alert(clicked_date);
                         $scope.datesel=clicked_date;
 											//	console.log($scope.datesel);
 											$http.get("https://apps.continuserve.com/webservice/calcheck.php?date="+clicked_date+"&type=1&u=niraj").then(function(response){
