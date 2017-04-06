@@ -199,6 +199,35 @@ $('#datetimepicker_dark').datetimepicker({theme:'dark'})
 	<script type="text/javascript" src="js/language/id-ID.js"></script>
 	<script type="text/javascript" src="js/language/th-TH.js"></script>
 	<script type="text/javascript" src="js/calendar.js"></script>
+
+  	<script type="text/javascript">
+/*$(document).on("click",".cal-month-day",function(e) {
+      var w = parseInt($(".cal-day-inmonth").css("width"));
+      var x = e.offsetX;
+      var cols = 8; // Really. There are 7 days in a week + 1 header column.
+      var clickedColumn = Math.floor(x / (w/cols));
+      // The date can be found from columns.
+      var dateCol = $(".cal-row-head").find("div").eq(clickedColumn).find("span");
+      var date = dateCol.attr("data-cal-date");
+
+      // Find out the hour clicked
+      var hourtxt = $(this).find(".cal-cell1 b").text()
+      console.log(e.innerText);
+
+console.log(e);
+      console.log(date + " " + hourtxt);
+    });
+*/
+
+
+
+		var disqus_shortname = 'bootstrapcalendar'; // required: replace example with your forum shortname
+		(function() {
+			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		})();
+	</script>
 <!------------------------------------------------------------------------------- -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
