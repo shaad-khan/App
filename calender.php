@@ -69,7 +69,7 @@ $u=$_GET['user'];
   </li>
   <li class="list-group-item" style="background-color: #030d21;
     color: beige;">
-    <span class="badge" style="background-color: #357ebd;">{{tot.tcount}} min</span>
+    <span class="badge" style="background-color: #357ebd;">{{tot.ttime}} min</span>
     Total time spent for the day
   </li>
 </ul>
