@@ -271,7 +271,7 @@ if($f2==1)
 $sql="select * from User_prof where Team='DBA' or Team='All'";
      $result1=$conn->query($sql);
 
-
+echo $sql;
 
   while($row2=$result1->fetch())
 
