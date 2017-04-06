@@ -14,7 +14,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $type=$_GET['type'];
 if($type==1)
 {
-  $sql="select count(*) as c from Master_Ticket_Tab where Resolver like '%".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
+  $sql="select count(*) as c from Master_Ticket_Tab where Resolver like '".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
@@ -22,7 +22,7 @@ $result=$conn->query($sql);
 
 	$tcount=$row4['c'];
 }
-$sql="select sum(TOTAL_TIME) as t from Master_Ticket_Tab where Resolver like '%".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
+$sql="select sum(TOTAL_TIME) as t from Master_Ticket_Tab where Resolver like '".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
