@@ -41,10 +41,12 @@ $result2=$conn->query($sql2);
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Continuitylate, Theme, Responsive, Fluid, Retina">
 
     <title>Continuity App</title>
+    <link rel="stylesheet" href="css/calendar.css">
  <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
+
 <script src="dateresource/jquery.js"></script>
  <script src="dateresource/jquery.datetimepicker.js"></script>
- <link rel="stylesheet" href="css/calendar.css">
+ 
    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bo
    <script src="dateresource/jquery.datetimepicker.js"></script>otstrap.min.css">
 <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
