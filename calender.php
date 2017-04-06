@@ -49,11 +49,11 @@ $u=$_GET['user'];
 		<small><?php echo $u;?></small>
 	</div>
 
-	<div class="row" ng-if="datesel!=null">
+	<div class="row" >
 		<div class="col-md-9" >
 			<div id="calendar"></div>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-3" ng-if="datesel!=null">
 			<div class="row">
 				<br>
 				<ul class="list-group" style="padding-top:9px;">
