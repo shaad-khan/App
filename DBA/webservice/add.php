@@ -268,7 +268,7 @@ if($f2==1)
     /*###############################################################################################################*/
 /*----------------------------------------------------------------------------------------------------*/
 
-$sql="select * from User_prof where Team='L3' or Team='All'";
+$sql="select * from User_prof where Team='DBA'";
      $result1=$conn->query($sql);
 
 
@@ -450,14 +450,14 @@ if($cl_tkt!=null)
 
 
     /*----------------------------------------------------------------------------------------*/
-/*echo "<script> alert('Updated successfully');
+echo "<script> alert('Updated successfully');
      setTimeout(function(){window.close()}, 1000);
-     </script>";*/
+     </script>";
 }
 else
 {
-    /*echo "<script> alert('Updation failed');
+    echo "<script> alert('Updation failed');
      setTimeout(function(){window.close()}, 1000);
-     </script>";*/
+     </script>";
 }
 ?>
