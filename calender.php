@@ -24,8 +24,8 @@ $admin=$_SESSION["admin"];
                                     <span class="glyphicon glyphicon-home"></a></span></div>
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
-       <div class="panel-body" ng-controller="demo">
-         <div class="container">
+       <!--<div class="panel-body" >-->
+         <div class="container" ng-controller="demo">
 	<!--<div class="jumbotron">
 		<h1>Bootstrap Calendar Demo</h1>
 
@@ -162,7 +162,7 @@ $admin=$_SESSION["admin"];
 			</div>
 		</div>
 	</div>
-</div>
+<!--</div>-->
 </div>
 </div>
 </div>
