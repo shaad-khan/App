@@ -320,13 +320,14 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 	{
 	$sql="update Status_count set Wip=".$row3['ccount']." where Email like '%".$r."%' and Team='SSS'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
-	//echo $sql;
+	echo $sql;
 	
 	//=$resolver[0].",Classify: $classify,wip:$wip,aui:$auc";
 
 	}
   else{
     $sql="update Status_count set Wip=0 where Email like '%".$r."%' and Team='SSS'";
+    echo $sql;
   }
   $conn->query($sql);
 	//$rows[]=$row3;
@@ -449,14 +450,14 @@ if($cl_tkt!=null)
 
 
     /*----------------------------------------------------------------------------------------*/
-echo "<script> alert('Updated successfully');
+/*echo "<script> alert('Updated successfully');
      setTimeout(function(){window.close()}, 1000);
-     </script>";
+     </script>";*/
 }
 else
 {
-    echo "<script> alert('Updation failed');
+    /*echo "<script> alert('Updation failed');
      setTimeout(function(){window.close()}, 1000);
-     </script>";
+     </script>";*/
 }
 ?>
