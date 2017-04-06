@@ -198,6 +198,11 @@ date=date.toISOString().substring(0, 10);
 												alert(clicked_date);
                         $scope.datesel=clicked_date;
 											//	console.log($scope.datesel);
+											$http.get("https://apps.continuserve.com/webservice/calcheck?date="+clicked_date+"&type=1&u=<?php echo $u;?>").then(function(response){
+     	//$scope.load2='false';
+      $scope.tts=response.data;
+
+});
 												$scope.$apply();
                         //	$('#calender .cal-momth-day').html("<small class='cal-events-num badge badge-important pull-left'>119</small>");
                         }
