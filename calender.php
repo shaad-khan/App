@@ -26,7 +26,7 @@ $u=$_GET['user'];
 	?>
 </head>
 <body>
-<div class="container">
+<div class="container" ng-controller="demo">
 	<!--<div class="jumbotron">
 		<h1>Bootstrap Calendar Demo</h1>
 
@@ -59,8 +59,8 @@ $u=$_GET['user'];
 		<small><?php echo $u;?></small>
 	</div>
 
-	<div class="row">
-		<div class="col-md-9" ng-controller="demo">
+	<div class="row" >
+		<div class="col-md-9" >
 			<div id="calendar"></div>
 		</div>
 		<div class="col-md-3">
