@@ -43,7 +43,15 @@ $result2=$conn->query($sql2);
     <title>Continuity App</title>
     <link rel="stylesheet" href="css/calendar.css">
  <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
-
+<style type="text/css">
+		.btn-twitter {
+			padding-left: 30px;
+			background: rgba(0, 0, 0, 0) url(https://platform.twitter.com/widgets/images/btn.27237bab4db188ca749164efd38861b0.png) -20px 9px no-repeat;
+		}
+		.btn-twitter:hover {
+			background-position:  -21px -16px;
+		}
+	</style>
 <script src="dateresource/jquery.js"></script>
  <script src="dateresource/jquery.datetimepicker.js"></script>
  
