@@ -27,7 +27,7 @@ $result=$conn->query($sql);
 
 	$tcount=$row4['c'];
 }
-$sql="select count(Tdiscription) as c from master_ticket_tab where Resolver like 'niraj%' and aflag=1";
+$sql="select count(Tdiscription) as c from master_ticket_tab where Resolver like 'niraj%' and aflag=1 and CONVERT(date,Resolver_Dtime)='$date'";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
