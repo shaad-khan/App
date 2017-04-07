@@ -252,6 +252,7 @@ element.style {
                       </a>
                       <ul class="sub">
                           <li><a  href="#!/task"><span class="glyphicon glyphicon-tasks"></span> Your Task List </a></li>
+                            <li><a  href="#!/calender"><span class="glyphicon glyphicon-calendar"></span> Calender View </a></li>
                            
                           <!--<li><a  href="alerticket.php">TrackServe Alert Tickets</a></li>
                  <?php

@@ -189,7 +189,7 @@ date=date.toISOString().substring(0, 10);
 										//		alert(clicked_date);
                         $scope.datesel=clicked_date;
 											//	console.log($scope.datesel);
-											$http.get("https://apps.continuserve.com/webservice/calcheck.php?date="+clicked_date+"&type=1&u=niraj").then(function(response){
+											$http.get("https://apps.continuserve.com/webservice/calcheck.php?date="+clicked_date+"&type=1&u=<?php echo $u;?>").then(function(response){
      	//$scope.load2='false';
       $scope.tot=response.data;
 			console.log($scope.tot);
