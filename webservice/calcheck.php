@@ -27,7 +27,7 @@ $result=$conn->query($sql);
 
 	$tcount=$row4['c'];
 }
-$sql="select count(Tdiscription) as c from master_ticket_tab where Resolver like 'niraj%' and aflag=1 and CONVERT(date,Resolver_Dtime)='$date'";
+$sql="select count(Tdiscription) as c from master_ticket_tab where Resolver like '".$user."%' and aflag=1 and CONVERT(date,Resolver_Dtime)='$date'";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
@@ -35,14 +35,25 @@ $result=$conn->query($sql);
 
 	$tcount=$tcount+$row4['c'];
 }
-
-$sql="select sum(TOTAL_TIME) as t from Master_Ticket_Tab where Resolver like '".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
+$sql="select sum(u.TimeTaken) as t
+from master_ticket_tab as m ,update_Tab as u 
+where (m.Ticket_ID=u.TicketId and (u.UpdateBy like '".$user."%' or u.Resolver like '".$user."%' )  
+and u.TimeTaken!=0)and CONVERT(date,u.UpdateTime)='$date'";
+//$sql="select sum(TOTAL_TIME) as t from Master_Ticket_Tab where Resolver like '".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
 {
 
 	$ttime=$row4['t'];
+}
+$sql="select sum(Total_time) as t from master_ticket_tab where Resolver like '".$user."%' and aflag=1 and CONVERT(date,Resolver_Dtime)='$date'";
+$result=$conn->query($sql);
+//echo $msg;
+  while($row4=$result->fetch())
+{
+
+	$ttime+=$row4['t'];
 }
 $rows=array('tcount'=>$tcount,'ttime'=>$ttime);
 ob_start("ob_gzhandler");
