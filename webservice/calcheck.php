@@ -12,6 +12,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $user=$_GET['u'];
     $date=$_GET['date'];
     $type=$_GET['type'];
+    
 if($type==1)
 {
   $sql="select count(m.Ticket_ID)
