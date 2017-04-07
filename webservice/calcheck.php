@@ -26,6 +26,7 @@ $result=$conn->query($sql);
 {
 
 	$tcount=$row4['c'];
+  
 }
 $sql="select sum(TOTAL_TIME) as t from Master_Ticket_Tab where Resolver like '".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
 $result=$conn->query($sql);
