@@ -12,9 +12,14 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $user=$_GET['u'];
     $date=$_GET['date'];
     $type=$_GET['type'];
+
 if($type==1)
 {
-  $sql="select count(*) as c from Master_Ticket_Tab where Resolver like '".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
+  $sql="select count(m.Ticket_ID)
+from master_ticket_tab as m ,update_Tab as u 
+where (m.Ticket_ID=u.TicketId and (u.UpdateBy like '".$user."%' or u.Resolver like '".$user."%' )  
+and u.TimeTaken!=0)and CONVERT(date,u.UpdateTime)='$date";
+  //$sql="select count(*) as c from Master_Ticket_Tab where Resolver like '".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
