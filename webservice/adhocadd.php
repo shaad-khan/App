@@ -68,6 +68,7 @@ $id=$row3['id'];
 if($u!=null)
 {
 $sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Project,Resolver,CTicket,Cdatetime,Resolver_Dtime,EnvType,Reviewer,Assign_to,Creator,Updatetime,Repo,aflag,Total_time,atype)values('$tk','$amessage','Close','General','$ptype','$u','','$adate','$adate','General','','$u','$u','$adate','',1,$tspent,'$ttype')";
+
 echo $sql;
 /*$conn->query($sql);
 
