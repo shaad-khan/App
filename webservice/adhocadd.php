@@ -12,6 +12,7 @@ $ttype=$_POST['ttype'];
 $tspent=$_POST['tspent'];
 $adate=$_POST['adate'];
 $amessage=$_POST['amessage'];
+$amessage=str_replace("'","''",$amessage);
 
 $server = "gjtz209gib.database.windows.net";
 $user = "CSL3AppsUser@gjtz209gib";
@@ -68,8 +69,8 @@ $id=$row3['id'];
 if($u!=null)
 {
 $sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Project,Resolver,CTicket,Cdatetime,Resolver_Dtime,EnvType,Reviewer,Assign_to,Creator,Updatetime,Repo,aflag,Total_time,atype)values('$tk','$amessage','Close','General','$ptype','$u','','$adate','$adate','General','','$u','$u','$adate','',1,$tspent,'$ttype')";
-echo $sql;
-/*$conn->query($sql);
+//echo $sql;
+$conn->query($sql);
 
 $sql="select Top 1 Ticket_ID from Master_Ticket_Tab where aflag=1 order by Id desc";
 $result=$conn->query($sql);
@@ -78,7 +79,7 @@ $result=$conn->query($sql);
 {
 $rows[]=$row3;
 }
-print(json_encode($rows, JSON_NUMERIC_CHECK));*/
+print(json_encode($rows, JSON_NUMERIC_CHECK));
 }
 else{
   echo "<script> alert('Session expired please re-login');setTimeout(function () { win.close();}, 6000);</script>";
