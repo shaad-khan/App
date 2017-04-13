@@ -1,6 +1,9 @@
 
 
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
+  $scope.orderByMe = function(x) {
+    $scope.myOrderBy = x;
+  }
  $scope.setuser=function(text)
  {
 $scope.u=text;
