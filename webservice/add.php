@@ -47,7 +47,7 @@ $reviewer= $_POST["reviewer"];
 $discription= $_POST["discription"];
 
 $comments= $_POST["comments"];
-
+$comments=str_replace("'","''",$comments);
 $cstatus= $_POST["cstatus"];
 
 $ttime= $_POST["ttime"];
