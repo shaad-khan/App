@@ -30,8 +30,8 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 if($u!=null)
 {
 $sql="insert into Modify_req values ('$tid',$tspent,'$adate','$u')";
-//echo $sql;
-$conn->query($sql);
+echo $sql;
+/*$conn->query($sql);
 
 $sql="select Top 1  Modify_req";
 $result=$conn->query($sql);
@@ -40,7 +40,7 @@ $result=$conn->query($sql);
 {
 $rows[]=$row3;
 }
-print(json_encode($rows, JSON_NUMERIC_CHECK));
+print(json_encode($rows, JSON_NUMERIC_CHECK));*/
 }
 else{
   echo "<script> alert('Session expired please re-login');setTimeout(function () { win.close();}, 6000);</script>";
