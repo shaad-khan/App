@@ -407,7 +407,19 @@ td
 </select>
   </div>
   </td>
-  <td ng-if="((items[0].Status=='Review')||(items[0].Status=='Doc')||(items[0].Status=='Closure'))">
+  <td ng-if="(items[0].Status=='Review')">
+
+   <div class="form-group" >
+    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td ng-if="(items[0].Status=='Review')">
+    <select class="form-control" name="cstatus" >
+  <option value="Closure">Closure</option>
+  <option value="next">Next Status</option>
+  
+</select>
+  </div>
+  </td>
+  <td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))">
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign

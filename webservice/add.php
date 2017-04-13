@@ -156,16 +156,22 @@ $fstatus='WIP';
         
          $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='WIP' where Ticket_ID='$TID'";
     }*/
+else if(($status=='Review') and ($cstatus=="Closure"))
+{
+  $fstatus="Closure";
+   $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
 
+}
 else if($cstatus=='next')
 {
-    $sql_status="select Status from Master_Ticket_Tab where Ticket_ID='$TID'";
+    $sql_status="select Status,Resolver from Master_Ticket_Tab where Ticket_ID='$TID'";
     $tab_status='';
 $result=$conn->query($sql_status);
 //echo $msg;
   while($row4=$result->fetch())
 {
     $tab_status=$row4['Status'];
+    $Resolver=$row4['Resolver'];
 }
 if(($tab_status=='WIP') and $AUI!='on' )
 {
@@ -198,6 +204,7 @@ date_default_timezone_set('Asia/Kolkata');
 else if(($tab_status=='Review'))
 {
     $fstatus='Doc';
+    $docf=1;
 }
 
 else if($tab_status=='Doc')
@@ -211,17 +218,21 @@ else if($tab_status=='Closure')
     //echo $fstatus;
 }
 
-if(($fstatus!='') and ($fresolver!=''))
+if(($fstatus!='') and ($fresolver!='')and ($docf==0))
 {
 $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
 
 }
-else if($fstatus!='')
+else if(($fstatus!='') and ($docf==0))
 {
 $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
 //echo $Master_sql;
 }
+else if(($fstatus=='Doc') and ($docf==1))
+{
+  $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime',Assign_to='$Resolver' where Ticket_ID='$TID'";
 
+}
 
 
    //$conn->query($Master_sql);
