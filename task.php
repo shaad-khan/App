@@ -252,7 +252,7 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Select Date:</label>
              
             
-           <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="adate2"/>
+           <input type="text" class="form-control" value="" id="some_class_4" name="date" style="color:black" placeholder="Date Time" ng-model="adate2"/>
           
           
            
@@ -292,6 +292,7 @@ window.onerror = function(errorMsg) {
           $('#some_class_1').datetimepicker();
            $('#some_class_2').datetimepicker();
             $('#some_class_3').datetimepicker();
+             $('#some_class_4').datetimepicker();
          });
 
          </script>
