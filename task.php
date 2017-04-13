@@ -66,20 +66,20 @@ $u=$_SESSION['user'];
                                    </div>--></div></div>
        <div class="panel-body" ng-controller="Task" >
          <table class="table" ><tr>
-     <th>Ticket_ID</th>
-     <th>Client</th>
-     <th>Project</th>
-     <th>Discription</th>
-     <th>Status</th>
-     <th>DateTime</th>
-     <th>Time Spend</th>
+     <th ng-click="orderByMe('Ticket_ID')">Ticket_ID</th>
+     <th ng-click="orderByMe('Client')">Client</th>
+     <th ng-click="orderByMe('Project')">Project</th>
+     <th ng-click="orderByMe('Tdiscription')">Discription</th>
+     <th ng-click="orderByMe('Status')">Status</th>
+     <th ng-click="orderByMe('UpdateTime')">DateTime</th>
+     <th ng-click="orderByMe('TimeTaken')">Time Spend</th>
      
 
 
    </tr>
 
 
-    <tr ng-repeat="res in tasks" ng-class="$index % 2 > 0 ? 'active':''" ng-if="tasks!=null">
+    <tr ng-repeat="res in tasks | orderBy:myOrderBy" ng-class="$index % 2 > 0 ? 'active':''" ng-if="tasks!=null">
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))&&((u!=res.Blocker_name))"><button class="btn btn-default" ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
