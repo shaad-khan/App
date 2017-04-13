@@ -230,7 +230,7 @@ $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatu
 }
 else if(($fstatus=='Doc') and ($docf==1))
 {
-  $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime',Assign_to='$Resolver' where Ticket_ID='$TID'";
+  $Master_sql="Update Master_Ticket_Tab set Status='$fstatus',Updatetime='$utime',Assign_to='$Resolver' where Ticket_ID='$TID'";
 
 }
 
@@ -242,8 +242,8 @@ else if(($fstatus=='Doc') and ($docf==1))
 }
 if($Master_sql) 
 {
-    echo $Master_sql;
-//$conn->query($Master_sql);
+    //echo $Master_sql;
+$conn->query($Master_sql);
 
 }
 $s="Update Master_Ticket_Tab set Updatetime='$utime' where Ticket_ID='$TID'";
@@ -460,9 +460,9 @@ if($cl_tkt!=null)
 
 
     /*----------------------------------------------------------------------------------------*/
-/*echo "<script> alert('Updated successfully');
+echo "<script> alert('Updated successfully');
      setTimeout(function(){window.close()}, 1000);
-     </script>";*/
+     </script>";
 }
 else
 {
