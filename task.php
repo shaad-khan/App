@@ -97,7 +97,7 @@ $u=$_SESSION['user'];
 
 <td>{{res.UpdateTime}}</td>
 <td >{{res.TimeTaken}} min</td>
-<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" data-ticket-id="{{task.Ticket_ID}}"><span class="glyphicon glyphicon-pencil"></span></button></td>
+<td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" data-ticket-id="task.Ticket_ID"><span class="glyphicon glyphicon-pencil"></span></button></td>
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="push(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></sbutton>
 </td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
@@ -107,7 +107,7 @@ $u=$_SESSION['user'];
     <td colspan="5">Total Time Spent On Tickets</td><td colspan="4">{{getTotal()}}  hh:mm <span class="glyphicon glyphicon-time"></span> </td></tr>
     </table>
     <table class="table" >
-<tr ng-repeat="task in atask" ng-class="$index % 2 > 0 ? 'active':''" ng-if="atask!=null">
+<tr ng-repeat="task in atask | orderBy:myOrderBy" ng-class="$index % 2 > 0 ? 'active':''" ng-if="atask!=null">
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))&&((u!=res.Blocker_name))"><button class="btn btn-default" ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
@@ -243,6 +243,7 @@ $u=$_SESSION['user'];
 
 <script>
 $('#my_modal').on('show.bs.modal', function(e) {
+  alert("here");
     var bookId = $(e.relatedTarget).data('ticket-id');
     $(e.currentTarget).find('input[name="ticketId"]').val(bookId);
 });
