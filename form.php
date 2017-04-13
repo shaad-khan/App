@@ -423,7 +423,7 @@ td
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="((items[0].Status=='Review')||(items[0].Status=='Doc')||(items[0].Status=='Closure'))">
+"></span></label></td><td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))">
   
 <input type="hidden" name="cstatus" value="next"/>
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Next Status" disabled>
