@@ -242,17 +242,16 @@ $u=$_SESSION['user'];
 </div>
 
 <script>
-
+$('#myModal').on('show.bs.modal', function(e) {
+  //alert("here");
+    var bookId = $(e.relatedTarget).data('ticket-id');
+    $(e.currentTarget).find('input[name="ticketId"]').val(bookId);
+});
 window.onerror = function(errorMsg) {
   $('#console').html($('#console').html()+'<br>'+errorMsg)
 }
 //alert("hello");
  $(function() {
-   $('#my_modal').on('show.bs.modal', function(e) {
-  alert("here");
-    var bookId = $(e.relatedTarget).data('ticket-id');
-    $(e.currentTarget).find('input[name="ticketId"]').val(bookId);
-});
           $('#some_class_1').datetimepicker();
            $('#some_class_2').datetimepicker();
             $('#some_class_3').datetimepicker();
