@@ -8,7 +8,7 @@ $u=$_SESSION["user"];
 
 
 $tid=$_POST['tid'];
-$ttype=$_POST['tspent'];
+//$ttype=$_POST[''];
 $tspent=$_POST['tspent'];
 $adate=$_POST['adate'];
 //$date=explode()
