@@ -235,7 +235,7 @@ $u=$_SESSION['user'];
              
            
            <input type="text" class="form-control"  name="ticketId" disabled/>
-          <input type="hidden" ng-model="tid2" name="ticketId"/>
+          <input type="hidden" ng-model="tid2" name="ticketId2"/>
           
            
           </div>
@@ -284,6 +284,7 @@ $('#myModal').on('show.bs.modal', function(e) {
   //alert("here");
     var bookId = $(e.relatedTarget).data('ticket-id');
     $(e.currentTarget).find('input[name="ticketId"]').val(bookId);
+    $(e.currentTarget).find('input[name="ticketId2"]').val(bookId);
 });
 window.onerror = function(errorMsg) {
   $('#console').html($('#console').html()+'<br>'+errorMsg)
