@@ -190,7 +190,7 @@ element.style {
     
     
  <button type="button" class="btn btn-primary" ng-click="search(fill)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-    <button type="button" class="btn btn-primary" ><a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
+    <button type="button" class="btn btn-primary" ><a href="https://apps.continuserve.com/main.php#!/" style="color:#fafafa;font-size:14px;">
                                     <span class="glyphicon glyphicon-home"></a></span></button>
   </div>
     </li>
