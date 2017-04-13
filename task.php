@@ -231,16 +231,42 @@ $u=$_SESSION['user'];
         <div class="modal-body">
 <form>
         <div class="form-group">
-            <label for="recipient-name" class="control-label">Environment Type</label>
+            <label for="recipient-name" class="control-label">Ticket ID</label>
              
            
            <input type="text" class="form-control"  name="ticketId" disabled/>
-          <input type="hidden" ng-model="tid" name="ticketId"/>
+          <input type="hidden" ng-model="tid2" name="ticketId"/>
           
            
           </div>
-
-         
+<div class="form-group">
+            <label for="recipient-name" class="control-label">Total Time Spent </label>
+             
+            
+           <input type="number" class="form-control" value="" placeholder="in min" ng-model="tspent2" required/>
+          
+          
+           
+          </div>
+           <div class="form-group">
+            <label for="recipient-name" class="control-label">Select Date:</label>
+             
+            
+           <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="adate2"/>
+          
+          
+           
+          </div>
+           <div class="form-group">
+            <label for="recipient-name" class="control-label">Request By</label>
+             
+            
+           <input type="Text" class="form-control" value="" placeholder="<?php echo $u; ?>"  required/>
+           <input type="hidden" class="form-control" value="<?php echo $u; ?>"  ng-model="user2" required/>
+          
+          
+           
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
