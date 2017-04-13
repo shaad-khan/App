@@ -1,6 +1,6 @@
 
 app.controller("modifytask",function($scope,$routeParams,service,$interval,$location,$http){
-$scope.adhoc_add=function(id,ts,ad,user)
+$scope.modify=function(id,ts,ad,user)
 {
 var data=$.param({
 tid:id,
