@@ -1,9 +1,7 @@
 
 
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
-  $scope.orderByMe = function(x) {
-    $scope.myOrderBy = x;
-  }
+ 
  $scope.setuser=function(text)
  {
 $scope.u=text;
@@ -295,6 +293,9 @@ var url="list.php?param="+text;
 
 /*------------------------------------------------------------------*/
 app.controller("Task",function($scope,service,$interval,$http,$rootScope){
+   $scope.orderByMe = function(x) {
+    $scope.myOrderBy = x;
+  }
 var x;
 /*service.serv("https://apps.continuserve.com/webservice/task_serv.php").then(function(response){
   
