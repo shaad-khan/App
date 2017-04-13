@@ -234,8 +234,8 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Ticket ID</label>
              
            
-           <input type="text" class="form-control"  name="ticketId" ng-model="id2"/>
-          <input type="hidden" name="ticketId2" ng-model="id" />
+           <input type="text" class="form-control"  name="ticketId" disabled/>
+          <input type="hidden" name="ticketId2"  value="" ng-model="id" />
           
            
           </div>
