@@ -261,8 +261,8 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Request By</label>
              
             
-           <input type="Text" class="form-control" value="" placeholder="<?php echo $u; ?>"  required/>
-           <input type="hidden" class="form-control" value="<?php echo $u; ?>"  ng-model="user2" required/>
+           <input type="text" class="form-control" value="" placeholder="<?php echo $u; ?>"  disabled/>
+           <input type="hidden" class="form-control" value="<?php echo $u; ?>"  ng-model="user2" />
           
           
            
