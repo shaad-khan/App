@@ -235,7 +235,7 @@ $u=$_SESSION['user'];
              
            
            <input type="text" class="form-control"  name="ticketId" disabled/>
-          <input type="hidden" ng-model="tid2" name="ticketId2"/>
+          <input type="hidden" ng-model="id" name="ticketId2"/>
           
            
           </div>
@@ -268,9 +268,9 @@ $u=$_SESSION['user'];
            
           </div>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer">{{id}}
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" ng-click="modify(tid2,tspent2,adate2,user2)">Modify Task</button>
+          <button type="button" class="btn btn-primary" ng-click="modify(id,tspent2,adate2,user2)">Modify Task</button>
         </div>
       </div>
       
