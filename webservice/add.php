@@ -60,7 +60,7 @@ $attime=$_POST['attime'];
 
 $cl_tkt=$_POST['client_tkt'];
 $team=$_POST['cteam'];
-
+$docf=0;
 $errors= array();
       $file_name = $_FILES['dfile']['name'];
       $file_size =$_FILES['dfile']['size'];
