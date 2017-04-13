@@ -1,5 +1,39 @@
 
+app.controller("modifytask",function($scope,$routeParams,service,$interval,$location,$http){
+$scope.adhoc_add=function(id,ts,ad,user)
+{
+var data=$.param({
+tid:id,
+tspent:ts,
+adate:ad,
+req:user
+});
+console.log(data);
+var config = {
+                headers : {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+                }
+            }
 
+$http.post('https://apps.continuserve.com/webservice/modify_task.php', data, config)
+            .then(function (data, status, headers, config) {
+                $scope.res= data.data;
+                //console.log($scope.res[0].Ticket_ID);
+                alert("Adhoc Ticket Created :" + $scope.res[0].Ticket_ID);
+               /* $scope.projecttype='';
+                 $scope.tasktype='';
+                  $scope.tspent='';
+                   $scope.adate='';
+                    $scope.amessage='';*/
+            });
+            
+
+};
+
+
+
+
+});
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
  
  $scope.setuser=function(text)

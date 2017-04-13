@@ -219,7 +219,7 @@ $u=$_SESSION['user'];
     </div>
   </div>
 </div>
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="myModal" role="dialog" ng-controller="modifytask">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -270,6 +270,7 @@ $u=$_SESSION['user'];
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" ng-click="modify(tid2,tspent2,adate2,user2)">Modify Task</button>
         </div>
       </div>
       
