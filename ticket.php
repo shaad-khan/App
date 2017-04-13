@@ -7,7 +7,7 @@ $admin=$_SESSION["admin"];
 ?>
 
 
- <div class="row mt"  ng-init="setuser('<?php echo $u;?>')">
+ <div class="row mt"  ng-init="setuser('<?php echo $u;?>')" ng-controller="Ticket">
    <div class="col-md-12">
  <div class="content-panel" id="reload">
 
@@ -18,13 +18,13 @@ $admin=$_SESSION["admin"];
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
 
-                                  <span class="glyphicon glyphicon-menu-hamburger"></span> L3 Support Team 
+                                  <span class="glyphicon glyphicon-menu-hamburger"></span> L3 Support Team (Status: {{type}})
 
-                                   <!-- <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
+                                   <!--<a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span>--></div>
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
-       <div class="panel-body" ng-controller="Ticket">
+       <div class="panel-body" >
          <table class="table"><tr>
      <th>Ticket_ID</th>
      <th>Client</th>
