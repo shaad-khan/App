@@ -190,11 +190,10 @@ element.style {
     
     
  <button type="button" class="btn btn-primary" ng-click="search(fill)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-    
+    <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
+                                    <span class="glyphicon glyphicon-home"></a></span>
   </div>
-    </li><li>
-     <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
-                                    <span class="glyphicon glyphicon-home"></a></span></li>
+    </li>
                     <li><a class="logout" href="logout.php">Logout</a></li>
               </ul>
             </div>
