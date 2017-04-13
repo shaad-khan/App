@@ -20,8 +20,8 @@ $admin=$_SESSION["admin"];
 
                                   <span class="glyphicon glyphicon-menu-hamburger"></span> <?php echo $u;?> Task Calender
 
-                                    <a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
-                                    <span class="glyphicon glyphicon-home"></a></span></div>
+                                    <!--<a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
+                                    <span class="glyphicon glyphicon-home"></a></span>--></div>
                                    <!-- <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div>--></div></div>
        <div class="panel-body" style="height: 900px;">
