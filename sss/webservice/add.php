@@ -6,7 +6,7 @@ $user_session=$_SESSION["user"];
 $type=$_POST["type"];
 
 $server = "gjtz209gib.database.windows.net";
-$user = "CSL3AppsUser@gjtz209gib";
+$user = "CSSSSAppsUser@gjtz209gib";
 $pwd = "C0ntinue2$3rve";
 $db = "CSL2AppsDB";
 
@@ -47,7 +47,7 @@ $reviewer= $_POST["reviewer"];
 $discription= $_POST["discription"];
 
 $comments= $_POST["comments"];
-
+$comments=str_replace("'","''",$comments);
 $cstatus= $_POST["cstatus"];
 
 $ttime= $_POST["ttime"];
@@ -60,7 +60,7 @@ $attime=$_POST['attime'];
 
 $cl_tkt=$_POST['client_tkt'];
 $team=$_POST['cteam'];
-
+$docf=0;
 $errors= array();
       $file_name = $_FILES['dfile']['name'];
       $file_size =$_FILES['dfile']['size'];
@@ -156,16 +156,22 @@ $fstatus='WIP';
         
          $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Status='WIP' where Ticket_ID='$TID'";
     }*/
+else if(($status=='Review') and ($cstatus=="Closure"))
+{
+  $fstatus="Closure";
+   $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
 
+}
 else if($cstatus=='next')
 {
-    $sql_status="select Status from Master_Ticket_Tab where Ticket_ID='$TID'";
+    $sql_status="select Status,Resolver from Master_Ticket_Tab where Ticket_ID='$TID'";
     $tab_status='';
 $result=$conn->query($sql_status);
 //echo $msg;
   while($row4=$result->fetch())
 {
     $tab_status=$row4['Status'];
+    $Resolver=$row4['Resolver'];
 }
 if(($tab_status=='WIP') and $AUI!='on' )
 {
@@ -198,6 +204,7 @@ date_default_timezone_set('Asia/Kolkata');
 else if(($tab_status=='Review'))
 {
     $fstatus='Doc';
+    $docf=1;
 }
 
 else if($tab_status=='Doc')
@@ -211,17 +218,21 @@ else if($tab_status=='Closure')
     //echo $fstatus;
 }
 
-if(($fstatus!='') and ($fresolver!=''))
+if(($fstatus!='') and ($fresolver!='')and ($docf==0))
 {
 $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
 
 }
-else if($fstatus!='')
+else if(($fstatus!='') and ($docf==0))
 {
 $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
 //echo $Master_sql;
 }
+else if(($fstatus=='Doc') and ($docf==1))
+{
+  $Master_sql="Update Master_Ticket_Tab set Status='$fstatus',Updatetime='$utime',Assign_to='$Resolver' where Ticket_ID='$TID'";
 
+}
 
 
    //$conn->query($Master_sql);
@@ -231,7 +242,7 @@ $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatu
 }
 if($Master_sql) 
 {
-   // echo $Master_sql;
+    //echo $Master_sql;
 $conn->query($Master_sql);
 
 }
@@ -283,16 +294,16 @@ $sql="select * from User_prof where Team='SSS' or Team='All'";
   $resolver=$row2['sessionId'];
 	$r=$row2['sessionId']."@continuserve.com";
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver."' and Status='Classify'";
-//echo $sql3;
+$sqSSS="select count(*) as ccount from dbo.Master_Ticket_Tab where (Creator like '".$resolver."' and Status='Classify')";
+//echo $sqSSS;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqSSS);
 //echo $msg;
   while($row3=$result->fetch())
 {
 	if($row3['ccount']!=0)
 	{
-	$sql="update Status_count set Classify=".$row3['ccount']." where Email like '%".$r."%'";
+	$sql="update Status_count set Classify=".$row3['ccount']." where Email like '%".$r."%' and Team='SSS'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
 	//echo $sql;
 	
@@ -300,7 +311,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '
 
 	}
   else{
-    $sql="update Status_count set Classify=0 where Email like '%".$r."%'";
+    $sql="update Status_count set Classify=0 where Email like '%".$r."%' and Team='SSS'";
   }
   $conn->query($sql);
 	//$rows[]=$row3;
@@ -309,10 +320,10 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '
 }
 
 /*-----------------------------------------------------*/
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='WIP' and team='SSS'";
-//echo $sql3;
+$sqSSS="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='WIP' and team='SSS'";
+//echo $sqSSS;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqSSS);
 //echo $msg;
   while($row3=$result->fetch())
 {
@@ -327,7 +338,6 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 	}
   else{
     $sql="update Status_count set Wip=0 where Email like '%".$r."%' and Team='SSS'";
-    //echo $sql;
   }
   $conn->query($sql);
 	//$rows[]=$row3;
@@ -335,10 +345,10 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 }
 /*-----------------------------------------------------*/
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Review' and team='SSS'";
-//echo $sql3;
+$sqSSS="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Review' and team='SSS'";
+//echo $sqSSS;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqSSS);
 //echo $msg;
   while($row3=$result->fetch())
 {
@@ -361,10 +371,10 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 }
 
 /*-----------------------------------------------------*/
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='AUI' and team='SSS'";
-//echo $sql3;
+$sqSSS="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='AUI' and team='SSS'";
+//echo $sqSSS;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqSSS);
 //echo $msg;
   while($row3=$result->fetch())
 {
@@ -387,10 +397,10 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 }
 
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Doc' and team='SSS'";
-//echo $sql3;
+$sqSSS="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Doc' and team='SSS'";
+//echo $sqSSS;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqSSS);
 //echo $msg;
   while($row3=$result->fetch())
 {
@@ -411,10 +421,10 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 
 }
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Closure' and team='SSS'";
-//echo $sql3;
+$sqSSS="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Closure' and team='SSS'";
+//echo $sqSSS;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqSSS);
 //echo $msg;
   while($row3=$result->fetch())
 {
