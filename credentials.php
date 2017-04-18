@@ -31,7 +31,7 @@ $admin=$_SESSION["admin"];
                                     
                                     </div></div></div>
        <div class="panel-body" >
-         <table class="table"><tr>
+         <table class="table2"><tr>
      <th>Client</th>
      <th>Connection Type</th>
      <th>ServerName</th>
