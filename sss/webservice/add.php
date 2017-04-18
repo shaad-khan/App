@@ -6,7 +6,7 @@ $user_session=$_SESSION["user"];
 $type=$_POST["type"];
 
 $server = "gjtz209gib.database.windows.net";
-$user = "CSSSSAppsUser@gjtz209gib";
+$user = "CSL3AppsUser@gjtz209gib";
 $pwd = "C0ntinue2$3rve";
 $db = "CSL2AppsDB";
 
