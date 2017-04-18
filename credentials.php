@@ -5,7 +5,14 @@ $u=$_SESSION['user'];
 
 ?>
 
-
+<style>
+tbody > tr > td, .table > tfoot > tr > td {
+    padding: 6px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+  </style>
  <div class="row mt"  ng-init="setuser('<?php echo $u;?>')">
   
    <div class="col-md-12" style="width: 102%;">
@@ -62,7 +69,7 @@ $u=$_SESSION['user'];
    </tr>
 
 
-    <tr ng-repeat="res in creds  | filter:ftext " ng-class="$index % 2 > 0 ? 'active':''" style="padding: 6px">
+    <tr ng-repeat="res in creds  | filter:ftext " ng-class="$index % 2 > 0 ? 'active':''">
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))&&((u!=res.Blocker_name))"><button class="btn btn-default" ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
