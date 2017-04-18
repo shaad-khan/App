@@ -7,8 +7,8 @@ $admin=$_SESSION["admin"];
 ?>
 
 
- <div class="row mt"  ng-init="setuser('<?php echo $u;?>')" ng-controller="Ticket">
-   <div class="col-md-12">
+ <div class="row mt"  ng-init="setuser('<?php echo $u;?>')" ng-controller="credentials" style="margin-top: 17px;">
+   <div class="col-md-12" style="width: 101%;">
  <div class="content-panel" id="reload">
 
 
@@ -30,8 +30,8 @@ $admin=$_SESSION["admin"];
           </div>
                                     
                                     </div></div></div>
-       <div class="panel-body" >
-         <table class="table table-hover table-condensed table-striped table-bordered" ><tr>
+       <div class="panel-body" style="padding: 3px;">
+         <table class="table table-hover table-condensed table-striped" ><tr>
      <th>Client</th>
      <th>Connection Type</th>
      <th>ServerName</th>
