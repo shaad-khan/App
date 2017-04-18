@@ -5,14 +5,7 @@ $u=$_SESSION['user'];
 
 ?>
 
-<style>
-tbody > tr > td, .table > tfoot > tr > td {
-    padding: 6px;
-    line-height: 1.42857143;
-    vertical-align: top;
-    border-top: 1px solid #ddd;
-}
-  </style>
+
  <div class="row mt"  ng-init="setuser('<?php echo $u;?>')">
   
    <div class="col-md-12" style="width: 102%;">
