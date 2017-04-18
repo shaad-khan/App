@@ -54,6 +54,8 @@ $u=$_SESSION['user'];
      <th>Environment</th>
      <th>User ID</th>
      <th>Password</th>
+     <th> <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-edit
+" aria-hidden="true"></span></button></th>
     <!-- <th>Time Spend</th>-->
      
 
