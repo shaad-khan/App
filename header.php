@@ -98,7 +98,7 @@ element.style {
     background-color:#777;
 }
 .table2 > tbody > tr > th, .table2 > tfoot > tr > th, .table2 > thead > tr > td, .table2 > tbody > tr > td, .table2 > tfoot > tr > td {
-    padding: 2px;
+    padding: 3px;
     line-height: 1.42857143;
     vertical-align: top;
     border-top: 1px solid #ddd;
