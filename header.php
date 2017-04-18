@@ -97,6 +97,12 @@ element.style {
     background-color: rgb(78, 205, 196);*/
     background-color:#777;
 }
+tbody > tr > td, .table > tfoot > tr > td {
+    padding: 6px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
 .btn-circle.btn-xl {
   width: 90px;
   height: 70px;
