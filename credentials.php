@@ -14,7 +14,7 @@ $admin=$_SESSION["admin"];
 
                           <div class="row">
 
-                             <div class="col-xs-12" style="padding-left: 21px;padding-right: 21px;">
+                             <div class="col-xs-12" style="padding-left: 18px;padding-right: 21px;">
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
 
