@@ -6,8 +6,7 @@ $u=$_SESSION['user'];
 ?>
 
 
- <div class="row mt"  style="margin-right: -24px;
-    margin-left: -10px;"ng-init="setuser('<?php echo $u;?>')">
+ <div class="row mt"  ng-init="setuser('<?php echo $u;?>')">
   
    <div class="col-md-12" style="width: 102%;">
  <div class="content-panel" id="reload">
@@ -72,16 +71,15 @@ $u=$_SESSION['user'];
 </span> {{res.Ticket_ID}}</button></td>
 <td ng-if="((res.Status=='Review')||(res.Status=='Doc') ||(res.Status=='Closure')||(res.Status=='Classify'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>-->
-<td ><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
-</span> {{res.Client}}</td>
+<td ><button type="button" class="btn btn-info" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-edit
+" aria-hidden="true"></span></button> {{res.Client}}</td>
 <td>{{res.ctype}}</td>
 <td>{{res.sname}}</td>
 <td>{{res.Environment}}</td>
 <td>{{res.uid}}</td>
 
 <td>{{res.Password}}</td>
-<td><button type="button" class="btn btn-info" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-edit
-" aria-hidden="true"></span></button><td>
+
 
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="push(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></sbutton>
 </td>
