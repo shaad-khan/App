@@ -54,8 +54,7 @@ $u=$_SESSION['user'];
      <th>Environment</th>
      <th>User ID</th>
      <th>Password</th>
-     <th> <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-edit
-" aria-hidden="true"></span></button></th>
+  
     <!-- <th>Time Spend</th>-->
      
 
@@ -80,7 +79,8 @@ $u=$_SESSION['user'];
 <td>{{res.uid}}</td>
 
 <td>{{res.Password}}</td>
-
+<td><button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-edit
+" aria-hidden="true"></span></button><td>
 
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="push(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></sbutton>
 </td>
