@@ -25,7 +25,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     {
       $sql="select m.Tdiscription,m.Ticket_ID,m.Client,u.Status,u.UpdateTime,u.TimeTaken,m.Project from master_ticket_tab as m ,update_Tab as u where m.Ticket_ID=u.TicketId and u.UpdateBy='$u' and (cast(u.UpdateTime as date) between cast('$s' as date) and cast('$e' as date))";
     }
-    //echo $sql;
+    echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
