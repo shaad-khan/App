@@ -13,7 +13,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 
 
-    $sql="select count(*) as tcount from Master_Ticket_Tab where Team='L3'";
+    $sql="select count(*) as tcount from Master_Ticket_Tab where and (Team='L3' or Team='')";
     //echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
@@ -22,7 +22,7 @@ $result=$conn->query($sql);
 
 	$rows[]=$row4;
 }
-$sql="select count(*) as pcount from Master_Ticket_Tab where  Status!='Close' and Team='L3'";
+$sql="select count(*) as pcount from Master_Ticket_Tab where  Status!='Close' and (Team='L3' or Team='')";
     //echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
@@ -31,7 +31,7 @@ $result=$conn->query($sql);
 
 	$rows[]=$row4;
 }
-$sql="select count(*) as ccount from Master_Ticket_Tab where Status='Close' and Team='L3'";
+$sql="select count(*) as ccount from Master_Ticket_Tab where Status='Close' and (Team='L3' or Team='')";
     //echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
