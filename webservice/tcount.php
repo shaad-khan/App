@@ -13,7 +13,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 
 
-    $sql="select count(*) as tcount from Master_Ticket_Tab where and (Team='L3' or Team='')";
+    $sql="select count(*) as tcount from Master_Ticket_Tab where (Team='L3' or Team='')";
     //echo $sql;
 $result=$conn->query($sql);
 //echo $msg;
