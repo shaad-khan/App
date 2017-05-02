@@ -13,7 +13,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 
 
-    $sql="select * from Master_ticket_tab where Team='SSS' and Ticket_ID like 'CSCHK%'";
+    $sql="select * from Master_ticket_tab where Team='SSS' and Ticket_ID like 'CSCHK%' and Status='WIP'";
     //echo $sql;
 
 $result=$conn->query($sql);

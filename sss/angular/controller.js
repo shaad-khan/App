@@ -457,7 +457,12 @@ $scope.$on('$destroy', function () {
  });
  $scope.close=function(v1)
 {
-  alert(v1);
+  service.serv("https://apps.continuserve.com/sss/webservice/checklist_u.php?id="+v1).then(function(response){
+	//$scope.load='false';
+		$scope.res=response.data;
+console.log(response.data.length);
+  
+	});
 }
 
 
