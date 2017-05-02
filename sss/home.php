@@ -52,7 +52,7 @@ $close=$_SESSION['Closure'];
                               <div class="panel panel-primary">
                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
 
-                                 <span class="glyphicon glyphicon-menu-hamburger"></span> L3 Support Team </div><div class="col-xs-4" align="right" ng-hide="load2"><img src="assets/ajax-loader.gif"/>
+                                 <span class="glyphicon glyphicon-menu-hamburger"></span> SSS Support Team </div><div class="col-xs-4" align="right" ng-hide="load2"><img src="assets/ajax-loader.gif"/>
                                   </div></div></div>
       <div class="panel-body">
         <table class="table table-fixed">
@@ -163,11 +163,19 @@ $close=$_SESSION['Closure'];
 
 </div>
 <div class="row mt" ng-controller="checklist">
-  <div class="col-md-9">
-<div class="content-panel" id="reload">
+ <div class="col-md-12">
+<div class="content-panel" id="reload"  >
 
 
-                      <div class="row" >
+                         <div class="row" >
+
+                            <div class="col-xs-12" style="padding-left:40px;padding-right:40px;">
+                              <div class="panel panel-primary">
+                                <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
+
+                                 <span class="glyphicon glyphicon-menu-hamburger"></span> Check List Task</div><div class="col-xs-4" align="right" ng-hide="load2"><img src="assets/ajax-loader.gif"/>
+                                  </div></div></div>
+      <div class="panel-body">
 
                            <!-- <div class="col-xs-6" ng-controller="clientgraph">
 
