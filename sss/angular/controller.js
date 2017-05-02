@@ -1,3 +1,35 @@
+app.controller("checklist",function($scope,$routeParams,service,$interval,$location,$http){
+ var ticketapi=$interval(statuscheck, 5000);
+var name=$routeParams.email;
+var type=$routeParams.type;
+function statuscheck() {
+ 
+	//alert("https://apps.continuserve.com/sss/continuity/App/webservice/status.php?name="+name+"&type="+type);
+service.serv("https://apps.continuserve.com/sss/webservice/checklist.php").then(function(response){
+	//$scope.load='false';
+		$scope.results=response.data;
+console.log(response.data.length);
+  
+	});
+  
+};
+//$scope.email=$routeParams.email;
+//$scope.name="shaad";
+//$scope.type=$routeParams.Type;
+
+$scope.$on('$destroy', function () { 
+  
+  
+  if (angular.isDefined(ticketapi)) {
+    
+            $interval.cancel(ticketapi);
+            ticketapi = undefined;
+          }
+
+ });
+
+})
+
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
  $scope.setuser=function(text)
  {
