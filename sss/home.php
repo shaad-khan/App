@@ -162,12 +162,12 @@ $close=$_SESSION['Closure'];
 
 
 </div>
-<div class="row mt">
+<div class="row mt" ng-controller="checklist">
   <div class="col-md-12">
 <div class="content-panel" id="reload">
 
 
-                      <div class="row" ng-controller="checklist">
+                      <div class="row" >
 
                            <!-- <div class="col-xs-6" ng-controller="clientgraph">
 
