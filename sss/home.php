@@ -182,6 +182,7 @@ $close=$_SESSION['Closure'];
                          <table class="table">
     <thead>
       <tr>
+      
         <th>CheckList</th>
         <th>DateTime</th>
         <th>Status</th>
@@ -191,9 +192,9 @@ $close=$_SESSION['Closure'];
          
       
       <tr class="danger"  ng-repeat="item in results">
-        <td>Danger</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
+        <td>{{item.Tdiscription}}</td>
+        <td>{{item.Cdatetime}}</td>
+        <td>{{item.Status}}</td>
       </tr>
       
     </tbody>
