@@ -455,9 +455,9 @@ $scope.$on('$destroy', function () {
           }
 
  });
- $scope.close=function(v1,v2)
+ $scope.close=function(v1)
 {
-  alert(v1+v2);
+  alert(v1);
 }
 
 

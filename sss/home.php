@@ -203,7 +203,7 @@ $close=$_SESSION['Closure'];
         <td>{{item.Tdiscription}}</td>
         <td>{{item.Cdatetime}}</td>
         <td>{{item.Status}}</td>
-         <td><button class="btn btn-success" ng-click="close(item.Id,<?php echo $u?>)"><span class="glyphicon glyphicon-ok
+         <td><button class="btn btn-success" ng-click="close(item.Id)"><span class="glyphicon glyphicon-ok
 "></span></button></td>
       </tr>
       
