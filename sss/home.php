@@ -167,9 +167,9 @@ $close=$_SESSION['Closure'];
 <div class="content-panel" id="reload">
 
 
-                     <!--    <div class="row">
+                      <div class="row" ng-controller="checklist">
 
-                            <div class="col-xs-6" ng-controller="clientgraph">
+                           <!-- <div class="col-xs-6" ng-controller="clientgraph">
 
                            <div id="donutchart" style="width: 400px; height:250px;"></div>
                            </div>
@@ -178,8 +178,27 @@ $close=$_SESSION['Closure'];
 
                            <div id="barchart_values" style="width: 400px; height:250px;"></div>
 
-                         </div>
                          </div>-->
+                         <table class="table">
+    <thead>
+      <tr>
+        <th>CheckList</th>
+        <th>DateTime</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+         
+      
+      <tr class="danger"  ng-repeat="item in results">
+        <td>Danger</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      
+    </tbody>
+  </table>
+                         </div>
 
                           </div>
 
