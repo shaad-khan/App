@@ -19,11 +19,14 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
     //$sql="select * from Master_ticket_tab where Team='SSS' and Ticket_ID like 'CSCHK%' and Status='WIP'";
     //echo $sql;
+    if($u)
+    {
 $sql="update Master_ticket_tab set Reslover='$u', Status='Close',Resolver_Dtime='$d' where Id=$id";
-$conn->query($sql);
+echo $sql;
+//$conn->query($sql);
 //echo $msg;
  
-
+    }
 
 
 ?>
