@@ -423,7 +423,10 @@ $http.post('https://apps.continuserve.com/sss/webservice/adhocadd.php', data, co
 
 };
 
-
+$scope.close=function(v1,v2)
+{
+  alert(v1+v2);
+}
 
 
 });
