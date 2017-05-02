@@ -199,10 +199,12 @@ $close=$_SESSION['Closure'];
     <tbody>
          
       
-      <tr class="danger"  ng-repeat="item in results">
+      <tr class="info"  ng-repeat="item in results">
         <td>{{item.Tdiscription}}</td>
         <td>{{item.Cdatetime}}</td>
         <td>{{item.Status}}</td>
+         <td><button class="btn btn-success"><span class="glyphicon glyphicon-ok
+"></span></button></td>
       </tr>
       
     </tbody>
