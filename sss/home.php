@@ -163,7 +163,7 @@ $close=$_SESSION['Closure'];
 
 </div>
 <div class="row mt" ng-controller="checklist">
-  <div class="col-md-12">
+  <div class="col-md-9">
 <div class="content-panel" id="reload">
 
 
