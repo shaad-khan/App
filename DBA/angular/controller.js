@@ -416,6 +416,12 @@ $http.post('https://apps.continuserve.com/DBA/webservice/adhocadd.php', data, co
             .then(function (data, status, headers, config) {
                 $scope.res= data.data;
                 //console.log($scope.res[0].Ticket_ID);
+                alert("Adhoc Ticket Created :" + $scope.res[0].Ticket_ID);
+                $scope.projecttype='';
+                 $scope.tasktype='';
+                  $scope.tspent='';
+                   $scope.adate='';
+                    $scope.amessage='';
             });
             
 

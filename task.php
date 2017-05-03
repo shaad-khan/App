@@ -2,7 +2,10 @@
 
 session_start();
 $u=$_SESSION['user'];
-
+if($u==null)
+{
+header("Location: https://apps.continuserve.com");
+}
 ?>
 
 

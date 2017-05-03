@@ -389,12 +389,12 @@ else{
 });
 
 app.controller("addtask",function($scope,$interval,$http,service){
-service.serv("https://apps.continuserve.com/sss/webservice/service.php?type=Adhoc_task").then(function(response){
+service.serv("https://apps.continuserve.com/SSS/webservice/service.php?type=Adhoc_task").then(function(response){
      	//$scope.load2='false';
       $scope.tts=response.data;
 
 });
-service.serv("https://apps.continuserve.com/sss/webservice/service.php?type=Project_tab").then(function(response){
+service.serv("https://apps.continuserve.com/SSS/webservice/service.php?type=Project_tab").then(function(response){
 $scope.projects=response.data;
 });
 
@@ -414,14 +414,21 @@ var config = {
                 }
             }
 
-$http.post('https://apps.continuserve.com/sss/webservice/adhocadd.php', data, config)
+$http.post('https://apps.continuserve.com/SSS/webservice/adhocadd.php', data, config)
             .then(function (data, status, headers, config) {
                 $scope.res= data.data;
                 //console.log($scope.res[0].Ticket_ID);
+                alert("Adhoc Ticket Created :" + $scope.res[0].Ticket_ID);
+                $scope.projecttype='';
+                 $scope.tasktype='';
+                  $scope.tspent='';
+                   $scope.adate='';
+                    $scope.amessage='';
             });
             
 
 };
+
 
 
 
