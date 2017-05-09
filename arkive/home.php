@@ -52,7 +52,7 @@ $close=$_SESSION['Closure'];
                               <div class="panel panel-primary">
                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
 
-                                 <span class="glyphicon glyphicon-menu-hamburger"></span> L3 Support Team </div><div class="col-xs-4" align="right" ng-hide="load2"><img src="assets/ajax-loader.gif"/>
+                                 <span class="glyphicon glyphicon-menu-hamburger"></span> Arkive Support Team </div><div class="col-xs-4" align="right" ng-hide="load2"><img src="assets/ajax-loader.gif"/>
                                   </div></div></div>
       <div class="panel-body">
         <table class="table table-fixed">
