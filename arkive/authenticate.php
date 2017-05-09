@@ -84,14 +84,14 @@ $_SESSION["admin"]=1;
 }
 if(($team=="L3")||($f==1))
 {
-  header('Location:https://apps.continuserve.com/main.php');
+  header('Location:https://apps.continuserve.com/arkive/main.php');
 }
 else 
 {
   //echo "i am here";
 //header('Location:https://apps.continuserve.com/continuity/app/home.php');
   echo "<script type='text/javascript'>alert('Sorry !! you dont have access to this portal ');</script>";
-  header('Refresh: 1; URL=https://apps.continuserve.com/');
+  header('Refresh: 1; URL=https://apps.continuserve.com/arkive');
 }
 }
 else
@@ -99,7 +99,7 @@ else
   echo "<script type='text/javascript'>alert('Sorry !! you have entered an invalid password ');</script>";
 
 
-header('Refresh: 1; URL=https://apps.continuserve.com/');
+header('Refresh: 1; URL=https://apps.continuserve.com/arkive');
 }
  //sleep(10);
 //header('Location:https://csmonitoring-dev.azurewebsites.net/o_view_date2.php?c=Today&d='.$date3);
