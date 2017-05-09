@@ -39,7 +39,7 @@ $scope.remove=function(text)
 //$scope.load='true';
 	}());
 	$scope.pop=function(ID) {
-     window.location=("https://apps.continuserve.com/sss/main.php#!/");
+    // window.location=("https://apps.continuserve.com/sss/main.php#!/");
 		var id=ID;
 		var url="form.php?ID="+id;
 	//	alert(url);
