@@ -63,7 +63,7 @@ $close=$_SESSION['Closure'];
       <th>WIP</th>
       <th>AUI</th>
       <th>Review</th>
-      <th>Documentation</th>
+     <!-- <th>Documentation</th>-->
       <th>Closure</th>
       <th>Total</th>
     </tr>
@@ -92,7 +92,7 @@ $close=$_SESSION['Closure'];
         <?php
         }?>
 
-        <td ng-init="total_Doc=total_Doc+item.Doc">
+       <!-- <td ng-init="total_Doc=total_Doc+item.Doc">
           <?php
         if($doc==1)
         {?>
@@ -104,7 +104,7 @@ $close=$_SESSION['Closure'];
         
        {{item.Doc}}</td>
         <?php
-        }?>
+        }?>-->
         <td ng-init="total_Closure=total_Closure+item.Closure">
           <?php
         if($close==1)
