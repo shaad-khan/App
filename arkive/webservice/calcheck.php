@@ -66,7 +66,7 @@ exit;
 /*else
 {
 
-    $sql="select * from ".$type." where Team='L3,SSS' or Team='L3'";
+    $sql="select * from ".$type." where Team='ARKIVE,SSS' or Team='ARKIVE'";
 }
     //echo $sql;
 $result=$conn->query($sql);

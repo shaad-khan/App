@@ -81,7 +81,7 @@ sendemail();
 
 function sendemail() {
     $server = "gjtz209gib.database.windows.net";
-$user = "CSL3AppsUser@gjtz209gib";
+$user = "CSARKIVEAppsUser@gjtz209gib";
 $pwd = "C0ntinue2$3rve";
 $db = "CSL2AppsDB";
 
@@ -128,11 +128,11 @@ $mail->Port = 587;
 $mail->IsHTML(true);
 //$mail->Username = "CS_Connect@continuserve.com";
 //$mail->Password = "Password1$";
-//$mail->SetFrom=('L3Alerts@continuserve.com');
+//$mail->SetFrom=('ARKIVEAlerts@continuserve.com');
 
 $mail->Username = "SSShelpdesk@continuserve.com";
 $mail->Password = "Welcome123456";
-//$mail->SetFrom=('L3Alerts@continuserve.com');
+//$mail->SetFrom=('ARKIVEAlerts@continuserve.com');
 $mail->CharSet = 'UTF-8';
 $mail->From = "SSShelpdesk@continuserve.com"; // the authenticated account
 $mail->FromName = "SSShelpdesk@continuserve.com"; // the user's email ?
@@ -142,7 +142,7 @@ $mail->MsgHTML($e);
 //$mail->AddAttachment($file_to_attach);
 //$mail->AddAttachment(  , 'NameOfFile.pdf' );
 //$mail->AddReplyTo('');
-//$mail->AddAddress('L3_CS@continuserve.com');
+//$mail->AddAddress('ARKIVE_CS@continuserve.com');
 $mail->AddCC("shadab.k@continuserve.com");
 //$mail->AddCC("npai@continuserve.com");
 //$mail->AddCC("stanly.benny@continuserve.com");

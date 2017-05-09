@@ -8,7 +8,7 @@ $db = "CSL2AppsDB";
 
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-$sql="select * from User_prof where Team='L3' or Team='All'";
+$sql="select * from User_prof where Team='ARKIVE' or Team='All'";
      $result1=$conn->query($sql);
 
 
@@ -22,10 +22,10 @@ $sql="select * from User_prof where Team='L3' or Team='All'";
 	$resolver=explode("@", $row2['Email']);
 	$r=$row2['Email'];
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver[0]."' and Status='Classify'";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver[0]."' and Status='Classify'";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
@@ -48,7 +48,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '
 }
 }
     
-$sql="select ID,Email,ISNULL(Classify,0) as Classify,ISNULL(Wip,0) as Wip ,ISNULL(Aui,0) as Aui,ISNULL(Review,0) as Review,ISNULL(Doc,0) as Doc,ISNULL(Closure,0) as Closure,ISNULL(Total,0) as Total,Name from status_count where Team='L3' order by ID desc";
+$sql="select ID,Email,ISNULL(Classify,0) as Classify,ISNULL(Wip,0) as Wip ,ISNULL(Aui,0) as Aui,ISNULL(Review,0) as Review,ISNULL(Doc,0) as Doc,ISNULL(Closure,0) as Closure,ISNULL(Total,0) as Total,Name from status_count where Team='ARKIVE' order by ID desc";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())

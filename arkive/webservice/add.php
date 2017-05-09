@@ -279,7 +279,7 @@ if($f2==1)
     /*###############################################################################################################*/
 /*----------------------------------------------------------------------------------------------------*/
 
-$sql="select * from User_prof where Team='L3' or Team='All'";
+$sql="select * from User_prof where Team='ARKIVE' or Team='All'";
      $result1=$conn->query($sql);
 
 
@@ -294,16 +294,16 @@ $sql="select * from User_prof where Team='L3' or Team='All'";
   $resolver=$row2['sessionId'];
 	$r=$row2['sessionId']."@continuserve.com";
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where (Creator like '".$resolver."' and Status='Classify')";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where (Creator like '".$resolver."' and Status='Classify')";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
 	if($row3['ccount']!=0)
 	{
-	$sql="update Status_count set Classify=".$row3['ccount']." where Email like '%".$r."%' and Team='L3'";
+	$sql="update Status_count set Classify=".$row3['ccount']." where Email like '%".$r."%' and Team='ARKIVE'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
 	//echo $sql;
 	
@@ -311,7 +311,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where (Creator like 
 
 	}
   else{
-    $sql="update Status_count set Classify=0 where Email like '%".$r."%' and Team='L3'";
+    $sql="update Status_count set Classify=0 where Email like '%".$r."%' and Team='ARKIVE'";
   }
   $conn->query($sql);
 	//$rows[]=$row3;
@@ -320,16 +320,16 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where (Creator like 
 }
 
 /*-----------------------------------------------------*/
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='WIP' and team='L3'";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='WIP' and team='ARKIVE'";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
 	if($row3['ccount']!=0)
 	{
-	$sql="update Status_count set Wip=".$row3['ccount']." where Email like '%".$r."%' and Team='L3'";
+	$sql="update Status_count set Wip=".$row3['ccount']." where Email like '%".$r."%' and Team='ARKIVE'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
 	//echo $sql;
 	
@@ -337,7 +337,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 	}
   else{
-    $sql="update Status_count set Wip=0 where Email like '%".$r."%' and Team='L3'";
+    $sql="update Status_count set Wip=0 where Email like '%".$r."%' and Team='ARKIVE'";
   }
   $conn->query($sql);
 	//$rows[]=$row3;
@@ -345,16 +345,16 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 }
 /*-----------------------------------------------------*/
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Review' and team='L3'";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Review' and team='ARKIVE'";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
 	if($row3['ccount']!=0)
 	{
-	$sql="update Status_count set Review=".$row3['ccount']." where Email like '%".$r."%' and Team='L3'";
+	$sql="update Status_count set Review=".$row3['ccount']." where Email like '%".$r."%' and Team='ARKIVE'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
 	//echo $sql;
 	
@@ -362,7 +362,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 	}
   else{
-    $sql="update Status_count set Review=0 where Email like '%".$r."%' and Team='L3'";
+    $sql="update Status_count set Review=0 where Email like '%".$r."%' and Team='ARKIVE'";
   }
   $conn->query($sql);
 	//$rows[]=$row3;
@@ -371,16 +371,16 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 }
 
 /*-----------------------------------------------------*/
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='AUI' and team='L3'";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='AUI' and team='ARKIVE'";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
 	if($row3['ccount']!=0)
 	{
-	$sql="update Status_count set Aui=".$row3['ccount']." where Email like '%".$r."%' and Team='L3'";
+	$sql="update Status_count set Aui=".$row3['ccount']." where Email like '%".$r."%' and Team='ARKIVE'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
 	//echo $sql;
 	
@@ -388,7 +388,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 	}
   else{
-    $sql="update Status_count set Aui=0 where Email like '%".$r."%' and Team='L3'";
+    $sql="update Status_count set Aui=0 where Email like '%".$r."%' and Team='ARKIVE'";
   }
   $conn->query($sql);
 	//$rows[]=$row3;
@@ -397,16 +397,16 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 }
 
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Doc' and team='L3'";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Doc' and team='ARKIVE'";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
 	if($row3['ccount']!=0)
 	{
-	$sql="update Status_count set Doc=".$row3['ccount']." where Email like '%".$r."%' and Team='L3'";
+	$sql="update Status_count set Doc=".$row3['ccount']." where Email like '%".$r."%' and Team='ARKIVE'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
 	//echo $sql;
 	
@@ -414,23 +414,23 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 	}
   else{
-    $sql="update Status_count set Doc=0 where Email like '%".$r."%' and Team='L3'";
+    $sql="update Status_count set Doc=0 where Email like '%".$r."%' and Team='ARKIVE'";
   }
   $conn->query($sql);
 	//$rows[]=$row3;
 
 
 }
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Closure' and team='L3'";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Closure' and team='ARKIVE'";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
 	if($row3['ccount']!=0)
 	{
-	$sql="update Status_count set Closure=".$row3['ccount']." where Email like '%".$r."%' and Team='L3'";
+	$sql="update Status_count set Closure=".$row3['ccount']." where Email like '%".$r."%' and Team='ARKIVE'";
 	//echo $resolver[0].",Classify: $row3['ccount']";
 	//echo $sql;
 	
@@ -438,7 +438,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 	}
   else{
-    $sql="update Status_count set Closure=0 where Email like '%".$r."%' and Team='L3'";
+    $sql="update Status_count set Closure=0 where Email like '%".$r."%' and Team='ARKIVE'";
   }
   $conn->query($sql);
 	//$rows[]=$row3;
