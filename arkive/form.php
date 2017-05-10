@@ -164,11 +164,17 @@ td
 
     <div class="form-group">
     <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Client==''">
+"></span></label></td><!--<td ng-if="items[0].Client==''">
     
     <select class="form-control" name="client">
   <option ng-repeat="list in lists" value="{{list.Client_name}}">{{list.Client_name}}</option>
 </select>
+  </div>
+  </td>-->
+  <td>
+    
+   <input type="hidden" name="client" value="ARKIVE"/>
+    <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="ARKIVE" disabled>
   </div>
   </td>
   <td ng-if="items[0].Client!=''">
