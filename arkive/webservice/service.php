@@ -14,7 +14,7 @@ if($type=='Team')
 {
   $sql="select * from ".$type;
 }
-else if($type='name')
+else if($type=='name')
 {
     $sql="select * from Status_count where Team='ARKIVE'";
    
