@@ -177,11 +177,11 @@ td
     <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="ARKIVE" disabled>
   </div>
   </td>
-  <td ng-if="items[0].Client!=''">
+ <!-- <td ng-if="items[0].Client!=''">
      <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Client}}" disabled>
     
   </div>
-  </td>
+  </td>-->
 </tr>
 <tr>
   <td>
