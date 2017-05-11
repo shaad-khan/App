@@ -368,7 +368,7 @@ td
   
       </tr>-->
 
-<tr><td>
+<!--<tr><td>
 
 <div class="form-group">
     <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
@@ -392,7 +392,7 @@ td
   </div>
   </td>
   
-</tr>
+</tr>-->
 <tr>
 <td ng-if="items[0].Status!='Classify'">
   <div class="form-group">
