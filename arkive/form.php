@@ -459,8 +459,10 @@ td
   </div></td>-->
   
   <td >
+   <label for="exampleInputEmail1">Team Selected <span class="glyphicon glyphicon-info-sign
+"></span></label>
   <input type="hidden" name="cteam" value="ARKIVE"/>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ARKIVE" disabled>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ARKIVE Support" disabled>
   </div></td>
 
   </td>
