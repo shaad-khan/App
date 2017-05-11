@@ -30,7 +30,7 @@ $result=$conn->query($sql);
 {
  if($type='name')
  {
-     $x=explode('@',$row4);
+     $x[]=explode('@',$row4['Email']);
 	$rows[]=$x[0];
  }
  else{
