@@ -16,7 +16,7 @@ if($type=='Team')
 }
 else if($type='name')
 {
-    $sql="select Email from Status_count where Team='ARKIVE'";
+    $sql="select * from Status_count where Team='ARKIVE'";
    
 }
 else
