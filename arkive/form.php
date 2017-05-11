@@ -215,7 +215,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td> <select class="form-control" name="assign" >
-  <option ng-repeat="t in name" value="{{t[0].Email }}">{{t[0].Email}}</option>
+  <option ng-repeat="t in names" value="{{t.Email }}">{{t.Email}}</option>
 </select>
 <!--<input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Assign_to}}" name="aname" disabled>
