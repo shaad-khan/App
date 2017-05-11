@@ -128,7 +128,7 @@ else
     //echo "<script> alert('insert');</script>";
 if($status=='Classify')
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='$assigned_To',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team' where Ticket_ID='$TID'";
 }
  else if(($status=='WIP') and ($AUI=='on') and ($cstatus!='next'))
     {
@@ -203,11 +203,11 @@ date_default_timezone_set('Asia/Kolkata');
 }
 else if(($tab_status=='Review'))
 {
-    $fstatus='Doc';
+    $fstatus='Close';
     $docf=1;
 }
 
-else if($tab_status=='Doc')
+/*else if($tab_status=='Doc')
 {
     $fstatus='Closure';
     //echo $fstatus;
@@ -216,7 +216,7 @@ else if($tab_status=='Closure')
 {
     $fstatus='Close';
     //echo $fstatus;
-}
+}*/
 
 if(($fstatus!='') and ($fresolver!='')and ($docf==0))
 {
