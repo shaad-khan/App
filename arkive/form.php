@@ -190,7 +190,7 @@ td
 "></span></label></td><td>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Cdatetime}}" disabled>
   </div>
-    </td><td>
+    </td><!--<td>
 <div class="form-group">
     <label for="exampleInputEmail1">Project <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Project==''">
@@ -204,7 +204,7 @@ td
   </div></td>
   
   
-  <td>
+  <td>-->
 <div class="form-group">
     <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td> <input type="hidden" value="<?php echo $user_session;?>" name="uname">
