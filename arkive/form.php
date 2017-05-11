@@ -201,10 +201,10 @@ td
   
   <td ng-if="items[0].Project!=''">
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Project}}" disabled>
-  </div></td>
+  </div></td>-->
   
   
-  <td>-->
+  <td>
 <div class="form-group">
     <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td> <input type="hidden" value="<?php echo $user_session;?>" name="uname">
