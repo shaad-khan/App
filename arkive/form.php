@@ -211,7 +211,14 @@ td
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php echo $user_session;?>"  disabled>
   </div></td>
   </tr>
-<tr> <td>
+<tr> <td ng-if="(<?php echo $admin;?>==1)&&(items[0].Status=='Classify')">
+<div class="form-group">
+    <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
+"></span></label> </td> <td><input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Assign_to}}" name="aname" disabled>
+  </div> </td>
+ <td ng-if="(<?php echo $admin;?>!=1)&&(items[0].Status!='Classify')">
+ 
 <div class="form-group">
     <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td><input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
