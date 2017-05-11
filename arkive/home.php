@@ -64,7 +64,7 @@ $close=$_SESSION['Closure'];
       <th>AUI</th>
       <th>Review</th>
      <!-- <th>Documentation</th>-->
-      <th>Close</th>
+      <th>Closure</th>
       <th>Total</th>
     </tr>
     </thead>
@@ -110,11 +110,11 @@ $close=$_SESSION['Closure'];
         if($close==1)
         {?>
         
-      <a href="#!/ticket/{{email}}/Close">{{item.Close}}</a></td>
+      <a href="#!/ticket/{{email}}/Closure">{{item.Closure}}</a></td>
       <?php
         }
         else{?>
-          {{item.Close}}</td>
+          {{item.Closure}}</td>
         <?php 
         }
         ?>

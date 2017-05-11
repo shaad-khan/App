@@ -433,8 +433,8 @@ td
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="(items[0].Status=='Review')">
     <select class="form-control" name="cstatus" >
-  <option value="Closure">Closure</option>
-  <option value="next">Next Status</option>
+  <option value="Closure" selected>Closure</option>
+  <!--<option value="next">Next Status</option>-->
   
 </select>
   </div>

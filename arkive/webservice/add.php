@@ -203,7 +203,7 @@ date_default_timezone_set('Asia/Kolkata');
 }
 else if(($tab_status=='Review'))
 {
-    $fstatus='Close';
+    $fstatus='Closure';
     $docf=1;
 }
 
@@ -211,12 +211,12 @@ else if(($tab_status=='Review'))
 {
     $fstatus='Closure';
     //echo $fstatus;
-}
+}*/
 else if($tab_status=='Closure')
 {
     $fstatus='Close';
     //echo $fstatus;
-}*/
+}
 
 if(($fstatus!='') and ($fresolver!='')and ($docf==0))
 {
