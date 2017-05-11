@@ -27,7 +27,6 @@ $admin=$_SESSION["admin"];
        <div class="panel-body" >
          <table class="table"><tr>
      <th>Ticket_ID</th>
-     <th>Client</th>
      <th>Project</th>
      <th>Discription</th>
      <th>Status</th>
