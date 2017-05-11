@@ -214,7 +214,7 @@ td
 <tr> <td ng-if="(<?php echo $admin;?>==1)&&(items[0].Status=='Classify')">
 <div class="form-group">
     <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
-"></span></label> </td> <td> <select class="form-control" name="assign" >
+"></span></label> </td> <td ng-if="(<?php echo $admin;?>==1)&&(items[0].Status=='Classify')"> <select class="form-control" name="assign" >
   <option ng-repeat="t in names" value="{{t.Email.toString().split('@')[0] }}">{{t.Email.toString().split('@')[0]}}</option>
 </select>
 <!--<input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
