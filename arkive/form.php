@@ -483,8 +483,7 @@ if($_SESSION['Doc']==1)
   <tr>
 <td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')">
 <div class="form-group"  >
-    <label for="exampleInputEmail1">If awaiting for User response<span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')" style="position:relative;left: -326px;">
+    <label for="exampleInputEmail1">If awaiting for User response</label></td><td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')" style="position:relative;left: -435px;">
 
   
   <div class="material-switch pull-right">
