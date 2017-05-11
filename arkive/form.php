@@ -129,11 +129,11 @@ td
 
   </style>
 </head>
-<body>
+<body  ng-controller="Form_data">
 
-<div class="container">
+<div class="container" >
 <br>
-  <div class="panel panel-primary" ng-controller="Form_data">
+  <div class="panel panel-primary">
     <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Edit Form For Ticket ID: {{ID}}  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-envelope
 "></span></button> <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2"><span class="glyphicon glyphicon-comment
 "></span></button>&nbsp;<button type="button" class="btn btn-primary"><a href="<?php Echo $link;?>" style="text-decoration:none;color:white"><span class="glyphicon glyphicon-paperclip
