@@ -9,6 +9,9 @@ app.controller("Form_data",function($scope,$interval,$http,servicecall){
     servicecall.serv("shiftschedule").then(function(response){
 $scope.schedules=response.data;
 });
+servicecall.serv("name").then(function(response){
+$scope.name=response.data;
+});
 servicecall.serv("Task_Category").then(function(response){
 $scope.tasks=response.data;
 });
