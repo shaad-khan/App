@@ -4,7 +4,7 @@
 session_start();
 if(!$_SESSION["user"])
   {
-    header('Location:https://apps.continuserve.com/');
+    header('Location:https://apps.continuserve.com/arkive');
   }
 
   include("db.php");
@@ -196,7 +196,7 @@ element.style {
     
     
  <button type="button" class="btn btn-primary" ng-click="search(fill)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-    <button type="button" class="btn btn-primary" ><a href="https://apps.continuserve.com/main.php#!/" style="color:#fafafa;font-size:14px;">
+    <button type="button" class="btn btn-primary" ><a href="https://apps.continuserve.com/arkive/main.php#!/" style="color:#fafafa;font-size:14px;">
                                     <span class="glyphicon glyphicon-home"></a></span></button>
   </div>
     </li>
@@ -309,9 +309,9 @@ element.style {
                            <!-- <li><a  href="gallery.php">Video_Gallery</a></li>-->
                       </ul>
                   </li>
-                  <li class="mt">
+                  <!--<li class="mt">
                       <li><a  href="#!/credentials"><span class="glyphicon glyphicon-tasks"></span> Credentials </a></li>
-                  </li>
+                  </li>-->
                   <!--<li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-book"></i>
