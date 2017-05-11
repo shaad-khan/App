@@ -17,6 +17,7 @@ if($type=='Team')
 else if($type='name')
 {
     $sql="select Email from Status_count where Team='ARKIVE'";
+   
 }
 else
 {
@@ -28,14 +29,10 @@ $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
 {
- if($type='name')
- {
-     $x[]=explode('@',$row4['Email']);
-	$rows[]=$x[0];
- }
- else{
+ 
+    
      $rows[]=$row4;
- }
+ 
 }
 ob_start("ob_gzhandler");
 
