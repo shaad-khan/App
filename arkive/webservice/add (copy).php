@@ -294,10 +294,10 @@ $sql="select * from User_prof where Team='ARKIVE' or Team='All'";
   $resolver=$row2['sessionId'];
 	$r=$row2['sessionId']."@continuserve.com";
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where (Creator like '".$resolver."' and Status='Classify')";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where (Creator like '".$resolver."' and Status='Classify')";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
@@ -320,10 +320,10 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where (Creator like 
 }
 
 /*-----------------------------------------------------*/
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='WIP' and team='ARKIVE'";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='WIP' and team='ARKIVE'";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
@@ -345,10 +345,10 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 }
 /*-----------------------------------------------------*/
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Review' and team='ARKIVE'";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Review' and team='ARKIVE'";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
@@ -371,10 +371,10 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 }
 
 /*-----------------------------------------------------*/
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='AUI' and team='ARKIVE'";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='AUI' and team='ARKIVE'";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
@@ -397,10 +397,10 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 }
 
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Doc' and team='ARKIVE'";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Doc' and team='ARKIVE'";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
@@ -421,10 +421,10 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 
 }
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Closure' and team='ARKIVE'";
-//echo $sql3;
+$sqARKIVE="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like '".$resolver."' and Status='Closure' and team='ARKIVE'";
+//echo $sqARKIVE;
 
-     $result=$conn->query($sql3);
+     $result=$conn->query($sqARKIVE);
 //echo $msg;
   while($row3=$result->fetch())
 {
