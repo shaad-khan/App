@@ -457,15 +457,15 @@ td
   <option ng-repeat="t in cteams" value="{{t.Team}}">{{t.Team}}</option>
 </select>
   </div></td>-->
-  
-  <td >
+    <input type="hidden" name="cteam" value="ARKIVE"/>
+ <!--<td >
    <label for="exampleInputEmail1">Team Selected <span class="glyphicon glyphicon-info-sign
 "></span></label>
-  <input type="hidden" name="cteam" value="ARKIVE"/>
+
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ARKIVE Support" disabled>
   </div></td>
 
-  </td>
+  </td>-->
   </tr>
   <?php 
 
