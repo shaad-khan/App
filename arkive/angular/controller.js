@@ -83,7 +83,7 @@ $scope.remove=function(text)
 	  return false;
     
 	};
-var ticketapi=$interval(statuscheck, 8000);
+var ticketapi=$interval(statuscheck, 3000);
 var name=$routeParams.email;
 var type=$routeParams.type;
 $scope.type=$routeParams.type;
