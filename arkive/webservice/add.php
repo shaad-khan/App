@@ -4,7 +4,7 @@ session_start();
 
 $user_session=$_SESSION["user"];
 $type=$_POST["type"];
-
+$admin=$_SESSION["admin"];
 $server = "gjtz209gib.database.windows.net";
 $user = "CSL3AppsUser@gjtz209gib";
 $pwd = "C0ntinue2$3rve";
@@ -111,7 +111,7 @@ $conn->query($sql);
 
 //echo $user_session;
 //echo ($uname!=$user_session);//and($status=='Classify'));
-if(($creator!=$user_session)and($status=='Classify'))
+if(($creator!=$user_session)and($status=='Classify') and ($admin!=1))
 {
    //echo "i am step 1";
      echo "<script> alert('ticket is assigned to $creator');
