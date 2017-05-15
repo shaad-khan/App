@@ -13,7 +13,12 @@
   <?php
   session_start();
 $user_session=$_SESSION["user"];
+
 $admin=$_SESSION["admin"];
+if($admin!=1)
+{
+  $admin=0;
+}
 if($user_session=='')
 {
    echo "<script> alert('Session Expired Please Relogin in app');
