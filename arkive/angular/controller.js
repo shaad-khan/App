@@ -88,7 +88,7 @@ var name=$routeParams.email;
 var type=$routeParams.type;
 $scope.type=$routeParams.type;
 function statuscheck() {
- 
+ 	$scope.results='';
 	//alert("https://apps.continuserve.com/arkive/continuity/App/webservice/status.php?name="+name+"&type="+type);
 service.serv("https://apps.continuserve.com/arkive/webservice/status.php?name="+name+"&type="+type).then(function(response){
 	$scope.load='false';
