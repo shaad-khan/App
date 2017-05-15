@@ -35,7 +35,12 @@ $http.post('https://apps.continuserve.com/arkive/webservice/modify_task.php', da
 
 });
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
- 
+ service.serv("https://apps.continuserve.com/arkive/webservice/status.php?name="+name+"&type="+type).then(function(response){
+	$scope.load='false';
+		$scope.results=response.data;
+console.log(response.data.length);
+  
+	});
  $scope.setuser=function(text)
  {
 $scope.u=text;
