@@ -85,9 +85,9 @@ header("Location: https://apps.continuserve.com");
 <tr ng-repeat="res in results | orderBy:myOrderBy">
 
 <td>{{res['workby']}}</td>
-<td>{{res['Date']}}</td>
-<td>{{res['Time Spend']/60}}</td>
-
+<td>{{res['workdate']}}</td>
+<td>{{res['time_spend']/60}}</td>
+</tr>
 
 
    
@@ -116,7 +116,7 @@ header("Location: https://apps.continuserve.com");
 </td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
 </td>-->
-
+</table>
 
     
  
