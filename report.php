@@ -9,7 +9,7 @@ header("Location: https://apps.continuserve.com");
 ?>
 
 
- <div class="row mt"  ng-init="setuser('<?php echo $u;?>')" ng-controller="Report">
+ <div class="row mt"  ng-init="setuser('<?php echo $u;?>')" >
   
    <div class="col-md-12">
  <div class="content-panel" id="reload">
