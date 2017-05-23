@@ -261,16 +261,16 @@ element.style {
                           <li><a  href="#!/task"><span class="glyphicon glyphicon-tasks"></span> Your Task List </a></li>
                             <li><a  href="#!/calender"><span class="glyphicon glyphicon-calendar"></span> Calender View </a></li>
                            
-                          <!--<li><a  href="alerticket.php">TrackServe Alert Tickets</a></li>
+                         
                  <?php
                  if($_SESSION['admin']==1)
                     {?>
-                <li><a  href="admin.php">Resolved ticket list</a></li>
+                <li><a  href="#!/report">Report</a></li>
 
                <?php
            }?>
 
-                          <li><a  href="userapp.php">Tasks Pending For User Confirmation</a></li>
+                         <!-- <li><a  href="userapp.php">Tasks Pending For User Confirmation</a></li>
                           <li><a  href="approval.php">Tasks Pending For Approval</a></li>
                            <li><a  href="in_progress.php">Tasks In_progress</a></li>
                           <li><a  href="weekdays.php?wflag=0">Weekdays</a></li>
