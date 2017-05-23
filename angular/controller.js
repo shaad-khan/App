@@ -2,6 +2,9 @@
 app.controller("Report",function($scope,service){
 $edate='';
 $sdate='';
+$scope.orderByMe = function(x) {
+    $scope.myOrderBy = x;
+  }
 $scope.search=function(v1,v2)
 {
   $sdate=v1;
