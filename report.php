@@ -68,8 +68,8 @@ header("Location: https://apps.continuserve.com");
                                    <!-- <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div>--></div></div>
        <div class="panel-body">
-       <div class="panel panel-primary">
-      <div class="panel-heading">Panel with panel-primary class</div>
+       <div class="panel panel-primary" ng-repeat="res in results">
+      <div class="panel-heading">$res['workby']</div>
       <div class="panel-body">Panel Content</div>
     </div>
        <!--  <table class="table" ><tr>
