@@ -69,7 +69,7 @@ header("Location: https://apps.continuserve.com");
                                    </div>--></div></div>
        <div class="panel-body">
        <div class="panel panel-primary" ng-repeat="res in results">
-      <div class="panel-heading">$res['workby']</div>
+      <div class="panel-heading">{{res['workby']}}</div>
       <div class="panel-body">Panel Content</div>
     </div>
        <!--  <table class="table" ><tr>
