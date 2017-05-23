@@ -262,13 +262,7 @@ element.style {
                             <li><a  href="#!/calender"><span class="glyphicon glyphicon-calendar"></span> Calender View </a></li>
                            
                          
-                 <?php
-                 if($_SESSION['admin']==1)
-                    {?>
-                <li><a  href="#!/report">Report</a></li>
-
-               <?php
-           }?>
+                
 
                          <!-- <li><a  href="userapp.php">Tasks Pending For User Confirmation</a></li>
                           <li><a  href="approval.php">Tasks Pending For Approval</a></li>
@@ -312,6 +306,13 @@ element.style {
                   <li class="mt">
                       <li><a  href="#!/credentials"><span class="glyphicon glyphicon-tasks"></span> Credentials </a></li>
                   </li>
+                   <?php
+                 if($_SESSION['admin']==1)
+                    {?>
+                <li><a  href="#!/report"><span class="glyphicon glyphicon-tasks"></span>Report</a></li>
+
+               <?php
+           }?>
                   <!--<li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-book"></i>
