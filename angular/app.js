@@ -30,7 +30,7 @@ app.config(function($routeProvider) {
 				//template: "helo there"
        //resolve: resolveController('angular/controller.js')
     templateUrl:"report.php",
-     controller  : "report"
+     controller  : "Report"
     })
      .when("/calender", {
         //templateUrl : "ticket.php",
