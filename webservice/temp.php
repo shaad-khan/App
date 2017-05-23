@@ -62,7 +62,7 @@ when '1' then mt.Total_time end <> 0 and
 case mt.aflag
 when '0' then CAST (CONVERT(DATE, ut.UpdateTime, 101) as varchar(30))
 when '1' then CAST (CONVERT(DATE, mt.Resolver_Dtime, 101) as varchar(30)) end between '$sdate' and '$edate'";
-
+echo $s;
 $res=$conn->query($s);
 
   while($row=$res->fetch())
