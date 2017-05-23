@@ -7,13 +7,14 @@ $scope.search=function(v1,v2)
   $sdate=v1;
   $edate=v2;
 //  alert($sdate+""+$sdate);
-}
 service.serv("https://apps.continuserve.com/webservice/temp.php?sdate="+$sdate+"&edate="+$edate).then(function(response){
 	$scope.load='false';
 		$scope.results=response.data;
 console.log(response.data.length);
   
 	});
+}
+
 
 });
 
