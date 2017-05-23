@@ -82,7 +82,7 @@ header("Location: https://apps.continuserve.com");
      <th ng-click="orderByMe('UpdateTime')">DateTime</th>
      <th ng-click="orderByMe('TimeTaken')">Time Spend</th>-->
      
-<tr ng-repeat="res in results | orderBy:myOrderBy">
+<tr ng-repeat="res in results | orderBy:myOrderBy" ng-class="$index % 2 > 0 ? 'active':''">
 
 <td>{{res['workby']}}</td>
 <td>{{res['workdate']}}</td>
