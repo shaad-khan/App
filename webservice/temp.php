@@ -6,6 +6,8 @@ $sd=explode(" ",$sdate);
 $ed=explode(" ",$edate);
 $sdate=$sd[0];
 $edate=$ed[0];
+$sdate=str_replace('/','-',$sdate);
+$edate=str_replace('/','-',$edate);
 $user_session=$_SESSION["user"];
 $server = "gjtz209gib.database.windows.net";
 $user = "CSL3AppsUser@gjtz209gib";
@@ -62,7 +64,7 @@ when '1' then mt.Total_time end <> 0 and
 case mt.aflag
 when '0' then CAST (CONVERT(DATE, ut.UpdateTime, 101) as varchar(30))
 when '1' then CAST (CONVERT(DATE, mt.Resolver_Dtime, 101) as varchar(30)) end between '$sdate' and '$edate'";
-echo $s;
+//echo $s;
 $res=$conn->query($s);
 
   while($row=$res->fetch())
