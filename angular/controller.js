@@ -6,8 +6,9 @@ $scope.search=function(v1,v2)
 {
   $sdate=v1;
   $edate=v2;
+  alert($sdate+""+$sdate);
 }
-alert($sdate+""+$sdate);
+
 });
 
 
