@@ -309,7 +309,7 @@ element.style {
                    <?php
                  if($_SESSION['admin']==1)
                     {?>
-                <li><a  href="#!/report"><span class="glyphicon glyphicon-tasks"></span>Report</a></li>
+                <li><a  href="#!/report"><span class="glyphicon glyphicon-tasks"></span> Report</a></li>
 
                <?php
            }?>
