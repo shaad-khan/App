@@ -86,7 +86,7 @@ header("Location: https://apps.continuserve.com");
 
 <td>{{res['workby']}}</td>
 <td>{{res['workdate']}}</td>
-<td>{{res['time_spend']/60}}</td>
+<td ng-class="res['time_spend'] /60 < 8 ? 'alert alert-danger':''">{{res['time_spend']/60}}</td>
 </tr>
 
 
