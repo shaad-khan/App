@@ -67,8 +67,12 @@ header("Location: https://apps.continuserve.com");
 
                                    <!-- <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div>--></div></div>
-       <div class="panel-body" ng-controller="Task" >
-         <table class="table" ><tr>
+       <div class="panel-body">
+       <div class="panel panel-primary">
+      <div class="panel-heading">Panel with panel-primary class</div>
+      <div class="panel-body">Panel Content</div>
+    </div>
+       <!--  <table class="table" ><tr>
      <th ng-click="orderByMe('Ticket_ID')">Employee Name</th>
      <th ng-click="orderByMe('Client')">Date</th>
     <!-- <th ng-click="orderByMe('Project')">Project</th>
@@ -80,7 +84,7 @@ header("Location: https://apps.continuserve.com");
 
 
    
- <table class="table" >
+<!-- <table class="table" >
 
    <!-- <tr ng-repeat="res in tasks | orderBy:myOrderBy" ng-class="$index % 2 > 0 ? 'active':''" ng-if="tasks!=null">
 <!--<td ng-if="res.Blocker_flag==0 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
@@ -106,35 +110,7 @@ header("Location: https://apps.continuserve.com");
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
 </td>-->
 
-<tr>
-<td>ddsdsds</td>
 
-<td>ddsdsds</td>
-
-<td>ddsdsds</td>
-
-
-<td>ddsdsds</td>
-
-<td>ddsdsds</td>
-
-<td>ddsdsds</td>
-
-<td>ddsdsds</td>
-
-<td>ddsdsds</td>
-
-<td>ddsdsds</td>
-
-<td>ddsdsds</td>
-
-<td>ddsdsds</td>
-    </tr>
-    <tr style="background:#428bca;color:white" ng-if="getTotal()" ng-init="tot1=getTotal()">
-    <td colspan="5">Total Time Spent On Tickets</td><td colspan="4">{{getTotal()}}  hh:mm <span class="glyphicon glyphicon-time"></span> </td></tr>
-    </table>
-    </tr>
-    </table>
     
  
 </div>

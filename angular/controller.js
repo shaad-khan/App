@@ -1,4 +1,17 @@
 
+app.controller("Report",function($scope,service){
+$edate='';
+$sdate='';
+$scope.search=function(v1,v2)
+{
+  $sdate=v1;
+  $edate=v2;
+}
+alert($sdate+""+$sdate);
+});
+
+
+
 app.controller("modifytask",function($scope,$routeParams,service,$interval,$location,$http){
 $scope.modify=function(id,ts,ad,user)
 {
