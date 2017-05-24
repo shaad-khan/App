@@ -13,7 +13,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 if($param=='total')
 {
-     $sql="select * from Master_Ticket_Tab";
+     $sql="select * from Master_Ticket_Tab and team='ARKIVE'";
 }
 else if($param=='pending')
 {
