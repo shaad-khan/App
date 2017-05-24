@@ -18,15 +18,15 @@ if($param=='total')
 else if($param=='pending')
 {
 
-    $sql="select * from Master_Ticket_Tab where Status!='Closure' order by UpdateTime desc";
+    $sql="select * from Master_Ticket_Tab where Status!='Closure' and team='ARKIVE' order by UpdateTime desc";
 }
 else if($param=='close')
 {
-     $sql="select * from Master_Ticket_Tab where Status='Close' order by UpdateTime desc";
+     $sql="select * from Master_Ticket_Tab where Status='Close' and team='ARKIVE' order by UpdateTime desc";
 }
 else
 {
-    $sql="select * from Master_Ticket_Tab where Status='$param' or Ticket_ID='$param' or Tdiscription like '".$param."%' or Client='$param' or Project='$param' or Resolver like '".$param."%' or EnvType='$param' or Reviewer like '".$param."%' or Assign_to like '".$param."%' or Creator like '".$param."%' order by UpdateTime desc"; 
+    $sql="select * from Master_Ticket_Tab where (Status='$param' or Ticket_ID='$param' or Tdiscription like '".$param."%' or Client='$param' or Project='$param' or Resolver like '".$param."%' or EnvType='$param' or Reviewer like '".$param."%' or Assign_to like '".$param."%' or Creator like '".$param."%') and team='ARKIVE' order by UpdateTime desc"; 
 }
     //echo $sql;
     
