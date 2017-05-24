@@ -18,7 +18,7 @@ if($param=='total')
 else if($param=='pending')
 {
 
-    $sql="select * from Master_Ticket_Tab where Status!='Closure' and team='ARKIVE' order by UpdateTime desc";
+    $sql="select * from Master_Ticket_Tab where (Status!='Closure' or Status!='Close') and team='ARKIVE' order by UpdateTime desc";
 }
 else if($param=='close')
 {
