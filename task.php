@@ -237,7 +237,7 @@ header("Location: https://apps.continuserve.com");
             <label for="recipient-name" class="control-label">Ticket ID</label>
              
            
-           <input type="text" class="form-control"  name="ticketId" ng-model="id"/>
+           <input type="text" class="form-control"  name="ticketId" disabled/>
           <input type="hidden" name="ticketId2"  value="" ng-model="id" />
           
            
@@ -287,7 +287,7 @@ $('#myModal').on('show.bs.modal', function(e) {
   //alert("here");
     var bookId = $(e.relatedTarget).data('ticket-id');
     $(e.currentTarget).find('input[name="ticketId"]').val(bookId);
-    $(e.currentTarget).find('input[name="ticketId2"]').attr('value',bookId);
+    $(e.currentTarget).find('input[name="ticketId2"]').val(bookId).change();
 });
 window.onerror = function(errorMsg) {
   $('#console').html($('#console').html()+'<br>'+errorMsg)
