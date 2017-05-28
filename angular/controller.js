@@ -25,10 +25,15 @@ console.log(response.data.length);
 
 app.controller("modifytask",function($scope,$routeParams,service,$interval,$location,$http){
 //$scope.$apply();
-$scope.$watch('tid', function(newValue, oldValue) {
-  console.log(newValue);
-  console.log(oldValue);
+$('#myModal').on('show.bs.modal', function(e) {
+  //alert("here");
+    var bookId = $(e.relatedTarget).data('ticket-id');
+    $(e.currentTarget).find('input[name="ticketId"]').val(bookId);
+    $(e.currentTarget).find('input[name="ticketId2"]').val(bookId);
+   // $('#input').trigger('input');
+      // $(e.currentTarget).find('input[name="ticketId2"]').trigger();
 });
+$scope.$apply();
 $scope.modify=function(id,ts,ad,user)
 {
 alert($scope.id);
