@@ -271,7 +271,7 @@ header("Location: https://apps.continuserve.com");
            
           </div>
         </div>
-        <div class="modal-footer">id:{{id}}{{id2}}
+        <div class="modal-footer">id:{{tid}}
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" ng-click="modify(tid,tspent2,adate2,user2)">Modify Task</button>
         </div>
@@ -283,14 +283,7 @@ header("Location: https://apps.continuserve.com");
 </div>
 
 <script>
-$('#myModal').on('show.bs.modal', function(e) {
-  //alert("here");
-    var bookId = $(e.relatedTarget).data('ticket-id');
-    $(e.currentTarget).find('input[name="ticketId"]').val(bookId);
-    $(e.currentTarget).find('input[name="ticketId2"]').val(bookId);
-   // $('#input').trigger('input');
-      // $(e.currentTarget).find('input[name="ticketId2"]').trigger();
-});
+
 window.onerror = function(errorMsg) {
   $('#console').html($('#console').html()+'<br>'+errorMsg)
 }
