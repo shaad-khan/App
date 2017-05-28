@@ -34,7 +34,7 @@ $('#myModal').on('show.bs.modal', function(e) {
       // $(e.currentTaget).find('input[name="ticketId2"]').trigger();
      
 });
-$scope.$apply();
+//$scope.$apply();
 
 $scope.modify=function(id,ts,ad,user)
 {
