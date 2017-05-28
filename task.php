@@ -287,10 +287,10 @@ $('#myModal').on('show.bs.modal', function(e) {
   //alert("here");
     var bookId = $(e.relatedTarget).data('ticket-id');
     $(e.currentTarget).find('input[name="ticketId"]').val(bookId);
-    //$(e.currentTarget).find('input[name="ticketId2"]').val(bookId);
-    $scope.$apply(function() { 
+    $(e.currentTarget).find('input[name="ticketId2"]').val(bookId);
+     $('#input').trigger('input');
    // every changes goes here
-   $('#selectedDueDate').val(bookId); 
+  
 });
       // $(e.currentTarget).find('input[name="ticketId2"]').trigger();
 });
