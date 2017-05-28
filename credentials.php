@@ -5,7 +5,11 @@ $u=$_SESSION['user'];
 $admin=$_SESSION["admin"];
 
 ?>
-
+<style>
+.table-condensed>thead>tr>th, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td {
+padding: 1px;
+}
+</style>
 
  <div class="row mt"  ng-init="setuser('<?php echo $u;?>')" ng-controller="credentials" style="margin-top: 17px;">
    <div class="col-md-12" style="width: 101%;">
@@ -14,7 +18,7 @@ $admin=$_SESSION["admin"];
 
                           <div class="row">
 
-                             <div class="col-xs-12" style="padding-left: 18px;padding-right: 21px;">
+                             <div class="col-xs-12" style="padding-left: 18px;padding-right: 15px;">
                                <div class="panel panel-primary">
                                  <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
 
