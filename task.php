@@ -288,10 +288,7 @@ $('#myModal').on('show.bs.modal', function(e) {
     var bookId = $(e.relatedTarget).data('ticket-id');
     $(e.currentTarget).find('input[name="ticketId"]').val(bookId);
     $(e.currentTarget).find('input[name="ticketId2"]').val(bookId);
-     $('#input').trigger('input');
-   // every changes goes here
-  
-});
+    $('#input').trigger('input');
       // $(e.currentTarget).find('input[name="ticketId2"]').trigger();
 });
 window.onerror = function(errorMsg) {
