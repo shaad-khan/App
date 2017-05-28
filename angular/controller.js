@@ -453,8 +453,8 @@ $scope.getGrandtotal=function()
   //console.log($rootScope.h + ":" + $rootScope.m);
   if($rootScope.h>0 || $rootScope.m>0)
   {
-    $rootScope.h = $rootScope.h < 10 ? '0' + $rootScope.h : $rootScope.h;
- $rootScope.m = $rootScope.m < 10 ? '0' +$rootScope.m : $rootScope.m;
+    //$rootScope.h = $rootScope.h < 10 ? '0' + $rootScope.h : $rootScope.h;
+ //$rootScope.m = $rootScope.m < 10 ? '0' +$rootScope.m : $rootScope.m;
   return $rootScope.h + ":" + $rootScope.m;
 }
 else{
