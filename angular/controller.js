@@ -40,7 +40,7 @@ $('#myModal').on('show.bs.modal', function(e) {
 
 $scope.modify=function(id,ts,ad,user)
 {
-alert($scope.id);
+//alert($scope.id);
 var data=$.param({
 tid:$scope.tid,
 tspent:ts,
