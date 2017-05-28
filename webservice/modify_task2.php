@@ -34,7 +34,7 @@ $sql="insert into Modify_req values ('$tid',$tspent,'$adate','$u')";
 //echo $sql;
 $conn->query($sql);
 
-$sql="select Top 1 *  Modify_req";
+$sql="select Top 1 * from Modify_req";
 $result=$conn->query($sql);
 //echo $msg;
   while($row3=$result->fetch())
