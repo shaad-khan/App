@@ -271,7 +271,7 @@ header("Location: https://apps.continuserve.com");
            
           </div>
         </div>
-        <div class="modal-footer">id:{{tid}}
+        <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary" ng-click="modify(tid,tspent2,adate2,user2)">Modify Task</button>
         </div>
