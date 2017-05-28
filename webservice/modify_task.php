@@ -30,8 +30,8 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 if($u!=null)
 {
 $sql="insert into Modify_req values ('$tid',$tspent,'$adate','$u')";
-echo $sql;
-/*$conn->query($sql);
+//echo $sql;
+$conn->query($sql);
 
 $sql="select Top 1  Modify_req";
 $result=$conn->query($sql);

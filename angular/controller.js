@@ -34,7 +34,7 @@ $('#myModal').on('show.bs.modal', function(e) {
    // $('#input').trigger('input');
       // $(e.currentTaget).find('input[name="ticketId2"]').trigger();
      $scope.tid=bookId;
-     alert( $scope.tid);
+     //alert( $scope.tid);
 });
 //$scope.$apply();
 
@@ -47,7 +47,7 @@ tspent:ts,
 adate:ad,
 req:user
 });
-console.log(data);
+//console.log(data);
 var config = {
                 headers : {
                     'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
