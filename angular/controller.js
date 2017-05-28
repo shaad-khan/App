@@ -58,7 +58,7 @@ $http.post('https://apps.continuserve.com/webservice/modify_task2.php', data, co
             .then(function (data, status, headers, config) {
                 $scope.res= data.data;
                 //console.log($scope.res[0].Ticket_ID);
-             alert("Adhoc Ticket updated:" + $scope.res[0].Ticket_ID);
+             alert("Adhoc Ticket updated:" + $scope.res[0].Tid);
                /* $scope.projecttype='';
                  $scope.tasktype='';
                   $scope.tspent='';
