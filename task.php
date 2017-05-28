@@ -238,7 +238,7 @@ header("Location: https://apps.continuserve.com");
              
            
            <input type="text" class="form-control"  name="ticketId" disabled/>
-          <input type="hidden" name="ticketId2"  id="selectedDueDate" ng-model="id" />
+          <input type="hidden" name="ticketId2"  id="selectedDueDate" ng-model="tid" />
           
            
           </div>
@@ -273,7 +273,7 @@ header("Location: https://apps.continuserve.com");
         </div>
         <div class="modal-footer">id:{{id}}{{id2}}
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" ng-click="modify(id,tspent2,adate2,user2)">Modify Task</button>
+          <button type="button" class="btn btn-primary" ng-click="modify(tid,tspent2,adate2,user2)">Modify Task</button>
         </div>
       </div>
       
@@ -288,7 +288,7 @@ $('#myModal').on('show.bs.modal', function(e) {
     var bookId = $(e.relatedTarget).data('ticket-id');
     $(e.currentTarget).find('input[name="ticketId"]').val(bookId);
     $(e.currentTarget).find('input[name="ticketId2"]').val(bookId);
-    $('#input').trigger('input');
+   // $('#input').trigger('input');
       // $(e.currentTarget).find('input[name="ticketId2"]').trigger();
 });
 window.onerror = function(errorMsg) {

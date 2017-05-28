@@ -25,6 +25,10 @@ console.log(response.data.length);
 
 app.controller("modifytask",function($scope,$routeParams,service,$interval,$location,$http){
 //$scope.$apply();
+$scope.$watch('tid', function(newValue, oldValue) {
+  console.log(newValue);
+  console.log(oldValue);
+});
 $scope.modify=function(id,ts,ad,user)
 {
 alert($scope.id);
