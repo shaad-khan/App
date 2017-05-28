@@ -47,7 +47,7 @@ tspent:ts,
 adate:ad,
 req:user
 });
-//console.log(data);
+console.log(data);
 var config = {
                 headers : {
                     'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
