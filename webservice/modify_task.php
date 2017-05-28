@@ -29,6 +29,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 if($u!=null)
 {
+  
 $sql="insert into Modify_req values ('$tid',$tspent,'$adate','$u')";
 //echo $sql;
 $conn->query($sql);
