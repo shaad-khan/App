@@ -24,10 +24,10 @@ console.log(response.data.length);
 
 
 app.controller("modifytask",function($scope,$routeParams,service,$interval,$location,$http){
-alert($scope.id);
+
 $scope.modify=function(id,ts,ad,user)
 {
-
+alert($scope.id);
 var data=$.param({
 tid:id,
 tspent:ts,
