@@ -32,8 +32,9 @@ $('#myModal').on('show.bs.modal', function(e) {
     $(e.currentTarget).find('input[name="ticketId2"]').val(bookId);
    // $('#input').trigger('input');
       // $(e.currentTarget).find('input[name="ticketId2"]').trigger();
+      $scope.$apply();
 });
-$scope.$apply();
+
 $scope.modify=function(id,ts,ad,user)
 {
 alert($scope.id);
