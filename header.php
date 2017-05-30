@@ -35,6 +35,7 @@ $result2=$conn->query($sql2);
   <head>
    <!-- <meta http-equiv="refresh" content="20" />-->
     <meta charset="utf-8">
+    <meta http-equiv="refresh" content="300">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Dashboard">
