@@ -642,9 +642,10 @@ fclose($myfile);
       <div class="panel-body">
         {{update.Comments}} 
 
-        <p ng-if="update.Resolver">Resolver Name : [ {{update.Resolver}}]</p>
-        <p>Status :[ {{update.Status}} ]</p>
-        <p>Update Was Done in Shift: [{{update.Shift}}]
+        <p ng-if="update.Resolver"> [ {{update.Resolver}}]</p>
+        <p>[{{update.Status}} ]</p>
+        <p>[{{update.Shift}}]</p>
+        <p> [{update.TimeTaken}]
       </div>
     </div>
   </div>
