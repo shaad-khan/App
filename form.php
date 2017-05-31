@@ -538,8 +538,8 @@ if($_SESSION['Doc']==1)
     
   </div> </td>
   <td colspan="8" ng-if="items[0].Status!='Classify' && items[0].Status!='Close'">
-<textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" required></textarea>
-    
+<textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" required ng-if="items[0].Status=='WIP' || items[0].Status=='AUI'"></textarea>
+   <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments"  ng-if="items[0].Status!='WIP' || items[0].Status!='AUI'"></textarea> 
   </div> </td>
  
 
