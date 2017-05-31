@@ -635,7 +635,7 @@ fclose($myfile);
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{update.UID}}" aria-expanded="false" aria-controls="collapse{{update.UID}}">
   <span class="glyphicon glyphicon-pushpin"> </span> {{update.UpdateBy}} [ {{update.UpdateTime}} ]    [ <span class="glyphicon glyphicon-bookmark" style="color:green"></span><span style="color:green">{{update.TaskName}}</span>  ]    <span class="glyphicon glyphicon-flag" ng-if="update.AUI_flag==1" style="color:red"></span>
-       [{{update.TimeTaken}}]
+       [{{update.TimeTaken}} min]
         </a>
       </h4>
     </div>
