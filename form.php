@@ -634,7 +634,8 @@ fclose($myfile);
     <div class="panel-heading" role="tab" id="heading{{update.UID}}">
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{update.UID}}" aria-expanded="false" aria-controls="collapse{{update.UID}}">
-  <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: {{update.UpdateBy}} [DateTime: {{update.UpdateTime}} ]    [ <span class="glyphicon glyphicon-bookmark" style="color:green"></span><span style="color:green">Type Of Task Done:{{update.TaskName}}</span>  ]    <span class="glyphicon glyphicon-flag" ng-if="update.AUI_flag==1" style="color:red"></span>
+  <span class="glyphicon glyphicon-pushpin"> </span> {{update.UpdateBy}} [ {{update.UpdateTime}} ]    [ <span class="glyphicon glyphicon-bookmark" style="color:green"></span><span style="color:green">{{update.TaskName}}</span>  ]    <span class="glyphicon glyphicon-flag" ng-if="update.AUI_flag==1" style="color:red"></span>
+       [{{update.TimeTaken}}]
         </a>
       </h4>
     </div>
@@ -642,10 +643,9 @@ fclose($myfile);
       <div class="panel-body">
         {{update.Comments}} 
 
-        <p ng-if="update.Resolver"> [ {{update.Resolver}}]</p>
-        <p>[{{update.Status}} ]</p>
-        <p>[{{update.Shift}}]</p>
-        <p> [{update.TimeTaken}]
+        <p ng-if="update.Resolver">Resolver Name : [ {{update.Resolver}}]</p>
+        <p>Status :[ {{update.Status}} ]</p>
+        <p>Update Was Done in Shift: [{{update.Shift}}]
       </div>
     </div>
   </div>
