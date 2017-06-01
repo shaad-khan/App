@@ -22,8 +22,15 @@ $sql="select * from User_prof where Team='L3' or Team='All'";
 	$resolver=explode("@", $row2['Email']);
 	$r=$row2['Email'];
 
-$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver[0]."' and Status='Classify' and Team!='ARKIVE'";
-//echo $sql3;
+if($resolver[0]=='unassigned'){
+	$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver[0]."' and Status='Classify' and team!='ARKIVE'";
+
+}
+else
+{
+$sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Creator like '".$resolver[0]."' and Status='Classify'";
+
+}//echo $sql3;
 
      $result=$conn->query($sql3);
 //echo $msg;
