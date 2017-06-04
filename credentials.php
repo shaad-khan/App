@@ -95,7 +95,7 @@ padding: 1px;
             <label for="recipient-name" class="control-label">UserName </label>
              
             
-           <input type="number" class="form-control" value="" placeholder="in min" ng-model="tspent2" required/>
+           <input type="text" class="form-control" value="" placeholder="in min" ng-model="tspent2" required/>
           
           
            
@@ -113,7 +113,7 @@ padding: 1px;
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" ng-click="modify(tid,tspent2,adate2,user2)">Modify Task</button>
+          <button type="button" class="btn btn-primary" ng-click="modify(tid,tspent2,adate2,user2)">Modify Credentials</button>
         </div>
       </div>
       
