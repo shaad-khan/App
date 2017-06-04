@@ -73,6 +73,59 @@ $http.post('https://apps.continuserve.com/webservice/modify_task2.php', data, co
 
 
 });
+app.controller("modifycred",function($scope,$routeParams,service,$interval,$location,$http){
+//$scope.$apply();
+$('#myModal').on('show.bs.modal', function(e) {
+  //alert("here");
+    var bookId = $(e.relatedTarget).data('ticket-id');
+    $(e.currentTarget).find('input[name="ticketId"]').val(bookId);
+    $(e.currentTarget).find('input[name="ticketId2"]').val(bookId);//.trigger('input');
+    
+   // $('#input').trigger('input');
+      // $(e.currentTaget).find('input[name="ticketId2"]').trigger();
+     $scope.tid=bookId;
+     //alert( $scope.tid);
+});
+//$scope.$apply();
+
+$scope.modify=function(id,ts,ad,user)
+{
+//alert($scope.id);
+var data=$.param({
+tid:$scope.tid,
+tspent:ts,
+adate:ad,
+req:user
+});
+console.log(data);
+var config = {
+                headers : {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+                }
+            }
+
+$http.post('https://apps.continuserve.com/webservice/modify_cred.php', data, config)
+            .then(function (data, status, headers, config) {
+                $scope.res= data.data;
+                //console.log($scope.res[0].Ticket_ID);
+                if($scope.res!=null)
+                {
+             alert("Credentials updated");
+                }
+               /* $scope.projecttype='';
+                 $scope.tasktype='';
+                  $scope.tspent='';
+                   $scope.adate='';
+                    $scope.amessage='';*/
+            });
+            
+
+};
+
+
+
+
+});
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
  
  $scope.setuser=function(text)
