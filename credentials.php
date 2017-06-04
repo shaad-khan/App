@@ -57,7 +57,7 @@ padding: 1px;
 <td>{{res.uid}}</td>
 
 <td>{{res.Password}}</td>
-<td><button type="button" class="btn btn-info" data-toggle="modal" data-toggle="#myModal" data-ticket-id="{{res.Id}}" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-edit
+<td><button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" data-ticket-id="{{res.Id}}" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-edit
 " aria-hidden="true"></span></button></td>
 
 
