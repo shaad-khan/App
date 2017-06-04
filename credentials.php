@@ -83,7 +83,7 @@ padding: 1px;
         <div class="modal-body">
 <form>
         <div class="form-group">
-            <label for="recipient-name" class="control-label">CredentialsId</label>
+            <label for="recipient-name" class="control-label">Credentials Id</label>
              
            
            <input type="text" class="form-control"  name="ticketId" disabled/>
