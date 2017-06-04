@@ -30,18 +30,18 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 if($u!=null)
 {
   
-$sql="update Credentials set [User ID]='$tspent',[Password]='$adate',[Last Updated By]='$u',[Last Updated]='$date' where id=$tid";
+$sql="update Credential set [User ID]='$tspent',[Password]='$adate',[Last Updated By]='$u',[Last Updated]='$date' where id=$tid";
 echo $sql;
-/*$conn->query($sql);
+$conn->query($sql);
 
-$sql="select * from Credentials where id=$tid";
+$sql="select * from Credential where id=$tid";
 $result=$conn->query($sql);
 //echo $msg;
   while($row3=$result->fetch())
 {
 $rows[]=$row3;
 }
-print(json_encode($rows, JSON_NUMERIC_CHECK));*/
+print(json_encode($rows, JSON_NUMERIC_CHECK));
 }
 else{
   echo "<script> alert('Session expired please re-login');setTimeout(function () { win.close();}, 6000);</script>";
