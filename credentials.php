@@ -95,7 +95,7 @@ padding: 1px;
             <label for="recipient-name" class="control-label">UserName </label>
              
             
-           <input type="text" class="form-control" value="" placeholder="in min" ng-model="tspent2" required/>
+           <input type="text" class="form-control" value="" placeholder="Username" ng-model="tspent2" required/>
           
           
            
@@ -104,7 +104,7 @@ padding: 1px;
             <label for="recipient-name" class="control-label">PassWord</label>
              
             
-           <input type="text" class="form-control" value="" id="some_class_4" name="date" style="color:black" placeholder="Date Time" ng-model="adate2"/>
+           <input type="text" class="form-control" value="" id="some_class_4" name="date" style="color:black" placeholder="Password" ng-model="adate2"/>
           
           
            
