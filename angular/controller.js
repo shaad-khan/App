@@ -111,6 +111,7 @@ $http.post('https://apps.continuserve.com/webservice/modify_cred.php', data, con
                 if($scope.res!=null)
                 {
              alert("Credentials updated");
+             window.location.reload();
                 }
                /* $scope.projecttype='';
                  $scope.tasktype='';
