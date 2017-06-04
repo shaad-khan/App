@@ -78,12 +78,12 @@ padding: 1px;
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Time Modification Request</h4>
+          <h4 class="modal-title">Credentials Modification </h4>
         </div>
         <div class="modal-body">
 <form>
         <div class="form-group">
-            <label for="recipient-name" class="control-label">Ticket ID</label>
+            <label for="recipient-name" class="control-label">CredentialsId</label>
              
            
            <input type="text" class="form-control"  name="ticketId" disabled/>
@@ -92,7 +92,7 @@ padding: 1px;
            
           </div>
 <div class="form-group">
-            <label for="recipient-name" class="control-label">Total Time Spent </label>
+            <label for="recipient-name" class="control-label">UserName </label>
              
             
            <input type="number" class="form-control" value="" placeholder="in min" ng-model="tspent2" required/>
@@ -101,7 +101,7 @@ padding: 1px;
            
           </div>
            <div class="form-group">
-            <label for="recipient-name" class="control-label">Select Date:</label>
+            <label for="recipient-name" class="control-label">PassWord</label>
              
             
            <input type="text" class="form-control" value="" id="some_class_4" name="date" style="color:black" placeholder="Date Time" ng-model="adate2"/>
@@ -109,16 +109,7 @@ padding: 1px;
           
            
           </div>
-           <div class="form-group">
-            <label for="recipient-name" class="control-label">Request By</label>
-             
-            
-           <input type="text" class="form-control" value="" placeholder="<?php echo $u; ?>"  disabled/>
-           <input type="hidden" class="form-control" value="<?php echo $u; ?>"  ng-model="user2" />
           
-          
-           
-          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
