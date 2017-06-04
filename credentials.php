@@ -26,7 +26,7 @@ padding: 1px;
 
                                    <!--<a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span>--></div>
-                                    <div class="col-xs-2" style="padding-left:580px">
+                                    <div class="col-xs-2" style="padding-left: 988px">
                                     
                                     <div class="form-group">
             
