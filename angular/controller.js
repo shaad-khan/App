@@ -149,7 +149,7 @@ env:$scope.env,
 ctype:$scope.ctype,
 sname:$scope.sname,
 uname:$scope.uname,
-pass:$scope.pass
+pass:$scope.passf
 });
 console.log(data);
 var config = {
@@ -164,7 +164,7 @@ var config = {
                 if($scope.resc!=null)
                 {
              alert("Credentials Added");
-             window.location.reload();
+          //   window.location.reload();
                 }
                
                    
