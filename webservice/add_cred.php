@@ -35,8 +35,8 @@ if($u!=null)
 //$sql="update Credential set [Environment]='$env',[User ID]='$tspent',[Password]='$adate',[Last Updated By]='$u',[Last Updated]='$date' where id=$tid";
 $sql="insert into Credential values('$client','$ctype','$sname','$env','$uname','$pass','$date','$u','','')";
 echo $sql;
-/*$conn->query($sql);
-
+$conn->query($sql);
+/*
 $sql="select * from Credential where id=$tid";
 $result=$conn->query($sql);
 //echo $msg;
