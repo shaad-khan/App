@@ -144,7 +144,7 @@ app.controller("addcred",function($scope,$http,$location)
   $scope.adhoc_cred=function()
   {
     var data=$.param({
-client=$scope.client,
+client:$scope.client,
 env:$scope.env,
 ctype:$scope.ctype,
 sname:$scope.sname,
