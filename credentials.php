@@ -142,6 +142,77 @@ padding: 1px;
   
 </div>
 
-
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" ng-controller="addtask">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background: #000d1a; color:white;">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" style="color: #f2f2f2;">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">Adhoc Task Entry Form</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+        <div class="form-group">
+            <label for="recipient-name" class="control-label">Environment Type</label>
+             
+            
+           <input type="text" class="form-control" value="General" placeholder="General" disabled/>
+          
+          
+           
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Select Project</label>
+             
+            
+           <select class="form-control" name="project" ng-model='projecttype' >
+  <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Project}}</option>
+</select>
+          
+           
+          </div>
+           <div class="form-group">
+            <label for="recipient-name" class="control-label">Select Task Type</label>
+             
+            
+           <select class="form-control" name="project"  ng-model='tasktype'>
+  <option ng-repeat="tt in tts" value="{{tt.Task}}">{{tt.Task}}</option>
+</select>
+          
+           
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Total Time Spent </label>
+             
+            
+           <input type="number" class="form-control" value="" placeholder="in min" ng-model="tspent" required/>
+          
+          
+           
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Select Date:</label>
+             
+            
+           <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="adate"/>
+          
+          
+           
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Message:</label>
+            <textarea class="form-control" id="message-text" ng-model='amessage'></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer" >
+      <!--<div class="row" ng-if="res[0].Ticket_ID">
+      <div class="col-md-3" style="color:red">{{res[0].Ticket_ID}} created</div>
+      </div>-->
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" ng-click="adhoc_add(projecttype,tasktype,tspent,adate,amessage)">Add Task</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
