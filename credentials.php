@@ -26,14 +26,23 @@ padding: 1px;
 
                                    <!--<a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span>--></div>
-                                    <div class="col-xs-2" style="padding-left: 988px">
+                                   <div class="col-xs-2">
                                     
                                     <div class="form-group">
             
-           <input type="text" class="form-control" value=""  style="color:black" placeholder="Filter keyword" ng-model="ftext"/>
-         
+              <input type="text" class="form-control" value=""  style="color:black" placeholder="Filter keyword" ng-model="ftext"/>
+             
           </div>
-                          <button type="button" class="btn btn-success">+Add Credentials</button>           
+                                    
+                                    </div>
+                                     <div class="col-xs-2">
+                                    
+                                    <div class="form-group">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-plus
+" aria-hidden="true"></span>Add Credentials</button>
+       
+          </div>
+                                    
                                     </div></div></div>
        <div class="panel-body" style="padding: 3px;">
          <table class="table table-hover table-condensed table-striped" ><tr>
