@@ -205,7 +205,7 @@ padding: 1px;
           </div>
           <div class="form-group">
             <label for="message-text" class="control-label">Password</label>
-            <input type="text" class="form-control" value=" " ng-model="pass" placeholder="Password" required/>
+            <input type="text" class="form-control" value=" " ng-model="passf" placeholder="Password" required/>
           
           
           </div>
