@@ -165,7 +165,7 @@ var config = {
                 {
              alert("Credentials Added");
           
-            //window.location.reload();
+            window.location.reload();
                 }
                
                    
