@@ -14,6 +14,7 @@ $uname=$_POST['uname'];
 $sname=$_POST['sname'];
 //$date=explode()
 $ctype=$_POST['ctype'];
+$pass=$_POST['pass'];
 //$amessage=str_replace("'","''",$amessage);
 
 $server = "gjtz209gib.database.windows.net";
