@@ -334,14 +334,46 @@ $scope.$on('$destroy', function () {
 });
 
 /*-------------------------------------------------------------------------------*/
-app.controller("credentials",function($scope,service,$interval){
+app.controller("credentials",function($scope,service,$interval,$location){
 service.serv("https://apps.continuserve.com/webservice/credentials_data.php").then(function(response){
   
      //	$scope.load2='false';
       $scope.creds=response.data;
       console.log($scope.creds[0].Client);
     }); 
+$scope.adhoc_cred=function()
+{
+//alert($scope.id);
 
+var data=$.param({
+client=$scope.client,
+env:$scope.env,
+ctype:$scope.ctype,
+sname:$scope.sname,
+uname:uname,
+pass:pass
+});
+console.log(data);
+var config = {
+                headers : {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+                }
+            }
+
+$http.post('https://apps.continuserve.com/webservice/add_cred.php', data, config)
+            .then(function (data, status, headers, config) {
+                $scope.res= data.data;
+                //console.log($scope.res[0].Ticket_ID);
+                if($scope.res!=null)
+                {
+             alert("Credentials Added");
+             window.location.reload();
+                }
+               
+            });
+            
+
+};
 
 })
 
