@@ -11,9 +11,9 @@ padding: 1px;
 }
 </style>
 
- <div class="row mt"  ng-init="setuser('<?php echo $u;?>')" ng-controller="credentials" style="margin-top: 17px;">
+ <div class="row mt"  ng-init="setuser('<?php echo $u;?>')" ng-controller="credentials" style="margin-top: 14px;">
    <div class="col-md-12" style="width: 101%;">
- <div class="content-panel" id="reload">
+ <div class="content-panel" id="reload" style="padding-top: 0px;">
 
 
                           <div class="row">
