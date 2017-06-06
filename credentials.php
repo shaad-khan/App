@@ -100,6 +100,7 @@ padding: 1px;
           
            
           </div>
+          
 <div class="form-group">
             <label for="recipient-name" class="control-label">UserName </label>
              
@@ -122,7 +123,7 @@ padding: 1px;
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" ng-click="modify_cred(tid,tspent2,adate2,user2)">Modify Credentials</button>
+          <button type="button" class="btn btn-primary" ng-click="modify_cred(tid,env,tspent2,adate2,user2)">Modify Credentials</button>
         </div>
       </div>
       
