@@ -91,9 +91,18 @@ $('#myModal').on('show.bs.modal', function(e) {
 $scope.modify_cred=function(id,env,ts,ad,user)
 {
 //alert($scope.id);
+var wenv;
+if($scope.cenv=='')
+{
+wenv='NA';
+}
+else
+{
+  wenv=$scope.cenv;
+}
 var data=$.param({
 tid:$scope.tid,
-env:$scope.cenv,
+env:wenv,
 tspent:ts,
 adate:ad,
 req:user
