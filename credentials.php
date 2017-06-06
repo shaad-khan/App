@@ -11,7 +11,7 @@ padding: 1px;
 }
 </style>
 
- <div class="row mt"  ng-init="setuser('<?php echo $u;?>')"  style="margin-top: 17px;">
+ <div class="row mt"  ng-init="setuser('<?php echo $u;?>')" ng-controller="credentials" style="margin-top: 17px;">
    <div class="col-md-12" style="width: 101%;">
  <div class="content-panel" id="reload">
 
@@ -142,7 +142,7 @@ padding: 1px;
   
 </div>
 
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" >
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" ng-controller="addcred">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background: #000d1a; color:white;">
