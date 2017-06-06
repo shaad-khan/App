@@ -33,8 +33,8 @@ if($u!=null)
   
 //$sql="update Credential set [Environment]='$env',[User ID]='$tspent',[Password]='$adate',[Last Updated By]='$u',[Last Updated]='$date' where id=$tid";
 $sql="insert into Credential values('$client','$ctype','$sname','$env','$uname','$pass','$date','$u','','')";
-//echo $sql;
-$conn->query($sql);
+echo $sql;
+/*$conn->query($sql);
 
 $sql="select * from Credential where id=$tid";
 $result=$conn->query($sql);
@@ -43,7 +43,7 @@ $result=$conn->query($sql);
 {
 $rows[]=$row3;
 }
-print(json_encode($rows, JSON_NUMERIC_CHECK));
+print(json_encode($rows, JSON_NUMERIC_CHECK));*/
 }
 else{
   echo "<script> alert('Session expired please re-login');setTimeout(function () { win.close();}, 6000);</script>";
