@@ -91,6 +91,15 @@ padding: 1px;
           
            
           </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Environment</label>
+             
+            
+           <input type="text" class="form-control" value="NA" placeholder="Environment" ng-model="env" required/>
+          
+          
+           
+          </div>
 <div class="form-group">
             <label for="recipient-name" class="control-label">UserName </label>
              

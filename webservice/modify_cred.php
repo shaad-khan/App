@@ -11,6 +11,7 @@ $tid=$_POST['tid'];
 //$ttype=$_POST[''];
 $tspent=$_POST['tspent'];
 $adate=$_POST['adate'];
+$env=$_POST['env'];
 //$date=explode()
 $user=$_POST['req'];
 //$amessage=str_replace("'","''",$amessage);
@@ -30,7 +31,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 if($u!=null)
 {
   
-$sql="update Credential set [User ID]='$tspent',[Password]='$adate',[Last Updated By]='$u',[Last Updated]='$date' where id=$tid";
+$sql="update Credential set [Environment]='$env',[User ID]='$tspent',[Password]='$adate',[Last Updated By]='$u',[Last Updated]='$date' where id=$tid";
 echo $sql;
 $conn->query($sql);
 
