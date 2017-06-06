@@ -88,11 +88,12 @@ $('#myModal').on('show.bs.modal', function(e) {
 });
 //$scope.$apply();
 
-$scope.modify_cred=function(id,ts,ad,user)
+$scope.modify_cred=function(id,env,ts,ad,user)
 {
 //alert($scope.id);
 var data=$.param({
 tid:$scope.tid,
+env:$scope.cenv,
 tspent:ts,
 adate:ad,
 req:user
