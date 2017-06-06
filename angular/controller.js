@@ -164,7 +164,8 @@ var config = {
                 if($scope.resc!=null)
                 {
              alert("Credentials Added");
-            window.location.reload();
+          
+            //window.location.reload();
                 }
                
                    
