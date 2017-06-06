@@ -95,7 +95,7 @@ padding: 1px;
             <label for="recipient-name" class="control-label">Environment</label>
              
             
-           <input type="text" class="form-control" value="NA" placeholder="Environment" ng-model="env" required/>
+           <input type="text" class="form-control" value="NA" placeholder="Environment" ng-model="cenv" required/>
           
           
            
@@ -123,7 +123,7 @@ padding: 1px;
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" ng-click="modify_cred(tid,env,tspent2,adate2,user2)">Modify Credentials</button>
+          <button type="button" class="btn btn-primary" ng-click="modify_cred(tid,cenv,tspent2,adate2,user2)">Modify Credentials</button>
         </div>
       </div>
       
