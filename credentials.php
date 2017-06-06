@@ -31,6 +31,7 @@ padding: 1px;
                                     <div class="form-group">
             
            <input type="text" class="form-control" value=""  style="color:black" placeholder="Filter keyword" ng-model="ftext"/>
+          <button type="button" class="btn btn-success">+ADD</button>
           </div>
                                     
                                     </div></div></div>
