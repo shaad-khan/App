@@ -33,7 +33,7 @@ padding: 1px;
            <input type="text" class="form-control" value=""  style="color:black" placeholder="Filter keyword" ng-model="ftext"/>
          
           </div>
-                          <button type="button" class="btn btn-success">+ADD</button>           
+                          <button type="button" class="btn btn-success">+Add Credentials</button>           
                                     </div></div></div>
        <div class="panel-body" style="padding: 3px;">
          <table class="table table-hover table-condensed table-striped" ><tr>
