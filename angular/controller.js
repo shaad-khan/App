@@ -148,8 +148,8 @@ client:$scope.client,
 env:$scope.env,
 ctype:$scope.ctype,
 sname:$scope.sname,
-uname:uname,
-pass:pass
+uname:$scope.uname,
+pass:$scope.pass
 });
 console.log(data);
 var config = {

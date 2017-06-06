@@ -216,7 +216,7 @@ padding: 1px;
       <div class="col-md-3" style="color:red">{{res[0].Ticket_ID}} created</div>
       </div>-->
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" ng-click="adhoc_cred()">Add Task</button>
+        <button type="button" class="btn btn-primary" ng-click="adhoc_cred()">Add Credential</button>
       </div>
     </div>
   </div>
