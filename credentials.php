@@ -31,9 +31,14 @@ padding: 1px;
                                     <div class="form-group">
             
            <input type="text" class="form-control" value=""  style="color:black" placeholder="Filter keyword" ng-model="ftext"/>
-          <button type="button" class="btn btn-success">+ADD</button>
+         
           </div>
+                                <div class="col-xs-2" style="padding-left: 400px">
                                     
+                                    <div class="form-group">
+            
+          <button type="button" class="btn btn-success">+ADD</button>
+          </div>    
                                     </div></div></div>
        <div class="panel-body" style="padding: 3px;">
          <table class="table table-hover table-condensed table-striped" ><tr>
