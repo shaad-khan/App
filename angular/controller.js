@@ -139,7 +139,7 @@ $http.post('https://apps.continuserve.com/webservice/modify_cred.php', data, con
 });
 
 
-app.controller("addcred",function($scope)
+app.controller("addcred",function($scope,$http,$location)
 {
   $scope.adhoc_cred=function()
   {
