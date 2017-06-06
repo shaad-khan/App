@@ -189,7 +189,7 @@ padding: 1px;
             <label for="recipient-name" class="control-label">Environment </label>
              
             
-           <input type="number" class="form-control" value="" placeholder="Environment" ng-model="env" required/>
+           <input type="text" class="form-control" value="" placeholder="Environment" ng-model="env" required/>
           
           
            

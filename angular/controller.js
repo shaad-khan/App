@@ -143,7 +143,36 @@ app.controller("addcred",function($scope)
 {
   $scope.adhoc_cred=function()
   {
-console.log($scope);
+    var data=$.param({
+client=$scope.client,
+env:$scope.env,
+ctype:$scope.ctype,
+sname:$scope.sname,
+uname:uname,
+pass:pass
+});
+console.log(data);
+var config = {
+                headers : {
+                    'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+                }
+            }
+            $http.post('https://apps.continuserve.com/webservice/add_cred.php', data, config)
+            .then(function (data, status, headers, config) {
+                $scope.resc= data.data;
+                //console.log($scope.res[0].Ticket_ID);
+                if($scope.resc!=null)
+                {
+             alert("Credentials Added");
+             window.location.reload();
+                }
+               
+                   
+            });
+   
+
+
+
   }
 })
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
