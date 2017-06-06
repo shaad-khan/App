@@ -137,6 +137,12 @@ $http.post('https://apps.continuserve.com/webservice/modify_cred.php', data, con
 
 
 });
+
+
+app.controller("addcred",function($scope)
+{
+console.log($scope);
+})
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
  
  $scope.setuser=function(text)
