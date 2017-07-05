@@ -173,7 +173,7 @@ header("Location: https://apps.continuserve.com");
              
             
            <select class="form-control" name="project" ng-model='projecttype' >
-  <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Project}}</option>
+  <option ng-repeat="project in projects | orderBy:'Project'" value="{{project.Project}}">{{project.Project}}</option>
 </select>
           
            
@@ -183,7 +183,7 @@ header("Location: https://apps.continuserve.com");
              
             
            <select class="form-control" name="project"  ng-model='tasktype'>
-  <option ng-repeat="tt in tts" value="{{tt.Task}}">{{tt.Task}}</option>
+  <option ng-repeat="tt in tts | orderBy:'Task'" value="{{tt.Task}}">{{tt.Task}}</option>
 </select>
           
            
