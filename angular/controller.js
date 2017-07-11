@@ -590,11 +590,13 @@ else{
 }
 $scope.nupdate=function()
 {
+  alert("value of amessage"+$scope.amessage);
  if ($scope.amessage=="")
   {
     $scope.amessage=$scope.myTextarea;
+    alert("value of amessage inside if"+$scope.amessage);
   }
-  alert($scope.amessage);
+  
 }
 $scope.adhoc_add=function(pt,tt,ts,ad,am)
 {
