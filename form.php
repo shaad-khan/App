@@ -527,7 +527,17 @@ if($_SESSION['Doc']==1)
     </td>
   
   </tr>
+<tr>
 
+<td ><div class="form-group" >
+    <label for="exampleInputEmail1">Adjust Update DateTime(Optional)</label>
+  <!--  <input type="number" class="form-control" name="auptime" id="exampleInputEmail1" placeholder="{{items[0].Total_client_time}} min" disabled>
+  -->
+  <input type="text" class="form-control" value="" id="some_class_1" name="opdate" style="color:black" placeholder="Adujusted Update Date Time" ng-model="opdate"/>
+          
+  </div>
+  
+    </td></tr>
 
 <tr> <td>
 <div class="form-group">
@@ -658,4 +668,18 @@ fclose($myfile);
 </div>
 
 </body>
+<script>
+
+window.onerror = function(errorMsg) {
+  $('#console').html($('#console').html()+'<br>'+errorMsg)
+}
+//alert("hello");
+ $(function() {
+          $('#some_class_1').datetimepicker();
+           $('#some_class_2').datetimepicker();
+            $('#some_class_3').datetimepicker();
+             $('#some_class_4').datetimepicker();
+         });
+
+         </script>
 </html>
