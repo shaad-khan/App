@@ -42,7 +42,7 @@ $resolver= $_POST["resolver"];
 $schedule= $_POST["schedule"];
 
 $reviewer= $_POST["reviewer"];
-
+$opdate=$_POST['opdate'];
 
 $discription= $_POST["discription"];
 
@@ -128,7 +128,7 @@ else
     //echo "<script> alert('insert');</script>";
 if($status=='Classify')
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set adtime='$opdate',Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team' where Ticket_ID='$TID'";
 }
  else if(($status=='WIP') and ($AUI=='on') and ($cstatus!='next'))
     {
@@ -136,7 +136,7 @@ $fstatus='AUI';
 $aui_flag=1;
         $fresolver=$user_session;
         
-        $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
+        $Master_sql="Update Master_Ticket_Tab set adtime='$opdate',Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
 
    // $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
     }
@@ -146,7 +146,7 @@ $fstatus='WIP';
 
 //$aui_flag=1;
         //$fresolver=$user_session;
-        $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
+        $Master_sql="Update Master_Ticket_Tab set adtime='$opdate', Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
 
    // $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
     }
@@ -159,7 +159,7 @@ $fstatus='WIP';
 else if(($status=='Review') and ($cstatus=="Closure"))
 {
   $fstatus="Closure";
-   $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
+   $Master_sql="Update Master_Ticket_Tab set adtime='$opdate',Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
 
 }
 else if($cstatus=='next')
@@ -220,17 +220,17 @@ else if($tab_status=='Closure')
 
 if(($fstatus!='') and ($fresolver!='')and ($docf==0))
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set adtime='$opdate',Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
 
 }
 else if(($fstatus!='') and ($docf==0))
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set adtime='$opdate',Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
 //echo $Master_sql;
 }
 else if(($fstatus=='Doc') and ($docf==1))
 {
-  $Master_sql="Update Master_Ticket_Tab set Status='$fstatus',Updatetime='$utime',Assign_to='$Resolver' where Ticket_ID='$TID'";
+  $Master_sql="Update Master_Ticket_Tab set adtime='$opdate',Status='$fstatus',Updatetime='$utime',Assign_to='$Resolver' where Ticket_ID='$TID'";
 
 }
 
@@ -246,7 +246,7 @@ if($Master_sql)
 $conn->query($Master_sql);
 
 }
-$s="Update Master_Ticket_Tab set Updatetime='$utime' where Ticket_ID='$TID'";
+$s="Update Master_Ticket_Tab set adtime='$opdate',Updatetime='$utime' where Ticket_ID='$TID'";
 $conn->query($s);
 if($fstatus=='')
 {
@@ -263,12 +263,12 @@ while($row1=$result->fetch())
 {
   $total=$total+$row1['TimeTaken'];
   }
- $s="Update Master_Ticket_Tab set Total_time=$total where Ticket_ID='$TID'";
+ $s="Update Master_Ticket_Tab set adtime='$opdate',Total_time=$total where Ticket_ID='$TID'";
  
 $conn->query($s);
 if($attime!='')
 {
-    $s="Update Master_Ticket_Tab set Total_client_time=$attime where Ticket_ID='$TID'";
+    $s="Update Master_Ticket_Tab set adtime='$opdate',Total_client_time=$attime where Ticket_ID='$TID'";
  
 $conn->query($s);
 }
