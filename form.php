@@ -144,7 +144,7 @@ td
 <tr><td>
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Ticket Id <span class="
 "></span></label></td><td>
   <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>"  disabled>
 
@@ -155,7 +155,7 @@ td
 <td>
 
 <div class="form-group">
-    <label for="exampleInputEmail1">CreatedBy <span class="glyphicon glyphicon-info-sign"></span></label></td><td>
+    <label for="exampleInputEmail1">CreatedBy <span class=""></span></label></td><td>
     <input type="hidden" value="{{items[0].Creator}}" name="creator"/>
     <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Creator}}" disabled>
   </div>
@@ -163,7 +163,7 @@ td
   <td>
 
     <div class="form-group">
-    <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Client  <span class="
 "></span></label></td><td ng-if="items[0].Client==''">
     
     <select class="form-control" name="client">
@@ -180,13 +180,13 @@ td
 <tr>
   <td>
 <div class="form-group">
-    <label for="exampleInputEmail1">CreationDateTime <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">CreationDateTime <span class="
 "></span></label></td><td>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Cdatetime}}" disabled>
   </div>
     </td><td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Project <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Project <span class="
 "></span></label></td><td ng-if="items[0].Project==''">
    <select class="form-control" name="project" >
   <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Project}}</option>
@@ -200,26 +200,26 @@ td
   
   <td>
 <div class="form-group">
-    <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">UpdatedBy <span class="
 "></span></label></td><td> <input type="hidden" value="<?php echo $user_session;?>" name="uname">
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php echo $user_session;?>"  disabled>
   </div></td>
   </tr>
 <tr> <td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Assigned To <span class="
 "></span></label> </td> <td><input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Assign_to}}" name="aname" disabled>
   </div> </td>
  <td>
 <div class="form-group">
-    <label for="exampleInputEmail1">UpadateDateTime <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">UpadateDateTime <span class="
 "></span></label> </td><input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime"/>
      <td><input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" disabled>
   </div> </td>
  <td>
   <div class="form-group">
-    <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Status <span class="
 "></span></label> </td> <td><input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
     <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled/>
   </div> </td>
@@ -227,7 +227,7 @@ td
   <tr>
 <!--<td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Resolver <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Resolver <span class="
 "></span></label>
 </td>
 <td>
@@ -236,7 +236,7 @@ td
   </td>-->
 <!--<td>
 <div class="form-group">
-    <label for="exampleInputEmail1">ResolvedBy <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ResolvedBy <span class="
 "></span></label></td><td>
     <input type="text" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="{{items[0].Resolved_By}}" disabled>
   </div>
@@ -244,7 +244,7 @@ td
    <td >
 
       <div class="form-group">
-    <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Discription <span class="
 "></span></label></td><td colspan="8">
 <textarea class="form-control" rows="3" cols="118" name="discription" placeholder="Discription" disabled>{{items[0].Tdiscription}}</textarea>
     
@@ -257,7 +257,7 @@ td
       <!--  <tr>
    <td>
     <div class="form-group">
-    <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Environment Type <span class="
 "></span></label></td><td>
      <select class="form-control" name="env">
   <option value="Prod">Prod</option>
@@ -268,7 +268,7 @@ td
     </td>
   <td>
     <div class="form-group">
-    <label for="exampleInputEmail1">Shift <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Shift <span class="
 "></span></label></td><td>
      <select class="form-control" name="schedule">
   <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
@@ -279,7 +279,7 @@ td
     <td>
 
 <div class="form-group" >
-    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ChangeStatus <span class="
 "></span></label></td><td>
     <select class="form-control" name="cstatus" >
   <option value="WIP">Work In progress</option>
@@ -292,7 +292,7 @@ td
   <tr>
     <!--<td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Reviewer <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Reviewer <span class="
 "></span></label> </td><td>
     <input type="text" class="form-control" name="reviewer" id="exampleInputEmail1" placeholder="Reviewer">
   </div>
@@ -301,7 +301,7 @@ td
       
        <td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Comments <span class="
 "></span></label></td><td colspan="8">
 <textarea class="form-control" rows="3" cols="116" name="comments" placeholder="Comments" required></textarea>
     
@@ -313,14 +313,14 @@ td
 
 <td>
 <div class="form-group" >
-    <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Enter Time<span class="
 "></span></label></td><td>
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
   </div>
 
 </td><td>
   <div class="form-group">
-    <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Select Type Of Task <span class="
 "></span></label></td><td>
      <select class="form-control selectpicker" name="tcategory">
 
@@ -332,7 +332,7 @@ td
 </tr>
 <tr><td>
 <div class="form-group" >
-    <label for="exampleInputEmail1">Select if waithing for User response<span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Select if waithing for User response<span class="
 "></span></label></td><td>
 
   <td style="position:relative;left: -285px;">
@@ -344,7 +344,7 @@ td
   </td>
 </td><td>
 <div class="form-group" >
-    <label for="exampleInputEmail1">Release The Ticket<span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Release The Ticket<span class="
 "></span></label></td><td><td style="position:relative;left: -161px;">
 
                             <input type="checkbox" name="release" value="1" />
@@ -365,7 +365,7 @@ td
 <tr><td>
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Environment Type <span class="
 "></span></label></td><td ng-if="items[0].EnvType==''">
      <select class="form-control" name="env">
   <option value="Prod">Prod</option>
@@ -378,7 +378,7 @@ td
 <td>
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Shift <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Shift <span class="
 "></span></label></td><td>
      <select class="form-control" name="schedule">
   <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
@@ -390,7 +390,7 @@ td
 <tr>
 <td ng-if="items[0].Status!='Classify'">
   <div class="form-group">
-    <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Select Type Of Task <span class="
 "></span></label></td><td ng-if="items[0].Status!='Classify'">
      <select class="form-control selectpicker" name="tcategory">
 
@@ -402,7 +402,7 @@ td
 <td ng-if="((items[0].Status=='Classify')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
 
    <div class="form-group" >
-    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ChangeStatus <span class="
 "></span></label></td><td ng-if="((items[0].Status=='Classify')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
     <select class="form-control" name="cstatus" >
   <option value="WIP">Work In progress</option>
@@ -414,7 +414,7 @@ td
   <td ng-if="(items[0].Status=='Review')">
 
    <div class="form-group" >
-    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ChangeStatus <span class="
 "></span></label></td><td ng-if="(items[0].Status=='Review')">
     <select class="form-control" name="cstatus" >
   <option value="Closure">Closure</option>
@@ -426,7 +426,7 @@ td
   <td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))">
 
    <div class="form-group" >
-    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ChangeStatus <span class="
 "></span></label></td><td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))">
   
 <input type="hidden" name="cstatus" value="next"/>
@@ -435,7 +435,7 @@ td
   </td>
   <td ng-if="items[0].Status=='Classify'">
   <div class="form-group">
-    <label for="exampleInputEmail1">Select Team {{items[0].team}} <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Select Team {{items[0].team}} <span class="
 "></span></label></td><td ng-if="items[0].team==null">
    <select class="form-control" name="cteam" >
   <option ng-repeat="t in cteams" value="{{t.Team}}" ng-selected="t.Team=='L3'">{{t.Team}}</option>
@@ -464,7 +464,7 @@ if($_SESSION['Doc']==1)
   <tr>
 <td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')">
 <div class="form-group"  >
-    <label for="exampleInputEmail1">If awaiting for User response<span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">If awaiting for User response<span class="
 "></span></label></td><td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')" style="position:relative;left: -326px;">
 
   
@@ -479,13 +479,13 @@ if($_SESSION['Doc']==1)
     <tr>
       <td ng-if="items[0].Status=='Classify'">
 <div class="form-group" >
-    <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Client Ticket number <span class="
 "></span></label></td><td ng-if="items[0].Status=='Classify'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="client_tkt" placeholder="Client Ticket Number optional" />
   </td>
   <td ng-if="items[0].Status!='Classify' && items[0].CTicket!=''">
 <div class="form-group" >
-    <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Client Ticket number <span class="
 "></span></label></td><td ng-if="items[0].Status!='Classify' && items[0].CTicket!=''">
  <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="{{items[0].CTicket}}" disabled/>
   </td>
@@ -493,7 +493,7 @@ if($_SESSION['Doc']==1)
 <tr>
   <td>
 <div class="form-group" >
-    <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Enter Time<span class="
 "></span></label></td><td ng-if="items[0].Status=='Classify'">
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" disabled>
   </div>
@@ -532,7 +532,7 @@ if($_SESSION['Doc']==1)
 
 <tr> <td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Comments <span class="
 "></span></label></td><td colspan="8" ng-if="items[0].Status=='Classify' || items[0].Status=='Close'" >
 <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" disabled></textarea>
     
@@ -547,7 +547,7 @@ if($_SESSION['Doc']==1)
   
 <!--<td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Resolver <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Resolver <span class="
 "></span></label>
 </td>
 <td>
@@ -556,7 +556,7 @@ if($_SESSION['Doc']==1)
   </td>-->
 <!--<td>
 <div class="form-group">
-    <label for="exampleInputEmail1">ResolvedBy <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ResolvedBy <span class="
 "></span></label></td><td>
     <input type="text" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="{{items[0].Resolved_By}}" disabled>
   </div>
