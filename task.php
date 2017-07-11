@@ -212,8 +212,8 @@ header("Location: https://apps.continuserve.com");
          <!-- <textarea class="form-control" ng-if="tasktype!='Email Review and Self learning'" name="txt2"  placeholder=""  ng-model="msg"  ng-blur="nupdate()" ></textarea>
         --><textarea class="form-control"  ng-if="tasktype!='Email Review and Self learning'" rows="3" cols="110" name="messages" placeholder="messages" ng-model="myTextarea"></textarea>
   message{{myTextarea}}
-      <input type="text" ng-model='xx' ng-if="tasktype!='Email Review and Self learning'" value="{{myTextarea}}" />
-         </div>
+     <!-- <input type="text" ng-model='xx' ng-if="tasktype!='Email Review and Self learning'" value="{{myTextarea}}" />
+       -->  </div>
         
         </form>
       </div>
