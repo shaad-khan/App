@@ -601,7 +601,7 @@ $scope.nupdate=function()
 $scope.adhoc_add=function(pt,tt,ts,ad,am)
 {
   
-  alert($scope.amessage);
+  //alert($scope.amessage);
 var data=$.param({
 ptype:pt,
 ttype:tt,
