@@ -242,11 +242,12 @@ else if(($fstatus=='Doc') and ($docf==1))
 }
 if($Master_sql) 
 {
-    //echo $Master_sql;
-$conn->query($Master_sql);
+    echo $Master_sql;
+//$conn->query($Master_sql);
 
 }
 $s="Update Master_Ticket_Tab set adtime='$opdate',Updatetime='$utime' where Ticket_ID='$TID'";
+echo $s;
 $conn->query($s);
 if($fstatus=='')
 {
@@ -264,12 +265,12 @@ while($row1=$result->fetch())
   $total=$total+$row1['TimeTaken'];
   }
  $s="Update Master_Ticket_Tab set adtime='$opdate',Total_time=$total where Ticket_ID='$TID'";
- 
+ echo $s;
 $conn->query($s);
 if($attime!='')
 {
     $s="Update Master_Ticket_Tab set adtime='$opdate',Total_client_time=$attime where Ticket_ID='$TID'";
- 
+ echo $s;
 $conn->query($s);
 }
 
