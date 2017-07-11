@@ -42,7 +42,7 @@ $resolver= $_POST["resolver"];
 $schedule= $_POST["schedule"];
 
 $reviewer= $_POST["reviewer"];
-$opdate=$_POST['opdate'];
+$opdate=$_POST["opdate"];
 
 $discription= $_POST["discription"];
 
