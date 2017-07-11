@@ -592,7 +592,7 @@ $scope.nupdate=function()
 {
  if ($scope.amessage=="")
   {
-    $scope.amessage=$scope.amessage2;
+    $scope.amessage=$scope.myTextarea;
   }
   alert($scope.amessage);
 }
