@@ -590,17 +590,17 @@ else{
 }
 $scope.nupdate=function()
 {
-  alert("value of amessage"+ $scope.amessage+"value of textarea"+$scope.myTextarea);
- if (!$scope.amessage)
-  {
-    $scope.amessage=$scope.myTextarea;
-    alert("value of amessage inside if"+$scope.amessage);
-  }
+  //alert("value of amessage"+ $scope.amessage+"value of textarea"+$scope.myTextarea);
+ 
   
 }
 $scope.adhoc_add=function(pt,tt,ts,ad,am)
 {
-  
+  if (!$scope.amessage)
+  {
+    $scope.amessage=$scope.myTextarea;
+    //alert("value of amessage inside if"+$scope.amessage);
+  }
   //alert($scope.amessage);
 var data=$.param({
 ptype:pt,
