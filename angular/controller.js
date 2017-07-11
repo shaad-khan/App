@@ -598,7 +598,7 @@ $scope.nupdate=function()
 }
 $scope.adhoc_add=function(pt,tt,ts,ad,am)
 {
-  
+  $scope.amessage=$scope.myTextarea;
   alert($scope.amessage);
 var data=$.param({
 ptype:pt,
