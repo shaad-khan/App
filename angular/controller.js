@@ -590,7 +590,7 @@ else{
 }
 $scope.nupdate=function()
 {
-  alert("value of amessage"+$scope.amessage);
+  alert("value of amessage"+ $scope.amessage+"value of textarea"+$scope.myTextarea);
  if ($scope.amessage=="")
   {
     $scope.amessage=$scope.myTextarea;
