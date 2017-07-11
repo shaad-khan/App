@@ -588,12 +588,17 @@ else{
   $scope.amessage="";
 }
 }
-$scope.adhoc_add=function(pt,tt,ts,ad,am)
+$scope.nupdate=function()
 {
-  if ($scope.amessage=="")
+ if ($scope.amessage=="")
   {
     $scope.amessage=$scope.amessage2;
   }
+  alert($scope.amessage);
+}
+$scope.adhoc_add=function(pt,tt,ts,ad,am)
+{
+  
   alert($scope.amessage);
 var data=$.param({
 ptype:pt,
