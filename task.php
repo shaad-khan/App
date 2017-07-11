@@ -208,7 +208,7 @@ header("Location: https://apps.continuserve.com");
           </div>
           <div class="form-group">
             <label for="message-text" class="control-label">Message:</label>
-            <textarea class="form-control" name="txt" type="text" placeholder="tasktype" id="message-text" ng-model='amessage' row="4" cols="6" >{{tasktype}}</textarea>
+            <textarea class="form-control" name="txt" type="text" placeholder="{{tasktype}}" id="message-text" ng-model='amessage' row="4" cols="6" >{{tasktype}}</textarea>
            {{tasktype}}
           </div>
         </form>
