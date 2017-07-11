@@ -9,7 +9,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
    <script src="https://apps.continuserve.com/angular/Contoller_form.js"></script>
+   
    <script src="angular/Controller_form.js"></script>
+    <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
+<script src="dateresource/jquery.js"></script>
+ <script src="dateresource/jquery.datetimepicker.js"></script>
   <?php
   session_start();
 $user_session=$_SESSION["user"];
@@ -532,12 +536,12 @@ if($_SESSION['Doc']==1)
 <td ><div class="form-group" >
     <label for="exampleInputEmail1">Adjust Update DateTime(Optional)</label>
   <!--  <input type="number" class="form-control" name="auptime" id="exampleInputEmail1" placeholder="{{items[0].Total_client_time}} min" disabled>
-  -->
+  --></td><td>
   <input type="text" class="form-control" value="" id="some_class_1" name="opdate" style="color:black" placeholder="Adujusted Update Date Time" ng-model="opdate"/>
           
-  </div>
+  </div></td>
   
-    </td></tr>
+    </tr>
 
 <tr> <td>
 <div class="form-group">
