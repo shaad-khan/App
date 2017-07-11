@@ -585,7 +585,7 @@ $scope.updateall=function()
   $scope.amessage=$scope.tasktype;
 }
 else{
-  $scope.amessage="";
+  $scope.amessage=$scope.amessage2;
 }
 }
 $scope.adhoc_add=function(pt,tt,ts,ad,am)
