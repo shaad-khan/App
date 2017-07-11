@@ -594,6 +594,7 @@ $scope.adhoc_add=function(pt,tt,ts,ad,am)
   {
     $scope.amessage=$scope.amessage2;
   }
+  alert($scope.amessage);
 var data=$.param({
 ptype:pt,
 ttype:tt,
