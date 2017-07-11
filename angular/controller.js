@@ -578,7 +578,10 @@ service.serv("https://apps.continuserve.com/webservice/service.php?type=Adhoc_ta
 service.serv("https://apps.continuserve.com/webservice/service.php?type=Project_tab").then(function(response){
 $scope.projects=response.data;
 });
-
+$scope.updateall=function()
+{
+  $scope.amessage=$scope.tasktype;
+}
 $scope.adhoc_add=function(pt,tt,ts,ad,am)
 {
 var data=$.param({
