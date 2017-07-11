@@ -212,7 +212,7 @@ header("Location: https://apps.continuserve.com");
           <textarea class="form-control" ng-if="tasktype!='Email Review and Self learning'" name="txt2"  placeholder=""  ng-model="amessage2"  ng-blur="nupdate()" ></textarea>
         <!--<input type="text" ng-model='amessage' value="{{tasktype}}" ng-if="tasktype=='Email Review and Self learning'"/>
         -->  </div>
-         message {{amessage}}
+         message {{amessage2}}
         </form>
       </div>
       <div class="modal-footer" >
