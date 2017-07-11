@@ -144,8 +144,7 @@ td
 <tr><td>
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Ticket Id <span class="
-"></span></label></td><td>
+    <label for="exampleInputEmail1">Ticket Id <span class=""></span></label></td><td>
   <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>"  disabled>
 
   <input type="hidden" name="TID" value="<?php Echo $ID;?>"/>
