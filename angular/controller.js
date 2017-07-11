@@ -585,17 +585,21 @@ $scope.updateall=function()
   $scope.amessage=$scope.tasktype;
 }
 else{
-  $scope.amessage=$scope.amessage2;
+  $scope.amessage="";
 }
 }
 $scope.adhoc_add=function(pt,tt,ts,ad,am)
 {
+  if ($scope.amessage=="")
+  {
+    $scope.amessage=$scope.amessage2;
+  }
 var data=$.param({
 ptype:pt,
 ttype:tt,
 tspent:ts,
 adate:ad,
-amessage:am
+amessage:$scope.amessage
 });
 console.log(data);
 var config = {
