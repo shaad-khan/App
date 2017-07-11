@@ -583,7 +583,10 @@ $scope.updateall=function()
   if($scope.tasktype=='Email Review and Self learning')
   {
   $scope.amessage=$scope.tasktype;
-  }
+}
+else{
+  $scope.amessage="";
+}
 }
 $scope.adhoc_add=function(pt,tt,ts,ad,am)
 {
