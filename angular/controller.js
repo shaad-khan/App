@@ -580,7 +580,10 @@ $scope.projects=response.data;
 });
 $scope.updateall=function()
 {
+  if($scope.tasktype=='Email Review and Self learning')
+  {
   $scope.amessage=$scope.tasktype;
+  }
 }
 $scope.adhoc_add=function(pt,tt,ts,ad,am)
 {
