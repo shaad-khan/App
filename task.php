@@ -165,7 +165,7 @@ header("Location: https://apps.continuserve.com");
             
      <!--      <input type="text" class="form-control" value="General" placeholder="General" disabled/>
         -->
-         <select class="form-control" name="project" ng-model='etype' >
+         <select class="form-control" name="etype" ng-model='etype' >
  <option value="Prod">Prod</option>
   <option value="Non-Prod">Non-Prod</option>
 </select>  

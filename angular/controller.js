@@ -594,7 +594,7 @@ $scope.nupdate=function()
  
   
 }
-$scope.adhoc_add=function(pt,tt,ts,ad,am)
+$scope.adhoc_add=function(et,pt,tt,ts,ad,am)
 {
   if (!$scope.amessage)
   {
@@ -603,7 +603,7 @@ $scope.adhoc_add=function(pt,tt,ts,ad,am)
   }
   //alert($scope.amessage);
 var data=$.param({
-  etype:$scope.etype,
+  etype:et,
 ptype:pt,
 ttype:tt,
 tspent:ts,
