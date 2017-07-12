@@ -603,6 +603,7 @@ $scope.adhoc_add=function(pt,tt,ts,ad,am)
   }
   //alert($scope.amessage);
 var data=$.param({
+  etype:$scope.etype,
 ptype:pt,
 ttype:tt,
 tspent:ts,

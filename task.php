@@ -163,8 +163,12 @@ header("Location: https://apps.continuserve.com");
             <label for="recipient-name" class="control-label">Environment Type</label>
              
             
-           <input type="text" class="form-control" value="General" placeholder="General" disabled/>
-          
+     <!--      <input type="text" class="form-control" value="General" placeholder="General" disabled/>
+        -->
+         <select class="form-control" name="project" ng-model='etype' >
+ <option value="Prod">Prod</option>
+  <option value="Non-Prod">Non-Prod</option>
+</select>  
           
            
           </div>
@@ -222,7 +226,7 @@ header("Location: https://apps.continuserve.com");
       <div class="col-md-3" style="color:red">{{res[0].Ticket_ID}} created</div>
       </div>-->
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" ng-click="adhoc_add(projecttype,tasktype,tspent,adate,amessage)">Add Task</button>
+        <button type="button" class="btn btn-primary" ng-click="adhoc_add(etype,projecttype,tasktype,tspent,adate,amessage)">Add Task</button>
       </div>
     </div>
   </div>
