@@ -1,5 +1,6 @@
 <?php
-
+header( "Content-Type: application/vnd.ms-excel" );
+	header( "Content-disposition: attachment; filename=spreadsheet.xls" );
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
 $sd=explode(" ",$sdate);
@@ -131,8 +132,7 @@ when '1' then CAST (CONVERT(DATE, mt.Resolver_Dtime, 101) as varchar(30)) end be
 
      $result=$conn->query($sql3);
 //echo $msg;
-header( "Content-Type: application/vnd.ms-excel" );
-	header( "Content-disposition: attachment; filename=spreadsheet.xls" );
+
     echo 'Ticket_ID' . "\t" . 'Client' "\t" . 'Project' . "\t" . 'Team' . "\t" . 'CTicket' ."\t" . 'TDiscription' ."\t" . 'Status' ."\t" . 'WorkDate' ."\t" . 'WorkedBy' ."\t" . 'EnvType' ."\t" . 'TaskType' ."\t" . 'ShiftType' ."\t" . 'TimeMinutes' ."\t" . 'TimeHours' ."\n";
   while($row2=$result->fetch())
 { 
