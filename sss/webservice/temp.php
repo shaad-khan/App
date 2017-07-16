@@ -1,6 +1,6 @@
 <?php
-//header( "Content-Type: application/vnd.ms-excel" );
-//	header( "Content-disposition: attachment; filename=spreadsheet.xls" );
+header( "Content-Type: application/vnd.ms-excel" );
+	header( "Content-disposition: attachment; filename=spreadsheet.xls" );
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
 $sd=explode(" ",$sdate);
@@ -70,11 +70,11 @@ case mt.aflag
 when '0' then CAST (CONVERT(DATE, ut.UpdateTime, 101) as varchar(30))
 when '1' then CAST (CONVERT(DATE, mt.Resolver_Dtime, 101) as varchar(30)) end between '$sdate' and '$edate'";
 
-echo $sql3;
+//echo $sql3;
   $result=$conn->query($sql3);
 //echo $msg;
 
-   // echo 'Ticket_ID' . "\t" . 'Client' "\t" . 'Project' . "\t" . 'Team' . "\t" . 'CTicket' ."\t" . 'TDiscription' ."\t" . 'Status' ."\t" . 'WorkDate' ."\t" . 'WorkedBy' ."\t" . 'EnvType' ."\t" . 'TaskType' ."\t" . 'ShiftType' ."\t" . 'TimeMinutes' ."\t" . 'TimeHours' ."\n";
+    echo 'Ticket_ID' . "\t" . 'Client' "\t" . 'Project' . "\t" . 'Team' . "\t" . 'CTicket' ."\t" . 'TDiscription' ."\t" . 'Status' ."\t" . 'WorkDate' ."\t" . 'WorkedBy' ."\t" . 'EnvType' ."\t" . 'TaskType' ."\t" . 'ShiftType' ."\t" . 'TimeMinutes' ."\t" . 'TimeHours' ."\n";
   while($row2=$result->fetch())
 { 
 	//
@@ -82,8 +82,7 @@ echo $sql3;
 	
 		//echo "i am here";
 		//$rows[]=$row2;
- //echo $row2['Ticket_ID'] . "\t" . $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']
- //."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t" . $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min'].."\t" . $row2['Time_hours'] "\n";
+ echo $row2['Ticket_ID'] . "\t" . $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t" . $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min'].."\t" . $row2['Time_hours'] "\n";
 $rows[]=$row2;
 }
 
