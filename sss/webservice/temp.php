@@ -1,6 +1,6 @@
 <?php
-header( "Content-Type: application/vnd.ms-excel" );
-header( "Content-disposition: attachment; filename=spreadsheet.xls" );
+//header( "Content-Type: application/vnd.ms-excel" );
+//header( "Content-disposition: attachment; filename=spreadsheet.xls" );
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
 $sd=explode(" ",$sdate);
