@@ -141,8 +141,8 @@ header( "Content-Type: application/vnd.ms-excel" );
 	
 		//echo "i am here";
 		//$rows[]=$row2;
- echo $row2['Ticket_ID'] . "\t" . $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']
- ."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t" . $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min'].."\t" . $row2['Time_hours'] "\n";
+ //echo $row2['Ticket_ID'] . "\t" . $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']
+ //."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t" . $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min'].."\t" . $row2['Time_hours'] "\n";
 $rows[]=$row2;
 }
 
