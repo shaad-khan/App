@@ -79,7 +79,27 @@ $scope.$on('$destroy', function () {
 
 });
 
+app.controller("Report",function($scope,service){
+$edate='';
+$sdate='';
+$scope.orderByMe = function(x) {
+    $scope.myOrderBy = x;
+  }
+$scope.search=function(v1,v2)
+{
+  $sdate=v1;
+  $edate=v2;
+//  alert($sdate+""+$sdate);
+service.serv("https://apps.continuserve.com/sss/webservice/temp.php?sdate="+$sdate+"&edate="+$edate).then(function(response){
+	$scope.load='false';
+		$scope.results=response.data;
+console.log(response.data.length);
+  
+	});
+}
 
+
+});
 
 
 app.controller("clientgraph", function($scope,$http,$interval){
