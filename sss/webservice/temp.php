@@ -71,7 +71,7 @@ when '0' then CAST (CONVERT(DATE, ut.UpdateTime, 101) as varchar(30))
 when '1' then CAST (CONVERT(DATE, mt.Resolver_Dtime, 101) as varchar(30)) end between '$sdate' and '$edate'";
 
 echo $sql3;
-  /*   $result=$conn->query($sql3);
+  $result=$conn->query($sql3);
 //echo $msg;
 
    // echo 'Ticket_ID' . "\t" . 'Client' "\t" . 'Project' . "\t" . 'Team' . "\t" . 'CTicket' ."\t" . 'TDiscription' ."\t" . 'Status' ."\t" . 'WorkDate' ."\t" . 'WorkedBy' ."\t" . 'EnvType' ."\t" . 'TaskType' ."\t" . 'ShiftType' ."\t" . 'TimeMinutes' ."\t" . 'TimeHours' ."\n";
@@ -91,5 +91,5 @@ $rows[]=$row2;
 
 
 print(json_encode($rows, JSON_NUMERIC_CHECK));
-*/
+
 ?>
