@@ -24,6 +24,7 @@ app.config(function($routeProvider) {
     templateUrl:"report.php",
      controller  : "Report"
     })
+    
     .when("/task", {
         templateUrl : "task.php",
          controller: 'Task'
