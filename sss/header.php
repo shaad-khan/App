@@ -44,6 +44,79 @@ $result2=$conn->query($sql2);
     <link rel="stylesheet" href="components/bootstrap3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="components/bootstrap3/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="css/calendar.css">
+  <style>
+element.style {
+    width: 14px;
+    /*height: 133px;
+    background-color: rgb(78, 205, 196);*/
+    background-color:#777;
+}
+.table2 > tbody > tr > th, .table2 > tfoot > tr > th, .table2 > thead > tr > td, .table2 > tbody > tr > td, .table2 > tfoot > tr > td {
+    padding: 3px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+.btn-circle.btn-xl {
+  width: 90px;
+  height: 70px;
+  padding: 10px 16px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
+
+.modal {
+    position: fixed;
+    top: -4px;
+    right: -126px;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+.close:hover, .close:focus {
+    color: #f2f2f2;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    opacity: .5;
+}
+/*
+.table-fixed {
+  width: 100%;
+  background-color: #f3f3f3;
+}
+.table-fixed tbody {
+  height: 200px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+.table-fixed tbody td {
+  float: left;
+}
+.table-fixed thead tr th {
+  float: left;
+  background-color: #f39c12;
+  border-color: #e67e22;
+}
+*/
+
+</style>
     <style>
 
         [class*="cal-cell"] {
@@ -788,8 +861,17 @@ element.style {
                       </a>
                       <ul class="sub">
                           <li><a  href="#!/task"><span class="glyphicon glyphicon-tasks"></span> Your Task List </a></li>
+                        
+                          <?php
+                 if($_SESSION['admin']==1)
+                    {?>
+                <li><a  href="#!/report"><span class="glyphicon glyphicon-tasks"></span> Report</a></li>
+
+               <?php
+           }?>
                           <!--<li><a  href="alerticket.php">TrackServe Alert Tickets</a></li>
                  <?php
+                 
                  if($_SESSION['admin']==1)
                     {?>
                 <li><a  href="admin.php">Resolved ticket list</a></li>
