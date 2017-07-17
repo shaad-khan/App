@@ -109,15 +109,15 @@ $i=2;
 					->setCellValue('B'.$i, $row2['Client'])
 					->setCellValue('C'.$i, $row2['Project'])
 					->setCellValue('D'.$i, $row2['Team'])
-					->setCellValue('E'.$i, $row2['CTicket']);
-					->setCellValue('F'.$i, $row2['TDiscription']);
-					->setCellValue('G'.$i, $row2['Status']);
-					->setCellValue('H'.$i, $row2['WorkDate']);
-					->setCellValue('I'.$i, $row2['WorkedBy']);
-					->setCellValue('J'.$i, $row2['EnvType']);
-					->setCellValue('K'.$i, $row2['TaskType']);
-					->setCellValue('L'.$i, $row2['ShiftType']);
-					->setCellValue('M'.$i, $row2['Time_Min']);
+					->setCellValue('E'.$i, $row2['CTicket'])
+					->setCellValue('F'.$i, $row2['TDiscription'])
+					->setCellValue('G'.$i, $row2['Status'])
+					->setCellValue('H'.$i, $row2['WorkDate'])
+					->setCellValue('I'.$i, $row2['WorkedBy'])
+					->setCellValue('J'.$i, $row2['EnvType'])
+					->setCellValue('K'.$i, $row2['TaskType'])
+					->setCellValue('L'.$i, $row2['ShiftType'])
+					->setCellValue('M'.$i, $row2['Time_Min'])
 					->setCellValue('N'.$i, $row2['Time_hours']);
 //echo $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t". $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min']."\t" . $row2['Time_hours']."\n";
 //$rows[]=$row2;
