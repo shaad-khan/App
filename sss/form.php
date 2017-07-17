@@ -2,14 +2,18 @@
 <html lang="en" ng-app="continuity_form">
 <head>
   <title>Form Template</title>
-  <meta charset="utf-8">
+   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-   <script src="https://apps.continuserve.com/sss/angular/Contoller_form.js"></script>
+   <script src="https://apps.continuserve.com/angular/Contoller_form.js"></script>
+   
    <script src="angular/Controller_form.js"></script>
+    <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
+<script src="dateresource/jquery.js"></script>
+ <script src="dateresource/jquery.datetimepicker.js"></script>
   <?php
   session_start();
 $user_session=$_SESSION["user"];
@@ -214,9 +218,12 @@ td
  <td>
 <div class="form-group">
     <label for="exampleInputEmail1">UpadateDateTime <span class="glyphicon glyphicon-info-sign
-"></span></label> </td><input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime"/>
-     <td><input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" disabled>
-  </div> </td>
+"></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
+     <td>
+     <input type="text" class="form-control"  id="some_class_1" name="opdate" style="color:black" placeholder="Update Datate Time" name="utime"/>
+     
+   <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
+-->  </div> </td>
  <td>
   <div class="form-group">
     <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
@@ -658,4 +665,18 @@ fclose($myfile);
 </div>
 
 </body>
+<script>
+
+window.onerror = function(errorMsg) {
+  $('#console').html($('#console').html()+'<br>'+errorMsg)
+}
+//alert("hello");
+ $(function() {
+          $('#some_class_1').datetimepicker();
+           $('#some_class_2').datetimepicker();
+            $('#some_class_3').datetimepicker();
+             $('#some_class_4').datetimepicker();
+         });
+
+         </script>
 </html>
