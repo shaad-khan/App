@@ -6,12 +6,15 @@ session_start();
 
 $u=$_SESSION["user"];
 
-
+$etype=$_POST['etype'];
 $ptype=$_POST['ptype'];
+$ctype=explode(" ",$ptype);
+$client=$ctype[0];
 $ttype=$_POST['ttype'];
 $tspent=$_POST['tspent'];
 $adate=$_POST['adate'];
 $amessage=$_POST['amessage'];
+$amessage=str_replace("'","''",$amessage);
 
 $server = "gjtz209gib.database.windows.net";
 $user = "CSL3AppsUser@gjtz209gib";
@@ -67,7 +70,7 @@ $id=$row3['id'];
                                   } 
 if($u!=null)
 {
-$sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Project,Resolver,CTicket,Cdatetime,Resolver_Dtime,EnvType,Reviewer,Assign_to,Creator,Updatetime,Repo,aflag,Total_time,atype,team)values('$tk','$amessage','Close','General','$ptype','$u','','$adate','$adate','General','','$u','$u','$adate','',1,$tspent,'$ttype','SSS')";
+$sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Project,Resolver,CTicket,Cdatetime,Resolver_Dtime,EnvType,Reviewer,Assign_to,Creator,Updatetime,Repo,aflag,Total_time,atype,team)values('$tk','$amessage','Close','$client','$ptype','$u','','$adate','$adate','$etype','','$u','$u','$adate','',1,$tspent,'$ttype','SSS')";
 
 $conn->query($sql);
 

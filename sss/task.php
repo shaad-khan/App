@@ -159,8 +159,12 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Environment Type</label>
              
             
-           <input type="text" class="form-control" value="General" placeholder="General" disabled/>
-          
+         <select class="form-control" name="etype" ng-model='etype' >
+         
+         <option value="General">General</option>
+ <option value="Prod">Prod</option>
+  <option value="Non-Prod">Non-Prod</option>
+</select>  
           
            
           </div>
