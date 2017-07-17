@@ -38,9 +38,10 @@ header("Location: https://apps.continuserve.com/");
                                      <div class="col-xs-2">
                                     
                                     <div class="form-group">
-            
-           <input type="text" class="form-control" value="" id="some_class_2" name="edate" style="color:black" placeholder="End date" ng-model="edate"/>
-          
+            <label for="mySubmit" class="btn"><i class="icon-search icon-white"></i> Generate Report</label>
+    <input id="mySubmit" type="submit" value="Go" class="hidden" />
+           <!--<input type="text" class="form-control" value="" id="some_class_2" name="edate" style="color:black" placeholder="End date" ng-model="edate"/>
+          -->
           </div>
                                     
                                     </div>
