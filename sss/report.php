@@ -27,7 +27,7 @@ header("Location: https://apps.continuserve.com/");
                                     <!--<a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span>--></div>
                                    <div class="col-xs-2">
-                           <form action="webservice/temp.php">         
+                           <form method="get" action="webservice/temp.php">         
                                     
             <div class="form-group">
            <input type="text" class="form-control" value="" id="some_class_1" name="sdate" style="color:black" placeholder="Start date" ng-model="sdate"/>
@@ -46,7 +46,7 @@ header("Location: https://apps.continuserve.com/");
                                     </div>
                                     <div class="col-xs-2" >
                                     
-                                    <div class="form-group">
+                                   
             
          <!--<button type="button" class="btn btn-primary" id="report"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> </button>
           -->
