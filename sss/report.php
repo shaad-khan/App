@@ -8,7 +8,7 @@ header("Location: https://apps.continuserve.com/");
 }
 ?>
 
-
+    <form method="get" action="webservice/temp.php">
  <div class="row mt"  ng-init="setuser('<?php echo $u;?>')" >
   
    <div class="col-md-12">
@@ -27,7 +27,7 @@ header("Location: https://apps.continuserve.com/");
                                     <!--<a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span>--></div>
                                    <div class="col-xs-2">
-                           <form method="get" action="webservice/temp.php">         
+                       
                                     
             <div class="form-group">
            <input type="text" class="form-control" value="" id="some_class_1" name="sdate" style="color:black" placeholder="Start date" ng-model="sdate"/>
