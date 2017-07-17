@@ -1,6 +1,27 @@
 <?php
-header( "Content-Type: application/vnd.ms-excel" );
-header( "Content-disposition: attachment; filename=spreadsheet.xls" );
+//header( "Content-Type: application/vnd.ms-excel" );
+//header( "Content-disposition: attachment; filename=spreadsheet.xls" );
+date_default_timezone_set('Asia/Kolkata');
+		require_once 'PHPExcel/Classes/PHPExcel.php';
+		
+		$filename = 'userReport'; //your file name
+		$objPHPExcel = new PHPExcel();
+		/*********************Add column headings START**********************/
+		$objPHPExcel->setActiveSheetIndex(0) 
+					->setCellValue('A1', 'Ticket_ID')
+					->setCellValue('B1', 'Client')
+					->setCellValue('C1', 'Project')
+					->setCellValue('D1', 'Team')
+					->setCellValue('E1', 'CTicket')
+                    ->setCellValue('F1', 'TDiscription')
+                    ->setCellValue('G1', 'Status')
+                    ->setCellValue('H1', 'WorkDate')
+                    ->setCellValue('I1', 'WorkedBy')
+                    ->setCellValue('J1', 'EnvType')
+                    ->setCellValue('K1', 'TaskType')
+                    ->setCellValue('L1', 'ShiftType')
+                    ->setCellValue('M1', 'TimeMinutes')
+                    ->setCellValue('N1', 'TimeHours');
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
 $sd=explode(" ",$sdate);
@@ -73,7 +94,7 @@ when '1' then CAST (CONVERT(DATE, mt.Resolver_Dtime, 101) as varchar(30)) end be
 //echo $sql3;
   $result=$conn->query($sql3);
 //echo $msg;
-
+$i=2;
     echo 'Ticket_ID' . "\t" . 'Client'. "\t" . 'Project' . "\t" . 'Team' . "\t" . 'CTicket' ."\t" . 'TDiscription' ."\t" . 'Status' ."\t" . 'WorkDate' ."\t" . 'WorkedBy' ."\t" . 'EnvType' ."\t" . 'TaskType' ."\t" . 'ShiftType' ."\t" . 'TimeMinutes' ."\t" . 'TimeHours' ."\n";
   while($row2=$result->fetch())
 { 
@@ -82,11 +103,58 @@ when '1' then CAST (CONVERT(DATE, mt.Resolver_Dtime, 101) as varchar(30)) end be
 	
 		//echo "i am here";
 		//$rows[]=$row2;
-echo $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t". $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min']."\t" . $row2['Time_hours']."\n";
+	
+		$objPHPExcel->setActiveSheetIndex(0) 
+					->setCellValue('A'.$i, $row2['Ticket_ID'])
+					->setCellValue('B'.$i, $row2['Client'])
+					->setCellValue('C'.$i, $row2['Project'])
+					->setCellValue('D'.$i, $row2['Team'])
+					->setCellValue('E'.$i, $row2['CTicket']);
+					->setCellValue('F'.$i, $row2['TDiscription']);
+					->setCellValue('G'.$i, $row2['Status']);
+					->setCellValue('H'.$i, $row2['WorkDate']);
+					->setCellValue('I'.$i, $row2['WorkedBy']);
+					->setCellValue('J'.$i, $row2['EnvType']);
+					->setCellValue('K'.$i, $row2['TaskType']);
+					->setCellValue('L'.$i, $row2['ShiftType']);
+					->setCellValue('M'.$i, $row2['Time_Min']);
+					->setCellValue('N'.$i, $row2['Time_hours']);
+//echo $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t". $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min']."\t" . $row2['Time_hours']."\n";
 //$rows[]=$row2;
+$i++;
 }
 
+/*------------------------------------------------------------*/
 
+        foreach(range('A','N') as $columnID) {
+			$objPHPExcel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(true);
+		}
+		/*********************Autoresize column width depending upon contents END***********************/
+		
+		$objPHPExcel->getActiveSheet()->getStyle('A1:N1')->getFont()->setBold(true); //Make heading font bold
+		
+		/*********************Add color to heading START**********************/
+		$objPHPExcel->getActiveSheet()
+					->getStyle('A1:E1')
+					->getFill()
+					->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
+					->getStartColor()
+					->setARGB('99ff99');
+		/*********************Add color to heading END***********************/
+		
+		$objPHPExcel->getActiveSheet()->setTitle('userReport'); //give title to sheet
+		$objPHPExcel->setActiveSheetIndex(0);
+		header('Content-Type: application/vnd.ms-excel');
+		header("Content-Disposition: attachment;Filename=$filename.xls");
+		header('Cache-Control: max-age=0');
+		$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
+		$objWriter->save('php://output');
+		exit;
+
+
+
+
+/*----------------------------------------------------------*/
 
 
 //print(json_encode($rows, JSON_NUMERIC_CHECK));
