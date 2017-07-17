@@ -262,7 +262,7 @@ header("Location: https://apps.continuserve.com/");
 </div>
 
 <script>
-document.getElementById("report").submit();
+
 $('#myModal').on('show.bs.modal', function(e) {
   //alert("here");
     var bookId = $(e.relatedTarget).data('ticket-id');
