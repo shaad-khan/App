@@ -38,10 +38,9 @@ header("Location: https://apps.continuserve.com/");
                                      <div class="col-xs-2">
                                     
                                     <div class="form-group">
-            <label for="mySubmit" class="btn"><i class="icon-search icon-white"></i> Generate Report</label>
-    <input id="mySubmit" type="submit" value="Go" class="hidden" />
-           <!--<input type="text" class="form-control" value="" id="some_class_2" name="edate" style="color:black" placeholder="End date" ng-model="edate"/>
-          -->
+            
+           <input type="text" class="form-control" value="" id="some_class_2" name="edate" style="color:black" placeholder="End date" ng-model="edate"/>
+          
           </div>
                                     
                                     </div>
@@ -51,7 +50,8 @@ header("Location: https://apps.continuserve.com/");
             
          <!--<button type="button" class="btn btn-primary" id="report"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> </button>
           -->
-          <input type="submit" name="sub" value="Generate"/>
+          <label for="mySubmit" class="btn"><i class="icon-search icon-white"></i> Search me</label>
+    <input id="mySubmit" type="submit" value="Go" class="hidden" />
           </div>
           </form>
                                     
