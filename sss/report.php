@@ -48,8 +48,9 @@ header("Location: https://apps.continuserve.com/");
                                     
                                     <div class="form-group">
             
-         <button type="button" class="btn btn-primary" id="report"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> </button>
-          
+         <!--<button type="button" class="btn btn-primary" id="report"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> </button>
+          -->
+          <input type="submit" name="sub" value="Generate"/>
           </div>
           </form>
                                     
