@@ -4,7 +4,7 @@
 date_default_timezone_set('Asia/Kolkata');
 		require_once 'PHPExcel/Classes/PHPExcel.php';
 		
-		$filename = 'userReport'; //your file name
+		$filename = 'SSS_Shift_report'; //your file name
 		$objPHPExcel = new PHPExcel();
 		/*********************Add column headings START**********************/
 		$objPHPExcel->setActiveSheetIndex(0) 
