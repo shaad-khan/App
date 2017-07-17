@@ -50,7 +50,7 @@ header("Location: https://apps.continuserve.com/");
             
          <!--<button type="button" class="btn btn-primary" id="report"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> </button>
           -->
-          <label for="mySubmit" class="btn"><i class="icon-search icon-white"></i> Search me</label>
+          <label for="mySubmit" class="btn"><i class="icon-search icon-white"></i> Generate Report</label>
     <input id="mySubmit" type="submit" value="Go" class="hidden" />
           </div>
           </form>
