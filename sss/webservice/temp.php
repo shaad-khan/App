@@ -83,7 +83,7 @@ end
 
 
  from dbo. Master_Ticket_Tab mt left outer join dbo.Update_Tab ut
-on mt.Ticket_ID = ut.TicketId where mt.team='L3' and case mt.aflag
+on mt.Ticket_ID = ut.TicketId where mt.team='SSS' and case mt.aflag
 when '0' then ut.TimeTaken
 when '1' then mt.Total_time end <> 0 and
 
