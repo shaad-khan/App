@@ -91,9 +91,9 @@ $scope.search=function(v1,v2)
   $edate=v2;
 //  alert($sdate+""+$sdate);
 service.serv("https://apps.continuserve.com/sss/webservice/temp.php?sdate="+$sdate+"&edate="+$edate).then(function(response){
-	$scope.load='false';
-		$scope.results=response.data;
-console.log(response.data.length);
+	//$scope.load='false';
+		//$scope.results=response.data;
+//console.log(response.data.length);
   
 	});
 }
