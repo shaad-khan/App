@@ -21,7 +21,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     //echo $sql;
     if($u)
     {
-$sql="update Master_ticket_tab set Resolver='$u', Status='Close',Resolver_Dtime='$d' where Id=$id";
+$sql="update Master_ticket_tab set Resolver='$u', Status='Close',Resolver_Dtime='$d',aflag=1 where Id=$id";
 echo $sql;
 $conn->query($sql);
 //echo $msg;
