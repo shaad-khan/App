@@ -17,7 +17,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 $TID  = $_POST["TID"];
 
 $env=$_POST['env'];
-
+$requester=$_POST['requester'];
 $client= $_POST["client"];
 
 $creator=$_POST['creator'];
@@ -128,7 +128,7 @@ else
     //echo "<script> alert('insert');</script>";
 if($status=='Classify')
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team',requester='$requester' where Ticket_ID='$TID'";
 }
  else if(($status=='WIP') and ($AUI=='on') and ($cstatus!='next'))
     {
