@@ -232,6 +232,7 @@ td
   </div> </td>
 
   <tr>
+  
 <!--<td>
 <div class="form-group">
     <label for="exampleInputEmail1">Resolver <span class="glyphicon glyphicon-info-sign
