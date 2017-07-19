@@ -242,7 +242,7 @@ else if(($fstatus=='Doc') and ($docf==1))
 }
 if($Master_sql) 
 {
-    //echo $Master_sql;
+    echo $Master_sql;
 $conn->query($Master_sql);
 
 }
@@ -460,9 +460,9 @@ if($cl_tkt!=null)
 
 
     /*----------------------------------------------------------------------------------------*/
-echo "<script> alert('Updated successfully');
+/*echo "<script> alert('Updated successfully');
      setTimeout(function(){window.close()}, 1000);
-     </script>";
+     </script>";*/
 }
 else
 {
