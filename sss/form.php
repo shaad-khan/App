@@ -230,9 +230,15 @@ td
 "></span></label> </td> <td><input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
     <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled/>
   </div> </td>
-
+<tr>
+<td>
+  <div class="form-group">
+    <label for="exampleInputEmail1">RequesterName <span class="glyphicon glyphicon-info-sign
+"></span></label> </td> <td><!--<input type="hidden" class="form-control"  value="{{items[0].requester}}"/>
+   --> <input type="text" class="form-control"  id="exampleInputEmail1" name="requester" placeholder="{{items[0].requester}}" value="{{items[0].requester}}" />
+  </div> </td>
+</tr>
   <tr>
-  
 <!--<td>
 <div class="form-group">
     <label for="exampleInputEmail1">Resolver <span class="glyphicon glyphicon-info-sign
