@@ -158,7 +158,13 @@ $fstatus='WIP';
     }*/
 else if(($status=='Review') and ($cstatus=="Closure"))
 {
-  $fstatus="Closure";
+  $fstatus="Close";
+   $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
+
+}
+else if(($status=='WIP') and ($cstatus=="Closure"))
+{
+  $fstatus="Close";
    $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
 
 }

@@ -421,6 +421,7 @@ td
 "></span></label></td><td ng-if="((items[0].Status=='Classify')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
     <select class="form-control" name="cstatus" >
   <option value="WIP">Work In progress</option>
+   <option value="Closure">Closure</option>
   <option value="next">Next Status</option>
   
 </select>
