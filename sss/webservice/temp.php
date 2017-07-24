@@ -129,7 +129,7 @@ $i++;
 
 /*------------------------------------------------------------*/
 
-        foreach(range('A','N') as $columnID) {
+        foreach(range('A','O') as $columnID) {
 			$objPHPExcel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(true);
 		}
 		/*********************Autoresize column width depending upon contents END***********************/
