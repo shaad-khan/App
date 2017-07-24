@@ -9,9 +9,9 @@ date_default_timezone_set('Asia/Kolkata');
 		/*********************Add column headings START**********************/
 		$objPHPExcel->setActiveSheetIndex(0) 
 					->setCellValue('A1', 'Ticket_ID')
-					->setCellValue('B1', 'Client')
-					->setCellValue('C1', 'Project')
-					->setCellValue('D1', 'Team')
+					->setCellValue('B1', 'Requester')
+					->setCellValue('C1', 'Client')
+					->setCellValue('D1', 'Project')
 					->setCellValue('E1', 'CTicket')
                     ->setCellValue('F1', 'TDiscription')
                     ->setCellValue('G1', 'Status')
@@ -21,7 +21,9 @@ date_default_timezone_set('Asia/Kolkata');
                     ->setCellValue('K1', 'TaskType')
                     ->setCellValue('L1', 'ShiftType')
                     ->setCellValue('M1', 'TimeMinutes')
-                    ->setCellValue('N1', 'TimeHours');
+                    ->setCellValue('N1', 'TimeHours')
+					->setCellValue('O1', 'Team');
+
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
 $sd=explode(" ",$sdate);
@@ -40,7 +42,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
 $sql3="select 
-mt.Ticket_ID,
+mt.Ticket_ID,mt.requestor,
 replace(replace(mt.Client, char(10),''), char(13),'') as Client,
 replace(replace(mt.Project, char(10),''), char(13),'') as Project ,
 mt.CTicket,
@@ -106,9 +108,9 @@ $i=2;
 	
 		$objPHPExcel->setActiveSheetIndex(0) 
 					->setCellValue('A'.$i, $row2['Ticket_ID'])
-					->setCellValue('B'.$i, $row2['Client'])
-					->setCellValue('C'.$i, $row2['Project'])
-					->setCellValue('D'.$i, $row2['Team'])
+					->setCellValue('B'.$i, $row2['requestor'])
+					->setCellValue('C'.$i, $row2['Client'])
+					->setCellValue('D'.$i, $row2['Project'])
 					->setCellValue('E'.$i, $row2['CTicket'])
 					->setCellValue('F'.$i, $row2['TDiscription'])
 					->setCellValue('G'.$i, $row2['Status'])
@@ -118,7 +120,8 @@ $i=2;
 					->setCellValue('K'.$i, $row2['TaskType'])
 					->setCellValue('L'.$i, $row2['ShiftType'])
 					->setCellValue('M'.$i, $row2['Time_Min'])
-					->setCellValue('N'.$i, $row2['Time_hours']);
+					->setCellValue('N'.$i, $row2['Time_hours'])
+					->setCellValue('O'.$i, $row2['Team']);
 //echo $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t". $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min']."\t" . $row2['Time_hours']."\n";
 //$rows[]=$row2;
 $i++;
@@ -135,7 +138,7 @@ $i++;
 		
 		/*********************Add color to heading START**********************/
 		$objPHPExcel->getActiveSheet()
-					->getStyle('A1:N1')
+					->getStyle('A1:O1')
 					->getFill()
 					->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
 					->getStartColor()
