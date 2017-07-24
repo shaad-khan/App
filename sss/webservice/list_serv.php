@@ -27,7 +27,7 @@ else if($param=='close')
 }
 else
 {
-    $sql="select * from Master_Ticket_Tab where (Status='$param' or Ticket_ID='$param' or Tdiscription like '".$param."%' or Client='$param' or Project='$param' or Resolver like '".$param."%' or EnvType='$param' or Reviewer like '".$param."%' or Assign_to like '".$param."%' or Creator like '".$param."%') and team='SSS' order by UpdateTime desc"; 
+    $sql="select * from Master_Ticket_Tab where (Status='$param' or Ticket_ID='$param' or Tdiscription like '%".$param."%' or Client='$param' or Project='$param' or Resolver like '%".$param."%' or EnvType='$param' or Reviewer like '%".$param."%' or Assign_to like '%".$param."%' or Creator like '%".$param."%')  order by UpdateTime desc"; 
 }
     //echo $sql;
     
