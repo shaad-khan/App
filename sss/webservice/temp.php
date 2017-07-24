@@ -1,13 +1,13 @@
 <?php
 //header( "Content-Type: application/vnd.ms-excel" );
 //header( "Content-disposition: attachment; filename=spreadsheet.xls" );
-date_default_timezone_set('Asia/Kolkata');
+/*date_default_timezone_set('Asia/Kolkata');
 		require_once 'PHPExcel/Classes/PHPExcel.php';
 		
 		$filename = 'SSS_Shift_report'; //your file name
 		$objPHPExcel = new PHPExcel();
 		/*********************Add column headings START**********************/
-		$objPHPExcel->setActiveSheetIndex(0) 
+		/*$objPHPExcel->setActiveSheetIndex(0) 
 					->setCellValue('A1', 'Ticket_ID')
 					->setCellValue('B1', 'Requester')
 					->setCellValue('C1', 'Client')
@@ -23,6 +23,7 @@ date_default_timezone_set('Asia/Kolkata');
                     ->setCellValue('M1', 'TimeMinutes')
                     ->setCellValue('N1', 'TimeHours')
 					->setCellValue('O1', 'Team');
+					*/
 
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
@@ -93,8 +94,8 @@ case mt.aflag
 when '0' then CAST (CONVERT(DATE, ut.UpdateTime, 101) as varchar(30))
 when '1' then CAST (CONVERT(DATE, mt.Resolver_Dtime, 101) as varchar(30)) end between '$sdate' and '$edate'";
 
-//echo $sql3;
-  $result=$conn->query($sql3);
+echo $sql3;
+/*  $result=$conn->query($sql3);
 //echo $msg;
 $i=2;
  //   echo 'Ticket_ID' . "\t" . 'Client'. "\t" . 'Project' . "\t" . 'Team' . "\t" . 'CTicket' ."\t" . 'TDiscription' ."\t" . 'Status' ."\t" . 'WorkDate' ."\t" . 'WorkedBy' ."\t" . 'EnvType' ."\t" . 'TaskType' ."\t" . 'ShiftType' ."\t" . 'TimeMinutes' ."\t" . 'TimeHours' ."\n";
@@ -126,33 +127,7 @@ $i=2;
 //$rows[]=$row2;
 $i++;
 }
-
-/*------------------------------------------------------------*/
-
-        foreach(range('A','O') as $columnID) {
-			$objPHPExcel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(true);
-		}
-		/*********************Autoresize column width depending upon contents END***********************/
-		
-		$objPHPExcel->getActiveSheet()->getStyle('A1:N1')->getFont()->setBold(true); //Make heading font bold
-		
-		/*********************Add color to heading START**********************/
-		$objPHPExcel->getActiveSheet()
-					->getStyle('A1:O1')
-					->getFill()
-					->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
-					->getStartColor()
-					->setARGB('99ff99');
-		/*********************Add color to heading END***********************/
-		
-		$objPHPExcel->getActiveSheet()->setTitle('userReport'); //give title to sheet
-		$objPHPExcel->setActiveSheetIndex(0);
-		header('Content-Type: application/vnd.ms-excel');
-		header("Content-Disposition: attachment;Filename=$filename.xls");
-		header('Cache-Control: max-age=0');
-		$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
-		$objWriter->save('php://output');
-		exit;
+*/
 
 
 
