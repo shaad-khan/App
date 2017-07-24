@@ -9,7 +9,7 @@ date_default_timezone_set('Asia/Kolkata');
 		/*********************Add column headings START**********************/
 		$objPHPExcel->setActiveSheetIndex(0) 
 					->setCellValue('A1', 'Ticket_ID')
-					->setCellValue('B1', 'Requestor')
+					->setCellValue('B1', 'Requester')
 					->setCellValue('C1', 'Client')
 					->setCellValue('D1', 'Project')
 					->setCellValue('E1', 'CTicket')
