@@ -22,7 +22,8 @@ date_default_timezone_set('Asia/Kolkata');
                     ->setCellValue('L1', 'ShiftType')
                     ->setCellValue('M1', 'TimeMinutes')
                     ->setCellValue('N1', 'TimeHours')
-					->setCellValue('O1', 'Team');
+					->setCellValue('O1', 'Team')
+					->setCellValue('P1', 'Comments');
 
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
@@ -45,7 +46,7 @@ $sql3="select
 mt.Ticket_ID,mt.requester,
 replace(replace(mt.Client, char(10),''), char(13),'') as Client,
 replace(replace(mt.Project, char(10),''), char(13),'') as Project ,
-mt.CTicket,
+mt.CTicket,ut.Comments,
 mt.Tdiscription,mt.Status,
 WorkDate =
 case mt.aflag
@@ -121,7 +122,8 @@ $i=2;
 					->setCellValue('L'.$i, $row2['ShiftType'])
 					->setCellValue('M'.$i, $row2['Time_Min'])
 					->setCellValue('N'.$i, $row2['Time_hours'])
-					->setCellValue('O'.$i, $row2['Team']);
+					->setCellValue('O'.$i, $row2['Team'])
+					->setCellValue('P'.$i, $row2['Comments']);
 //echo $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t". $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min']."\t" . $row2['Time_hours']."\n";
 //$rows[]=$row2;
 $i++;
@@ -129,7 +131,7 @@ $i++;
 
 /*------------------------------------------------------------*/
 
-        foreach(range('A','O') as $columnID) {
+        foreach(range('A','P') as $columnID) {
 			$objPHPExcel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(true);
 		}
 		/*********************Autoresize column width depending upon contents END***********************/
@@ -138,7 +140,7 @@ $i++;
 		
 		/*********************Add color to heading START**********************/
 		$objPHPExcel->getActiveSheet()
-					->getStyle('A1:O1')
+					->getStyle('A1:P1')
 					->getFill()
 					->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
 					->getStartColor()
