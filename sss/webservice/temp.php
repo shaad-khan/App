@@ -46,7 +46,7 @@ $sql3="select
 mt.Ticket_ID,mt.requester,
 replace(replace(mt.Client, char(10),''), char(13),'') as Client,
 replace(replace(mt.Project, char(10),''), char(13),'') as Project ,
-mt.CTicket,ut.Comments,
+mt.CTicket,ut.Comments,mt.team,
 mt.Tdiscription,mt.Status,
 WorkDate =
 case mt.aflag
@@ -124,6 +124,7 @@ $i=2;
 					->setCellValue('N'.$i, $row2['Time_hours'])
 					->setCellValue('O'.$i, $row2['Team'])
 					->setCellValue('P'.$i, $row2['Comments']);
+
 //echo $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t". $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min']."\t" . $row2['Time_hours']."\n";
 //$rows[]=$row2;
 $i++;
