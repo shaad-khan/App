@@ -140,7 +140,7 @@ $aui_flag=1;
 
    // $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
     }
-else if(($status=='WIP') and ($AUI!='on') and ($cstatus!='next' ))
+else if(($status=='WIP') and ($AUI!='on') and ($cstatus!='next' ) and ($cstatus!='Closure' ))
     {
 $fstatus='WIP';
 
@@ -467,7 +467,7 @@ if($cl_tkt!=null)
 
     /*----------------------------------------------------------------------------------------*/
 echo "<script> alert('Updated successfully');
-     setTimeout(function(){window.close()}, 1000);
+     
      </script>";
 }
 else
