@@ -13,7 +13,7 @@ date_default_timezone_set('Asia/Kolkata');
 					->setCellValue('C1', 'Client')
 					->setCellValue('D1', 'Project')
 					->setCellValue('E1', 'CTicket')
-                    ->setCellValue('F1', 'TDiscription')
+                    ->setCellValue('F1', 'TDescription')
                     ->setCellValue('G1', 'Status')
                     ->setCellValue('H1', 'WorkDate')
                     ->setCellValue('I1', 'WorkedBy')
