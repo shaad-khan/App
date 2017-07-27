@@ -44,7 +44,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
 $sql3="select 
 mt.Ticket_ID,mt.requester,
-replace(replace(mt.Client, char(10),''), char(13),'') as Client,
+mt.Client,
 replace(replace(mt.Project, char(10),''), char(13),'') as Project ,
 mt.CTicket,ut.Comments,mt.team,
 mt.Tdiscription,mt.Status,
