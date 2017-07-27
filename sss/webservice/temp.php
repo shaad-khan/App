@@ -113,7 +113,7 @@ $i=2;
 					->setCellValue('C'.$i, $row2['Client'])
 					->setCellValue('D'.$i, $row2['Project'])
 					->setCellValue('E'.$i, $row2['CTicket'])
-					->setCellValue('F'.$i, $row2['TDiscription'])
+					->setCellValue('F'.$i, $row2['Tdiscription'])
 					->setCellValue('G'.$i, $row2['Status'])
 					->setCellValue('H'.$i, $row2['WorkDate'])
 					->setCellValue('I'.$i, $row2['WorkedBy'])
