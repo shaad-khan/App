@@ -18,7 +18,7 @@ if($type==1)
   select count(m.Ticket_ID) as c
 from master_ticket_tab as m ,update_Tab as u 
 where (m.Ticket_ID=u.TicketId and (u.UpdateBy like '".$user."%' or u.Resolver like '".$user."%' )  
-and u.TimeTaken!=0)and
+and u.TimeTaken!=0) and m.aflag=0 and
 case u.adtime
 when NULL then CAST (CONVERT(DATE, m.UpdateTime, 101) as varchar(30))
 else CAST (CONVERT(DATE, u.adtime, 101) as varchar(30)) end='$date'";
@@ -43,7 +43,7 @@ $sql="SET ANSI_NULLS OFF
 select sum(u.TimeTaken) as t
 from master_ticket_tab as m ,update_Tab as u 
 where (m.Ticket_ID=u.TicketId and (u.UpdateBy like '".$user."%' or u.Resolver like '".$user."%' )  
-and u.TimeTaken!=0)and
+and u.TimeTaken!=0) and m.aflag=0 and
 case u.adtime
 when NULL then CAST (CONVERT(DATE, m.UpdateTime, 101) as varchar(30))
 else CAST (CONVERT(DATE, u.adtime, 101) as varchar(30)) end='$date'";
@@ -63,6 +63,7 @@ $result=$conn->query($sql);
 
 	$ttime+=$row4['t'];
 }
+$ttime=$ttime/60;
 $rows=array('tcount'=>$tcount,'ttime'=>$ttime);
 ob_start("ob_gzhandler");
 
