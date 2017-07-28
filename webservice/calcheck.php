@@ -17,7 +17,10 @@ if($type==1)
   $sql="select count(m.Ticket_ID) as c
 from master_ticket_tab as m ,update_Tab as u 
 where (m.Ticket_ID=u.TicketId and (u.UpdateBy like '".$user."%' or u.Resolver like '".$user."%' )  
-and u.TimeTaken!=0)and CONVERT(date,u.UpdateTime)='$date'";
+and u.TimeTaken!=0)and and
+case u.adtime
+when NULL then m.UpdateTime
+else u.adtime end='$date'";
 //echo $sql;
   //$sql="select count(*) as c from Master_Ticket_Tab where Resolver like '".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
 $result=$conn->query($sql);
@@ -38,7 +41,10 @@ $result=$conn->query($sql);
 $sql="select sum(u.TimeTaken) as t
 from master_ticket_tab as m ,update_Tab as u 
 where (m.Ticket_ID=u.TicketId and (u.UpdateBy like '".$user."%' or u.Resolver like '".$user."%' )  
-and u.TimeTaken!=0)and CONVERT(date,u.UpdateTime)='$date'";
+and u.TimeTaken!=0)and
+case u.adtime
+when NULL then m.UpdateTime
+else u.adtime end='$date'";
 //$sql="select sum(TOTAL_TIME) as t from Master_Ticket_Tab where Resolver like '".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
 $result=$conn->query($sql);
 //echo $msg;
