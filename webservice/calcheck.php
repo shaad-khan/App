@@ -64,6 +64,7 @@ $result=$conn->query($sql);
 	$ttime+=$row4['t'];
 }
 $ttime=$ttime/60;
+$ttime=floor($ttime);
 $rows=array('tcount'=>$tcount,'ttime'=>$ttime);
 ob_start("ob_gzhandler");
 
