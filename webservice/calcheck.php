@@ -14,7 +14,8 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $type=$_GET['type'];
 if($type==1)
 {
-  $sql="select count(m.Ticket_ID) as c
+  $sql="SET ANSI_NULLS OFF
+  select count(m.Ticket_ID) as c
 from master_ticket_tab as m ,update_Tab as u 
 where (m.Ticket_ID=u.TicketId and (u.UpdateBy like '".$user."%' or u.Resolver like '".$user."%' )  
 and u.TimeTaken!=0)and
@@ -38,7 +39,8 @@ $result=$conn->query($sql);
 
 	$tcount=$tcount+$row4['c'];
 }
-$sql="select sum(u.TimeTaken) as t
+$sql="SET ANSI_NULLS OFF
+select sum(u.TimeTaken) as t
 from master_ticket_tab as m ,update_Tab as u 
 where (m.Ticket_ID=u.TicketId and (u.UpdateBy like '".$user."%' or u.Resolver like '".$user."%' )  
 and u.TimeTaken!=0)and
