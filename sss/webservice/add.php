@@ -168,6 +168,12 @@ else if(($status=='WIP') and ($cstatus=="Closure"))
    $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
 
 }
+else if(($status=='AUI') and ($cstatus=="Closure"))
+{
+  $fstatus="Close";
+   $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
+
+}
 else if($cstatus=='next')
 {
     $sql_status="select Status,Resolver from Master_Ticket_Tab where Ticket_ID='$TID'";
