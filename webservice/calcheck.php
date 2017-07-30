@@ -39,6 +39,7 @@ $result=$conn->query($sql);
 
 	$tcount=$tcount+$row4['c'];
 }
+
 $sql="SET ANSI_NULLS OFF
 select sum(u.TimeTaken) as t
 from update_Tab as u 
