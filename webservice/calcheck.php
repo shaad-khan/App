@@ -15,12 +15,12 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 if($type==1)
 {
   $sql="SET ANSI_NULLS OFF
-  select count(m.Ticket_ID) as c
-from master_ticket_tab as m ,update_Tab as u 
-where (m.Ticket_ID=u.TicketId and (u.UpdateBy like '".$user."%' or u.Resolver like '".$user."%' )  
-and u.TimeTaken!=0) and m.aflag=0 and
+  select count(TicketID) as c
+from update_Tab as u 
+where  (u.UpdateBy like '".$user."%' or u.Resolver like '".$user."%' )  
+and u.TimeTaken!=0 and 
 case u.adtime
-when NULL then CAST (CONVERT(DATE, m.UpdateTime, 101) as varchar(30))
+when NULL then CAST (CONVERT(DATE, u.UpdateTime, 101) as varchar(30))
 else CAST (CONVERT(DATE, u.adtime, 101) as varchar(30)) end='$date'";
 //echo $sql;
   //$sql="select count(*) as c from Master_Ticket_Tab where Resolver like '".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
@@ -31,7 +31,7 @@ $result=$conn->query($sql);
 
 	$tcount=$row4['c'];
 }
-$sql="select count(Tdiscription) as c from master_ticket_tab where Resolver like '".$user."%' and aflag=1 and CONVERT(date,Resolver_Dtime)='$date'";
+$sql="select count(Tdiscription) as c from master_ticket_tab where Resolver like '".$user."%' and aflag=1 and CONVERT(date,UpdateTime)='$date'";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
@@ -41,11 +41,11 @@ $result=$conn->query($sql);
 }
 $sql="SET ANSI_NULLS OFF
 select sum(u.TimeTaken) as t
-from master_ticket_tab as m ,update_Tab as u 
-where (m.Ticket_ID=u.TicketId and (u.UpdateBy like '".$user."%' or u.Resolver like '".$user."%' )  
-and u.TimeTaken!=0) and m.aflag=0 and
+from update_Tab as u 
+where (u.UpdateBy like '".$user."%' or u.Resolver like '".$user."%' )  
+and u.TimeTaken!=0 and
 case u.adtime
-when NULL then CAST (CONVERT(DATE, m.UpdateTime, 101) as varchar(30))
+when NULL then CAST (CONVERT(DATE, u.UpdateTime, 101) as varchar(30))
 else CAST (CONVERT(DATE, u.adtime, 101) as varchar(30)) end='$date'";
 //$sql="select sum(TOTAL_TIME) as t from Master_Ticket_Tab where Resolver like '".$user."%' and CONVERT(date,Resolver_Dtime)='$date'";
 $result=$conn->query($sql);
@@ -55,7 +55,7 @@ $result=$conn->query($sql);
 
 	$ttime=$row4['t'];
 }
-$sql="select sum(Total_time) as t from master_ticket_tab where Resolver like '".$user."%' and aflag=1 and CONVERT(date,Resolver_Dtime)='$date'";
+$sql="select sum(Total_time) as t from master_ticket_tab where Resolver like '".$user."%' and aflag=1 and CONVERT(date,UpdateTime)='$date'";
 $result=$conn->query($sql);
 //echo $msg;
   while($row4=$result->fetch())
