@@ -249,7 +249,7 @@ td
 </select>
   </div>
   </td>
-  <td ng-if="items[0].Status!='Classify'">
+  <td ng-if="items[0].Status!='Classify' && items[0].jobtype!=''">
      <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].jobtype}}" disabled>
     
   </div>
