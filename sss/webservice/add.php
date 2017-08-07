@@ -216,8 +216,8 @@ date_default_timezone_set('Asia/Kolkata');
 }
 else if(($tab_status=='Review'))
 {
-    $fstatus='Doc';
-    $docf=1;
+    $fstatus='Close';
+    $docf=0;
 }
 
 else if($tab_status=='Doc')
