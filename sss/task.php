@@ -188,6 +188,16 @@ $u=$_SESSION['user'];
           
            
           </div>
+           <div class="form-group">
+            <label for="recipient-name" class="control-label">Select Shift Type</label>
+             
+            
+           <select class="form-control" name="stype"  ng-model='stype'>
+  <option ng-repeat="tt in sts" value="{{tt.title}}">{{tt.title}}</option>
+</select>
+          
+           
+          </div>
           <div class="form-group">
             <label for="recipient-name" class="control-label">Total Time Spent </label>
              
