@@ -238,6 +238,23 @@ td
 "></span></label> </td> <td><!--<input type="hidden" class="form-control"  value="{{items[0].requester}}"/>
    --> <input type="text" class="form-control"  id="exampleInputEmail1" name="requester" placeholder="{{items[0].requester}}" value="{{items[0].requester}}" />
   </div> </td>
+  <td>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Type of Job <span class="glyphicon glyphicon-info-sign
+"></span></label> </td><td ng-if="items[0].jobtype==''">
+    
+    <select class="form-control" name="jtype" required>
+  <option  value="Billable">Billable</option>
+  <option  value="Non-Billable">Non-Billable</option>
+</select>
+  </div>
+  </td>
+  <td ng-if="items[0].Client!=''">
+     <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].jobtype}}" disabled>
+    
+  </div>
+  </td>
 </tr>
   <tr>
 <!--<td>
