@@ -192,6 +192,7 @@ $close=$_SESSION['Closure'];
       <tr>
       
         <th>CheckList</th>
+        <th>Client</th>
         <th>DateTime</th>
         <th>Status</th>
       </tr>
@@ -201,6 +202,7 @@ $close=$_SESSION['Closure'];
       
       <tr class="info"  ng-repeat="item in results">
         <td>{{item.Tdiscription}}</td>
+         <td>{{item.Client}}</td>
         <td>{{item.Cdatetime}}</td>
         <td>{{item.Status}}</td>
          <td><button class="btn btn-success" ng-click="close(item.Id)"><span class="glyphicon glyphicon-ok
