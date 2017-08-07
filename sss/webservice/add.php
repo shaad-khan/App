@@ -42,6 +42,7 @@ $resolver= $_POST["resolver"];
 $schedule= $_POST["schedule"];
 
 $reviewer= $_POST["reviewer"];
+$jtype=$_POST['jtype'];
 
 
 $discription= $_POST["discription"];
@@ -128,7 +129,7 @@ else
     //echo "<script> alert('insert');</script>";
 if($status=='Classify')
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team',requester='$requester' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team',requester='$requester',jobtype='$jtype' where Ticket_ID='$TID'";
 }
  else if(($status=='WIP') and ($AUI=='on') and ($cstatus!='next'))
     {
