@@ -193,6 +193,7 @@ $u=$_SESSION['user'];
              
             
            <select class="form-control" name="stype"  ng-model='stype'>
+           
   <option ng-repeat="tt in sts" value="{{tt.title}}">{{tt.title}}</option>
 </select>
           
