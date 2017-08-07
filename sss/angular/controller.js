@@ -428,7 +428,8 @@ ptype:pt,
 ttype:tt,
 tspent:ts,
 adate:ad,
-amessage:am
+amessage:am,
+stype:$scope.stype
 });
 console.log(data);
 var config = {
