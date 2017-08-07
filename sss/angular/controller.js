@@ -417,7 +417,7 @@ service.serv("https://apps.continuserve.com/SSS/webservice/service.php?type=Adho
 service.serv("https://apps.continuserve.com/SSS/webservice/service.php?type=Project_tab").then(function(response){
 $scope.projects=response.data;
 });
-service.serv("https://apps.continuserve.com/SSS/webservice/service.php?type=dbo.shiftschedule").then(function(response){
+service.serv("https://apps.continuserve.com/SSS/webservice/service.php?type=shiftschedule").then(function(response){
 $scope.sts=response.data;
 });
 
