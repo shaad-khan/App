@@ -170,7 +170,7 @@ td
     <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Client==''">
     
-    <select class="form-control" name="client">
+    <select class="form-control" name="client" required>
   <option ng-repeat="list in lists" value="{{list.Client_name}}">{{list.Client_name}}</option>
 </select>
   </div>
@@ -192,7 +192,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Project <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Project==''">
-   <select class="form-control" name="project" >
+   <select class="form-control" name="project" required>
   <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Project}}</option>
 </select>
   </div></td>
@@ -244,6 +244,8 @@ td
     <label for="exampleInputEmail1">Type of Job <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><td ng-if="items[0].Status=='Classify'">
     <select class="form-control" name="jtype" required>
+
+  <option  value=""></option>
   <option  value="Billable">Billable</option>
   <option  value="Non-Billable">Non-Billable</option>
 </select>
@@ -398,7 +400,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].EnvType==''">
-     <select class="form-control" name="env">
+     <select class="form-control" name="env" >
      <option value="General">General</option>
   <option value="Prod">Prod</option>
     <option value="Non-Prod">Non-Prod</option>
@@ -412,7 +414,7 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Shift <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-     <select class="form-control" name="schedule">
+     <select class="form-control" name="schedule" required>
   <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
 </select>
   </div>
