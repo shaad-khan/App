@@ -502,12 +502,17 @@ $scope.$on('$destroy', function () {
  });
  $scope.close=function(v1)
 {
+  if($scope.stype==''){
+    alert("select shift type");
+  }
+  else{
   service.serv("https://apps.continuserve.com/sss/webservice/checklist_u.php?id="+v1+"&stype="+$scope.stype).then(function(response){
 	//$scope.load='false';
 		$scope.res=response.data;
 console.log(response.data.length);
   
 	});
+  }
 }
 
 
