@@ -502,7 +502,7 @@ $scope.$on('$destroy', function () {
  });
  $scope.close=function(v1)
 {
-  if($scope.stype==''){
+  if($scope.stype.length==0){
     alert("select shift type");
   }
   else{
