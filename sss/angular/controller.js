@@ -423,6 +423,13 @@ $scope.sts=response.data;
 
 $scope.adhoc_add=function(pt,tt,ts,ad,am)
 {
+
+if(pt===''|| tt==='' ||  ts==='' || ad===''|| am==='' || $scope.stype==='' || $scope.jtype==='')
+{
+  alert("One of the fields are blank please fill the required field");
+
+}
+else{
 var data=$.param({
 ptype:pt,
 ttype:tt,
@@ -453,7 +460,7 @@ $http.post('https://apps.continuserve.com/SSS/webservice/adhocadd.php', data, co
             
 
 };
-
+}
 
 
 
