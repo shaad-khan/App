@@ -195,6 +195,7 @@ $close=$_SESSION['Closure'];
         <th>Client</th>
         <th>DateTime</th>
         <th>Status</th>
+        <th>Select Shift</th>
       </tr>
     </thead>
     <tbody>
@@ -205,6 +206,20 @@ $close=$_SESSION['Closure'];
          <td>{{item.Client}}</td>
         <td>{{item.Cdatetime}}</td>
         <td>{{item.Status}}</td>
+        <td>
+          <div class="form-group">
+           
+             
+            
+           <select class="form-control" name="stype"  ng-model='stype' required>
+           
+  <option ng-repeat="tt in sts" value="{{tt.title}}">{{tt.title}}</option>
+</select>
+          
+           
+          </div>
+        
+        </td>
          <td><button class="btn btn-success" ng-click="close(item.Id)"><span class="glyphicon glyphicon-ok
 "></span></button></td>
       </tr>

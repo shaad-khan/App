@@ -470,6 +470,9 @@ app.controller("checklist",function($scope,$routeParams,service,$interval,$locat
  var ticketapi=$interval(statuscheck, 5000);
 var name=$routeParams.email;
 var type=$routeParams.type;
+service.serv("https://apps.continuserve.com/SSS/webservice/service.php?type=shiftschedule").then(function(response){
+$scope.sts=response.data;
+});
 function statuscheck() {
  
 	//alert("https://apps.continuserve.com/sss/continuity/App/webservice/status.php?name="+name+"&type="+type);
@@ -479,6 +482,8 @@ service.serv("https://apps.continuserve.com/sss/webservice/checklist.php").then(
 console.log(response.data.length);
   
 	});
+  
+
   
 };
 //$scope.email=$routeParams.email;
