@@ -473,6 +473,12 @@ var type=$routeParams.type;
 service.serv("https://apps.continuserve.com/SSS/webservice/service.php?type=shiftschedule").then(function(response){
 $scope.sts=response.data;
 });
+service.serv("https://apps.continuserve.com/sss/webservice/checklist.php").then(function(response){
+	//$scope.load='false';
+		$scope.results=response.data;
+console.log(response.data.length);
+  
+	});
 function statuscheck() {
  
 	//alert("https://apps.continuserve.com/sss/continuity/App/webservice/status.php?name="+name+"&type="+type);
