@@ -15,15 +15,16 @@ date_default_timezone_set('Asia/Kolkata');
 					->setCellValue('E1', 'CTicket')
                     ->setCellValue('F1', 'TDescription')
                     ->setCellValue('G1', 'Status')
-                    ->setCellValue('H1', 'WorkDate')
-                    ->setCellValue('I1', 'WorkedBy')
-                    ->setCellValue('J1', 'EnvType')
-                    ->setCellValue('K1', 'TaskType')
-                    ->setCellValue('L1', 'ShiftType')
-                    ->setCellValue('M1', 'TimeMinutes')
-                    ->setCellValue('N1', 'TimeHours')
-					->setCellValue('O1', 'Team')
-					->setCellValue('P1', 'Comments');
+					->setCellValue('H1', 'Creation Date')
+                    ->setCellValue('I1', 'WorkDate')
+                    ->setCellValue('J1', 'WorkedBy')
+                    ->setCellValue('K1', 'EnvType')
+                    ->setCellValue('L1', 'TaskType')
+                    ->setCellValue('M1', 'ShiftType')
+                    ->setCellValue('N1', 'TimeMinutes')
+                    ->setCellValue('O1', 'TimeHours')
+					->setCellValue('P1', 'Team')
+					->setCellValue('Q1', 'Comments');
 
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
@@ -47,7 +48,7 @@ mt.Ticket_ID,mt.requester,
 replace(replace(mt.Client, char(10),''), char(13),'') as Client,
 replace(replace(mt.Project, char(10),''), char(13),'') as Project ,
 mt.CTicket,ut.Comments,mt.team,
-mt.Tdiscription,mt.Status,
+mt.Tdiscription,mt.Status,mt.Cdatetime
 WorkDate =
 case mt.aflag
 when '0' then CAST (CONVERT(DATE, ut.UpdateTime, 101) as varchar(30))
@@ -115,15 +116,16 @@ $i=2;
 					->setCellValue('E'.$i, $row2['CTicket'])
 					->setCellValue('F'.$i, $row2['Tdiscription'])
 					->setCellValue('G'.$i, $row2['Status'])
-					->setCellValue('H'.$i, $row2['WorkDate'])
-					->setCellValue('I'.$i, $row2['WorkedBy'])
-					->setCellValue('J'.$i, $row2['EnvType'])
-					->setCellValue('K'.$i, $row2['TaskType'])
-					->setCellValue('L'.$i, $row2['ShiftType'])
-					->setCellValue('M'.$i, $row2['Time_Min'])
-					->setCellValue('N'.$i, $row2['Time_hours'])
-					->setCellValue('O'.$i, $row2['Team'])
-					->setCellValue('P'.$i, $row2['Comments']);
+					->setCellValue('H'.$i, $row2['Cdatetime'])
+					->setCellValue('I'.$i, $row2['WorkDate'])
+					->setCellValue('J'.$i, $row2['WorkedBy'])
+					->setCellValue('K'.$i, $row2['EnvType'])
+					->setCellValue('L'.$i, $row2['TaskType'])
+					->setCellValue('M'.$i, $row2['ShiftType'])
+					->setCellValue('N'.$i, $row2['Time_Min'])
+					->setCellValue('O'.$i, $row2['Time_hours'])
+					->setCellValue('P'.$i, $row2['Team'])
+					->setCellValue('Q'.$i, $row2['Comments']);
 
 //echo $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t". $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min']."\t" . $row2['Time_hours']."\n";
 //$rows[]=$row2;
@@ -132,16 +134,16 @@ $i++;
 
 /*------------------------------------------------------------*/
 
-        foreach(range('A','P') as $columnID) {
+        foreach(range('A','Q') as $columnID) {
 			$objPHPExcel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(true);
 		}
 		/*********************Autoresize column width depending upon contents END***********************/
 		
-		$objPHPExcel->getActiveSheet()->getStyle('A1:N1')->getFont()->setBold(true); //Make heading font bold
+		$objPHPExcel->getActiveSheet()->getStyle('A1:Q1')->getFont()->setBold(true); //Make heading font bold
 		
 		/*********************Add color to heading START**********************/
 		$objPHPExcel->getActiveSheet()
-					->getStyle('A1:P1')
+					->getStyle('A1:Q1')
 					->getFill()
 					->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
 					->getStartColor()
