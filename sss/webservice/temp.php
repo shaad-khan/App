@@ -48,7 +48,7 @@ mt.Ticket_ID,mt.requester,
 replace(replace(mt.Client, char(10),''), char(13),'') as Client,
 replace(replace(mt.Project, char(10),''), char(13),'') as Project ,
 mt.CTicket,ut.Comments,mt.team,
-mt.Tdiscription,mt.Status,mt.Cdatetime
+mt.Tdiscription,mt.Status,mt.Cdatetime,
 WorkDate =
 case mt.aflag
 when '0' then CAST (CONVERT(DATE, ut.UpdateTime, 101) as varchar(30))
