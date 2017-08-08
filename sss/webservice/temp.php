@@ -51,8 +51,8 @@ mt.CTicket,ut.Comments,mt.team,
 mt.Tdiscription,mt.Status,mt.Cdatetime,
 WorkDate =
 case mt.aflag
-when '0' then CAST (CONVERT(DATE, ut.UpdateTime, 101) as varchar(30))
-when '1' then CAST (CONVERT(DATE, mt.Resolver_Dtime, 101) as varchar(30))
+when '0' then ut.UpdateTime 
+when '1' then mt.Resolver_Dtime
 else 'Unknown'
 end,
 WorkedBy = case mt.aflag
