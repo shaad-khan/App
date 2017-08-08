@@ -426,7 +426,7 @@ $scope.adhoc_add=function(pt,tt,ts,ad,am)
 
 if(pt.length == 0 || tt.length ==0 ||  ts.length ==0 || ad.length ==0|| am.length ==0 || $scope.stype.length == 0 || $scope.jtype.length == 0)
 {
-  alert("One of the fields are blank please fill the required field");
+  alert("One or more fields are blank please fill the required field");
   console.log("blank_ alert");
 
 }
