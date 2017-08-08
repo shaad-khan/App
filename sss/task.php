@@ -199,6 +199,21 @@ $u=$_SESSION['user'];
           
            
           </div>
+           <div class="form-group">
+            <label for="recipient-name" class="control-label">Select Job Type</label>
+             
+            
+           <select class="form-control" name="jtype"  ng-model='jtype'>
+           
+  <option  value="Billable">Billable</option>
+  <option  value="Non-Billable">Non-Billable</option>
+</select>
+          
+           
+          </div>
+
+
+
           <div class="form-group">
             <label for="recipient-name" class="control-label">Total Time Spent </label>
              

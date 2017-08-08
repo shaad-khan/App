@@ -429,7 +429,8 @@ ttype:tt,
 tspent:ts,
 adate:ad,
 amessage:am,
-stype:$scope.stype
+stype:$scope.stype,
+jtype:$scope.jtype
 });
 console.log(data);
 var config = {
