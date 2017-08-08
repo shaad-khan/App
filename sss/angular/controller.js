@@ -467,7 +467,7 @@ $http.post('https://apps.continuserve.com/SSS/webservice/adhocadd.php', data, co
 
 });
 app.controller("checklist",function($scope,$routeParams,service,$interval,$location,$http){
- var ticketapi=$interval(statuscheck, 5000);
+ var ticketapi=$interval(statuscheck, 10000);
 var name=$routeParams.email;
 var type=$routeParams.type;
 service.serv("https://apps.continuserve.com/SSS/webservice/service.php?type=shiftschedule").then(function(response){
@@ -502,7 +502,7 @@ $scope.$on('$destroy', function () {
  });
  $scope.close=function(v1)
 {
-  service.serv("https://apps.continuserve.com/sss/webservice/checklist_u.php?id="+v1).then(function(response){
+  service.serv("https://apps.continuserve.com/sss/webservice/checklist_u.php?id="+v1+"&stype="+$scope.stype).then(function(response){
 	//$scope.load='false';
 		$scope.res=response.data;
 console.log(response.data.length);
