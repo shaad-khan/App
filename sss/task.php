@@ -159,7 +159,7 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Environment Type</label>
              
             
-         <select class="form-control" name="etype" ng-model='etype' >
+         <select class="form-control" name="etype" ng-model='etype' required>
          
          <option value="General">General</option>
  <option value="Prod">Prod</option>
@@ -172,7 +172,7 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Select Project</label>
              
             
-           <select class="form-control" name="project" ng-model='projecttype' >
+           <select class="form-control" name="project" ng-model='projecttype' required>
   <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Project}}</option>
 </select>
           
@@ -182,7 +182,7 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Select Task Type</label>
              
             
-           <select class="form-control" name="project"  ng-model='tasktype'>
+           <select class="form-control" name="project"  ng-model='tasktype' required>
   <option ng-repeat="tt in tts" value="{{tt.Task}}">{{tt.Task}}</option>
 </select>
           
@@ -192,7 +192,7 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Select Shift Type</label>
              
             
-           <select class="form-control" name="stype"  ng-model='stype'>
+           <select class="form-control" name="stype"  ng-model='stype' required>
            
   <option ng-repeat="tt in sts" value="{{tt.title}}">{{tt.title}}</option>
 </select>
@@ -203,7 +203,7 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Select Job Type</label>
              
             
-           <select class="form-control" name="jtype"  ng-model='jtype'>
+           <select class="form-control" name="jtype"  ng-model='jtype' required>
            
   <option  value="Billable">Billable</option>
   <option  value="Non-Billable">Non-Billable</option>
@@ -227,7 +227,7 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Select Date:</label>
              
             
-           <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="adate"/>
+           <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="adate" required/>
           
           
            
