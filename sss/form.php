@@ -220,7 +220,7 @@ td
     <label for="exampleInputEmail1">UpadateDateTime <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
      <td>
-     <input type="text" class="form-control"  id="some_class_1" style="color:black" placeholder="Update Datate Time" name="utime"/>
+     <input type="text" class="form-control"  id="some_class_1" style="color:black" placeholder="Update Datate Time" name="utime" required/>
      
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
