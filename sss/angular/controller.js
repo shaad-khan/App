@@ -424,7 +424,7 @@ $scope.sts=response.data;
 $scope.adhoc_add=function(pt,tt,ts,ad,am)
 {
 
-if(pt =='' || tt =='' ||  ts =='' || ad ==''|| am =='' || $scope.stype =='' || $scope.jtype =='')
+if(pt.length == 0 || tt.length ==0 ||  ts.length ==0 || ad.length ==0|| am.length ==0 || $scope.stype.length == 0 || $scope.jtype.length == 0)
 {
   alert("One of the fields are blank please fill the required field");
 
