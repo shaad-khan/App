@@ -220,7 +220,7 @@ $close=$_SESSION['Closure'];
           </div>
         
         </td>
-         <td><button class="btn btn-success" ng-click="close(item.Id)"><span class="glyphicon glyphicon-ok
+         <td><button class="btn btn-success" ng-click="close(item.Id,stype)"><span class="glyphicon glyphicon-ok
 "></span></button></td>
       </tr>
       

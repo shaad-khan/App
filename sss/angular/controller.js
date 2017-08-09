@@ -506,9 +506,11 @@ $scope.$on('$destroy', function () {
           }
 
  });
- $scope.close=function(v1)
+ $scope.close=function(v1,v2)
 {
-  alert($scope.stype);
+
+  alert(v2);
+
   if($scope.stype.length==0){
     alert("select shift type");
   }
