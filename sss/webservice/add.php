@@ -112,6 +112,14 @@ $conn->query($sql);
 
 //echo $user_session;
 //echo ($uname!=$user_session);//and($status=='Classify'));
+
+if($crtime=='' && $status='Classify')
+{
+  echo "<script> alert('Please Enter creation time ');
+window.location='https://apps.continuserve.com/sss/form.php?ID=$TID';
+</script>";
+}
+else{
 if(($creator!=$user_session)and($status=='Classify'))
 {
    //echo "i am step 1";
@@ -491,5 +499,6 @@ else
     echo "<script> alert('Updation failed');
      setTimeout(function(){window.close()}, 1000);
      </script>";
+}
 }
 ?>
