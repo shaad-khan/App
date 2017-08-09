@@ -511,13 +511,13 @@ $scope.$on('$destroy', function () {
 
   alert(v2);
 
-  if(v2.length==0){
-    alert("select shift type");
+  if(typeof v2 == 'undefined'){
+    alert("Please select shift timing");
   }
   else{
     //alert("i am here");
 
-  service.serv("https://apps.continuserve.com/sss/webservice/checklist_u.php?id="+v1+"&stype="+$scope.stype).then(function(response){
+  service.serv("https://apps.continuserve.com/sss/webservice/checklist_u.php?id="+v1+"&stype="+v2).then(function(response){
 	//$scope.load='false';
 		$scope.res=response.data;
 //console.log(response.data.length);
