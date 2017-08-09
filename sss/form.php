@@ -215,11 +215,11 @@ td
 "></span></label> </td> <td><input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Assign_to}}" name="aname" disabled>
   </div> </td>
-  <td ng-if="items[0].Status=='Classify'">
+  <td ng-show="items[0].Status=='Classify'">
 <div class="form-group">
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
-     <td ng-if="items[0].Status=='Classify'">
+     <td ng-show="items[0].Status=='Classify'">
      <input type="text" class="form-control"  id="datetimepicker_dark"  placeholder="Creation Date Time" name="crtime" required/>
      
   
@@ -242,8 +242,8 @@ td
     <label for="exampleInputEmail1">UpadateDateTime <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
      <td>
-   <!--  <input type="text" class="form-control"  id="some_class_2" style="color:black" placeholder="Update Date Time" name="utime" required/>
-     -->
+     <input type="text" class="form-control"  id="some_class_2" style="color:black" placeholder="Update Date Time" name="utime" required/>
+     
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
  
