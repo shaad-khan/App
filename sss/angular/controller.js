@@ -513,10 +513,11 @@ $scope.$on('$destroy', function () {
   }
   else{
     alert("i am here");
+
   service.serv("https://apps.continuserve.com/sss/webservice/checklist_u.php?id="+v1+"&stype="+$scope.stype).then(function(response){
 	//$scope.load='false';
 		$scope.res=response.data;
-console.log(response.data.length);
+//console.log(response.data.length);
   
 	});
   }
