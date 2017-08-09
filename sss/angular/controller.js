@@ -512,6 +512,7 @@ $scope.$on('$destroy', function () {
     alert("select shift type");
   }
   else{
+    alert("i am here");
   service.serv("https://apps.continuserve.com/sss/webservice/checklist_u.php?id="+v1+"&stype="+$scope.stype).then(function(response){
 	//$scope.load='false';
 		$scope.res=response.data;
