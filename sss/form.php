@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-   <script src="https://apps.continuserve.com/angular/Contoller_form.js"></script>
+   
    
    <script src="angular/Controller_form.js"></script>
     <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
@@ -234,7 +234,7 @@ td
      <td ng-if="items[0].Status!='Classify'">
      <input type="text" class="form-control"   style="color:black" placeholder="{{items[0].Cdatetime}}"  disabled/>
      
-     
+
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
  <td>
