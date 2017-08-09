@@ -112,8 +112,8 @@ $conn->query($sql);
 
 //echo $user_session;
 //echo ($uname!=$user_session);//and($status=='Classify'));
-
-if($crtime=='' && $status='Classify')
+echo "<script> alert('".$crtime."')";
+if($crtime=='')
 {
   echo "<script> alert('Please Enter creation time ');
 window.location='https://apps.continuserve.com/sss/form.php?ID=$TID';
