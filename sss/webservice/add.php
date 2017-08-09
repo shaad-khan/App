@@ -112,7 +112,6 @@ $conn->query($sql);
 
 //echo $user_session;
 //echo ($uname!=$user_session);//and($status=='Classify'));
-
 if(($creator!=$user_session)and($status=='Classify'))
 {
    //echo "i am step 1";
@@ -264,7 +263,7 @@ else if(($fstatus=='Doc') and ($docf==1))
 if($Master_sql) 
 {
   
-   echo $Master_sql;
+  // echo $Master_sql;
 $conn->query($Master_sql);
 
 }
