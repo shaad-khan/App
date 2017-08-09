@@ -511,11 +511,11 @@ $scope.$on('$destroy', function () {
 
   alert(v2);
 
-  if($scope.stype.length==0){
+  if(v2.length==0){
     alert("select shift type");
   }
   else{
-    alert("i am here");
+    //alert("i am here");
 
   service.serv("https://apps.continuserve.com/sss/webservice/checklist_u.php?id="+v1+"&stype="+$scope.stype).then(function(response){
 	//$scope.load='false';
