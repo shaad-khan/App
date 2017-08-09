@@ -220,10 +220,11 @@ td
     <label for="exampleInputEmail1">Creation_date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
      <td ng-if="items[0].Status=='Classify'">
-     <input type="text" class="form-control"  id="some_class_2" style="color:black" placeholder="Update Datate Time" name="crtime" required/>
+     <input type="text" class="form-control"  id="some_class_1" style="color:black" placeholder="Creation Date Time" name="crtime" required/>
      
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
+
 
 <td ng-if="items[0].Status!='Classify'">
 <div class="form-group">
@@ -239,20 +240,20 @@ td
     <label for="exampleInputEmail1">UpadateDateTime <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
      <td>
-     <input type="text" class="form-control"  id="some_class_1" style="color:black" placeholder="Update Datate Time" name="utime" required/>
+     <input type="text" class="form-control"  id="some_class_2" style="color:black" placeholder="Update Date Time" name="utime" required/>
      
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
  
 <tr>
-<td>
+
 <td>
   <div class="form-group">
     <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td><input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
     <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled/>
   </div> </td>
-
+<td>
   <div class="form-group">
     <label for="exampleInputEmail1">RequesterName <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td><!--<input type="hidden" class="form-control"  value="{{items[0].requester}}"/>
