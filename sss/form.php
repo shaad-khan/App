@@ -220,7 +220,7 @@ td
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
      <td ng-if="items[0].Status=='Classify'">
-     <input type="text" class="form-control some_class"  id="some_class_1" style="color:black" placeholder="Creation Date Time" name="crtime" required/>
+     <input type="text" class="form-control"  id="datetimepicker_dark"  placeholder="Creation Date Time" name="crtime" required/>
      
   
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
@@ -729,7 +729,7 @@ window.onerror = function(errorMsg) {
             $('#some_class_3').datetimepicker();
              $('#some_class_4').datetimepicker();
              $('.some_class').datetimepicker();
-         
+         $('#datetimepicker_dark').datetimepicker({theme:'dark'})
 
          </script>
 </html>
