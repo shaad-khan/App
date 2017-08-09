@@ -729,7 +729,6 @@ window.onerror = function(errorMsg) {
             $('#some_class_3').datetimepicker();
              $('#some_class_4').datetimepicker();
              $('.some_class').datetimepicker();
-         $('#datetimepicker_dark').datetimepicker({theme:'dark'})
-
+         $('#datetimepicker_dark').datetimepicker();
          </script>
 </html>
