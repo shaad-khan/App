@@ -13,7 +13,7 @@ $db = "CSL2AppsDB";
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-    
+  $crtime=$_POST['crtime'];  
 $TID  = $_POST["TID"];
 
 $env=$_POST['env'];
@@ -129,7 +129,13 @@ else
     //echo "<script> alert('insert');</script>";
 if($status=='Classify')
 {
+  if($crtime)
+  {
+    $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team',requester='$requester',jobtype='$jtype',Cdatetime='$crtime' where Ticket_ID='$TID'";
+  }
+  else{
 $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team',requester='$requester',jobtype='$jtype' where Ticket_ID='$TID'";
+}
 }
  else if(($status=='WIP') and ($AUI=='on') and ($cstatus!='next'))
     {
@@ -218,6 +224,7 @@ else if(($tab_status=='Review'))
 {
     $fstatus='Close';
     $docf=0;
+    
 }
 
 else if($tab_status=='Doc')
