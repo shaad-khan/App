@@ -509,7 +509,7 @@ $scope.$on('$destroy', function () {
  $scope.close=function(v1,v2)
 {
 
-  alert(v2);
+  //alert(v2);
 
   if(typeof v2 == 'undefined'){
     alert("Please select shift timing");
