@@ -222,6 +222,7 @@ td
      <td ng-if="items[0].Status=='Classify'">
      <input type="text" class="form-control some_class"  id="some_class_1" style="color:black" placeholder="Creation Date Time" name="crtime" required/>
      
+     
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
 
