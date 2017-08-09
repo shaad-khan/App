@@ -215,6 +215,24 @@ td
 "></span></label> </td> <td><input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Assign_to}}" name="aname" disabled>
   </div> </td>
+  <td ng-if="items[0].Status=='Classify'">
+<div class="form-group">
+    <label for="exampleInputEmail1">Creation_date Time <span class="glyphicon glyphicon-info-sign
+"></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
+     <td ng-if="items[0].Status=='Classify'">
+     <input type="text" class="form-control"  id="some_class_2" style="color:black" placeholder="Update Datate Time" name="crtime" required/>
+     
+   <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
+-->  </div> </td>
+<td ng-if="items[0].Status!='Classify'">
+<div class="form-group">
+    <label for="exampleInputEmail1">Creation_date Time <span class="glyphicon glyphicon-info-sign
+"></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
+     <td ng-if="items[0].Status!='Classify'">
+     <input type="text" class="form-control"   style="color:black" placeholder="{{items[0].Cdatetime}}"  disabled/>
+     
+   <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
+-->  </div> </td>
  <td>
 <div class="form-group">
     <label for="exampleInputEmail1">UpadateDateTime <span class="glyphicon glyphicon-info-sign
@@ -224,14 +242,15 @@ td
      
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
- <td>
+ 
+<tr>
+<td>
+<td>
   <div class="form-group">
     <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td><input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
     <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled/>
   </div> </td>
-<tr>
-<td>
 
   <div class="form-group">
     <label for="exampleInputEmail1">RequesterName <span class="glyphicon glyphicon-info-sign
@@ -555,6 +574,7 @@ if($_SESSION['Doc']==1)
     </td>
     <?php
   }?>
+
 <td ng-if="items[0].Status=='Close'"><div class="form-group" >
     <label for="exampleInputEmail1">Total Client Time</label>
     <input type="number" class="form-control" name="attime" id="exampleInputEmail1" placeholder="{{items[0].Total_client_time}} min" disabled>
