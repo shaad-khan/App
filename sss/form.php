@@ -234,6 +234,7 @@ td
      <td ng-if="items[0].Status!='Classify'">
      <input type="text" class="form-control"   style="color:black" placeholder="{{items[0].Cdatetime}}"  disabled/>
      
+     
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
  <td>
