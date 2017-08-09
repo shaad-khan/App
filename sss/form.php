@@ -224,6 +224,7 @@ td
      
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
+
 <td ng-if="items[0].Status!='Classify'">
 <div class="form-group">
     <label for="exampleInputEmail1">Creation_date Time <span class="glyphicon glyphicon-info-sign
