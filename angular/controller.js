@@ -232,6 +232,13 @@ var ticketapi=$interval(statuscheck, 5000);
 var name=$routeParams.email;
 var type=$routeParams.type;
 $scope.type=$routeParams.type;
+
+service.serv("https://apps.continuserve.com/webservice/status.php?name="+name+"&type="+type).then(function(response){
+	$scope.load='false';
+		$scope.results=response.data;
+console.log(response.data.length);
+  
+	});
 function statuscheck() {
  
 	//alert("https://apps.continuserve.com/continuity/App/webservice/status.php?name="+name+"&type="+type);
