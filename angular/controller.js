@@ -203,9 +203,9 @@ app.controller("Ticket",function($scope,$routeParams,service,$interval,$location
 //$scope.actualtime='';
 //$scope.ob={}
 //$scope.ob.actualtime='';
-$scope.closure=function(v1,v3)
+$scope.closure=function(v1,v2,v3)
 {
-  alert(v1+$scope.actualtime+v3);
+  alert(v1+v2+v3);
 }
 
  $('.bs-example-modal-lg2').on('show.bs.modal', function(e) {
