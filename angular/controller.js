@@ -205,7 +205,10 @@ $scope.ob={}
 //$scope.ob.actualtime='';
 $scope.closure=function(v1,v2,v3)
 {
-  alert(v1+v2+v3);
+  if(v1&&v2&&v3)
+  {
+    alert("hello");
+  }
   $scope.ob.aactualtime="";
 }
 
