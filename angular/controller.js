@@ -201,7 +201,7 @@ var config = {
 })
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
 //$scope.actualtime='';
-//$scope.ob={}
+$scope.ob={}
 //$scope.ob.actualtime='';
 $scope.closure=function(v1,v2,v3)
 {
