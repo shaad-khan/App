@@ -26,13 +26,13 @@ $admin=$_SESSION["admin"];
                                    </div></div></div>
        <div class="panel-body" >
          <table class="table"><tr>
-     <th>Ticket_ID</th>
-     <th>Client</th>
+     <th ng-show="type!='Review'">Ticket_ID</th>
+     <th ng-show="type!='Review'">Client</th>
      <th>Project</th>
      <th>Discription</th>
      <th>Status</th>
-     <th>Creation_DateTime</th>
-     <th>Last_Update_DateTime</th>
+     <th>Created</th>
+     <th>Last_Update</th>
      <th>Creator</th>
 
 
