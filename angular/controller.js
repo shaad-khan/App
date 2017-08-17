@@ -178,7 +178,7 @@ var config = {
 })
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
  
-  service.serv("shiftschedule").then(function(response){
+  service.serv("https://apps.continuserve.com/webservice/service.php?type=shiftschedule").then(function(response){
 $scope.schedules=response.data;
 });
  $scope.setuser=function(text)
