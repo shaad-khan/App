@@ -207,7 +207,12 @@ $scope.closure=function(v1,v2,v3)
 {
   if(v1&&v2&&v3)
   {
-    alert("hello");
+    service.serv("https://apps.continuserve.com/webservice/update.php?ID="+v1+"&atime="+v2+"&sch="+v3).then(function(response){
+     	//$scope.load2='false';
+      $scope.updates=response.data;
+
+    });
+   
   }
   $scope.ob.aactualtime="";
 }
