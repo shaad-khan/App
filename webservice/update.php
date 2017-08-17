@@ -21,11 +21,11 @@ $conn->query($sql);
 $sql="delete from Update_Tab where Ticketid='$Id'";
 $conn->query($sql);*/
 
-$sql="update Master_Ticket_tab set Status='Close',Resolver='$user_session',Total_client_time=$atime,Updatetime='$fdate',shift='$sch' where Ticket_ID='$id'";
-echo $sql;
+$sql="update Master_Ticket_tab set Status='Close',Resolver='$user_session',Total_client_time=$atime,Updatetime='$fdate',shift='$sch' where Ticket_ID='$Id'";
+//echo $sql;
 
-//$conn->query($sql);
-/*$sql="select * from Update_Tab where TicketId='".$id."' order by UpdateTime desc";
+$conn->query($sql);
+$sql="select * from Update_Tab where TicketId='".$id."' order by UpdateTime desc";
     //echo $sql;
     
 $result=$conn->query($sql);
@@ -42,6 +42,6 @@ ob_start("ob_gzhandler");
 
 print(json_encode($rows));
 ob_end_flush();
-exit;*/
+exit;
 
     ?>
