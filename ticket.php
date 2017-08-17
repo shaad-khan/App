@@ -16,7 +16,7 @@ $admin=$_SESSION["admin"];
 
                              <div class="col-xs-12" style="padding-left: 21px;padding-right: 21px;">
                                <div class="panel panel-primary">
-                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-8">
+                                 <div class="panel-heading" style="background-color:#001a33"><div class="row"><div class="col-xs-4">
 
                                   <span class="glyphicon glyphicon-menu-hamburger"></span> L3 Support Team (Status: {{type}})
 
