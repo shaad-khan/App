@@ -200,6 +200,12 @@ var config = {
   }
 })
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
+
+$scope.closue=function(v1,v2,v3)
+{
+  alert(v1+v2+v3);
+}
+
  $('.bs-example-modal-lg2').on('show.bs.modal', function(e) {
   //alert("here");
     var bookId = $(e.relatedTarget).data('ticket-id');
