@@ -228,7 +228,7 @@ $scope.remove=function(text)
 	  return false;
     
 	};
-var ticketapi=$interval(statuscheck, 5000);
+var ticketapi=$interval(statuscheck, 10000);
 var name=$routeParams.email;
 var type=$routeParams.type;
 $scope.type=$routeParams.type;
