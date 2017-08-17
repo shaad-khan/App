@@ -54,7 +54,7 @@ $admin=$_SESSION["admin"];
 </span> {{res.Ticket_ID}}</button></td>
 <td ng-show="type!='Review' && type!='Closure'">{{res.Client}}</td>
 <td>{{res.Project}}</td>
-<td><a href='' data-toggle="modal" data-target=".bs-example-modal-lg2">{{res.Tdiscription}}</a></td>
+<td><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2">{{res.Tdiscription}}</button></td>
 <td ng-show="type!='Closure'">{{res.Status}}</td>
 <td>{{res.Cdatetime}}</td>
 <td>{{res.Updatetime}}</td>
@@ -84,5 +84,43 @@ $admin=$_SESSION["admin"];
 
 
 
+
+<div class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+       <div class="modal-header"> 
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="myModalLabel">Update History <span class="glyphicon glyphicon-comment
+"> </span></h4>
+     </div> <div class="row clear">
+ <div class="col-xs-12">
+  
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-controller="update" ng-init="ID='<?php Echo $ID;?>'">
+  <div class="panel panel-info" ng-repeat="update in updates">
+    <div class="panel-heading" role="tab" id="heading{{update.UID}}">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{update.UID}}" aria-expanded="false" aria-controls="collapse{{update.UID}}">
+  <span class="glyphicon glyphicon-pushpin"> </span> {{update.UpdateBy}} [ {{update.UpdateTime}} ]    [ <span class="glyphicon glyphicon-bookmark" style="color:green"></span><span style="color:green">{{update.TaskName}}</span>  ]    <span class="glyphicon glyphicon-flag" ng-if="update.AUI_flag==1" style="color:red"></span>
+       [{{update.TimeTaken}} min]
+        </a>
+      </h4>
+    </div>
+    <div id="collapse{{update.UID}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{update.UID}}">
+      <div class="panel-body">
+        {{update.Comments}} 
+
+        <p ng-if="update.Resolver">Resolver Name : [ {{update.Resolver}}]</p>
+        <p>Status :[ {{update.Status}} ]</p>
+        <p>Update Was Done in Shift: [{{update.Shift}}]
+      </div>
+    </div>
+  </div>
+ 
+  </div>
+  
+  </div>
+</div>
+    </div>
+  </div>
+</div>
 
 

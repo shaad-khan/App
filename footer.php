@@ -191,20 +191,7 @@ $('#datetimepicker_dark').datetimepicker({theme:'dark'})
       });
 
   </script>-->
-<script>
 
-window.onerror = function(errorMsg) {
-  $('#console').html($('#console').html()+'<br>'+errorMsg)
-}
-//alert("hello");
- $(function() {
-          $('#some_class_1').datetimepicker();
-           $('#some_class_2').datetimepicker();
-            $('#some_class_3').datetimepicker();
-             $('#some_class_4').datetimepicker();
-         });
-
-         </script>
   </body>
   
 </html>
