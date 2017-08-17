@@ -46,7 +46,7 @@ $admin=$_SESSION["admin"];
 </span> {{res.Ticket_ID}}</button></td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))&&((u==res.Blocker_name))"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
-<td ng-if="((res.Status=='Review')||(res.Status=='Doc') ||(res.Status=='Closure')||(res.Status=='Classify'))"><a href=''  ng-click="pop(res.Ticket_ID)">
+<td ng-if="((res.Status=='Review')||(res.Status=='Doc') ||(res.Status=='Closure'))"><a href=''  ng-click="pop(res.Ticket_ID)">
  {{res.Ticket_ID}}</a></td>
  <td ng-if="(res.Status=='Classify')"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
