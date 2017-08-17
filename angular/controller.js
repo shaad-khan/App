@@ -206,6 +206,7 @@ $scope.ob={}
 $scope.closure=function(v1,v2,v3)
 {
   alert(v1+v2+v3);
+  $scope.ob={}
 }
 
  $('.bs-example-modal-lg2').on('show.bs.modal', function(e) {
