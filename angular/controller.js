@@ -212,9 +212,13 @@ $scope.closure=function(v1,v2,v3)
       $scope.updates=response.data;
 
     });
-   
+   $scope.ob.aactualtime="";
   }
-  $scope.ob.aactualtime="";
+else
+{
+  alert("one of the field is missing");
+}
+  
 }
 
  $('.bs-example-modal-lg2').on('show.bs.modal', function(e) {
