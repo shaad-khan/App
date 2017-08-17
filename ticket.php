@@ -30,7 +30,7 @@ $admin=$_SESSION["admin"];
      <th ng-show="type!='Review' && type!='Closure'">Client</th>
      <th>Project</th>
      <th>Discription</th>
-     <th>Status</th>
+     <th ng-show="type!='Closure'">Status</th>
      <th>Created</th>
      <th>Last_Update</th>
      <th>Creator</th>
