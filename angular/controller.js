@@ -212,7 +212,7 @@ $scope.closure=function(v1,v2,v3)
       $scope.updates=response.data;
 
     });
-   $scope.ob.aactualtime="";
+   $scope.ob.actualtime="";
   }
 else
 {
