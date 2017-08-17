@@ -175,7 +175,7 @@ $result=$conn->query($sql_status);
 }
 if(($tab_status=='WIP') and $AUI!='on' )
 {
-    $fstatus='Review';
+    $fstatus='Close';
     date_default_timezone_set('Asia/Kolkata');
 									//$date = date('Ymd H:i:s');
 									$fdate = date('m-d-y H:i:s');
@@ -194,7 +194,7 @@ $fresolver=$user_session;
 }
 else if(($tab_status=='AUI'))
 {
-$fstatus='Review';
+$fstatus='Close';
 //$aui_flag=1;
 date_default_timezone_set('Asia/Kolkata');
 									//$date = date('Ymd H:i:s');
@@ -263,7 +263,7 @@ while($row1=$result->fetch())
 {
   $total=$total+$row1['TimeTaken'];
   }
- $s="Update Master_Ticket_Tab set Total_time=$total where Ticket_ID='$TID'";
+ $s="Update Master_Ticket_Tab set Total_time=$total,Total_client_time=$total where Ticket_ID='$TID'";
  
 $conn->query($s);
 if($attime!='')
