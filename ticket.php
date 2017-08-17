@@ -22,7 +22,7 @@ $admin=$_SESSION["admin"];
 
                                    <!--<a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span>--></div>
-                                    <div class="col-xs-4" align="right" ng-show="type=='Closure'" ><!--<img src="assets/ajax-loader.gif"/>-->select Shift </div>  <div class="col-xs-4" align="right" ng-show="type=='Closure'"> <select class="form-control" ng-model="schedule">
+                                    <div class="col-xs-4" align="right" ng-show="type=='Closure'" ><!--<img src="assets/ajax-loader.gif"/>-->select Shift </div>  <div class="col-xs-4" align="right" ng-show="type=='Closure'"> <select class="form-control" ng-model="schedule" required>
   <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
 </select>
                                    </div></div></div>
@@ -69,7 +69,7 @@ $admin=$_SESSION["admin"];
 
 </td>
 <td ng-if="<?php echo $admin;?>==1 && res.Status=='Closure'">
-<input type="text" class="form-control" placeholder="min" name="actime" ng-model="ob.actualtime"></td><td ng-if="<?php echo $admin;?>==1 && res.Status=='Closure'">
+<input type="text" class="form-control" placeholder="min" name="actime" ng-model="ob.actualtime" required></td><td ng-if="<?php echo $admin;?>==1 && res.Status=='Closure'">
 <button class="btn btn-success" ng-click="closure(res.Ticket_ID,ob.actualtime,schedule)"><span class="fa fa-check-square-o"></span></button>
 </td>
     </tr>
