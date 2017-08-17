@@ -201,7 +201,7 @@ var config = {
 })
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
 
-$scope.closue=function(v1,v2,v3)
+$scope.closure=function(v1,v2,v3)
 {
   alert(v1+v2+v3);
 }
