@@ -178,6 +178,9 @@ var config = {
 })
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
  
+  service.serv("shiftschedule").then(function(response){
+$scope.schedules=response.data;
+});
  $scope.setuser=function(text)
  {
 $scope.u=text;

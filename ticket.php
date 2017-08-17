@@ -22,7 +22,9 @@ $admin=$_SESSION["admin"];
 
                                    <!--<a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span>--></div>
-                                    <div class="col-xs-4" align="right" ><!--<img src="assets/ajax-loader.gif"/>-->select Shift
+                                    <div class="col-xs-4" align="right" ><!--<img src="assets/ajax-loader.gif"/>-->select Shift  <select class="form-control" name="schedule">
+  <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
+</select>
                                    </div></div></div>
        <div class="panel-body" style="padding:0px">
          <table class="table"><tr>
