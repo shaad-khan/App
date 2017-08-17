@@ -177,7 +177,17 @@ var config = {
   }
 })
 app.controller("Ticket",function($scope,$routeParams,service,$interval,$location,$http){
- 
+ $('.bs-example-modal-lg2').on('show.bs.modal', function(e) {
+  //alert("here");
+    var bookId = $(e.relatedTarget).data('ticket-id');
+    //$(e.currentTarget).find('input[name="ticketId"]').val(bookId);
+    //$(e.currentTarget).find('input[name="ticketId2"]').val(bookId);//.trigger('input');
+    
+   // $('#input').trigger('input');
+      // $(e.currentTaget).find('input[name="ticketId2"]').trigger();
+     $scope.tid=bookId;
+     console.log( $scope.tid);
+});
   service.serv("https://apps.continuserve.com/webservice/service.php?type=shiftschedule").then(function(response){
 $scope.schedules=response.data;
 });

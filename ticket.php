@@ -54,7 +54,7 @@ $admin=$_SESSION["admin"];
 </span> {{res.Ticket_ID}}</button></td>
 <td ng-show="type!='Review' && type!='Closure'">{{res.Client}}</td>
 <td>{{res.Project}}</td>
-<td><a href='' data-toggle="modal" data-target=".bs-example-modal-lg2">{{res.Tdiscription}}</a></td>
+<td ><a href='' data-toggle="modal" data-target=".bs-example-modal-lg2" data-ticket-id="{{res.Ticket_ID}}>{{res.Tdiscription}}</a></td>
 <td ng-show="type!='Closure'">{{res.Status}}</td>
 <td>{{res.Cdatetime}}</td>
 <td>{{res.Updatetime}}</td>
@@ -80,9 +80,6 @@ $admin=$_SESSION["admin"];
 </div>
 </div>
 </div>
-</div>
-
-
 
 
 <div class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -122,5 +119,11 @@ $admin=$_SESSION["admin"];
     </div>
   </div>
 </div>
+</div>
+
+
+
+
+
 
 
