@@ -210,12 +210,13 @@ app.controller("Ticket",function($scope,$routeParams,service,$interval,$location
       // $(e.currentTaget).find('input[name="ticketId2"]').trigger();
      $scope.tid=bookId;
      console.log( $scope.tid);
-});
-$http.get("https://apps.continuserve.com/webservice/updateinfo.php?ID="+$scope.tid).then(function(response){
+     service.serv("https://apps.continuserve.com/webservice/updateinfo.php?ID="+$scope.tid).then(function(response){
      	//$scope.load2='false';
       $scope.updates=response.data;
 
     });
+});
+
   service.serv("https://apps.continuserve.com/webservice/service.php?type=shiftschedule").then(function(response){
 $scope.schedules=response.data;
 });
