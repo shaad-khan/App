@@ -27,7 +27,7 @@ $admin=$_SESSION["admin"];
        <div class="panel-body" style="padding:0px">
          <table class="table"><tr>
      <th ng-show="type!='Closure'" >Ticket_ID</th>
-     <th ng-show="type!='Review' || type!='Closure'">Client</th>
+     <th ng-show="type!='Review' && type!='Closure'">Client</th>
      <th>Project</th>
      <th>Discription</th>
      <th>Status</th>
@@ -50,7 +50,7 @@ $admin=$_SESSION["admin"];
  {{res.Ticket_ID}}</a></td>
  <td ng-if="(res.Status=='Classify')"><button class="btn btn-info" ng-click="pop(res.Ticket_ID)"><span class="glyphicon glyphicon-briefcase" aria-hidden="true">
 </span> {{res.Ticket_ID}}</button></td>
-<td ng-show="type!='Review' || type!='Closure'">{{res.Client}}</td>
+<td ng-show="type!='Review' && type!='Closure'">{{res.Client}}</td>
 <td>{{res.Project}}</td>
 <td>{{res.Tdiscription}}</td>
 <td ng-show="type!='Closure'">{{res.Status}}</td>
