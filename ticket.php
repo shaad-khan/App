@@ -21,7 +21,8 @@ $admin=$_SESSION["admin"];
                                   <span class="glyphicon glyphicon-menu-hamburger"></span> L3 Support Team (Status: {{type}})
 
                                    <!--<a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
-                                    <span class="glyphicon glyphicon-home"></a></span>--></div>
+                                    <span class="glyphicon glyphicon-home"></a></span>--></div><div class="col-xs-4" align="right" ng-hide="load"> Select Shift
+                                    </div>
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
        <div class="panel-body" style="padding:0px">
@@ -34,7 +35,7 @@ $admin=$_SESSION["admin"];
      <th>Created</th>
      <th>Last_Update</th>
      <th>Creator</th>
-
+     
 
    </tr>
 
