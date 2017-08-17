@@ -67,7 +67,7 @@ $admin=$_SESSION["admin"];
 
 </td>
 <td ng-if="<?php echo $admin;?>==1 && res.Status=='Closure'">
-<input type="text" ng-model="actualtime"/>
+<input type="text" ng-model="actualtime"/></td><td ng-if="<?php echo $admin;?>==1 && res.Status=='Closure'">
 <button class="btn btn-danger" ng-click="remove(res.Ticket_ID,actualtime)"><span class="glyphicon glyphicon-remove"></span></button>
 </td>
     </tr>
