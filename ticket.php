@@ -24,7 +24,7 @@ $admin=$_SESSION["admin"];
                                     <span class="glyphicon glyphicon-home"></a></span>--></div>
                                     <div class="col-xs-4" align="right" ng-hide="load"><img src="assets/ajax-loader.gif"/>
                                    </div></div></div>
-       <div class="panel-body" >
+       <div class="panel-body" style="padding:0px">
          <table class="table"><tr>
      <th >Ticket_ID</th>
      <th ng-show="type!='Review'">Client</th>
