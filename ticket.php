@@ -91,7 +91,7 @@ $admin=$_SESSION["admin"];
      </div> <div class="row clear">
  <div class="col-xs-12">
   
-<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-controller="update" ng-init="ID='<?php Echo $ID;?>'">
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-info" ng-repeat="update in updates">
     <div class="panel-heading" role="tab" id="heading{{update.UID}}">
       <h4 class="panel-title">

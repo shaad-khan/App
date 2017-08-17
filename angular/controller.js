@@ -1,4 +1,27 @@
 
+/*app.controller("update",function($scope,$interval,$http,service){
+
+$http.get("https://apps.continuserve.com/webservice/updateinfo.php?ID="+$scope.ID).then(function(response){
+     	//$scope.load2='false';
+      $scope.updates=response.data;
+
+    });
+//console.log($scope.ID +"  :i am here");
+$interval(callApi, 10000);
+
+  function callApi(){
+    $scope.date = new Date();
+    $http.get("https://apps.continuserve.com/webservice/updateinfo.php?ID="+$scope.ID).then(function(response){
+     	//$scope.load2='false';
+      $scope.updates=response.data;
+
+    });
+  }
+
+});*/
+
+/*---------------------------------------------------------------*/
+
 app.controller("Report",function($scope,service){
 $edate='';
 $sdate='';
@@ -188,6 +211,11 @@ app.controller("Ticket",function($scope,$routeParams,service,$interval,$location
      $scope.tid=bookId;
      console.log( $scope.tid);
 });
+$http.get("https://apps.continuserve.com/webservice/updateinfo.php?ID="+$scope.tid).then(function(response){
+     	//$scope.load2='false';
+      $scope.updates=response.data;
+
+    });
   service.serv("https://apps.continuserve.com/webservice/service.php?type=shiftschedule").then(function(response){
 $scope.schedules=response.data;
 });
