@@ -62,8 +62,13 @@ $admin=$_SESSION["admin"];
 </td>
 <td ng-if="res.Blocker_flag==1 && ((res.Status=='WIP')||(res.Status=='AUI'))"><button class="btn btn-danger" ng-click="stat(res.Ticket_ID)"><span class="glyphicon glyphicon-check"></span></button>
 </td>
-<td ng-if="<?php echo $admin;?>==1">
+<td ng-if="<?php echo $admin;?>==1 && res.Status!='Closure'">
 <button class="btn btn-danger" ng-click="remove(res.Ticket_ID)"><span class="glyphicon glyphicon-remove"></span></button>
+
+</td>
+<td ng-if="<?php echo $admin;?>==1 && res.Status=='Closure'">
+<input type="text" ng-model="actualtime"/>
+<button class="btn btn-danger" ng-click="remove(res.Ticket_ID,actualtime)"><span class="glyphicon glyphicon-remove"></span></button>
 </td>
     </tr>
  </table
