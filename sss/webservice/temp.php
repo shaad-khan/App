@@ -83,7 +83,8 @@ Time_hours =case mt.aflag
 when '0' then cast(ut.TimeTaken/60.0 as  decimal(16,2))
 when '1' then cast( mt.Total_time/60.0 as  decimal(16,2))
 else 'Unknown'
-end
+end,
+mt.jobtype as jobtype
 
 
  from dbo. Master_Ticket_Tab mt left outer join dbo.Update_Tab ut
@@ -125,7 +126,8 @@ $i=2;
 					->setCellValue('N'.$i, $row2['Time_Min'])
 					->setCellValue('O'.$i, $row2['Time_hours'])
 					->setCellValue('P'.$i, $row2['Team'])
-					->setCellValue('Q'.$i, $row2['Comments']);
+					->setCellValue('Q'.$i, $row2['Comments'])
+					->setCellValue('R'.$i, $row2['jobtype']);
 
 //echo $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t". $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min']."\t" . $row2['Time_hours']."\n";
 //$rows[]=$row2;
@@ -134,16 +136,16 @@ $i++;
 
 /*------------------------------------------------------------*/
 
-        foreach(range('A','Q') as $columnID) {
+        foreach(range('A','R') as $columnID) {
 			$objPHPExcel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(true);
 		}
 		/*********************Autoresize column width depending upon contents END***********************/
 		
-		$objPHPExcel->getActiveSheet()->getStyle('A1:Q1')->getFont()->setBold(true); //Make heading font bold
+		$objPHPExcel->getActiveSheet()->getStyle('A1:R1')->getFont()->setBold(true); //Make heading font bold
 		
 		/*********************Add color to heading START**********************/
 		$objPHPExcel->getActiveSheet()
-					->getStyle('A1:Q1')
+					->getStyle('A1:R1')
 					->getFill()
 					->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
 					->getStartColor()
