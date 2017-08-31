@@ -24,7 +24,8 @@ date_default_timezone_set('Asia/Kolkata');
                     ->setCellValue('N1', 'TimeMinutes')
                     ->setCellValue('O1', 'TimeHours')
 					->setCellValue('P1', 'Team')
-					->setCellValue('Q1', 'Comments');
+					->setCellValue('Q1', 'Comments')
+					->setCellValue('R1', 'Type Of Job');
 
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
