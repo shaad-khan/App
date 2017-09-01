@@ -73,7 +73,7 @@ $admin=$_SESSION["admin"];
 </td>
 <td ng-if="<?php echo $admin;?>==1 && res.Status=='Closure'">
 
-<input type="text" class="form-control" placeholder="min" name="actime" ng-model="ob.actualtime" size="14" required></td><td ng-if="<?php echo $admin;?>==1 && res.Status=='Closure'">
+<input type="text" class="form-control" placeholder="min" name="actime" ng-model="ob.actualtime" required></td><td ng-if="<?php echo $admin;?>==1 && res.Status=='Closure'">
 <button class="btn btn-success" ng-click="closure(res.Ticket_ID,ob.actualtime,schedule)"><span class="fa fa-check-square-o"></span></button>
 </td>
     </tr>
