@@ -71,7 +71,7 @@ end,
 ShiftType =
 case mt.aflag
 when '0' then ut.Shift
-when '1' then 'Adhoc Shift'
+when '1' then mt.Shift
 else 'Unknown'
 end,
 Time_Min =
