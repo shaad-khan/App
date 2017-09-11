@@ -20,7 +20,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
     //$sql="select * from Master_ticket_tab where Team='SSS' and Ticket_ID like 'CSCHK%' and Status='WIP'";
     //echo $sql;
-    if($u && $stype!='')
+    if($u!=null && $stype!=null)
     {
 $sql="update Master_ticket_tab set Resolver='$u', Status='Close',Resolver_Dtime='$d',aflag=1,atype='CheckList Task',shift='$stype' where Id=$id";
 echo $sql;
@@ -29,7 +29,7 @@ $conn->query($sql);
  
     }
     else{
-        echo "<script>alert('Shift Timing Is missing');</shift>;
+        echo "<script>alert('Shift Timing Is missing');</shift>";
     }
 
 
