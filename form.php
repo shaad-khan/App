@@ -20,6 +20,7 @@ $user_session=$_SESSION["user"];
 $admin=$_SESSION["admin"];
 if($user_session=='')
 {
+  
    echo "<script> alert('Session Expired Please Relogin in app');
      setTimeout(function(){window.close()}, 1000);
      </script>";
