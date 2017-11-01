@@ -160,7 +160,7 @@ var date=new Date();
 date=date.toISOString().substring(0, 10);
 //alert(date);
 	var options = {
-		events_source: 'https://csmonitoring-dev.azurewebsites.net/coyote/event.php?u=<?php echo $u;?>',
+		events_source: 'https://apps.continuserve.com/continuity/services/event.php?u=<?php echo $u;?>',
 		view: 'month',
 		tmpl_path: 'tmpls/',
 		tmpl_cache: false,
