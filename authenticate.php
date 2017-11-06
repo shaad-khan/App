@@ -56,7 +56,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
  if($username2!='')
  {
-$sql="select * from User_prof where Status=1 and Email like'".$username2."'";
+$sql="select * from User_prof where Status=1 and Email like'".$username."'";
  }
  else
  {
