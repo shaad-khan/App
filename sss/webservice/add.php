@@ -124,7 +124,6 @@ else
 {
     /* update assigncolumn in Main_table */
 
-
     //echo "i am step 2";
     //echo "<script> alert('insert');</script>";
 if($status=='Classify')
