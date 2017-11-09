@@ -215,11 +215,11 @@ td
 "></span></label> </td> <td><input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Assign_to}}" name="aname" disabled>
   </div> </td>
-  <td ng-show="items[0].Status=='Classify'">
+  <td ng-show="items[0].Status=='WIP'">
 <div class="form-group">
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
-     <td ng-show="items[0].Status=='Classify'">
+     <td ng-show="items[0].Status=='WIP'">
      <input type="text" class="form-control"  id="datetimepicker_dark"  placeholder="Creation Date Time" name="crtime"/>
 
      
@@ -228,11 +228,11 @@ td
 -->  </div> </td>
 
 
-<td ng-if="items[0].Status!='Classify'">
+<td ng-if="items[0].Status!='WIP'">
 <div class="form-group">
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
-     <td ng-if="items[0].Status!='Classify'">
+     <td ng-if="items[0].Status!='WIP'">
      <input type="text" class="form-control"   style="color:black" placeholder="{{items[0].Cdatetime}}"  disabled/>
      
 
@@ -266,7 +266,7 @@ td
 
   <div class="form-group">
     <label for="exampleInputEmail1">Type of Job <span class="glyphicon glyphicon-info-sign
-"></span></label> </td><td ng-if="items[0].Status=='Classify'">
+"></span></label> </td><td ng-if="items[0].Status=='WIP'">
     <select class="form-control" name="jtype" required>
 
   <option  value=""></option>
@@ -275,7 +275,7 @@ td
 </select>
   </div>
   </td>
-  <td ng-if="items[0].Status!='Classify' && items[0].jobtype!=''">
+  <td ng-if="items[0].Status!='WIP' && items[0].jobtype!=''">
      <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].jobtype}}" disabled>
     
   </div>
@@ -446,10 +446,10 @@ td
   
 </tr>
 <tr>
-<td ng-if="items[0].Status!='Classify'">
+<td ng-if="items[0].Status!='WIP'">
   <div class="form-group">
     <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status!='Classify'">
+"></span></label></td><td ng-if="items[0].Status!='WIP'">
      <select class="form-control selectpicker" name="tcategory">
 
   <option ng-repeat="task in tasks | filter : items[0].Status" value="{{task.Category}}">{{task.Category}}</option>
@@ -457,11 +457,11 @@ td
   </div>
 
   </td>
-<td ng-if="((items[0].Status=='Classify')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
+<td ng-if="((items[0].Status=='WIP')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="((items[0].Status=='Classify')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
+"></span></label></td><td ng-if="((items[0].Status=='WIP')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
     <select class="form-control" name="cstatus" >
   <option value="WIP">Work In progress</option>
    <option value="Closure">Closure</option>
@@ -492,7 +492,7 @@ td
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Next Status" disabled>
   </div>
   </td>
-  <td ng-if="items[0].Status=='Classify'">
+  <td ng-if="items[0].Status=='WIP'">
   <div class="form-group">
     <label for="exampleInputEmail1">Select Team {{items[0].team}} <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].team==null">
@@ -501,7 +501,7 @@ td
 </select>
   </div></td>
   
-  <td ng-if="items[0].team!=null&& items[0].Status=='Classify'">
+  <td ng-if="items[0].team!=null&& items[0].Status=='WIP'">
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].team}}" disabled>
   </div></td>
 
@@ -536,16 +536,16 @@ if($_SESSION['Doc']==1)
 
     </tr>
     <tr>
-      <td ng-if="items[0].Status=='Classify'">
+      <td ng-if="items[0].Status=='WIP'">
 <div class="form-group" >
     <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status=='Classify'">
+"></span></label></td><td ng-if="items[0].Status=='WIP'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="client_tkt" placeholder="Client Ticket Number optional" />
   </td>
-  <td ng-if="items[0].Status!='Classify' && items[0].CTicket!=''">
+  <td ng-if="items[0].Status!='WIP' && items[0].CTicket!=''">
 <div class="form-group" >
     <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status!='Classify' && items[0].CTicket!=''">
+"></span></label></td><td ng-if="items[0].Status!='WIP' && items[0].CTicket!=''">
  <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="{{items[0].CTicket}}" disabled/>
   </td>
       </tr>
@@ -553,11 +553,11 @@ if($_SESSION['Doc']==1)
   <td>
 <div class="form-group" >
     <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status=='Classify'">
+"></span></label></td><td ng-if="items[0].Status=='WIP'">
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" disabled>
   </div>
     </td>
-    <td ng-if="items[0].Status!='Classify' && items[0].Status!='Closure' && items[0].Status!='Close'">
+    <td ng-if="items[0].Status!='WIP' && items[0].Status!='Closure' && items[0].Status!='Close'">
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
   </div>
 
@@ -593,11 +593,11 @@ if($_SESSION['Doc']==1)
 <tr> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td colspan="8" ng-if="items[0].Status=='Classify' || items[0].Status=='Close'" >
+"></span></label></td><td colspan="8" ng-if="items[0].Status=='WIP' || items[0].Status=='Close'" >
 <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" disabled></textarea>
     
   </div> </td>
-  <td colspan="8" ng-if="items[0].Status!='Classify' && items[0].Status!='Close'">
+  <td colspan="8" ng-if="items[0].Status!='WIP' && items[0].Status!='Close'">
 <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" required></textarea>
     
   </div> </td>
