@@ -554,6 +554,7 @@ if($_SESSION['Doc']==1)
 <div class="form-group" >
     <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Status=='Classify'">
+
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" disabled>
   </div>
     </td>
