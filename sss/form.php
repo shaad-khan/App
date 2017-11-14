@@ -457,11 +457,11 @@ td
   </div>
 
   </td>
-<td ng-if="((items[0].Status=='WIP')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
+<td ng-if="((items[0].Status=='WIP')||(items[0].Status=='AUI'))">
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="((items[0].Status=='WIP')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
+"></span></label></td><td ng-if="((items[0].Status=='WIP')||(items[0].Status=='AUI'))">
     <select class="form-control" name="cstatus" >
   <option value="WIP">Work In progress</option>
    <option value="Closure">Closure</option>
