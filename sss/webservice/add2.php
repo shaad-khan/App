@@ -127,7 +127,7 @@ else
 
     //echo "i am step 2";
     //echo "<script> alert('insert');</script>";
-if($status=='Classify')
+if($status=='WIP')
 {
   if($crtime)
   {
@@ -137,7 +137,7 @@ if($status=='Classify')
 $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team',requester='$requester',jobtype='$jtype' where Ticket_ID='$TID'";
 }
 }
- else if(($status=='WIP') and ($AUI=='on') and ($cstatus!='next'))
+ if(($status=='WIP') and ($AUI=='on') and ($cstatus!='next'))
     {
 $fstatus='AUI';
 $aui_flag=1;
