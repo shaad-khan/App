@@ -446,10 +446,10 @@ td
   
 </tr>
 <tr>
-<td ng-if="items[0].Status!='WIP'">
+<td ng-if="items[0].Status!='Classify'">
   <div class="form-group">
     <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status!='WIP'">
+"></span></label></td><td ng-if="items[0].Status!='Classify'">
      <select class="form-control selectpicker" name="tcategory">
 
   <option ng-repeat="task in tasks | filter : items[0].Status" value="{{task.Category}}">{{task.Category}}</option>
