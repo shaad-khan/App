@@ -480,7 +480,7 @@ if($cl_tkt!=null)
 
 
     /*----------------------------------------------------------------------------------------*/
-echo "<script> document.getElementById('td1').innerHTML ='updated successfully';
+echo "<script> alert('update successfull');
 window.location='https://apps.continuserve.com/sss/form.php?ID=$TID';
 </script>";
     
