@@ -482,7 +482,7 @@ if($cl_tkt!=null)
     /*----------------------------------------------------------------------------------------*/
 
     
-header("https://apps.continuserve.com/sss/form.php?ID=".$TID);
+//header("https://apps.continuserve.com/sss/form.php?ID=".$TID);
 }
 else
 {
