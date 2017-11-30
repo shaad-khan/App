@@ -492,7 +492,7 @@ td
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Next Status" disabled>
   </div>
   </td>
-  <!--<td ng-if="items[0].Status=='WIP'">
+  <td ng-if="items[0].Status=='WIP'">
   <div class="form-group">
     <label for="exampleInputEmail1">Select Team {{items[0].team}} <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].team==null">
@@ -505,7 +505,7 @@ td
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].team}}" disabled>
   </div></td>
 
-  </td>-->
+  </td>
   </tr>
   <?php 
 
@@ -542,41 +542,6 @@ if($_SESSION['Doc']==1)
 "></span></label></td><td ng-if="items[0].Status=='WIP'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="client_tkt" placeholder="Client Ticket Number optional" />
   </td>
-<!----------------------------------------New changes------------------------------- -->
- <!--<td ng-if="items[0].Status=='WIP'">
-<div class="form-group" >
-    <label for="exampleInputEmail1">Access Form number <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status=='WIP'">
- <input type="text" class="form-control" id="exampleInputEmail1" name="formnumber" placeholder="Access Form number" />
-  </td>
-</tr>
-<tr>
- <td ng-if="items[0].Status=='WIP'">
-<div class="form-group" >
-    <label for="exampleInputEmail1">Approver <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status=='WIP'">
- <input type="text" class="form-control" id="exampleInputEmail1" name="approver" placeholder="Approver" />
-  </td>
-<td ng-if="items[0].Status=='WIP'">
-<div class="form-group" >
-    <label for="exampleInputEmail1"> Cloning Profile <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status=='WIP'">
- <input type="text" class="form-control" id="exampleInputEmail1" name="cprofile" placeholder="Cloning Profile" />
-  </td>
-  <td ng-if="items[0].Status=='WIP'">
-<div class="form-group" >
-    <label for="exampleInputEmail1"> Access Form Date <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status=='WIP'">
-<input type="text" class="form-control"  id="some_class_2" style="color:black" placeholder="Access Form Date" name="accesstime" required/>
-  </td>
-</tr>-->
-
-<!-- --------------------------------------------------------------------------- -->
-
-
-
-
-
   <td ng-if="items[0].Status!='WIP' && items[0].CTicket!=''">
 <div class="form-group" >
     <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
