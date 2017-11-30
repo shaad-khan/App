@@ -543,7 +543,7 @@ if($_SESSION['Doc']==1)
  <input type="text" class="form-control" id="exampleInputEmail1" name="client_tkt" placeholder="Client Ticket Number optional" />
   </td>
 <!----------------------------------------New changes------------------------------- -->
- <td ng-if="items[0].Status=='WIP'">
+ <!--<td ng-if="items[0].Status=='WIP'">
 <div class="form-group" >
     <label for="exampleInputEmail1">Access Form number <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Status=='WIP'">
@@ -563,9 +563,15 @@ if($_SESSION['Doc']==1)
 "></span></label></td><td ng-if="items[0].Status=='WIP'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="cprofile" placeholder="Cloning Profile" />
   </td>
-</tr>
+  <td ng-if="items[0].Status=='WIP'">
+<div class="form-group" >
+    <label for="exampleInputEmail1"> Access Form Date <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td ng-if="items[0].Status=='WIP'">
+<input type="text" class="form-control"  id="some_class_2" style="color:black" placeholder="Access Form Date" name="accesstime" required/>
+  </td>
+</tr>-->
 
-<!----------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------- -->
 
 
 

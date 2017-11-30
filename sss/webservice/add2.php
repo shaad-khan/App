@@ -40,6 +40,10 @@ $status= $_POST["status"];
 $resolver= $_POST["resolver"];
 
 $schedule= $_POST["schedule"];
+$accesst=$_POST['accesstime'];
+$formnumber=$_POST['formnumber'];
+$approver=$_POST['approver'];
+$cprofile=$_POST['cprofile'];
 
 $reviewer= $_POST["reviewer"];
 $jtype=$_POST['jtype'];
