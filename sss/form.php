@@ -492,14 +492,14 @@ td
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Next Status" disabled>
   </div>
   </td>
-  <td ng-if="items[0].Status=='WIP'">
+  <!--<td ng-if="items[0].Status=='WIP'">
   <div class="form-group">
     <label for="exampleInputEmail1">Select Team {{items[0].team}} <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].team==null">
    <select class="form-control" name="cteam" >
   <option ng-repeat="t in cteams" value="{{t.Team}}" ng-selected="t.Team=='SSS'">{{t.Team}}</option>
 </select>
-  </div></td>
+  </div></td>-->
   
   <td ng-if="items[0].team!=null&& items[0].Status=='WIP'">
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].team}}" disabled>
