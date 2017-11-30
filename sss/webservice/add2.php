@@ -143,17 +143,17 @@ $fstatus='AUI';
 $aui_flag=1;
         $fresolver=$user_session;
         
-        $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime' where Ticket_ID='$TID'";
+        $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime',Updatetime='$utime',Client='$client',Project='$project',EnvType='$env',requester='$requester',jobtype='$jtype',Cdatetime='$crtime' where Ticket_ID='$TID'";
 
    // $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
     }
 else if(($status=='WIP') and ($AUI!='on') and ($cstatus!='next' ) and ($cstatus!='Closure' ))
     {
 $fstatus='WIP';
-
+$fresolver=$user_session;
 //$aui_flag=1;
         //$fresolver=$user_session;
-        $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime',Client='$client',Project='$project',EnvType='$env',requester='$requester',jobtype='$jtype',Cdatetime='$crtime' where Ticket_ID='$TID'";
+        $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$utime',Updatetime='$utime',Client='$client',Project='$project',EnvType='$env',requester='$requester',jobtype='$jtype',Cdatetime='$crtime' where Ticket_ID='$TID'";
 
    // $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
     }
