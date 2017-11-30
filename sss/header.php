@@ -267,12 +267,12 @@ element.style {
                           <li><a  href="#!/task"><span class="glyphicon glyphicon-tasks"></span> Your Task List </a></li>
                         
                           <?php
-                 if($_SESSION['admin']==1)
-                    {?>
+                 //if($_SESSION['admin']==1)
+                   // {?>
                 <li><a  href="#!/report"><span class="glyphicon glyphicon-tasks"></span> Report</a></li>
 
                <?php
-           }?>
+          // }?>
                           <!--<li><a  href="alerticket.php">TrackServe Alert Tickets</a></li>
                  <?php
                  
