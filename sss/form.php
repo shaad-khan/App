@@ -553,7 +553,7 @@ if($_SESSION['Doc']==1)
 <tr>
  <td ng-if="items[0].Status=='WIP'">
 <div class="form-group" >
-    <label for="exampleInputEmail1">Approver, Cloning Profile <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Approver <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Status=='WIP'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="approver" placeholder="Approver" />
   </td>
