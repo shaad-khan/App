@@ -542,6 +542,21 @@ if($_SESSION['Doc']==1)
 "></span></label></td><td ng-if="items[0].Status=='WIP'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="client_tkt" placeholder="Client Ticket Number optional" />
   </td>
+<!----------------------------------------New changes------------------------------- -->
+ <td ng-if="items[0].Status=='WIP'">
+<div class="form-group" >
+    <label for="exampleInputEmail1">Access Form number <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td ng-if="items[0].Status=='WIP'">
+ <input type="text" class="form-control" id="exampleInputEmail1" name="formnumber" placeholder="Access Form number" />
+  </td>
+
+
+<!----------------------------------------------------------------------------- -->
+
+
+
+
+
   <td ng-if="items[0].Status!='WIP' && items[0].CTicket!=''">
 <div class="form-group" >
     <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
