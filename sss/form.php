@@ -585,33 +585,33 @@ if($_SESSION['Doc']==1)
 <tr>
   
 <!----------------------------------------New changes------------------------------- -->
-<td ng-if="items[0].Status=='WIP'">
+<td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 
 <div class="form-group" >
     <label for="exampleInputEmail1">Access Form number <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status=='WIP' ">
+"></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="formnumber" placeholder="Access Form number" />
   </td>
 </tr>
 <tr>
- <td ng-if="items[0].Status=='WIP' && item[0].approver==''">
+ <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 <div class="form-group" >
     <label for="exampleInputEmail1">Approver <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status=='WIP' && item[0].approver==''">
+"></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="approver" placeholder="Approver" />
   </td>
-<td ng-if="items[0].Status=='WIP' && item[0].cprofile==''">
+<td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 <div class="form-group" >
     <label for="exampleInputEmail1"> Cloning Profile <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status=='WIP' && item[0].cprofile==''">
+"></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="cprofile" placeholder="Cloning Profile" />
   </td>
-  <td ng-if="items[0].Status=='WIP' && item[0].afdate==''">
+  <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 <div class="form-group" >
     <label for="exampleInputEmail1"> Access Form Date <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status=='WIP' && item[0].afdate==''">
- <input type="text" class="form-control" id="exampleInputEmail1" name="afdate" placeholder="Access Form Date" />
-  </td>
+"></span></label></td><td nng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
+<input type="text" class="form-control"  id="some_class_3" style="color:black" placeholder="Update Date Time" name="afdate" required/>
+      </td>
 </tr>
 
 <!----------------------------------------------------------------------------- -->
@@ -811,6 +811,7 @@ window.onerror = function(errorMsg) {
             $('#some_class_3').datetimepicker();
              $('#some_class_4').datetimepicker();
              $('.some_class').datetimepicker();
+             
          $('#datetimepicker_dark').datetimepicker();
          </script>
 </html>
