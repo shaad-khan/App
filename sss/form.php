@@ -583,7 +583,46 @@ if($_SESSION['Doc']==1)
   </td>
       </tr>
 <tr>
-  <td>
+  
+<!----------------------------------------New changes------------------------------- -->
+ <td ng-if="items[0].Status=='WIP'">
+<div class="form-group" >
+    <label for="exampleInputEmail1">Access Form number <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td ng-if="items[0].Status=='WIP'">
+ <input type="text" class="form-control" id="exampleInputEmail1" name="formnumber" placeholder="Access Form number" />
+  </td>
+</tr>
+<tr>
+ <td ng-if="items[0].Status=='WIP'">
+<div class="form-group" >
+    <label for="exampleInputEmail1">Approver <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td ng-if="items[0].Status=='WIP'">
+ <input type="text" class="form-control" id="exampleInputEmail1" name="approver" placeholder="Approver" />
+  </td>
+<td ng-if="items[0].Status=='WIP'">
+<div class="form-group" >
+    <label for="exampleInputEmail1"> Cloning Profile <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td ng-if="items[0].Status=='WIP'">
+ <input type="text" class="form-control" id="exampleInputEmail1" name="cprofile" placeholder="Cloning Profile" />
+  </td>
+</tr>
+
+<!----------------------------------------------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+<tr><td>
+
+
+
 <div class="form-group" >
     <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Status=='Classify'">
