@@ -72,7 +72,7 @@ $close=$_SESSION['Closure'];
 
 
     <tr ng-repeat="item in items" ng-class="$index % 2 > 0 ? 'active':''">
-  <!--    <td ng-init="email=item.Email.split('@')[0]"><span class="glyphicon glyphicon-user" style="font-size:20px;color:black;padding:5px;"></span>  {{item.Name}}</td><td ng-init="table_count.Total=table_count.Total+item.classify"><a href="#!/ticket/{{email}}/Classify">{{item.Classify}}</a></td>-->
+      <td ng-init="email=item.Email.split('@')[0]"><span class="glyphicon glyphicon-user" style="font-size:20px;color:black;padding:5px;"></span>  {{item.Name}}</td><!--<td ng-init="table_count.Total=table_count.Total+item.classify"><a href="#!/ticket/{{email}}/Classify">{{item.Classify}}</a></td>-->
       <td ng-init="total_Wip=total_Wip+item.Wip"><a href="#!/ticket/{{email}}/Wip"> {{item.Wip}}</a></td>
       <td ng-init="total_Aui=total_Aui+item.Aui"><a href="#!/ticket/{{email}}/Aui">{{item.Aui}}</a></td>
       
