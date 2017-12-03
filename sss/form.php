@@ -554,12 +554,27 @@ if($_SESSION['Doc']==1)
 
     </tr>
     <tr>
-      <td ng-if="items[0].Status=='WIP'">
+      <td ng-if="items[0].Status=='WIP' && items[0].CTicket==''">
 <div class="form-group" >
     <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].Status=='WIP'">
+"></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].CTicket==''">
  <input type="text" class="form-control" id="exampleInputEmail1" name="client_tkt" placeholder="Client Ticket Number optional" />
   </td>
+<td ng-if="items[0].Status=='WIP' && items[0].CTicket!=''">
+<div class="form-group" >
+    <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
+"></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].CTicket!=''">
+ <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="{{items[0].CTicket}}" disabled/>
+  <input type="hidden" name='client_tkt'  value="{{items[0].CTicket}}" disabled/>
+  
+  </td>
+      </tr>
+<tr>
+  <td>
+
+
+
+
   <td ng-if="items[0].Status!='WIP' && items[0].CTicket!=''">
 <div class="form-group" >
     <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
