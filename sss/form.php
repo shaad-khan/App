@@ -177,6 +177,7 @@ td
   </td>
   <td ng-if="items[0].Client!=''">
      <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Client}}" disabled>
+     <input type="hidden"  name="client" value="{{items[0].Client}}" >
     
   </div>
   </td>
@@ -196,10 +197,11 @@ td
   <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Project}}</option>
 </select>
   </div></td>
-  <input type="hidden" value="{{project.Project}}"" name="project"/>
+  
   <td ng-if="items[0].Project!=''">
 
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Project}}" disabled>
+    <input type="hidden" value="{{project.Project}}"" name="project"/>
   </div></td>
   
   
