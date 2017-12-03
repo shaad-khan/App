@@ -235,7 +235,7 @@ td
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
      <td ng-if="items[0].Status=='WIP' && items[0].Cdatetime!=''">
-     <input type="text" class="form-control"   style="color:black" placeholder="{{items[0].Cdatetime}}"  disabled/>
+     <input type="text" class="form-control"   style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
      
 
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
@@ -288,12 +288,12 @@ td
 </select>
   </div>
   </td>
-   <td ng-if="items[0].Status=='WIP' && items[0].jobtype!=''">
+   <td ng-if="items[0].Status=='WIP' && items[0].jobtype">
      <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].jobtype}}" disabled>
     <input type='hidden' name='jtype' value='{{items[0].jobtype}}'/>
   </div>
   </td>
-  <td ng-if="items[0].Status!='WIP' && items[0].jobtype!=''">
+  <td ng-if="items[0].Status!='WIP' && items[0].jobtype">
      <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].jobtype}}" disabled>
     
   </div>
