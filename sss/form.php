@@ -586,6 +586,7 @@ if($_SESSION['Doc']==1)
   
 <!----------------------------------------New changes------------------------------- -->
 <td ng-if="items[0].Status=='WIP' && item[0].aformnumber==''">
+
 <div class="form-group" >
     <label for="exampleInputEmail1">Access Form number <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Status=='WIP'&& item[0].aformnumber=='' ">
