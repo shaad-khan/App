@@ -201,7 +201,7 @@ td
   <td ng-if="items[0].Project!=''">
 
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Project}}" disabled>
-    <input type="hidden" value="{{project.Project}}" name="project"/>
+    <input type="hidden" value="{{items[0].Project}}" name="project"/>
   </div></td>
   
   
