@@ -50,6 +50,15 @@ $discription= $_POST["discription"];
 $comments= $_POST["comments"];
 $comments=str_replace("'","''",$comments);
 $cstatus= $_POST["cstatus"];
+$afdate=$_POST['afdate'];
+$formnumber=$_POST['formnumber'];		 
+  $approver=$_POST['approver'];		  //$approver=$_POST['approver'];
+ $cprofile=$_POST['cprofile'];		 //+$cprofile=$_POST['cprofile'];
+
+
+
+
+
 
 $ttime= $_POST["ttime"];
 
@@ -131,10 +140,10 @@ if($status=='WIP')
 {
   if($crtime)
   {
-    $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team',requester='$requester',jobtype='$jtype',Cdatetime='$crtime' where Ticket_ID='$TID'";
+    $Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team',requester='$requester',jobtype='$jtype',Cdatetime='$crtime',aformnumber='$formnumber',approver='$approver',cprofile='$cprofile',afdate='$afdate' where Ticket_ID='$TID'";
   }
   else{
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team',requester='$requester',jobtype='$jtype' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team',requester='$requester',jobtype='$jtype',aformnumber='$formnumber',approver='$approver',cprofile='$cprofile',afdate='$afdate' where Ticket_ID='$TID'";
 }
 }
  if(($status=='WIP') and ($AUI=='on') and ($cstatus!='next'))
@@ -143,7 +152,7 @@ $fstatus='AUI';
 $aui_flag=1;
         $fresolver=$user_session;
         
-        $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime',Updatetime='$utime',Client='$client',Project='$project',EnvType='$env',requester='$requester',jobtype='$jtype',Cdatetime='$crtime' where Ticket_ID='$TID'";
+        $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$fdate',Updatetime='$utime',Updatetime='$utime',Client='$client',Project='$project',EnvType='$env',requester='$requester',jobtype='$jtype',Cdatetime='$crtime',aformnumber='$formnumber',approver='$approver',cprofile='$cprofile',afdate='$afdate' where Ticket_ID='$TID'";
 
    // $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
     }
@@ -153,7 +162,7 @@ $fstatus='WIP';
 $fresolver=$user_session;
 //$aui_flag=1;
         //$fresolver=$user_session;
-        $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$utime',Updatetime='$utime',Client='$client',Project='$project',EnvType='$env',requester='$requester',jobtype='$jtype',Cdatetime='$crtime' where Ticket_ID='$TID'";
+        $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Resolver='$fresolver',Resolver_Dtime='$utime',Updatetime='$utime',Client='$client',Project='$project',EnvType='$env',requester='$requester',jobtype='$jtype',Cdatetime='$crtime',aformnumber='$formnumber',approver='$approver',cprofile='$cprofile',afdate='$afdate' where Ticket_ID='$TID'";
 
    // $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned', Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
     }
