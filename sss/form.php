@@ -220,6 +220,7 @@ td
   </div> </td>
   <td ng-show="items[0].Status=='WIP' && !items[0].Cdatetime">
 <div class="form-group">
+
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
      <td ng-show="items[0].Status=='WIP' && !items[0].Cdatetime">
