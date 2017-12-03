@@ -218,11 +218,11 @@ td
 "></span></label> </td> <td><input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Assign_to}}" name="aname" disabled>
   </div> </td>
-  <td ng-show="items[0].Status=='WIP' && items[0].Cdatetime==''">
+  <td ng-show="items[0].Status=='WIP' && !items[0].Cdatetime">
 <div class="form-group">
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
-     <td ng-show="items[0].Status=='WIP' && items[0].Cdatetime==''">
+     <td ng-show="items[0].Status=='WIP' && !items[0].Cdatetime">
      <input type="text" class="form-control"  id="datetimepicker_dark"  placeholder="Creation Date Time" name="crtime"/>
 
      
@@ -230,11 +230,11 @@ td
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
 
-<td ng-if="items[0].Status=='WIP' && items[0].Cdatetime!='' ">
+<td ng-if="items[0].Status=='WIP' && items[0].Cdatetime">
 <div class="form-group">
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
-     <td ng-if="items[0].Status=='WIP' && items[0].Cdatetime!=''">
+     <td ng-if="items[0].Status=='WIP' && items[0].Cdatetime">
      <input type="text" class="form-control"   style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
      
 
