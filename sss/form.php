@@ -808,6 +808,7 @@ window.onerror = function(errorMsg) {
 }
 //alert("hello");
  //$('input').datepicker();
+ $(function() {
           $('#some_class_1').datetimepicker();
            $('#some_class_2').datetimepicker();
             $('#some_class_3').datetimepicker();
@@ -815,4 +816,5 @@ window.onerror = function(errorMsg) {
              $('.some_class').datetimepicker();
              $('#datetimepicker_dark').datetimepicker();
          </script>
+ });
 </html>
