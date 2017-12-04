@@ -224,7 +224,7 @@ td
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
      <td ng-show="items[0].Status=='WIP' && !items[0].Cdatetime">
-     <input type="text" class="form-control hasDatepicker"  id="some_class_1" style="color:black"  placeholder="Creation Date Time" name="crtime"/>
+     <input type="date" class="form-control hasDatepicker"   style="color:black"  placeholder="Creation Date Time" name="crtime"/>
 
      
   
@@ -237,7 +237,7 @@ td
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
      <td ng-if="items[0].Status=='WIP' && items[0].Cdatetime">
-     <input type="text" class="form-control hasDatepicker" id="some_class_1"  style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
+     <input type="date" class="form-control hasDatepicker"   style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
      
 
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
@@ -248,7 +248,7 @@ td
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
     --> <td ng-if="items[0].Status!='WIP'">
-     <input type="text" class="form-control hasDatepicker" id="some_class_1"  style="color:black" placeholder="{{items[0].Cdatetime}}" name="crtime"  enabled/>
+     <input type="date" class="form-control hasDatepicker"   style="color:black" placeholder="{{items[0].Cdatetime}}" name="crtime"  enabled/>
      
 
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
@@ -269,7 +269,7 @@ td
   <div class="form-group">
     <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td><input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
-    <input type="text" class="form-control hasDatepicker"  id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled/>
+    <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled/>
   </div> </td>
 <td>
   <div class="form-group">
