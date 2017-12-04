@@ -246,9 +246,9 @@ td
 <td ng-if="items[0].Status!='WIP'">
 <div class="form-group">
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
-"></span></label> </td><input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
-     <td ng-if="items[0].Status!='WIP'">
-     <input type="text" class="form-control" id="some_class_1"  style="color:black" placeholder="{{items[0].Cdatetime}}"  enabled/>
+"></span></label> </td><!--<input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
+    --> <td ng-if="items[0].Status!='WIP'">
+     <input type="text" class="form-control" id="some_class_1"  style="color:black" placeholder="{{items[0].Cdatetime}}" name="crtime"  enabled/>
      
 
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
