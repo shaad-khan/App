@@ -809,12 +809,12 @@ window.onerror = function(errorMsg) {
 //alert("hello");
  //$('input').datepicker();
  $(function() {
-          $('#some_class_1').datetimepicker();
-           $('#some_class_2').datetimepicker();
-            $('#some_class_3').datetimepicker();
-             $('#some_class_4').datetimepicker();
-             $('.some_class').datetimepicker();
-             $('#datetimepicker_dark').datetimepicker();
+          $('#some_class_1').datetimepicker('show');
+           $('#some_class_2').datetimepicker('show');
+            $('#some_class_3').datetimepicker('show');
+             $('#some_class_4').datetimepicker('show');
+             $('.some_class').datetimepicker('show');
+             $('#datetimepicker_dark').datetimepicker('show');
               });
          </script>
 
