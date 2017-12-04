@@ -612,7 +612,7 @@ if($_SESSION['Doc']==1)
 <div class="form-group" >
     <label for="exampleInputEmail1"> Access Form Date <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
-<input type="text" class="form-control"  id="some_class_3" style="color:black" placeholder="Access form date" name="afdate" required/>
+<input type="datetime-local" class="form-control"  id="some_class_3" style="color:black" placeholder="Access form date" name="afdate" required/>
       </td>
 </tr>
 
