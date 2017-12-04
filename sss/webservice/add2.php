@@ -71,6 +71,8 @@ $attime=$_POST['attime'];
 $cl_tkt=$_POST['client_tkt'];
 $team=$_POST['cteam'];
 $docf=0;
+$crtime=str_replace('T',' ',$crtime);
+$afdate=str_replace('T',' ',$afdate);
 date_default_timezone_set('Asia/Kolkata');
                   $ndate = date('Ymd H:i:s');
 $errors= array();
