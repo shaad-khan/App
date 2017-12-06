@@ -106,6 +106,15 @@ $conn->query($sql);
       }else{
         // print_r($errors);
       }
+$spro="select PID from dbo.Project_tab where Project like '%".$project."'%";
+$rpro=$conn->query($spro);
+//echo $msg;
+  while($rowp=$rpro->fetch())
+{
+  $pid=$rowp['PID'];
+
+}
+
 
 //$sql="insert into Update_Tab values('$TID','$status','$utime','$uname','$schedule','$client','$project','$ttime','$reviewer','$resolver','','$tcategory')";
 
@@ -128,7 +137,7 @@ else
     //echo "<script> alert('insert');</script>";
 if($status=='Classify')
 {
-$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team' where Ticket_ID='$TID'";
+$Master_sql="Update Master_Ticket_Tab set Assign_To='$user_session',Updatetime='$utime', Status='WIP',Client='$client',Project='$project',EnvType='$env',team='$team',Project_id=$pid where Ticket_ID='$TID'";
 }
  else if(($status=='WIP') and ($AUI=='on') and ($cstatus!='next'))
     {
