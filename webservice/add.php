@@ -106,7 +106,7 @@ $conn->query($sql);
       }else{
         // print_r($errors);
       }
-$spro="select PID from dbo.Project_tab where Project like '%".$project."'%";
+$spro="select PID from dbo.Project_tab where Project like '%".$project."%'";
 $rpro=$conn->query($spro);
 //echo $msg;
   while($rowp=$rpro->fetch())
