@@ -49,7 +49,7 @@ $discription= $_POST["discription"];
 $comments= $_POST["comments"];
 $comments=str_replace("'","''",$comments);
 $cstatus= $_POST["cstatus"];
-
+$pid='';
 $ttime= $_POST["ttime"];
 
 $tcategory= $_POST["tcategory"];
@@ -108,9 +108,9 @@ $conn->query($sql);
       }
 $spro="select PID from dbo.Project_tab where Project like '%".$project."%'";
 echo $spro;
-$rpro=$conn->query($spro);
+$resp=$conn->query($spro);
 //echo $msg;
-  while($rowp=$rpro->fetch())
+  while($rowp=$resp->fetch())
 {
   $pid=$rowp['PID'];
 
@@ -253,7 +253,7 @@ else if(($fstatus=='Doc') and ($docf==1))
 if($Master_sql) 
 {
     echo $Master_sql;
-//$conn->query($Master_sql);
+$conn->query($Master_sql);
 
 }
 $s="Update Master_Ticket_Tab set Updatetime='$utime' where Ticket_ID='$TID'";
