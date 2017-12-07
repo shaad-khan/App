@@ -253,7 +253,7 @@ else if(($fstatus=='Doc') and ($docf==1))
 if($Master_sql) 
 {
     echo $Master_sql;
-$conn->query($Master_sql);
+//$conn->query($Master_sql);
 
 }
 $s="Update Master_Ticket_Tab set Updatetime='$utime' where Ticket_ID='$TID'";
