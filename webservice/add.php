@@ -476,7 +476,7 @@ if($cl_tkt!=null)
 }
 
 
-$sqlc="update cupdate set cgflag=1 where team='L3'";
+$sqlc="update cupdate set cflag=1 where team='L3'";
 $conn->query($sqlc);
 
     /*----------------------------------------------------------------------------------------*/
