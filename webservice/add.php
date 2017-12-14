@@ -476,7 +476,8 @@ if($cl_tkt!=null)
 }
 
 
-
+$sqlc="update cupdate set cgflag=1 where team='L3'";
+$conn->query($sqlc);
 
     /*----------------------------------------------------------------------------------------*/
 echo "<script> alert('Updated successfully');
