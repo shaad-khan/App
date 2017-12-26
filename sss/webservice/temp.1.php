@@ -12,26 +12,20 @@ date_default_timezone_set('Asia/Kolkata');
 					->setCellValue('B1', 'Requester')
 					->setCellValue('C1', 'Client')
 					->setCellValue('D1', 'Project')
-					->setCellValue('E1', 'ProjectId')
-					->setCellValue('F1', 'CTicket')
-                    ->setCellValue('G1', 'TDescription')
-                    ->setCellValue('H1', 'Status')
-					->setCellValue('I1', 'Creation Date')
-                    ->setCellValue('J1', 'WorkDate')
-                    ->setCellValue('K1', 'WorkedBy')
-					->setCellValue('L1', 'EmplId')
-                    ->setCellValue('M1', 'EnvType')
-                    ->setCellValue('N1', 'TaskType')
-                    ->setCellValue('O1', 'ShiftType')
-                    ->setCellValue('P1', 'TimeMinutes')
-                    ->setCellValue('Q1', 'TimeHours')
-					->setCellValue('R1', 'Team')
-					->setCellValue('S1', 'Comments')
-					->setCellValue('T1',  'Job Type']);
-					->setCellValue('U1', 'Access Form Number')
-					->setCellValue('V1', 'Cloning Profile ')
-					->setCellValue('W1', 'Approver')
-					->setCellValue('X1', 'Access Form Date');
+					->setCellValue('E1', 'CTicket')
+                    ->setCellValue('F1', 'TDescription')
+                    ->setCellValue('G1', 'Status')
+					->setCellValue('H1', 'Creation Date')
+                    ->setCellValue('I1', 'WorkDate')
+                    ->setCellValue('J1', 'WorkedBy')
+                    ->setCellValue('K1', 'EnvType')
+                    ->setCellValue('L1', 'TaskType')
+                    ->setCellValue('M1', 'ShiftType')
+                    ->setCellValue('N1', 'TimeMinutes')
+                    ->setCellValue('O1', 'TimeHours')
+					->setCellValue('P1', 'Team')
+					->setCellValue('Q1', 'Comments')
+					->setCellValue('R1', 'Type Of Job');
 
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
@@ -50,12 +44,10 @@ $db = "CSL2AppsDB";
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-$sql3="SET ANSI_NULLS OFF
-
-select 
+$sql3="select 
 mt.Ticket_ID,mt.requester,
 replace(replace(mt.Client, char(10),''), char(13),'') as Client,
-replace(replace(mt.Project, char(10),''), char(13),'') as Project ,pf.PID,
+replace(replace(mt.Project, char(10),''), char(13),'') as Project ,
 mt.CTicket,ut.Comments,mt.team,
 mt.Tdiscription,mt.Status,mt.Cdatetime,
 WorkDate =
@@ -69,7 +61,6 @@ when '0' then ut.UpdateBy
 when '1' then mt.Resolver
 else 'Unknown'
 end,
-uf.EID as EmpId,
 mt.EnvType,
 TaskType =
 case mt.aflag
@@ -94,22 +85,17 @@ when '0' then cast(ut.TimeTaken/60.0 as  decimal(16,2))
 when '1' then cast( mt.Total_time/60.0 as  decimal(16,2))
 else 'Unknown'
 end,
-mt.jobtype as jobtype,aformnumber,approver,cprofile,afdate
+mt.jobtype as jobtype
 
 
- from dbo.User_prof  as uf,dbo.Project_tab as pf, dbo. Master_Ticket_Tab mt left outer join dbo.Update_Tab ut
+ from dbo. Master_Ticket_Tab mt left outer join dbo.Update_Tab ut
 on mt.Ticket_ID = ut.TicketId where mt.team='SSS' and case mt.aflag
 when '0' then ut.TimeTaken
 when '1' then mt.Total_time end <> 0 and
 
 case mt.aflag
 when '0' then CAST (CONVERT(DATE, ut.UpdateTime, 101) as varchar(30))
-when '1' then CAST (CONVERT(DATE, mt.Resolver_Dtime, 101) as varchar(30)) end  between '$sdate' and '$edate' and 
-case mt.aflag
-when '0' then ut.UpdateBy
-when '1' then mt.Resolver
-else 'Unknown'
-end like uf.sessionId and mt.Project like pf.Project";
+when '1' then CAST (CONVERT(DATE, mt.Resolver_Dtime, 101) as varchar(30)) end between '$sdate' and '$edate'";
 
 //echo $sql3;
   $result=$conn->query($sql3);
@@ -129,26 +115,20 @@ $i=2;
 					->setCellValue('B'.$i, $row2['requester'])
 					->setCellValue('C'.$i, $row2['Client'])
 					->setCellValue('D'.$i, $row2['Project'])
-					->setCellValue('E'.$i, $row2['PID'])
-					->setCellValue('F',$i, $row2['CTicket'])
-					->setCellValue('G'.$i, $row2['Tdiscription'])
-					->setCellValue('H'.$i, $row2['Status'])
-					->setCellValue('I'.$i, $row2['Cdatetime'])
-					->setCellValue('J'.$i, $row2['WorkDate'])
-					->setCellValue('K'.$i, $row2['WorkedBy'])
-					->setCellValue('L'.$i, $row2['EmpId'])
-					->setCellValue('M'.$i, $row2['EnvType'])
-					->setCellValue('N'.$i, $row2['TaskType'])
-					->setCellValue('O'.$i, $row2['ShiftType'])
-					->setCellValue('P'.$i, $row2['Time_Min'])
-					->setCellValue('Q'.$i, $row2['Time_hours'])
-					->setCellValue('R'.$i, $row2['Team'])
-					->setCellValue('S'.$i, $row2['Comments'])
-					->setCellValue('T'.$i, $row2['jobtype'])
-					->setCellValue('U'.$i, $row2['aformnumber'])
-					->setCellValue('V'.$i, $row2['cprofile'])
-					->setCellValue('W'.$i, $row2['approver'])
-					->setCellValue('X'.$i, $row2['afdate']);
+					->setCellValue('E'.$i, $row2['CTicket'])
+					->setCellValue('F'.$i, $row2['Tdiscription'])
+					->setCellValue('G'.$i, $row2['Status'])
+					->setCellValue('H'.$i, $row2['Cdatetime'])
+					->setCellValue('I'.$i, $row2['WorkDate'])
+					->setCellValue('J'.$i, $row2['WorkedBy'])
+					->setCellValue('K'.$i, $row2['EnvType'])
+					->setCellValue('L'.$i, $row2['TaskType'])
+					->setCellValue('M'.$i, $row2['ShiftType'])
+					->setCellValue('N'.$i, $row2['Time_Min'])
+					->setCellValue('O'.$i, $row2['Time_hours'])
+					->setCellValue('P'.$i, $row2['Team'])
+					->setCellValue('Q'.$i, $row2['Comments'])
+					->setCellValue('R'.$i, $row2['jobtype']);
 
 //echo $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t". $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min']."\t" . $row2['Time_hours']."\n";
 //$rows[]=$row2;
