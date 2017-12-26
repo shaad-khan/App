@@ -27,11 +27,11 @@ date_default_timezone_set('Asia/Kolkata');
                     ->setCellValue('Q1', 'TimeHours')
 					->setCellValue('R1', 'Team')
 					->setCellValue('S1', 'Comments')
-					->setCellValue('T1',  'Job Type'])
-					->setCellValue('U1', 'Access Form Number')
-					->setCellValue('V1', 'Cloning Profile ')
+					->setCellValue('T1',  'Job-Type')
+					->setCellValue('U1', 'Access-Form-Number')
+					->setCellValue('V1', 'Cloning-Profile ')
 					->setCellValue('W1', 'Approver')
-					->setCellValue('X1', 'Access Form Date');
+					->setCellValue('X1', 'Access-Form-Date');
 
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
