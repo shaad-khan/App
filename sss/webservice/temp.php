@@ -130,7 +130,7 @@ $i=2;
 					->setCellValue('C'.$i, $row2['Client'])
 					->setCellValue('D'.$i, $row2['Project'])
 					->setCellValue('E'.$i, $row2['PID'])
-					->setCellValue('F',$i, $row2['CTicket'])
+					->setCellValue('F'.$i, $row2['CTicket'])
 					->setCellValue('G'.$i, $row2['Tdiscription'])
 					->setCellValue('H'.$i, $row2['Status'])
 					->setCellValue('I'.$i, $row2['Cdatetime'])
