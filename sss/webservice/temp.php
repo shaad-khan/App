@@ -157,16 +157,16 @@ $i++;
 
 /*------------------------------------------------------------*/
 
-        foreach(range('A','R') as $columnID) {
+        foreach(range('A','X') as $columnID) {
 			$objPHPExcel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(true);
 		}
 		/*********************Autoresize column width depending upon contents END***********************/
 		
-		$objPHPExcel->getActiveSheet()->getStyle('A1:R1')->getFont()->setBold(true); //Make heading font bold
+		$objPHPExcel->getActiveSheet()->getStyle('A1:X1')->getFont()->setBold(true); //Make heading font bold
 		
 		/*********************Add color to heading START**********************/
 		$objPHPExcel->getActiveSheet()
-					->getStyle('A1:R1')
+					->getStyle('A1:X1')
 					->getFill()
 					->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
 					->getStartColor()
