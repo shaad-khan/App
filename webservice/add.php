@@ -519,7 +519,8 @@ $conn->query($sqlc);
 
     /*----------------------------------------------------------------------------------------*/
 echo "<script> alert('Updated successfully');
-     
+ setTimeout(function(){window.location.href = 'https://apps.continuserve.com/form.php?ID=$TID}, 1000);
+      ;
      </script>";
 
 if($uflg!=1)
