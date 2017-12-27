@@ -164,7 +164,7 @@ td
     <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Creator}}" disabled>
   </div>
   </td>
-  <td>
+<!--  <td>
 
     <div class="form-group">
     <label for="exampleInputEmail1">Client  <span class="
@@ -174,7 +174,7 @@ td
   <option ng-repeat="list in lists" value="{{list.Client_name}}">{{list.Client_name}}</option>
 </select>
   </div>
-  </td>
+  </td>-->
   <td ng-if="items[0].Client!=''">
      <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Client}}" disabled>
     
@@ -193,7 +193,7 @@ td
     <label for="exampleInputEmail1">Project <span class="
 "></span></label></td><td ng-if="items[0].Project==''">
    <select class="form-control" name="project" >
-  <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Project}}</option>
+  <option ng-repeat="project in projects | orderBy" value="{{project.Project}}">{{project.Project}}</option>
 </select>
   </div></td>
   

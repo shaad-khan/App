@@ -17,8 +17,10 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 $TID  = $_POST["TID"];
 
 $env=$_POST['env'];
+$project= $_POST["project"];
+$c=explode(" ",$project);
 
-$client= $_POST["client"];
+$client= $c[0]; 
 
 $creator=$_POST['creator'];
 
@@ -27,7 +29,7 @@ $assigned_To=$_POST['assign'];
 
 $release=$_POST['release'];
 
-$project= $_POST["project"];
+
 
 $uname= $_POST["uname"];
 
