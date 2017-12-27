@@ -195,7 +195,7 @@ td
     <label for="exampleInputEmail1">Project <span class="
 "></span></label></td><td ng-if="items[0].Project==''">
    <select class="form-control" name="project" >
-  <option ng-repeat="project in projects | orderBy project" value="{{project.Project}}">{{project.Project}}</option>
+  <option ng-repeat="project in projects | orderBy: 'Project'" value="{{project.Project}}">{{project.Project}}</option>
 </select>
   </div></td>
   
