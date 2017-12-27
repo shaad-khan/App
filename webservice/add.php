@@ -265,6 +265,7 @@ if((($r == 1 ) && ($c == 1)) && ($fstatus=="Review"))
 {
 
 $conn->query($Master_sql);
+$uflg=1;
 }
 else if((($r == 1 ) && ($c == 0)) && ($fstatus=="Review"))
 {
