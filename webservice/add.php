@@ -254,7 +254,7 @@ else if(($fstatus=='Doc') and ($docf==1))
 if($Master_sql) 
 {
    // echo $Master_sql;
-$usql="select Review,Closure from dbo.user_prof where SessionId like '%".$user_session."' and Team='L3'";
+$usql="select Review,Closure from dbo.user_prof where SessionId like '%".$user_session."' and Team='L3' or Team='All'";
 $result=$conn->query($usql);
 while($row1=$result->fetch())
 {
