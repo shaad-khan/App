@@ -374,6 +374,7 @@ td
     <label for="exampleInputEmail1">Environment Type <span class="
 "></span></label></td><td ng-if="items[0].EnvType==''">
      <select class="form-control" name="env">
+     <option value="">Null</option>
   <option value="Prod">Prod</option>
     <option value="Non-Prod">Non-Prod</option>
 </select>
