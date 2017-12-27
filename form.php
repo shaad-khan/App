@@ -177,7 +177,7 @@ td
   </td>-->
   <td ng-if="items[0].Client!=''"> <div class="form-group">
     <label for="exampleInputEmail1">Client  <span class="
-"></span></label></td><td>
+"></span></label></td><td ng-if="items[0].Client!=''">
      <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Client}}" disabled>
     
   </div>
