@@ -214,15 +214,15 @@ date_default_timezone_set('Asia/Kolkata');
 }
 else if(($tab_status=='Review'))
 {
-    $fstatus='Doc';
-    $docf=1;
+    $fstatus='Closure';
+//    $docf=1;
 }
 
-else if($tab_status=='Doc')
+/*else if($tab_status=='Doc')
 {
     $fstatus='Closure';
     //echo $fstatus;
-}
+}*/
 else if($tab_status=='Closure')
 {
     $fstatus='Close';
@@ -254,7 +254,44 @@ else if(($fstatus=='Doc') and ($docf==1))
 if($Master_sql) 
 {
    // echo $Master_sql;
+$usql="select Review,Closure from dbo.user_prof where SessionId like '%".$user_session."' and Team='L3'";
+$result=$conn->query($usql);
+while($row1=$result->fetch())
+{
+  $r=$row1['Review'];
+  $c=$row1['Closure'];
+  }
+if((($r == 1 ) && ($c == 1)) && ($fstatus=="Review"))
+{
+
 $conn->query($Master_sql);
+}
+else if((($r == 1 ) && ($c == 0)) && ($fstatus=="Review"))
+{
+  $conn->query($Master_sql);
+
+
+}
+else if((($r == 1 ) && ($c == 1)) && ($fstatus=="Closure"))
+{
+  $conn->query($Master_sql);
+
+
+}
+else if((($r == 0 ) && ($c == 0)) && (($fstatus=="Review")||($fstatus=="Closure")))
+{
+echo "<script> alert('Sorry you don't have enough privileges to update further');
+     
+     </script>";
+
+}
+
+else{
+  $conn->query($Master_sql);
+}
+
+
+
 
 }
 $s="Update Master_Ticket_Tab set Updatetime='$utime' where Ticket_ID='$TID'";
@@ -293,7 +330,7 @@ $conn->query($s);
 }
 
 }
-if($f2==1)
+if($f2==3)
 {
     /*###############################################################################################################*/
 /*----------------------------------------------------------------------------------------------------*/
@@ -481,7 +518,7 @@ $conn->query($sqlc);
 
     /*----------------------------------------------------------------------------------------*/
 echo "<script> alert('Updated successfully');
-     setTimeout(function(){window.close()}, 1000);
+     
      </script>";
 }
 else
