@@ -269,13 +269,13 @@ $conn->query($Master_sql);
 else if((($r == 1 ) && ($c == 0)) && ($fstatus=="Review"))
 {
   $conn->query($Master_sql);
-
+ $uflg=1;
 
 }
 else if((($r == 1 ) && ($c == 1)) && ($fstatus=="Closure"))
 {
   $conn->query($Master_sql);
-
+ $uflg=1;
 
 }
 else if((($r == 0 ) && ($c == 0)) && (($fstatus=="Review")||($fstatus=="Closure")))
@@ -288,6 +288,7 @@ echo "<script> alert('Sorry you don't have enough privileges to update further')
 
 else{
   $conn->query($Master_sql);
+  $uflg=1;
 }
 
 
@@ -505,7 +506,7 @@ $sql3="select count(*) as ccount from dbo.Master_Ticket_Tab where Assign_to like
 
 
 }
-
+}
 if($cl_tkt!=null)
 {
   $sql="update Master_Ticket_tab set Cticket='$cl_tkt' where Ticket_ID='$TID'";
@@ -520,8 +521,8 @@ $conn->query($sqlc);
 echo "<script> alert('Updated successfully');
      
      </script>";
-}
-else
+
+if($uflg!=1)
 {
     echo "<script> alert('Updation failed');
      setTimeout(function(){window.close()}, 1000);
