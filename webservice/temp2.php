@@ -93,7 +93,7 @@ when '0' then cast(ut.TimeTaken/60.0 as  decimal(16,2))
 when '1' then cast( mt.Total_time/60.0 as  decimal(16,2))
 else 'Unknown'
 end
- from dbo.User_prof  as uf,dbo. Master_Ticket_Tab mt
+ from dbo.User_prof  as uf,dbo.Project_tab as pf,dbo. Master_Ticket_Tab mt
  left outer join dbo.Update_Tab ut
 on mt.Ticket_ID = ut.TicketId where mt.team='L3'  and case mt.aflag
 when '0' then ut.TimeTaken
