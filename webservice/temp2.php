@@ -24,14 +24,14 @@ date_default_timezone_set('Asia/Kolkata');
                     ->setCellValue('N1', 'TaskType')
                     ->setCellValue('O1', 'ShiftType')
                     ->setCellValue('P1', 'TimeMinutes')
-                    ->setCellValue('Q1', 'TimeHours')
-					->setCellValue('R1', 'Team')
+                    ->setCellValue('Q1', 'TimeHours');
+					/*->setCellValue('R1', 'Team')
 					->setCellValue('S1', 'Comments')
 					->setCellValue('T1',  'Job-Type')
 					->setCellValue('U1', 'Access-Form-Number')
 					->setCellValue('V1', 'Cloning-Profile ')
 					->setCellValue('W1', 'Approver')
-					->setCellValue('X1', 'Access-Form-Date');
+					->setCellValue('X1', 'Access-Form-Date');*/
 
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
@@ -173,7 +173,7 @@ $i++;
 		
 		/*********************Add color to heading START**********************/
 		$objPHPExcel->getActiveSheet()
-					->getStyle('A1:X1')
+					->getStyle('A1:Q1')
 					->getFill()
 					->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
 					->getStartColor()
