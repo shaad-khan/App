@@ -2,9 +2,9 @@
 //header( "Content-Type: application/vnd.ms-excel" );
 //header( "Content-disposition: attachment; filename=spreadsheet.xls" );
 date_default_timezone_set('Asia/Kolkata');
-		require_once 'PHPExcel/Classes/PHPExcel.php';
+		require_once './sss/webservice/PHPExcel/Classes/PHPExcel.php';
 		
-		$filename = 'SSS_Shift_report'; //your file name
+		$filename = 'L3_Shift_report'; //your file name
 		$objPHPExcel = new PHPExcel();
 		/*********************Add column headings START**********************/
 		$objPHPExcel->setActiveSheetIndex(0) 
