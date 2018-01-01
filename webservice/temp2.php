@@ -9,22 +9,21 @@ date_default_timezone_set('Asia/Kolkata');
 		/*********************Add column headings START**********************/
 		$objPHPExcel->setActiveSheetIndex(0) 
 					->setCellValue('A1', 'Ticket_ID')
-					->setCellValue('B1', 'Requester')
-					->setCellValue('C1', 'Client')
-					->setCellValue('D1', 'Project')
-					->setCellValue('E1', 'ProjectId')
-					->setCellValue('F1', 'CTicket')
-                    ->setCellValue('G1', 'TDescription')
-                    ->setCellValue('H1', 'Status')
-					->setCellValue('I1', 'Creation Date')
-                    ->setCellValue('J1', 'WorkDate')
-                    ->setCellValue('K1', 'WorkedBy')
-					->setCellValue('L1', 'EmplId')
-                    ->setCellValue('M1', 'EnvType')
-                    ->setCellValue('N1', 'TaskType')
-                    ->setCellValue('O1', 'ShiftType')
-                    ->setCellValue('P1', 'TimeMinutes')
-                    ->setCellValue('Q1', 'TimeHours');
+					->setCellValue('B1', 'Client')
+					->setCellValue('C1', 'Project')
+					->setCellValue('D1', 'ProjectId')
+					->setCellValue('E1', 'CTicket')
+                    ->setCellValue('F1', 'TDescription')
+                    ->setCellValue('G1', 'Status')
+					->setCellValue('H1', 'Creation Date')
+                    ->setCellValue('I1', 'WorkDate')
+                    ->setCellValue('J1', 'WorkedBy')
+					->setCellValue('K1', 'EmplId')
+                    ->setCellValue('L1', 'EnvType')
+                    ->setCellValue('M1', 'TaskType')
+                    ->setCellValue('N1', 'ShiftType')
+                    ->setCellValue('O1', 'TimeMinutes')
+                    ->setCellValue('P1', 'TimeHours');
 					
 
 $edate=$_GET['edate'];
@@ -48,8 +47,8 @@ $sql3="SET ANSI_NULLS OFF
 
 select 
 mt.Ticket_ID,
-replace(replace(mt.Client, char(10),''), char(13),''),
-replace(replace(mt.Project, char(10),''), char(13),''),pf.PID,
+replace(replace(mt.Client, char(10),''), char(13),'') as Client,
+replace(replace(mt.Project, char(10),''), char(13),'') as Project,pf.PID,
 mt.CTicket,
 mt.Tdiscription,
 WorkDate =
@@ -126,22 +125,21 @@ $i=2;
 	
 		$objPHPExcel->setActiveSheetIndex(0) 
 					->setCellValue('A'.$i, $row2['Ticket_ID'])
-					->setCellValue('B'.$i, $row2['requester'])
-					->setCellValue('C'.$i, $row2['Client'])
-					->setCellValue('D'.$i, $row2['Project'])
-					->setCellValue('E'.$i, $row2['PID'])
-					->setCellValue('F'.$i, $row2['CTicket'])
-					->setCellValue('G'.$i, $row2['Tdiscription'])
-					->setCellValue('H'.$i, $row2['Status'])
-					->setCellValue('I'.$i, $row2['Cdatetime'])
-					->setCellValue('J'.$i, $row2['WorkDate'])
-					->setCellValue('K'.$i, $row2['WorkedBy'])
-					->setCellValue('L'.$i, $row2['EmpId'])
-					->setCellValue('M'.$i, $row2['EnvType'])
-					->setCellValue('N'.$i, $row2['TaskType'])
-					->setCellValue('O'.$i, $row2['ShiftType'])
-					->setCellValue('P'.$i, $row2['Time_Min'])
-					->setCellValue('Q'.$i, $row2['Time_hours']);
+					->setCellValue('B'.$i, $row2['Client'])
+					->setCellValue('C'.$i, $row2['Project'])
+					->setCellValue('D'.$i, $row2['PID'])
+					->setCellValue('E'.$i, $row2['CTicket'])
+					->setCellValue('F'.$i, $row2['Tdiscription'])
+					->setCellValue('G'.$i, $row2['Status'])
+					->setCellValue('H'.$i, $row2['Cdatetime'])
+					->setCellValue('I'.$i, $row2['WorkDate'])
+					->setCellValue('J'.$i, $row2['WorkedBy'])
+					->setCellValue('K'.$i, $row2['EmpId'])
+					->setCellValue('L'.$i, $row2['EnvType'])
+					->setCellValue('M'.$i, $row2['TaskType'])
+					->setCellValue('N'.$i, $row2['ShiftType'])
+					->setCellValue('O'.$i, $row2['Time_Min'])
+					->setCellValue('P'.$i, $row2['Time_hours']);
 					
 //echo $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t". $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min']."\t" . $row2['Time_hours']."\n";
 //$rows[]=$row2;
@@ -151,16 +149,16 @@ $i++;
 
 /*------------------------------------------------------------*/
 
-        foreach(range('A','Q') as $columnID) {
+        foreach(range('A','p') as $columnID) {
 			$objPHPExcel->getActiveSheet()->getColumnDimension($columnID)->setAutoSize(true);
 		}
 		/*********************Autoresize column width depending upon contents END***********************/
 		
-		$objPHPExcel->getActiveSheet()->getStyle('A1:Q1')->getFont()->setBold(true); //Make heading font bold
+		$objPHPExcel->getActiveSheet()->getStyle('A1:p1')->getFont()->setBold(true); //Make heading font bold
 		
 		/*********************Add color to heading START**********************/
 		$objPHPExcel->getActiveSheet()
-					->getStyle('A1:Q1')
+					->getStyle('A1:p1')
 					->getFill()
 					->setFillType(PHPExcel_Style_Fill::FILL_SOLID)
 					->getStartColor()
