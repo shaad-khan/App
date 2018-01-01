@@ -8,7 +8,7 @@ header("Location: https://apps.continuserve.com/");
 }
 ?>
 
-    <form method="get" action="webservice/temp2.php">
+
  <div class="row mt"  ng-init="setuser('<?php echo $u;?>')" >
   
    <div class="col-md-12">
@@ -27,10 +27,10 @@ header("Location: https://apps.continuserve.com/");
                                     <!--<a href="https://apps.continuserve.com/main.php#!/" style="color:aqua;font-size:18px;">
                                     <span class="glyphicon glyphicon-home"></a></span>--></div>
                                    <div class="col-xs-2">
-                       
+                                    
                                     
             <div class="form-group">
-           <input type="text" class="form-control" value="" id="some_class_1" name="sdate" style="color:black" placeholder="Start date" ng-model="sdate"/>
+           <input type="text" class="form-control" value="" id="some_class_1" name="date" style="color:black" placeholder="Start date" ng-model="sdate"/>
           
           </div>
                                     
@@ -39,21 +39,18 @@ header("Location: https://apps.continuserve.com/");
                                     
                                     <div class="form-group">
             
-           <input type="text" class="form-control" value="" id="some_class_2" name="edate" style="color:black" placeholder="End date" ng-model="edate"/>
+           <input type="text" class="form-control" value="" id="some_class_2" name="date" style="color:black" placeholder="End date" ng-model="edate"/>
           
           </div>
                                     
                                     </div>
                                     <div class="col-xs-2" >
                                     
-                                   
+                                    <div class="form-group">
             
-         <!--<button type="button" class="btn btn-primary" id="report"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> </button>
-          -->
-          <label for="mySubmit" class="btn"><i class="glyphicon glyphicon-list-alt"></i> Generate Report</label>
-    <input id="mySubmit" type="submit" value="Go" class="hidden" />
+         <button type="button" class="btn btn-primary" ng-click="search(sdate,edate)"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> </button>
+          
           </div>
-          </form>
                                     
                                     </div>
                                      <div class="col-xs-2">
@@ -264,7 +261,6 @@ header("Location: https://apps.continuserve.com/");
 </div>
 
 <script>
-
 $('#myModal').on('show.bs.modal', function(e) {
   //alert("here");
     var bookId = $(e.relatedTarget).data('ticket-id');
