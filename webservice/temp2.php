@@ -25,13 +25,7 @@ date_default_timezone_set('Asia/Kolkata');
                     ->setCellValue('O1', 'ShiftType')
                     ->setCellValue('P1', 'TimeMinutes')
                     ->setCellValue('Q1', 'TimeHours');
-					/*->setCellValue('R1', 'Team')
-					->setCellValue('S1', 'Comments')
-					->setCellValue('T1',  'Job-Type')
-					->setCellValue('U1', 'Access-Form-Number')
-					->setCellValue('V1', 'Cloning-Profile ')
-					->setCellValue('W1', 'Approver')
-					->setCellValue('X1', 'Access-Form-Date');*/
+					
 
 $edate=$_GET['edate'];
 $sdate=$_GET['sdate'];
@@ -148,14 +142,7 @@ $i=2;
 					->setCellValue('O'.$i, $row2['ShiftType'])
 					->setCellValue('P'.$i, $row2['Time_Min'])
 					->setCellValue('Q'.$i, $row2['Time_hours']);
-					/*->setCellValue('R'.$i, $row2['Team'])
-					->setCellValue('S'.$i, $row2['Comments'])
-					->setCellValue('T'.$i, $row2['jobtype'])
-					->setCellValue('U'.$i, $row2['aformnumber'])
-					->setCellValue('V'.$i, $row2['cprofile'])
-					->setCellValue('W'.$i, $row2['approver'])
-					->setCellValue('X'.$i, $row2['afdate']);*/
-
+					
 //echo $row2['Ticket_ID'] . "\t" . $row2['Project'] ."\t" . $row2['Team']."\t" . $row2['CTicket']."\t" . $row2['TDiscription']."\t" . $row2['Status']."\t". $row2['WorkDate']."\t" . $row2['WorkedBy']."\t" . $row2['EnvType']."\t" . $row2['TaskType']."\t" . $row2['ShiftType']."\t" . $row2['Time_Min']."\t" . $row2['Time_hours']."\n";
 //$rows[]=$row2;
 $i++;
