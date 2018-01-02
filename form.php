@@ -542,7 +542,7 @@ if($_SESSION['Doc']==1)
     <label for="exampleInputEmail1">Adjust Update DateTime(Optional)</label>
   <!--  <input type="number" class="form-control" name="auptime" id="exampleInputEmail1" placeholder="{{items[0].Total_client_time}} min" disabled>
   --></td><td>
-  <input type="text" class="form-control"  id="some_class_1" name="opdate" style="color:black" placeholder="Adujusted Update Date Time" ng-model="sdate"/>
+  <input type="text" class="form-control"  id="some_class_2" name="opdate" style="color:black" placeholder="Adujusted Update Date Time" ng-model="sdate"/>
           
   </div></td>
   
