@@ -739,7 +739,8 @@ if($_SESSION['Doc']==1)
                                   <textarea class="form-control" rows="20" cols="100" name="comments" placeholder="Comments" style="background-color:#f4f9fd;color:#1e1833;font-family:initial" disabled>
                                     <?php
 //$lk= "/automation/resource/{{ID}}.txt";
-$iparr = split ("CSTKT18", $ID); 
+$y=date('y');
+$iparr = split ("CSTKT".$y, $ID); 
 
 $tid=$iparr[1];
 
