@@ -128,7 +128,7 @@ $i=2;
 					->setCellValue('A'.$i, $row2['Ticket_ID'])
 					->setCellValue('B'.$i, $row2['requester'])
 					->setCellValue('C'.$i, $row2['Client'])
-					->setCellValue('D'.$i, $row2['Client']+' L1 Support')
+					->setCellValue('D'.$i, $row2['Client'].' L1 Support')
 					->setCellValue('E'.$i, $row2['PID'])
 					->setCellValue('F'.$i, $row2['CTicket'])
 					->setCellValue('G'.$i, $row2['Tdiscription'])
