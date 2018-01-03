@@ -740,6 +740,7 @@ if($_SESSION['Doc']==1)
                                     <?php
 //$lk= "/automation/resource/{{ID}}.txt";
 $iparr = split ("CSTKT18", $ID); 
+
 $tid=$iparr[1];
 
 $lk="../automation/resource/$tid/$tid.txt";
