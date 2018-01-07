@@ -232,12 +232,12 @@ td
 -->  </div> </td>
 
 
-<td ng-if="items[0].Status=='WIP' && items[0].Cdatetime">
+<td ng-if="items[0].Status=='WIP' && items[0].Cdatetime && items[0].Assign_to=='unassigned'">
 <div class="form-group">
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
      <td ng-if="items[0].Status=='WIP' && items[0].Cdatetime">
-     <input type="datetime-local" class="form-control hasDatepicker"   style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
+     <input type="text" class="form-control hasDatepicker"   style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
      
 
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
