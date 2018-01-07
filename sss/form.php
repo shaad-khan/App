@@ -224,11 +224,11 @@ td
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
      <td ng-show="items[0].Status=='WIP' && !items[0].Cdatetime">
-     <input type="datetime-local" class="form-control hasDatepicker"   style="color:black"  placeholder="Creation Date Time" name="crtime"/>
+     <inputtype="date" class="form-control hasDatepicker"    style="color:black"  placeholder="Creation Date Time" name="crtime"/>
 
      
   
-   <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
+   <!--  <input type="text"  datetime-local class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
 
 
@@ -237,7 +237,11 @@ td
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
      <td ng-if="items[0].Status=='WIP' && items[0].Cdatetime">
+<<<<<<< HEAD
      <input type="text" class="form-control hasDatepicker"   style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
+=======
+     <input type="date" class="form-control"   style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
+>>>>>>> 02ad8092f625e2c135cbf215a7769da814c30ade
      
 
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
@@ -248,8 +252,8 @@ td
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
     --> <td ng-if="items[0].Status!='WIP'">
-     <input type="datetime-local" class="form-control hasDatepicker"   style="color:black" placeholder="{{items[0].Cdatetime}}" name="crtime"  enabled/>
-     
+    <input type="text" class="form-control"   style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
+    
 
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
@@ -612,7 +616,7 @@ if($_SESSION['Doc']==1)
 <div class="form-group" >
     <label for="exampleInputEmail1"> Access Form Date <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
-<input type="datetime-local" class="form-control"  id="some_class_3" style="color:black" placeholder="Access form date" name="afdate" />
+<input type="date" class="form-control"  id="some_class_3" style="color:black" placeholder="Access form date" name="afdate" />
       </td>
 </tr>
 
@@ -739,7 +743,9 @@ if($_SESSION['Doc']==1)
                                   <textarea class="form-control" rows="20" cols="100" name="comments" placeholder="Comments" style="background-color:#f4f9fd;color:#1e1833;font-family:initial" disabled>
                                     <?php
 //$lk= "/automation/resource/{{ID}}.txt";
-$iparr = split ("CSTKT17", $ID); 
+$y=date('y');
+$iparr = split ("CSTKT".$y, $ID); 
+
 $tid=$iparr[1];
 
 $lk="../automation/resource/$tid/$tid.txt";

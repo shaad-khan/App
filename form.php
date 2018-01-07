@@ -542,7 +542,7 @@ if($_SESSION['Doc']==1)
     <label for="exampleInputEmail1">Adjust Update DateTime(Optional)</label>
   <!--  <input type="number" class="form-control" name="auptime" id="exampleInputEmail1" placeholder="{{items[0].Total_client_time}} min" disabled>
   --></td><td>
-  <input type="date" class="form-control"  id="" name="opdate" style="color:black" placeholder="Adujusted Update Date Time" ng-model="sdate"/>
+  <input type="text" class="form-control"  id="some_class_2" name="opdate" style="color:black" placeholder="Adujusted Update Date Time" ng-model="sdate"/>
           
   </div></td>
   
@@ -613,8 +613,8 @@ if($_SESSION['Doc']==1)
     
                                   <textarea class="form-control" rows="20" cols="100" name="comments" placeholder="Comments" style="background-color:#f4f9fd;color:#1e1833;font-family:initial" disabled>
                                     <?php
-//$lk= "/automation/resource/{{ID}}.txt";
-$iparr = split ("CSTKT17", $ID); 
+$y=date('y');
+$iparr = split ("CSTKT".$y, $ID); 
 $tid=$iparr[1];
 
 $lk="automation/resource/$tid/$tid.txt";
