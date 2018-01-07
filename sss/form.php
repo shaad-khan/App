@@ -218,12 +218,12 @@ td
 "></span></label> </td> <td><input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Assign_to}}" name="aname" disabled>
   </div> </td>
-  <td ng-show="items[0].Status=='WIP' && !items[0].Cdatetime && items[0].Assign_to!='unassigned'">
+  <td ng-show="items[0].Status=='WIP' && items[0].Cdatetime && items[0].Assign_to!='unassigned'">
 <div class="form-group">
 
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
-     <td ng-show="items[0].Status=='WIP' && !items[0].Cdatetime && items[0].Assign_to!='unassigned'">
+     <td ng-show="items[0].Status=='WIP' && items[0].Cdatetime && items[0].Assign_to!='unassigned'">
      <inputtype="date" class="form-control hasDatepicker"    style="color:black"  placeholder="Creation Date Time" name="crtime"/>
 
      
