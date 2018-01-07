@@ -236,12 +236,8 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
-     <td ng-if="items[0].Status=='WIP' && items[0].Cdatetime">
-<<<<<<< HEAD
+     <td ng-if="items[0].Status=='WIP' && items[0].Cdatetime  && items[0].Assign_to=='unassigned'">
      <input type="text" class="form-control hasDatepicker"   style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
-=======
-     <input type="date" class="form-control"   style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
->>>>>>> 02ad8092f625e2c135cbf215a7769da814c30ade
      
 
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
