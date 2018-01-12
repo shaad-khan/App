@@ -388,7 +388,7 @@ td
     <label for="exampleInputEmail1">Shift <span class="
 "></span></label></td><td>
      <select class="form-control" name="schedule">
-  <option ng-repeat="schedule in schedules | orderBy: 'title'" value="{{schedule.title}}">{{schedule.title}}</option>
+  <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
 </select>
   </div>
   </td>
