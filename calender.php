@@ -158,7 +158,7 @@ app.controller("demo",function($scope,$http)
 	"use strict";
 var date=new Date();
 date=date.toISOString().substring(0, 10);
-//alert(date);
+alert(date);
 	var options = {
 		events_source: 'https://apps.continuserve.com/continuity/services/event.php?u=<?php echo $u;?>',
 		view: 'month',
