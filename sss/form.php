@@ -446,7 +446,7 @@ td
     <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].EnvType==''">
      <select class="form-control" name="env" required>
-       <option value=" "></option>
+       <option value=null></option>
      <option value="General">General</option>
   <option value="Prod">Prod</option>
     <option value="Non-Prod">Non-Prod</option>
