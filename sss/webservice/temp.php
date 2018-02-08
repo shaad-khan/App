@@ -111,7 +111,7 @@ when '1' then mt.Resolver
 else 'Unknown'
 end like uf.sessionId and mt.Project like pf.Project";
 
-//echo $sql3;
+echo $sql3;
   $result=$conn->query($sql3);
 //echo $msg;
 $i=2;
