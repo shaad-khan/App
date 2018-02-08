@@ -171,7 +171,7 @@ td
 "></span></label></td><td ng-if="items[0].Client==''">
     
     <select class="form-control" name="client" required>
-  <option ng-repeat="list in lists | orderBy: list.Client_name" value="{{list.Client_name}}">{{list.Client_name}}</option>
+  <option ng-repeat="list in lists | orderBy: 'Client_name'" value="{{list.Client_name}}">{{list.Client_name}}</option>
 </select>
   </div>
   </td>
@@ -194,7 +194,7 @@ td
     <label for="exampleInputEmail1">Project <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Project==''">
    <select class="form-control" name="project" required>
-  <option ng-repeat="project in projects | orderBy: project.Project" value="{{project.Project}}">{{project.Project}}</option>
+  <option ng-repeat="project in projects | orderBy: 'Project'" value="{{project.Project}}">{{project.Project}}</option>
 </select>
   </div></td>
   
@@ -475,7 +475,7 @@ td
 "></span></label></td><td ng-if="items[0].Status!='Classify'">
      <select class="form-control selectpicker" name="tcategory" required>
 
-  <option ng-repeat="task in tasks | filter : items[0].Status | orderBy: task.Category" value="{{task.Category}}">{{task.Category}}</option>
+  <option ng-repeat="task in tasks | filter : items[0].Status | orderBy: 'Category'" value="{{task.Category}}">{{task.Category}}</option>
 </select>
   </div>
 
