@@ -461,6 +461,7 @@ td
     <label for="exampleInputEmail1">Shift <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
      <select class="form-control" name="schedule" required>
+      <option value="">None</option>
   <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
 </select>
   </div>
