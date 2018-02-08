@@ -492,7 +492,6 @@ if($cl_tkt!=null)
 }
 
 
-
     /*----------------------------------------------------------------------------------------*/
 /*echo "<script> alert('Updated successfully');
 window.location='https://apps.continuserve.com/sss/form.php?ID=$TID';
