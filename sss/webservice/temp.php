@@ -109,9 +109,9 @@ case mt.aflag
 when '0' then ut.UpdateBy
 when '1' then mt.Resolver
 else 'Unknown'
-end like uf.sessionId and mt.Project like pf.Project";
+end like uf.sessionId and (mt.Project like pf.Project or ut.Project like pf.Project)";
 
-echo $sql3;
+//echo $sql3;
   $result=$conn->query($sql3);
 //echo $msg;
 $i=2;
@@ -128,7 +128,7 @@ $i=2;
 					->setCellValue('A'.$i, $row2['Ticket_ID'])
 					->setCellValue('B'.$i, $row2['requester'])
 					->setCellValue('C'.$i, $row2['Client'])
-					->setCellValue('D'.$i, $row2['Client'].' L1 Support')
+					->setCellValue('D'.$i, $row2['Project'])
 					->setCellValue('E'.$i, $row2['PID'])
 					->setCellValue('F'.$i, $row2['CTicket'])
 					->setCellValue('G'.$i, $row2['Tdiscription'])
