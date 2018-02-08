@@ -276,7 +276,7 @@ td
   <div class="form-group">
     <label for="exampleInputEmail1">RequesterName <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td><!--<input type="hidden" class="form-control"  value="{{items[0].requester}}"/>
-   --> <input type="text" class="form-control"  id="exampleInputEmail1" name="requester" placeholder="{{items[0].requester}}" value="{{items[0].requester}}" />
+   --> <input type="text" class="form-control"  id="exampleInputEmail1" name="requester" placeholder="{{items[0].requester}}" value="{{items[0].requester}}" required/>
   </div> </td>
   <td>
 
@@ -322,7 +322,7 @@ td
    <td >
 
       <div class="form-group">
-    <label for="exampleInputEmail1">Discription <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Description <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td colspan="8">
 <textarea class="form-control" rows="3" cols="118" name="discription" placeholder="Discription" disabled>{{items[0].Tdiscription}}</textarea>
     
@@ -445,7 +445,8 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].EnvType==''">
-     <select class="form-control" name="env" >
+     <select class="form-control" name="env" required>
+       <option value=" "></option>
      <option value="General">General</option>
   <option value="Prod">Prod</option>
     <option value="Non-Prod">Non-Prod</option>
@@ -471,7 +472,7 @@ td
   <div class="form-group">
     <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Status!='Classify'">
-     <select class="form-control selectpicker" name="tcategory">
+     <select class="form-control selectpicker" name="tcategory" required>
 
   <option ng-repeat="task in tasks | filter : items[0].Status" value="{{task.Category}}">{{task.Category}}</option>
 </select>
