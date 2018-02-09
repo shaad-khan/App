@@ -185,7 +185,7 @@ else if(($status=='Review') and ($cstatus=="Closure"))
 else if(($status=='WIP') and ($cstatus=="Closure"))
 {
   $fstatus="Close";
-  $Master_sql="Update Master_Ticket_Tab set Resolver='$user_session',Updatetime='$utime',Resolver_Dtime='$utime',Status='$fstatus',Client='$client',Project='$project',EnvType='$env',team='$team',requester='$requester',jobtype='$jtype',aformnumber='$formnumber',approver='$approver',cprofile='$cprofile',afdate='$afdate' where Ticket_ID='$TID'";
+  $Master_sql="Update Master_Ticket_Tab set Resolver='$user_session',Updatetime='$utime',Resolver_Dtime='$utime',Status='$fstatus',Client='$client',Project='$project',EnvType='$env',team='SSS',requester='$requester',jobtype='$jtype',aformnumber='$formnumber',approver='$approver',cprofile='$cprofile',afdate='$afdate' where Ticket_ID='$TID'";
   // $Master_sql="Update Master_Ticket_Tab set Assign_To='unassigned',Status='$fstatus',Updatetime='$utime' where Ticket_ID='$TID'";
 
 }
