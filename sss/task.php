@@ -160,7 +160,7 @@ $u=$_SESSION['user'];
              
             
          <select class="form-control" name="etype" ng-model='etype' required>
-         
+         <option value="">None</option>
          <option value="General">General</option>
  <option value="Prod">Prod</option>
   <option value="Non-Prod">Non-Prod</option>
@@ -173,7 +173,8 @@ $u=$_SESSION['user'];
              
             
            <select class="form-control" name="project" ng-model='projecttype' required>
-  <option ng-repeat="project in projects" value="{{project.Project}}">{{project.Project}}</option>
+            <option value="">None</option>
+  <option ng-repeat="project in projects | orderBy: 'Project'" value="{{project.Project}}">{{project.Project}}</option>
 </select>
           
            
@@ -183,7 +184,8 @@ $u=$_SESSION['user'];
              
             
            <select class="form-control" name="project"  ng-model='tasktype' required>
-  <option ng-repeat="tt in tts" value="{{tt.Task}}">{{tt.Task}}</option>
+             <option value="">None</option>
+  <option ng-repeat="tt in tts | orderBy: 'Task'" value="{{tt.Task}}">{{tt.Task}}</option>
 </select>
           
            
@@ -193,8 +195,8 @@ $u=$_SESSION['user'];
              
             
            <select class="form-control" name="stype"  ng-model='stype' required>
-           
-  <option ng-repeat="tt in sts" value="{{tt.title}}">{{tt.title}}</option>
+            <option value="">None</option>
+  <option ng-repeat="tt in sts | orderBy: 'title'" value="{{tt.title}}">{{tt.title}}</option>
 </select>
           
            
@@ -204,7 +206,7 @@ $u=$_SESSION['user'];
              
             
            <select class="form-control" name="jtype"  ng-model='jtype' required>
-           
+            <option value="">None</option>
   <option  value="Billable">Billable</option>
   <option  value="Non-Billable">Non-Billable</option>
 </select>
