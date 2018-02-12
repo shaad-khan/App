@@ -473,9 +473,9 @@ td
   <div class="form-group">
     <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Status!='Classify'">
-  <option value="">None</option>
+  
      <select class="form-control selectpicker" name="tcategory" required>
-
+<option value="">None</option>
   <option ng-repeat="task in tasks | filter : items[0].Status | orderBy: 'Category'" value="{{task.Category}}">{{task.Category}}</option>
 </select>
   </div>
