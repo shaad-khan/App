@@ -183,6 +183,7 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Select Task Type</label>
              
             
+            
            <select class="form-control" name="project"  ng-model='tasktype' required>
              <option value="">None</option>
   <option ng-repeat="tt in tts | orderBy: 'Task'" value="{{tt.Task}}">{{tt.Task}}</option>
