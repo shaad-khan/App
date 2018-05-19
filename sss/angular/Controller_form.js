@@ -2,7 +2,7 @@ var app=angular.module("continuity_form",[]);
 
 app.controller("Form_data",function($scope,$interval,$http,servicecall){
   $scope.changedValue=function(x){
-    $scope.flag=x;
+    $scope.dflag=x;
     console.log(x);
     };
     servicecall.serv("Client").then(function(response){

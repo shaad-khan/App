@@ -604,7 +604,7 @@ td
       </tr>
        
 <tr>
- <td> value {{d}}</td>
+ <td> value {{dflag}}</td>
 <!----------------------------------------New changes------------------------------- -->
 <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 
