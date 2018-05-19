@@ -612,8 +612,8 @@ if($_SESSION['Doc']==1)
 "></span></label></td><td ng-if="items[0].Status!='WIP' && items[0].CTicket!=''">
  <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="{{items[0].CTicket}}" disabled/>
   </td>
-      </tr>
-      <div ng-if="tcat=='Change in Access'">  
+      </tr></table>
+      <table ng-if="tcat=='Change in Access'">  
 <tr>
   
 <!----------------------------------------New changes------------------------------- -->
@@ -645,7 +645,7 @@ if($_SESSION['Doc']==1)
 <input type="date" class="form-control"  id="some_class_3" style="color:black" placeholder="Access form date" name="afdate" />
       </td>
 </tr>
-</div>
+</table>
 <!----------------------------------------------------------------------------- -->
 
 
@@ -657,7 +657,7 @@ if($_SESSION['Doc']==1)
 
 
 
-
+<table>
 <tr><td>
 
 
