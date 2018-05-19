@@ -187,8 +187,7 @@ td
     
   </div>
   </td>
-</tr>
-<tr>
+
   <!--<td>
 <div class="form-group">
     <label for="exampleInputEmail1">CreationDateTime <span class="glyphicon glyphicon-info-sign
