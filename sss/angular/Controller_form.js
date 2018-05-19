@@ -1,9 +1,13 @@
 var app=angular.module("continuity_form",[]);
 
 app.controller("Form_data",function($scope,$interval,$http,servicecall){
+  $scope.changedValue=function(x){
+    $scope.flag=x;
+    };
     servicecall.serv("Client").then(function(response){
      	//$scope.load2='false';
       $scope.lists=response.data;
+      
     });
 
     servicecall.serv("shiftschedule").then(function(response){
