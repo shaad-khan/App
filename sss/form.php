@@ -557,19 +557,7 @@ td
 
   </td>
   
-  <?php 
-
-if($_SESSION['Doc']==1)
-{?><!--
-  <tr ng-if="items[0].Resolver == User && items[0].Status=='Doc'"><td>
-    <div class="form-group" >
-    <label for="exampleInputEmail1">Upload Documentation file (File size < 5 mb )</label></td><td>
-    <input type="file"  name="dfile"/>
-  </div>
-  </td>
-    </tr>-->
-    <?php
-}?>
+  
   
 <td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')">
 <div class="form-group"  >
@@ -613,8 +601,8 @@ if($_SESSION['Doc']==1)
 "></span></label></td><td ng-if="items[0].Status!='WIP' && items[0].CTicket!=''">
  <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="{{items[0].CTicket}}" disabled/>
   </td>
-      </tr></table>
-      <table>  
+      </tr>
+       
 <tr>
  <td> value {{tcat}}</td>
 <!----------------------------------------New changes------------------------------- -->
@@ -646,7 +634,7 @@ if($_SESSION['Doc']==1)
 <input type="date" class="form-control"  id="some_class_3" style="color:black" placeholder="Access form date" name="afdate" />
       </td>
 </tr>
-</table>
+
 <!----------------------------------------------------------------------------- -->
 
 
