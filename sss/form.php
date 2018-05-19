@@ -499,7 +499,7 @@ td
     <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Status!='Classify'">
   
-     <select class="form-control selectpicker" name="tcategory" required style="width: 158px;">
+     <select class="form-control selectpicker" name="tcategory" required style="width: 158px;" ng-model="tcat">
 <option value="">None</option>
   <option ng-repeat="task in tasks | filter : items[0].Status | orderBy: 'Category'" value="{{task.Category}}">{{task.Category}}</option>
 </select>
@@ -613,7 +613,7 @@ if($_SESSION['Doc']==1)
  <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="{{items[0].CTicket}}" disabled/>
   </td>
       </tr>
-<tr>
+<tr ng-if="tcat=='Change in Access'">
   
 <!----------------------------------------New changes------------------------------- -->
 <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
