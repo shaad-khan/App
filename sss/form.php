@@ -602,9 +602,9 @@ td
  <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="{{items[0].CTicket}}" disabled/>
   </td>
       </tr>
-       
+       <div ng-if="dflag=='Change in Access'">
 <tr>
- <td> value {{dflag}}</td>
+ 
 <!----------------------------------------New changes------------------------------- -->
 <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 
@@ -634,7 +634,7 @@ td
 <input type="date" class="form-control"  id="some_class_3" style="color:black" placeholder="Access form date" name="afdate" />
       </td>
 </tr>
-
+</div>
 <!----------------------------------------------------------------------------- -->
 
 
