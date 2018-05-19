@@ -555,7 +555,7 @@ td
   </div></td>
 
   </td>
-  </tr>
+  
   <?php 
 
 if($_SESSION['Doc']==1)
