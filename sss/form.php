@@ -149,28 +149,30 @@ td
     <div class="panel-body" ng-init="User='<?php Echo $user_session;?>'"><form class="form-inline" action="webservice/add2.php" method="POST" enctype="multipart/form-data"> 
 
 <table>
-<tr><td>
+<tr><!--<td>
 
 <div class="form-group">
     <!--<label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>"  disabled>-->
+  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>"  disabled>
 
   <input type="hidden" name="TID" value="<?php Echo $ID;?>"/>
   </div>
 
 </div></td>
-<td>
+<!--<td>
 
 <div class="form-group">
 <!--    <label for="exampleInputEmail1">CreatedBy <span class="glyphicon glyphicon-info-sign"></span></label></td><td>
     <input type="hidden" value="{{items[0].Creator}}" name="creator"/>
-    <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Creator}}" disabled>-->
+    <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Creator}}" disabled>
   </div>
-  </td>
+  </td>-->
   <td>
 
     <div class="form-group">
+    <input type="hidden" name="TID" value="<?php Echo $ID;?>"/>
+    <input type="hidden" value="{{items[0].Creator}}" name="creator"/>
     <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Client==''">
     
