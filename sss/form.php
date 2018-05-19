@@ -613,9 +613,9 @@ if($_SESSION['Doc']==1)
  <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="{{items[0].CTicket}}" disabled/>
   </td>
       </tr></table>
-      <table ng-if="tcat=='Change in Access'">  
+      <table>  
 <tr>
-  
+ <td> {{tcat}}</td>
 <!----------------------------------------New changes------------------------------- -->
 <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 
