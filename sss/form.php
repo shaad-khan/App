@@ -191,7 +191,7 @@ td
 "></span></label></td><td ng-if="items[0].Client==''">
     
     <select class="form-control" name="client" required>
-  <option ng-repeat="list in lists track by $index | orderBy: 'Client_name'" value="{{list.Client_name}}">{{list.Client_name}}</option>
+  <option ng-repeat="list in lists  | orderBy: 'Client_name' track by $index" value="{{list.Client_name}}">{{list.Client_name}}</option>
 </select>
   </div>
   </td>
@@ -215,7 +215,7 @@ td
     <label for="exampleInputEmail1">Project <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Project==''">
    <select class="form-control" name="project" required>
-  <option ng-repeat="project in projects track by $index | orderBy: 'Project'" value="{{project.Project}}">{{project.Project}}</option>
+  <option ng-repeat="project in projects  | orderBy: 'Project' track by $index" value="{{project.Project}}">{{project.Project}}</option>
 </select>
   </div></td>
   
