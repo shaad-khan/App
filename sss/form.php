@@ -48,6 +48,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 .form-inline .form-control {
     display: inline-block;
     /* width: auto; */
+    width: 100%;
     vertical-align: middle;
 }
   }
