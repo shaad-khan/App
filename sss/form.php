@@ -47,6 +47,12 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
   body{
     background-color:#001a33;
   }
+  input{
+    width:100%
+  }
+  select{
+    width:100%
+  }
   td {
     padding: 3px;
     border: 1px solid black;
