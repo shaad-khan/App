@@ -616,7 +616,7 @@ if($_SESSION['Doc']==1)
       </tr></table>
       <table>  
 <tr>
- <td> {{tcat}}</td>
+ <td> value {{tcat}}</td>
 <!----------------------------------------New changes------------------------------- -->
 <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 
