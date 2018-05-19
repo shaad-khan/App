@@ -493,7 +493,7 @@ td
   </td>
   
 </tr>
-<tr>
+
 <td ng-if="items[0].Status!='Classify'">
   <div class="form-group">
     <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
@@ -505,7 +505,7 @@ td
 </select>
   </div>
 
-  </td>
+  </td><tr>
 <td ng-if="((items[0].Status=='WIP')||(items[0].Status=='AUI'))">
 
    <div class="form-group" >
