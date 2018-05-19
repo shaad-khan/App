@@ -44,6 +44,13 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
   ?>
   <style>
+  @media (min-width: 768px){
+.form-inline .form-control {
+    display: inline-block;
+    /* width: auto; */
+    vertical-align: middle;
+}
+  }
   body{
     background-color:#001a33;
   }
