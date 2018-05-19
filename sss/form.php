@@ -603,7 +603,7 @@ td
   </td>
       </tr>
       
-<tr ng-if="dflag=='Change in Access || dflag=='Profile Creation' || dflag=='Profile Re-enable'">
+<tr ng-if="dflag=='Change in Access' || dflag=='Profile Creation' || dflag=='Profile Re-enable'">
  
 <!----------------------------------------New changes------------------------------- -->
 <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
@@ -614,7 +614,7 @@ td
  <input type="text" class="form-control" id="exampleInputEmail1" name="formnumber" placeholder="Access Form number" />
   </td>
 </tr>
-<tr ng-if="dflag=='Change in Access || dflag=='Profile Creation' || dflag=='Profile Re-enable'">
+<tr ng-if="dflag=='Change in Access' || dflag=='Profile Creation' || dflag=='Profile Re-enable'">
  <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 <div class="form-group" >
     <label for="exampleInputEmail1">Approver <span class="glyphicon glyphicon-info-sign
