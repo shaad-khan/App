@@ -186,6 +186,7 @@ td
      <input type="hidden"  name="client" value="{{items[0].Client}}" >
      <input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
      <input type="hidden" value="<?php echo $user_session;?>" name="uname">
+     <input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
   </div>
   </td>
 
@@ -274,14 +275,14 @@ td
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
  
-<tr>
 
-<td>
+
+<!--<td>
   <div class="form-group">
     <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td><input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
     <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled/>
-  </div> </td>
+  </div> </td>-->
 <td>
   <div class="form-group">
     <label for="exampleInputEmail1">RequesterName <span class="glyphicon glyphicon-info-sign
