@@ -501,7 +501,7 @@ td
   
      <select class="form-control selectpicker" ng-model="tcat" id="tcat" name="tcategory"  required style="width: 158px;" >
 <option value="">None</option>
-  <option ng-repeat="task in tasks  | filter : items[0].Status | orderBy: 'Category'" value="{{task.Category}}">{{task.Category}}</option>
+  <option ng-repeat="task in tasks  | filter : items[0].Status | orderBy: 'Category' track by $index" value="{{task.Category}}">{{task.Category}}</option>
 </select>
   </div>
 
