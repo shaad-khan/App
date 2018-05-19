@@ -313,7 +313,7 @@ td
   </div>
   </td>
 </tr>
-  <tr>
+  <!--<tr>
 <!--<td>
 <div class="form-group">
     <label for="exampleInputEmail1">Resolver <span class="glyphicon glyphicon-info-sign
@@ -330,7 +330,7 @@ td
     <input type="text" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="{{items[0].Resolved_By}}" disabled>
   </div>
   </td>-->
-   <td >
+  <!-- <td >
 
       <div class="form-group">
     <label for="exampleInputEmail1">Description <span class="glyphicon glyphicon-info-sign
@@ -339,7 +339,7 @@ td
     
   </div>
       </td>
-      </tr>
+      </tr>-->
       </table>
       <hr/>
       <table>
