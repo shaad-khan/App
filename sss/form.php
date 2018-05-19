@@ -262,7 +262,9 @@ td
 
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
+</tr><tr>
  <td>
+
 <div class="form-group">
     <label for="exampleInputEmail1">UpadateDateTime <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
