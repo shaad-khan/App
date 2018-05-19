@@ -492,7 +492,7 @@ td
   </div>
   </td>
   
-</tr>
+
 
 <td ng-if="items[0].Status!='Classify'">
   <div class="form-group">
