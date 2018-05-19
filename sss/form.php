@@ -148,9 +148,9 @@ td
 <tr><td>
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
+    <!--<label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td>
-  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>"  disabled>
+  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>"  disabled>-->
 
   <input type="hidden" name="TID" value="<?php Echo $ID;?>"/>
   </div>
@@ -159,9 +159,9 @@ td
 <td>
 
 <div class="form-group">
-    <label for="exampleInputEmail1">CreatedBy <span class="glyphicon glyphicon-info-sign"></span></label></td><td>
+<!--    <label for="exampleInputEmail1">CreatedBy <span class="glyphicon glyphicon-info-sign"></span></label></td><td>
     <input type="hidden" value="{{items[0].Creator}}" name="creator"/>
-    <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Creator}}" disabled>
+    <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Creator}}" disabled>-->
   </div>
   </td>
   <td>
