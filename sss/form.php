@@ -301,8 +301,8 @@ td
   <div class="form-group">
     <label for="exampleInputEmail1">RequesterName <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td><!--<input type="hidden" class="form-control"  value="{{items[0].requester}}"/>
-   --> <input type="text" class="form-control"  ng-model="t" id="exampleInputEmail1" name="requester" placeholder="{{items[0].requester}}" value="{{items[0].requester}}" required/>
-  {{t}}</div> </td>
+   --> <input type="text" class="form-control"   id="exampleInputEmail1" name="requester" placeholder="{{items[0].requester}}" value="{{items[0].requester}}" required/>
+  </div> </td>
   <td>
 
   <div class="form-group">
@@ -503,6 +503,7 @@ td
 <option value="">None</option>
   <option ng-repeat="task in tasks  | filter : items[0].Status | orderBy: 'Category' track by $index" value="{{task.Category}}">{{task.Category}}</option>
 </select>
+{{tcat}}
   </div>
 
   </td><tr>
