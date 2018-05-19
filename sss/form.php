@@ -184,7 +184,8 @@ td
   <td ng-if="items[0].Client!=''">
      <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Client}}" disabled>
      <input type="hidden"  name="client" value="{{items[0].Client}}" >
-    
+     <input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
+     <input type="hidden" value="<?php echo $user_session;?>" name="uname">
   </div>
   </td>
 
@@ -210,21 +211,23 @@ td
   </div></td>
   
   
-  <td>
+ <!-- <td>
 <div class="form-group">
     <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td> <input type="hidden" value="<?php echo $user_session;?>" name="uname">
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php echo $user_session;?>"  disabled>
-  </div></td>
-  </tr>
-<tr> <td>
+  </div></td>-->
+  
+ <!--<td>
 <div class="form-group">
+
     <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
 "></span></label> </td> <td><input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Assign_to}}" name="aname" disabled>
-  </div> </td>
+  </div> </td>-->
   <td ng-show="items[0].Status=='WIP' && items[0].Cdatetime && items[0].Assign_to!='unassigned'">
 <div class="form-group">
+
 
     <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
