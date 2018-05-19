@@ -191,7 +191,7 @@ td
 "></span></label></td><td ng-if="items[0].Client==''">
     
     <select class="form-control" name="client" required>
-  <option ng-repeat="list in lists | orderBy: 'Client_name'" value="{{list.Client_name}}">{{list.Client_name}}</option>
+  <option ng-repeat="list in lists track by $index | orderBy: 'Client_name'" value="{{list.Client_name}}">{{list.Client_name}}</option>
 </select>
   </div>
   </td>
@@ -215,7 +215,7 @@ td
     <label for="exampleInputEmail1">Project <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].Project==''">
    <select class="form-control" name="project" required>
-  <option ng-repeat="project in projects | orderBy: 'Project'" value="{{project.Project}}">{{project.Project}}</option>
+  <option ng-repeat="project in projects track by $index | orderBy: 'Project'" value="{{project.Project}}">{{project.Project}}</option>
 </select>
   </div></td>
   
@@ -487,7 +487,7 @@ td
 "></span></label></td><td>
      <select class="form-control" name="schedule" required>
       <option value="">None</option>
-  <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
+  <option ng-repeat="schedule in schedules track by $index" value="{{schedule.title}}">{{schedule.title}}</option>
 </select>
   </div>
   </td>
@@ -501,7 +501,7 @@ td
   
      <select class="form-control selectpicker" ng-model="tcat" id="tcat" name="tcategory"  required style="width: 158px;" >
 <option value="">None</option>
-  <option ng-repeat="task in tasks | filter : items[0].Status | orderBy: 'Category'" value="{{task.Category}}">{{task.Category}}</option>
+  <option ng-repeat="task in tasks track by $index | filter : items[0].Status | orderBy: 'Category'" value="{{task.Category}}">{{task.Category}}</option>
 </select>
   </div>
 
@@ -546,7 +546,7 @@ td
     <label for="exampleInputEmail1">Select Team {{items[0].team}} <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="items[0].team==null">
    <select class="form-control" name="cteam" >
-  <option ng-repeat="t in cteams" value="{{t.Team}}" ng-selected="t.Team=='SSS'">{{t.Team}}</option>
+  <option ng-repeat="t in cteams track by $index" value="{{t.Team}}" ng-selected="t.Team=='SSS'">{{t.Team}}</option>
 </select>
   </div></td>
   
