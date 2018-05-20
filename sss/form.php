@@ -664,7 +664,8 @@ td
   </div>
     </td>
     <td ng-if="items[0].Status!='Closure' && items[0].Status!='Close'">
-    <input ng-if="nitems[0].Mins" type="number" class="form-control" name="ttime" id="exampleInputEmail1" value="{{nitems[0].Mins}}" placeholder="Time In min" disabled>
+    <input ng-if="nitems[0].Mins" type="hidden" class="form-control" name="ttime" id="exampleInputEmail1" value="{{nitems[0].Mins}}">
+    <input ng-if="nitems[0].Mins" type="number" class="form-control" name="ttime2" id="exampleInputEmail1" value="{{nitems[0].Mins}}" placeholder="Time In min" disabled>
     <input ng-if="!nitems[0].Mins" type="number" class="form-control" name="ttime" id="exampleInputEmail1" value="" placeholder="Time In min" required>
   </div>
 
