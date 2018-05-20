@@ -507,7 +507,7 @@ td
   </div>
 
   </td><tr >
-<td ng-if="((items[0].Status=='WIP')||(items[0].Status=='AUI'))" >
+<td ng-if="((items[0].Status=='WIP')||(items[0].Status=='AUI'))" align="center">
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
@@ -520,7 +520,7 @@ td
 </select>
   </div>
   </td>
-   <td ng-if="(items[0].Status=='Review')">
+   <td ng-if="(items[0].Status=='Review')" align="center">
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
@@ -532,26 +532,26 @@ td
 </select>
   </div>
   </td>
-  <td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))">
+  <td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))" align="center">
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))">
+"></span></label></td><td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))" align="center">
   
 <input type="hidden" name="cstatus" value="next"/>
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Next Status" disabled>
   </div>
   </td>
-  <td ng-if="items[0].Status=='WIP'">
+  <td ng-if="items[0].Status=='WIP'" align="center">
   <div class="form-group">
     <label for="exampleInputEmail1">Select Team {{items[0].team}} <span class="glyphicon glyphicon-info-sign
-"></span></label></td><td ng-if="items[0].team==null">
+"></span></label></td><td ng-if="items[0].team==null" align="center">
    <select class="form-control" name="cteam" >
   <option ng-repeat="t in cteams track by $index" value="{{t.Team}}" ng-selected="t.Team=='SSS'">{{t.Team}}</option>
 </select>
   </div></td>
   
-  <td ng-if="items[0].team!=null&& items[0].Status=='WIP'">
+  <td ng-if="items[0].team!=null&& items[0].Status=='WIP'" align="center">
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].team}}" disabled>
   </div></td>
 
@@ -559,7 +559,7 @@ td
   
   
   
-<td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')" >
+<td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')" align="center" >
 <div class="form-group"  >
     <label for="exampleInputEmail1">If awaiting for User response<span class="glyphicon glyphicon-info-sign
 "></span></label></td><td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')" style="position:relative;left: -110px;;">
