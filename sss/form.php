@@ -61,7 +61,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
   select{
     width:100%
   }
-  
+
   td {
     padding: 3px;
     border: 1px solid black;
@@ -557,7 +557,6 @@ td
   </div></td>
 
   </td>
-  
   
   
 <td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')" align="center" >
