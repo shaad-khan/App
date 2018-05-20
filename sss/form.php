@@ -61,7 +61,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
   select{
     width:100%
   }
-
+  
   td {
     padding: 3px;
     border: 1px solid black;
@@ -167,7 +167,7 @@ td
 <tr align="center"><!--<td>
 
 <div class="form-group">
-    <!--<label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
+    <!--<label for="exampleInputEmail1">Ticket Id <span class="
 "></span></label></td><td>
   <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>"  disabled>
 
@@ -178,7 +178,7 @@ td
 <!--<td>
 
 <div class="form-group">
-<!--    <label for="exampleInputEmail1">CreatedBy <span class="glyphicon glyphicon-info-sign"></span></label></td><td>
+<!--    <label for="exampleInputEmail1">CreatedBy <span class=""></span></label></td><td>
     <input type="hidden" value="{{items[0].Creator}}" name="creator"/>
     <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Creator}}" disabled>
   </div>
@@ -188,7 +188,7 @@ td
     <div class="form-group">
     <input type="hidden" name="TID" value="<?php Echo $ID;?>"/>
     <input type="hidden" value="{{items[0].Creator}}" name="creator"/>
-    <label for="exampleInputEmail1">Client  <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Client  <span class="
 "></span></label></td><td ng-if="items[0].Client==''">
     
     <select class="form-control" name="client" required>
@@ -207,13 +207,13 @@ td
 
   <!--<td>
 <div class="form-group">
-    <label for="exampleInputEmail1">CreationDateTime <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">CreationDateTime <span class="
 "></span></label></td><td>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Cdatetime}}" disabled>
   </div>
     </td>--><td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Project <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Project <span class="
 "></span></label></td><td ng-if="items[0].Project==''">
    <select class="form-control" name="project" required>
   <option ng-repeat="project in projects  | orderBy: 'Project' track by $index" value="{{project.Project}}">{{project.Project}}</option>
@@ -229,7 +229,7 @@ td
   
  <!-- <td>
 <div class="form-group">
-    <label for="exampleInputEmail1">UpdatedBy <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">UpdatedBy <span class="
 "></span></label></td><td> <input type="hidden" value="<?php echo $user_session;?>" name="uname">
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php echo $user_session;?>"  disabled>
   </div></td>-->
@@ -237,7 +237,7 @@ td
  <!--<td>
 <div class="form-group">
 
-    <label for="exampleInputEmail1">Assigned To <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Assigned To <span class="
 "></span></label> </td> <td><input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Assign_to}}" name="aname" disabled>
   </div> </td>-->
@@ -245,7 +245,7 @@ td
 <div class="form-group">
 
 
-    <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Creation Date Time <span class="
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
      <td ng-show="items[0].Status=='WIP' && items[0].Cdatetime && items[0].Assign_to!='unassigned'">
      <input type="date" class="form-control"    style="color:black"  placeholder="Creation Date Time" name="crtime"/>
@@ -258,7 +258,7 @@ td
 
 <td ng-if="items[0].Status=='WIP' && items[0].Cdatetime && items[0].Assign_to=='unassigned'">
 <div class="form-group">
-    <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Creation Date Time <span class="
 "></span></label> </td><input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
      <td ng-if="items[0].Status=='WIP' && items[0].Cdatetime  && items[0].Assign_to=='unassigned'">
      <input type=hidden  value="{{items[0].Cdatetime}}" name="crtime"/>
@@ -270,7 +270,7 @@ td
 
 <td ng-if="items[0].Status!='WIP'">
 <div class="form-group">
-    <label for="exampleInputEmail1">Creation Date Time <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Creation Date Time <span class="
 "></span></label> </td><!--<input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
     --> <td ng-if="items[0].Status!='WIP'">
     <input type="text" class="form-control"   style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
@@ -282,7 +282,7 @@ td
  <td>
 
 <div class="form-group">
-    <label for="exampleInputEmail1">UpadateDateTime <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">UpadateDateTime <span class="
 "></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
      <td>
      <input type="text" class="form-control hasDatepicker"  id="some_class_2" style="color:black" placeholder="Update Date Time" name="utime" required/>
@@ -294,20 +294,20 @@ td
 
 <!--<td>
   <div class="form-group">
-    <label for="exampleInputEmail1">Status <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Status <span class="
 "></span></label> </td> <td><input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
     <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled/>
   </div> </td>-->
 <td>
   <div class="form-group">
-    <label for="exampleInputEmail1">RequesterName <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">RequesterName <span class="
 "></span></label> </td> <td><!--<input type="hidden" class="form-control"  value="{{items[0].requester}}"/>
    --> <input type="text" class="form-control"   id="exampleInputEmail1" name="requester" placeholder="{{items[0].requester}}" value="{{items[0].requester}}" required/>
   </div> </td>
   <td>
 
   <div class="form-group">
-    <label for="exampleInputEmail1">Type of Job <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Type of Job <span class="
 "></span></label> </td><td ng-if="items[0].Status=='WIP' && !items[0].jobtype">
     <select class="form-control" name="jtype" required>
 
@@ -331,7 +331,7 @@ td
   <!--<tr>
 <!--<td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Resolver <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Resolver <span class="
 "></span></label>
 </td>
 <td>
@@ -340,7 +340,7 @@ td
   </td>-->
 <!--<td>
 <div class="form-group">
-    <label for="exampleInputEmail1">ResolvedBy <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ResolvedBy <span class="
 "></span></label></td><td>
     <input type="text" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="{{items[0].Resolved_By}}" disabled>
   </div>
@@ -348,7 +348,7 @@ td
   <!-- <td >
 
       <div class="form-group">
-    <label for="exampleInputEmail1">Description <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Description <span class="
 "></span></label></td><td colspan="8">
 <textarea class="form-control" rows="3" cols="118" name="discription" placeholder="Discription" disabled>{{items[0].Tdiscription}}</textarea>
     
@@ -361,7 +361,7 @@ td
       <!--  <tr>
    <td>
     <div class="form-group">
-    <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Environment Type <span class="
 "></span></label></td><td>
      <select class="form-control" name="env">
   <option value="Prod">Prod</option>
@@ -372,7 +372,7 @@ td
     </td>
   <td>
     <div class="form-group">
-    <label for="exampleInputEmail1">Shift <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Shift <span class="
 "></span></label></td><td>
      <select class="form-control" name="schedule">
   <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
@@ -383,7 +383,7 @@ td
     <td>
 
 <div class="form-group" >
-    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ChangeStatus <span class="
 "></span></label></td><td>
     <select class="form-control" name="cstatus" >
   <option value="WIP">Work In progress</option>
@@ -396,7 +396,7 @@ td
   <tr>
     <!--<td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Reviewer <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Reviewer <span class="
 "></span></label> </td><td>
     <input type="text" class="form-control" name="reviewer" id="exampleInputEmail1" placeholder="Reviewer">
   </div>
@@ -405,7 +405,7 @@ td
       
        <td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Comments <span class="
 "></span></label></td><td colspan="8">
 <textarea class="form-control" rows="3" cols="116" name="comments" placeholder="Comments" required></textarea>
     
@@ -417,14 +417,14 @@ td
 
 <td>
 <div class="form-group" >
-    <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Enter Time<span class="
 "></span></label></td><td>
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
   </div>
 
 </td><td>
   <div class="form-group">
-    <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Select Type Of Task <span class="
 "></span></label></td><td>
      <select class="form-control selectpicker" name="tcategory">
 
@@ -436,7 +436,7 @@ td
 </tr>
 <tr><td>
 <div class="form-group" >
-    <label for="exampleInputEmail1">Select if waithing for User response<span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Select if waithing for User response<span class="
 "></span></label></td><td>
 
   <td style="position:relative;left: -285px;">
@@ -448,7 +448,7 @@ td
   </td>
 </td><td>
 <div class="form-group" >
-    <label for="exampleInputEmail1">Release The Ticket<span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Release The Ticket<span class="
 "></span></label></td><td><td style="position:relative;left: -161px;">
 
                             <input type="checkbox" name="release" value="1" />
@@ -469,7 +469,7 @@ td
 <tr align="center"><td>
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Environment Type <span class="
 "></span></label></td><td ng-if="items[0].EnvType==''">
      <select class="form-control" name="env" required >
         <option value="">None</option>
@@ -484,7 +484,7 @@ td
 <td>
 
 <div class="form-group">
-    <label for="exampleInputEmail1">Shift <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Shift <span class="
 "></span></label></td><td>
      <select class="form-control" name="schedule" required>
       <option value="">None</option>
@@ -497,7 +497,7 @@ td
 
 <td ng-if="items[0].Status!='Classify'">
   <div class="form-group">
-    <label for="exampleInputEmail1">Select Type Of Task <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Select Type Of Task <span class="
 "></span></label></td><td ng-if="items[0].Status!='Classify'">
   
      <select class="form-control selectpicker" ng-model="tcat" ng-change="changedValue(tcat)" id="tcat" name="tcategory"  required style="width: 158px;" >
@@ -511,7 +511,7 @@ td
 <td ng-if="((items[0].Status=='WIP')||(items[0].Status=='AUI'))" align="center">
 
    <div class="form-group" >
-    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ChangeStatus <span class="
 "></span></label></td><td ng-if="((items[0].Status=='WIP')||(items[0].Status=='AUI'))">
     <select class="form-control" name="cstatus" >
   <option value="WIP">Work In progress</option>
@@ -524,7 +524,7 @@ td
    <td ng-if="(items[0].Status=='Review')" align="center">
 
    <div class="form-group" >
-    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ChangeStatus <span class="
 "></span></label></td><td ng-if="(items[0].Status=='Review')">
     <select class="form-control" name="cstatus" >
   <option value="Closure">Closure</option>
@@ -536,7 +536,7 @@ td
   <td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))" align="center">
 
    <div class="form-group" >
-    <label for="exampleInputEmail1">ChangeStatus <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ChangeStatus <span class="
 "></span></label></td><td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))" align="center">
   
 <input type="hidden" name="cstatus" value="next"/>
@@ -545,7 +545,7 @@ td
   </td>
   <td ng-if="items[0].Status=='WIP'" align="center">
   <div class="form-group">
-    <label for="exampleInputEmail1">Select Team {{items[0].team}} <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Select Team {{items[0].team}} <span class="
 "></span></label></td><td ng-if="items[0].team==null" align="center">
    <select class="form-control" name="cteam" >
   <option ng-repeat="t in cteams track by $index" value="{{t.Team}}" ng-selected="t.Team=='SSS'">{{t.Team}}</option>
@@ -559,9 +559,10 @@ td
   </td>
   
   
+  
 <td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')" align="center" >
 <div class="form-group"  >
-    <label for="exampleInputEmail1">If awaiting for User response<span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">If awaiting for User response<span class="
 "></span></label></td><td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')" style="position:relative;left: -110px;;">
 
   
@@ -576,13 +577,13 @@ td
     <tr align="center">
       <td ng-if="items[0].Status=='WIP' && items[0].CTicket==''">
 <div class="form-group" >
-    <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Client Ticket number <span class="
 "></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].CTicket==''">
  <input type="text" class="form-control" id="exampleInputEmail1" name="client_tkt" placeholder="Client Ticket Number optional" />
   </td>
 <td ng-if="items[0].Status=='WIP' && items[0].CTicket!=''">
 <div class="form-group" >
-    <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Client Ticket number <span class="
 "></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].CTicket!=''">
  <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="{{items[0].CTicket}}" disabled/>
   <input type="hidden" name='client_tkt'  value="{{items[0].CTicket}}" disabled/>
@@ -597,7 +598,7 @@ td
 
   <td ng-if="items[0].Status!='WIP' && items[0].CTicket!=''">
 <div class="form-group" >
-    <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Client Ticket number <span class="
 "></span></label></td><td ng-if="items[0].Status!='WIP' && items[0].CTicket!=''">
  <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="{{items[0].CTicket}}" disabled/>
   </td>
@@ -609,7 +610,7 @@ td
 <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 
 <div class="form-group" >
-    <label for="exampleInputEmail1">Access Form number <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Access Form number <span class="
 "></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="formnumber" placeholder="Access Form number" />
   </td>
@@ -617,13 +618,13 @@ td
 
  <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 <div class="form-group" >
-    <label for="exampleInputEmail1">Approver <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Approver <span class="
 "></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="approver" placeholder="Approver" />
   </td>
 <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 <div class="form-group" >
-    <label for="exampleInputEmail1"> Cloning Profile <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1"> Cloning Profile <span class="
 "></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="cprofile" placeholder="Cloning Profile" />
   </td>
@@ -631,7 +632,7 @@ td
   <tr ng-if="dflag=='Change in Access' || dflag=='Profile Creation' || dflag=='Profile Re-enable'">
   <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 <div class="form-group" >
-    <label for="exampleInputEmail1"> Access Form Date <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1"> Access Form Date <span class="
 "></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
 <input type="date" class="form-control"  id="some_class_3" style="color:black" placeholder="Access form date" name="afdate" />
       </td>
@@ -655,7 +656,7 @@ td
 
 
 <div class="form-group" >
-    <label for="exampleInputEmail1">Enter Time<span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Enter Time<span class="
 "></span></label></td><td ng-if="items[0].Status=='Classify'">
 
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" disabled>
@@ -696,7 +697,7 @@ td
 
 <tr align="center"> <td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Comments <span class="
 "></span></label></td><td colspan="8" ng-if="items[0].Status=='Classify'" >
 <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" disabled></textarea>
     
@@ -711,7 +712,7 @@ td
   
 <!--<td>
 <div class="form-group">
-    <label for="exampleInputEmail1">Resolver <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">Resolver <span class="
 "></span></label>
 </td>
 <td>
@@ -720,7 +721,7 @@ td
   </td>-->
 <!--<td>
 <div class="form-group">
-    <label for="exampleInputEmail1">ResolvedBy <span class="glyphicon glyphicon-info-sign
+    <label for="exampleInputEmail1">ResolvedBy <span class="
 "></span></label></td><td>
     <input type="text" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="{{items[0].Resolved_By}}" disabled>
   </div>
