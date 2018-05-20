@@ -194,7 +194,7 @@ $u=$_SESSION['user'];
 
           <!-------------------------------------------- ---->
 
-<div ng-if="dflag!='Vacation' || dflag!='Comp-off'">
+<div ng-if="dflag!=='Vacation' || dflag!=='Comp-off">
           {{dflag}}
            <div class="form-group">
             <label for="recipient-name" class="control-label">Select Shift Type</label>
