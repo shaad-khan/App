@@ -163,7 +163,7 @@ td
     <div class="panel-body" ng-init="User='<?php Echo $user_session;?>'"><form class="form-inline" action="webservice/add2.php" method="POST" enctype="multipart/form-data"> 
 
 <table>
-<tr><!--<td>
+<tr align="center"><!--<td>
 
 <div class="form-group">
     <!--<label for="exampleInputEmail1">Ticket Id <span class="glyphicon glyphicon-info-sign
@@ -277,7 +277,7 @@ td
 
    <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
 -->  </div> </td>
-</tr><tr>
+</tr><tr align="center">
  <td>
 
 <div class="form-group">
@@ -465,7 +465,7 @@ td
   
       </tr>-->
 
-<tr><td>
+<tr align="center"><td>
 
 <div class="form-group">
     <label for="exampleInputEmail1">Environment Type <span class="glyphicon glyphicon-info-sign
@@ -506,7 +506,7 @@ td
 
   </div>
 
-  </td><tr>
+  </td><tr align="center">
 <td ng-if="((items[0].Status=='WIP')||(items[0].Status=='AUI'))">
 
    <div class="form-group" >
@@ -573,7 +573,7 @@ td
   </td>
 
     </tr>
-    <tr>
+    <tr align="center">
       <td ng-if="items[0].Status=='WIP' && items[0].CTicket==''">
 <div class="form-group" >
     <label for="exampleInputEmail1">Client Ticket number <span class="glyphicon glyphicon-info-sign
@@ -589,7 +589,7 @@ td
   
   </td>
       </tr>
-<tr>
+<tr align="center">
   <td>
 
 
@@ -650,7 +650,7 @@ td
 
 
 <table>
-<tr><td>
+<tr align="center"><td>
 
 
 
@@ -694,7 +694,7 @@ td
   </tr>
 
 
-<tr> <td>
+<tr align="center"> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="glyphicon glyphicon-info-sign
 "></span></label></td><td colspan="8" ng-if="items[0].Status=='Classify'" >
@@ -707,7 +707,7 @@ td
   </div> </td>
  
 
-  <tr>
+  <tr align="center">
   
 <!--<td>
 <div class="form-group">
