@@ -194,9 +194,9 @@ $u=$_SESSION['user'];
 
           <!-------------------------------------------- ---->
 
-<div ng-if="dflag!='Vacation' || dflag!='Comp-off">
+
           {{dflag}}
-           <div class="form-group">
+           <div class="form-group" ng-if="dflag!='Vacation' || dflag!='Comp-off">
             <label for="recipient-name" class="control-label">Select Shift Type</label>
              
             
@@ -207,7 +207,7 @@ $u=$_SESSION['user'];
           
            
           </div>
-           <div class="form-group">
+           <div class="form-group" ng-if="dflag!='Vacation' || dflag!='Comp-off">
             <label for="recipient-name" class="control-label">Select Job Type</label>
              
             
@@ -219,7 +219,7 @@ $u=$_SESSION['user'];
           
            
           </div>
-             </div>
+            
 
 
           <div class="form-group">
