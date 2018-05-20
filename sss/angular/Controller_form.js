@@ -4,6 +4,13 @@ app.controller("Form_data",function($scope,$interval,$http,servicecall){
   $scope.changedValue=function(x){
     $scope.dflag=x;
     console.log(x);
+    $http.get("https://apps.continuserve.com/sss/webservice/ntask.php?val="+x).then(function(response){
+      //$scope.load2='false';
+     $scope.nitems=response.data;
+
+   });
+
+
     };
     servicecall.serv("Client").then(function(response){
      	//$scope.load2='false';

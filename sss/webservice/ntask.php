@@ -9,9 +9,9 @@ $db = "CSL2AppsDB";
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
+$x=$_GET['val'];
 
-
-    $sql="select * from Ntask_time";
+    $sql="select * from Ntask_time where Task_Type='$x'";
     //echo $sql;
 
 $result=$conn->query($sql);
