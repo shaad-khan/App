@@ -191,6 +191,11 @@ $u=$_SESSION['user'];
           
            
           </div>
+
+          <!-------------------------------------------- ---->
+
+<div ng-if="tasktype!='Vacation' || tasktype!='Comp-off'">
+
            <div class="form-group">
             <label for="recipient-name" class="control-label">Select Shift Type</label>
              
@@ -214,7 +219,7 @@ $u=$_SESSION['user'];
           
            
           </div>
-
+             </div>
 
 
           <div class="form-group">
