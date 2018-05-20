@@ -157,7 +157,7 @@ td
 <div class="container" ng-controller="Form_data">
 <br>
   <div class="panel panel-primary" >
-    <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Edit Form For Ticket ID: {{ID}}  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-envelope
+    <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Ticket ID: {{ID}}  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-envelope
 "></span></button> <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2"><span class="glyphicon glyphicon-comment
 "></span></button>&nbsp;<button type="button" class="btn btn-primary"><a href="<?php Echo $link;?>" style="text-decoration:none;color:white"><span class="glyphicon glyphicon-paperclip
 "></span></a></button>  [ Ticket Description : {{items[0].Tdiscription}}]  [Assigned To : {{items[0].Assign_to}}] [Status : {{items[0].Status}}]</div>
