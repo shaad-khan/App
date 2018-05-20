@@ -64,7 +64,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
   
   td {
     padding: 3px;
-    border: 1px solid black;
+   /* border: 1px solid black;*/
 }
   .clear{
 
