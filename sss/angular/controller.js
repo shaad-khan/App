@@ -312,6 +312,7 @@ var url="list.php?param="+text;
 /*------------------------------------------------------------------*/
 app.controller("Task",function($scope,service,$interval,$http,$rootScope){
 var x;
+
 /*service.serv("https://apps.continuserve.com/sss/webservice/task_serv.php").then(function(response){
   
      	//$scope.load='false';
@@ -409,6 +410,13 @@ else{
 });
 
 app.controller("addtask",function($scope,$interval,$http,service){
+
+  $scope.changedValue=function(x){
+    $scope.dflag=x;
+  };
+
+
+
 service.serv("https://apps.continuserve.com/SSS/webservice/service.php?type=Adhoc_task").then(function(response){
      	//$scope.load2='false';
       $scope.tts=response.data;

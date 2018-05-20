@@ -184,7 +184,7 @@ $u=$_SESSION['user'];
              
             
             
-           <select class="form-control" name="project"  ng-model='tasktype' required>
+           <select class="form-control" name="project"  ng-model='tasktype' ng-change="changedValue(tasktype)" required>
              <option value="">None</option>
   <option ng-repeat="tt in tts | orderBy: 'Task'" value="{{tt.Task}}">{{tt.Task}}</option>
 </select>
@@ -194,7 +194,7 @@ $u=$_SESSION['user'];
 
           <!-------------------------------------------- ---->
 
-<div ng-if="tasktype!='Vacation' || tasktype!='Comp-off'">
+<div ng-if="dflag!='Vacation' || dflag!='Comp-off'">
 
            <div class="form-group">
             <label for="recipient-name" class="control-label">Select Shift Type</label>
