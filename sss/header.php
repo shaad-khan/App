@@ -45,6 +45,10 @@ $result2=$conn->query($sql2);
  <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
 <script src="dateresource/jquery.js"></script>
  <script src="dateresource/jquery.datetimepicker.js"></script>
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bo
    <script src="dateresource/jquery.datetimepicker.js"></script>otstrap.min.css">
 <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>

@@ -266,11 +266,8 @@ window.onerror = function(errorMsg) {
  $(function() {
           $('#some_class_1').datetimepicker();
            $('#some_class_2').datetimepicker();
-            $('#some_class_3').daterangepicker({
-    opens: 'left'
-  }, function(start, end, label) {
-    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-  });
+            $('#some_class_3').datetimepicker();
+  
          });
 
          </script>
