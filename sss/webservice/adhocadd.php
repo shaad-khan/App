@@ -39,9 +39,11 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $adate=str_replace("-","#",$adate);
     $adate=str_replace("/","-",$adate);
     $da=explode("#",$adate);
-    echo $adate;
-   $x=createRange($da[0], $da[1]);
-    print(json_encode($x, JSON_NUMERIC_CHECK));
+    echo $da[0]."<br/>".$da[1];
+
+
+   //$x=createRange($da[0], $da[1]);
+    //print(json_encode($x, JSON_NUMERIC_CHECK));
    // for($i=0;$i<=count($x);$i++)
     //{
     //  print(json_encode($x, JSON_NUMERIC_CHECK));
