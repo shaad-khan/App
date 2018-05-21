@@ -11,7 +11,7 @@ function createRange($start, $end, $format = 'Y-m-d') {
   $dates = array();
   $dates[] = $start->format($format);
   while ($start != $end) {
-  $start->modify(($invert ? '-' : '+') . '1 day');
+  $start->modify(($invert ? '/' : '+') . '1 day');
   $dates[] = $start->format($format);
   }
   return $dates;
