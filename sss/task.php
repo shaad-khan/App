@@ -4,10 +4,7 @@ session_start();
 $u=$_SESSION['user'];
 
 ?>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
 
  <div class="row mt"  ng-init="setuser('<?php echo $u;?>')">
   
@@ -235,12 +232,11 @@ $u=$_SESSION['user'];
            
           </div>
           <div class="form-group">
-            <label for="recipient-name" class="control-label">Date Range:</label>
+            <label for="recipient-name" class="control-label">Start Date:</label>
              
             
-          <!-- <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="adate" required/>
-          -->
-          <input type="text" name="daterange" value=" " />
+           <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="adate" required/>
+          
           
            
           </div>
@@ -260,15 +256,7 @@ $u=$_SESSION['user'];
     </div>
   </div>
 </div>
-<script>
-$(function() {
-  $('input[name="daterange"]').daterangepicker({
-    opens: 'left'
-  }, function(start, end, label) {
-    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-  });
-});
-</script>
+
 <script>
 window.onerror = function(errorMsg) {
   $('#console').html($('#console').html()+'<br>'+errorMsg)
@@ -277,7 +265,11 @@ window.onerror = function(errorMsg) {
  $(function() {
           $('#some_class_1').datetimepicker();
            $('#some_class_2').datetimepicker();
-            $('#some_class_3').datetimepicker();
+            $('#some_class_3').daterangepicker({
+    opens: 'left'
+  }, function(start, end, label) {
+    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+  });
          });
 
          </script>
