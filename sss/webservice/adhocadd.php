@@ -36,13 +36,13 @@ $db = "CSL2AppsDB";
 
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    $adate=str_replace("-","#",$adate);
-    $adate=str_replace("/","-",$adate);
-    $da=explode("#",$adate);
+    //$adate=str_replace("-","#",$adate);
+    //$adate=str_replace("/","-",$adate);
+    $da=explode("-",$adate);
     echo date_format($da[0],'Y-m-d')."<br/>".date_format($da[1],'Y-m-d');
     
 
-   $x=createRange($da[0], $da[1]);
+   $x=createRange(date_format($da[0],'Y-m-d'), date_format($da[1],'Y-m-d'));
    print_r($x);
     //print(json_encode($x, JSON_NUMERIC_CHECK));
    // for($i=0;$i<=count($x);$i++)
