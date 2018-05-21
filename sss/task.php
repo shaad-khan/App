@@ -157,7 +157,7 @@ $u=$_SESSION['user'];
 </div>
 </div>
 
-<div class="modal fade bs-example-modal-lg info-div" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" ng-controller="addtask">
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" ng-controller="addtask">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background: #000d1a; color:white;">
