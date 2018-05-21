@@ -11,7 +11,7 @@ function createRange($start, $end, $format = 'Y-m-d') {
   $dates = array();
   $dates[] = $start->format($format);
   while ($start != $end) {
-  $start->modify(($invert ? '/' : '+') . '1 day');
+  $start->modify(($invert ? '-' : '+') . '1 day');
   $dates[] = $start->format($format);
   }
   return $dates;
@@ -37,6 +37,8 @@ $db = "CSL2AppsDB";
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     $da=explode("-",$adate);
+    $da[0]=str_replace("/",'-',$da[0]);
+    $da[1]=str_replace("/",'-',$da[1]);
     $x=createRange($da[0], $da[1]);
     
     for($i=0;$i<=count($x);$i++)
