@@ -41,10 +41,11 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $da=explode("#",$adate);
     
     $x=createRange($da[0], $da[1]);
-    
+    print(json_encode($x, JSON_NUMERIC_CHECK));
     for($i=0;$i<=count($x);$i++)
     {
-
+    //  print(json_encode($x, JSON_NUMERIC_CHECK));
+/*
 
     date_default_timezone_set('Asia/Kolkata');
 									//$date = date('Ymd H:i:s');
@@ -107,6 +108,6 @@ $rows[]=$row3;
 }
 else{
   echo "<script> alert('Session expired please re-login');setTimeout(function () { win.close();}, 6000);</script>";
-}
+}*/
  }
 ?>
