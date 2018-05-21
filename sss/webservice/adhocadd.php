@@ -42,7 +42,8 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     echo $da[0]."<br/>".$da[1];
 
 
-   //$x=createRange($da[0], $da[1]);
+   $x=createRange($da[0], $da[1]);
+   print_r($x);
     //print(json_encode($x, JSON_NUMERIC_CHECK));
    // for($i=0;$i<=count($x);$i++)
     //{
