@@ -3,7 +3,19 @@
 
 session_start();
 
-
+function createRange($start, $end, $format = 'Y-m-d') {
+  $start  = new DateTime($start);
+  $end= new DateTime($end);
+  $invert = $start > $end;
+  
+  $dates = array();
+  $dates[] = $start->format($format);
+  while ($start != $end) {
+  $start->modify(($invert ? '-' : '+') . '1 day');
+  $dates[] = $start->format($format);
+  }
+  return $dates;
+  }
 $u=$_SESSION["user"];
 
 $etype=$_POST['etype'];
@@ -24,6 +36,12 @@ $db = "CSL2AppsDB";
 
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+    $da=explode("-",$adate);
+    $x=createRange($da[0], $da[1]);
+    
+    for($i=0;$i<=count($x);$i++)
+    {
+
 
     date_default_timezone_set('Asia/Kolkata');
 									//$date = date('Ymd H:i:s');
@@ -71,7 +89,7 @@ $id=$row3['id'];
                                   } 
 if($u!=null)
 {
-$sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Project,Resolver,CTicket,Cdatetime,Resolver_Dtime,EnvType,Reviewer,Assign_to,Creator,Updatetime,Repo,aflag,Total_time,atype,team,jobtype,shift)values('$tk','$amessage','Close','$client','$ptype','$u','','$adate','$adate','$etype','','$u','$u','$adate','',1,$tspent,'$ttype','SSS','$jtype','$stype')";
+$sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Project,Resolver,CTicket,Cdatetime,Resolver_Dtime,EnvType,Reviewer,Assign_to,Creator,Updatetime,Repo,aflag,Total_time,atype,team,jobtype,shift)values('$tk','$amessage','Close','$client','$ptype','$u','','$adate','$x[$i]','$etype','','$u','$u','$adate','',1,$tspent,'$ttype','SSS','$jtype','$stype')";
 
 $conn->query($sql);
 
@@ -87,4 +105,5 @@ print(json_encode($rows, JSON_NUMERIC_CHECK));
 else{
   echo "<script> alert('Session expired please re-login');setTimeout(function () { win.close();}, 6000);</script>";
 }
+ }
 ?>

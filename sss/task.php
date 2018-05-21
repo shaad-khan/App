@@ -245,7 +245,7 @@ $u=$_SESSION['user'];
            
           </div>
           <div class="form-group">
-            <label for="recipient-name" class="control-label">Start Date:</label>
+            <label for="recipient-name" class="control-label">Select Date Range:</label>
              
             
          <!--  <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="adate" required/>
