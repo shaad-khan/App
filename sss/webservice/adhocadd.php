@@ -39,7 +39,7 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $adate=str_replace("-","#",$adate);
     $adate=str_replace("/","-",$adate);
     $da=explode("#",$adate);
-    echo date('Y-m-d', $da[0])."<br/>".date('Y-m-d', $da[1]);
+    echo date_format($da[0],'Y-m-d')."<br/>".date_format($da[1],'Y-m-d');
     
 
    $x=createRange($da[0], $da[1]);
