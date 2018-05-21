@@ -100,7 +100,7 @@ $result=$conn->query($sql);
 {
 $rows[]=$row3;
 }
-print(json_encode($rows, JSON_NUMERIC_CHECK));
+//print(json_encode($rows, JSON_NUMERIC_CHECK));
 }
 else{
   echo "<script> alert('Session expired please re-login');setTimeout(function () { win.close();}, 6000);</script>";
