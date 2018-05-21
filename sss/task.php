@@ -250,7 +250,7 @@ $u=$_SESSION['user'];
          <!--  <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="adate" required/>
           
           -->
-          <input type="text" name="daterange" value="" />
+          <input type="text"  class="form-control" name="daterange" value="" ng-model="adate" required/>
            
           </div>
           <div class="form-group">
