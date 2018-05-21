@@ -229,6 +229,7 @@ $u=$_SESSION['user'];
            <input type="number" class="form-control" value="" placeholder="in min" ng-model="tspent" required/>
           
           
+          
            
           </div>
           <div class="form-group">
