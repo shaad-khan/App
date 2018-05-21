@@ -4,7 +4,18 @@ session_start();
 $u=$_SESSION['user'];
 
 ?>
+<style>
+.info-div {
+  position: absolute;
+  width: 100%;
+  margin-top: -100px;
+  z-index: 10;
+  height: 100%;
+  max-height: 1340px;
+  overflow-y: scroll;
+}
 
+</style>
 
  <div class="row mt"  ng-init="setuser('<?php echo $u;?>')">
   
@@ -146,7 +157,7 @@ $u=$_SESSION['user'];
 </div>
 </div>
 
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" ng-controller="addtask">
+<div class="modal fade bs-example-modal-lg info-div" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" ng-controller="addtask">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background: #000d1a; color:white;">
