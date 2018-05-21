@@ -36,9 +36,10 @@ $db = "CSL2AppsDB";
 
 $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-    $da=explode("-",$adate);
-    $da[0]=str_replace("/",'-',$da[0]);
-    $da[1]=str_replace("/",'-',$da[1]);
+    $adate=str_replace("-","#",$adate);
+    $adate=str_replace("/","-",$adate);
+    $da=explode("#",$adate);
+    
     $x=createRange($da[0], $da[1]);
     
     for($i=0;$i<=count($x);$i++)
