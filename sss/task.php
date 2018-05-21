@@ -236,9 +236,10 @@ $u=$_SESSION['user'];
             <label for="recipient-name" class="control-label">Start Date:</label>
              
             
-           <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="adate" required/>
+         <!--  <input type="text" class="form-control" value="" id="some_class_3" name="date" style="color:black" placeholder="Date Time" ng-model="adate" required/>
           
-          
+          -->
+          <input type="text" name="daterange" value="" />
            
           </div>
           <div class="form-group">
@@ -258,7 +259,7 @@ $u=$_SESSION['user'];
   </div>
 </div>
 
-<script>
+<!--<script>
 window.onerror = function(errorMsg) {
   $('#console').html($('#console').html()+'<br>'+errorMsg)
 }
@@ -270,4 +271,13 @@ window.onerror = function(errorMsg) {
   
          });
 
-         </script>
+         </script>-->
+         <script>
+$(function() {
+  $('input[name="daterange"]').daterangepicker({
+    opens: 'left'
+  }, function(start, end, label) {
+    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+  });
+});
+</script>
