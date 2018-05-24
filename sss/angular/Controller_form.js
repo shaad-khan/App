@@ -1,12 +1,20 @@
 var app=angular.module("continuity_form",[]);
 
 app.controller("Form_data",function($scope,$interval,$http,servicecall){
+  $scope.jjf=0;
   $scope.changedValue=function(x){
     $scope.dflag=x;
     console.log(x);
     $http.get("https://apps.continuserve.com/sss/webservice/ntask.php?val="+x).then(function(response){
       //$scope.load2='false';
      $scope.nitems=response.data;
+     if(response.data.Job_Type)
+     {
+       $scope.jjf=1;
+     }
+     else {
+       $scope.jjf=0;
+     }
 
    });
 
@@ -15,7 +23,7 @@ app.controller("Form_data",function($scope,$interval,$http,servicecall){
     servicecall.serv("Client").then(function(response){
      	//$scope.load2='false';
       $scope.lists=response.data;
-      
+
     });
 
     servicecall.serv("shiftschedule").then(function(response){
@@ -26,11 +34,11 @@ $scope.tasks=response.data;
 });
 servicecall.serv("Project_tab").then(function(response){
 $scope.projects=response.data;
-}); 
+});
 servicecall.serv("Team").then(function(response){
 $scope.cteams=response.data;
-}); 
-    
+});
+
 $interval(callApi, 1000);
 
   function callApi(){
@@ -80,4 +88,3 @@ return fac;
 
 
 });
-
