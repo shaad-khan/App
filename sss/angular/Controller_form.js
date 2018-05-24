@@ -12,9 +12,7 @@ app.controller("Form_data",function($scope,$interval,$http,servicecall){
      {
        $scope.jjf=2;
      }
-     else {
-       $scope.jjf=1;
-     }
+     
 
    });
 
