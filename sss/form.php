@@ -309,13 +309,13 @@ td
   <div class="form-group">
     <label for="exampleInputEmail1">Type of Job <span class="
 "></span></label> </td><td ng-if="items[0].Status=='WIP' && !items[0].jobtype">
-    <select ng-if="jjf==1" class="form-control" name="jtype" required >
+    <select ng-if="jjf==2" class="form-control" name="jtype" required >
 
   <option  value=""></option>
   <option  ng-if="nitems[0].Job_Type=='Billable'" value="Billable" selected>Billable</option>
   <option  ng-if="nitems[0].Job_Type=='Non-Billable'"value="Non-Billable" selected>Non-Billable</option>
 </select>
-<select ng-if="jjf==0" class="form-control" name="jtype" required >
+<select ng-if="jjf==1" class="form-control" name="jtype" required >
 
 <option  value=""></option>
 <option  value="Billable" >Billable</option>

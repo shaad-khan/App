@@ -1,7 +1,7 @@
 var app=angular.module("continuity_form",[]);
 
 app.controller("Form_data",function($scope,$interval,$http,servicecall){
-  $scope.jjf=0;
+  $scope.jjf=1;
   $scope.changedValue=function(x){
     $scope.dflag=x;
     console.log(x);
@@ -10,10 +10,10 @@ app.controller("Form_data",function($scope,$interval,$http,servicecall){
      $scope.nitems=response.data;
      if(response.data.Job_Type)
      {
-       $scope.jjf=1;
+       $scope.jjf=2;
      }
      else {
-       $scope.jjf=0;
+       $scope.jjf=1;
      }
 
    });

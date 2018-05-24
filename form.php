@@ -2,13 +2,13 @@
 <html lang="en" ng-app="continuity_form">
 <head>
   <title>Form Template</title>
-   <meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-   
+   <script src="https://apps.continuserve.com/angular/Contoller_form.js"></script>
    
    <script src="angular/Controller_form.js"></script>
     <link rel="stylesheet" type="text/css" href="dateresource/jquery.datetimepicker.css"/>
@@ -20,6 +20,7 @@ $user_session=$_SESSION["user"];
 $admin=$_SESSION["admin"];
 if($user_session=='')
 {
+  
    echo "<script> alert('Session Expired Please Relogin in app');
      setTimeout(function(){window.close()}, 1000);
      </script>";
@@ -44,28 +45,9 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
 
   ?>
   <style>
-  @media (min-width: 768px){
-.form-inline .form-control {
-    display: inline-block;
-    /* width: auto; */
-    width: 100%;
-    vertical-align: middle;
-}
-  }
   body{
     background-color:#001a33;
   }
-  input{
-    width:100%
-  }
-  select{
-    width:100%
-  }
-  
-  td {
-    padding: 3px;
-    border: 1px solid black;
-}
   .clear{
 
     padding:5px;
@@ -154,181 +136,101 @@ td
 </head>
 <body>
 
-<div class="container" ng-controller="Form_data">
+<div class="container">
 <br>
-  <div class="panel panel-primary" >
+  <div class="panel panel-primary" ng-controller="Form_data">
     <div class="panel-heading" ng-init="ID='<?php Echo $ID;?>'">Edit Form For Ticket ID: {{ID}}  <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg"><span class="glyphicon glyphicon-envelope
 "></span></button> <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2"><span class="glyphicon glyphicon-comment
 "></span></button>&nbsp;<button type="button" class="btn btn-primary"><a href="<?php Echo $link;?>" style="text-decoration:none;color:white"><span class="glyphicon glyphicon-paperclip
-"></span></a></button>  [ Ticket Description : {{items[0].Tdiscription}}]  [Assigned To : {{items[0].Assign_to}}] [Status : {{items[0].Status}}]</div>
-    <div class="panel-body" ng-init="User='<?php Echo $user_session;?>'"><form class="form-inline" action="webservice/add2.php" method="POST" enctype="multipart/form-data"> 
+"></span></a></button></div>
+    <div class="panel-body" ng-init="User='<?php Echo $user_session;?>'"><form class="form-inline" action="webservice/add.php" method="POST" enctype="multipart/form-data"> 
 
 <table>
-<tr align="center"><!--<td>
+<tr><td>
 
 <div class="form-group">
-    <!--<label for="exampleInputEmail1">Ticket Id <span class="
-"></span></label></td><td>
+    <label for="exampleInputEmail1">Ticket Id <span class=""></span></label></td><td>
   <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php Echo $ID;?>"  disabled>
 
   <input type="hidden" name="TID" value="<?php Echo $ID;?>"/>
   </div>
 
 </div></td>
-<!--<td>
+<td>
 
 <div class="form-group">
-<!--    <label for="exampleInputEmail1">CreatedBy <span class=""></span></label></td><td>
+    <label for="exampleInputEmail1">CreatedBy <span class=""></span></label></td><td>
     <input type="hidden" value="{{items[0].Creator}}" name="creator"/>
     <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Creator}}" disabled>
   </div>
-  </td>-->
-  <td>
+  </td>
+<!--  <td>
 
     <div class="form-group">
-    <input type="hidden" name="TID" value="<?php Echo $ID;?>"/>
-    <input type="hidden" value="{{items[0].Creator}}" name="creator"/>
     <label for="exampleInputEmail1">Client  <span class="
 "></span></label></td><td ng-if="items[0].Client==''">
     
-    <select class="form-control" name="client" required>
-  <option ng-repeat="list in lists  | orderBy: 'Client_name' track by $index" value="{{list.Client_name}}">{{list.Client_name}}</option>
+    <select class="form-control" name="client">
+  <option ng-repeat="list in lists" value="{{list.Client_name}}">{{list.Client_name}}</option>
 </select>
   </div>
-  </td>
-  <td ng-if="items[0].Client!=''">
+  </td>-->
+  <td ng-if="items[0].Client!=''"> <div class="form-group">
+    <label for="exampleInputEmail1">Client  <span class="
+"></span></label></td><td ng-if="items[0].Client!=''">
      <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Client}}" disabled>
-     <input type="hidden"  name="client" value="{{items[0].Client}}" >
-     <input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
-     <input type="hidden" value="<?php echo $user_session;?>" name="uname">
-     <input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
+    
   </div>
   </td>
-
-  <!--<td>
+</tr>
+<tr>
+  <td>
 <div class="form-group">
     <label for="exampleInputEmail1">CreationDateTime <span class="
 "></span></label></td><td>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Cdatetime}}" disabled>
   </div>
-    </td>--><td>
+    </td><td>
 <div class="form-group">
     <label for="exampleInputEmail1">Project <span class="
 "></span></label></td><td ng-if="items[0].Project==''">
-   <select class="form-control" name="project" required>
-  <option ng-repeat="project in projects  | orderBy: 'Project' track by $index" value="{{project.Project}}">{{project.Project}}</option>
+   <select class="form-control" name="project" >
+  <option ng-repeat="project in projects | orderBy: 'Project'" value="{{project.Project}}">{{project.Project}}</option>
 </select>
   </div></td>
   
   <td ng-if="items[0].Project!=''">
-
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Project}}" disabled>
-    <input type="hidden" value="{{items[0].Project}}" name="project"/>
   </div></td>
   
   
- <!-- <td>
+  <td>
 <div class="form-group">
     <label for="exampleInputEmail1">UpdatedBy <span class="
 "></span></label></td><td> <input type="hidden" value="<?php echo $user_session;?>" name="uname">
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="<?php echo $user_session;?>"  disabled>
-  </div></td>-->
-  
- <!--<td>
+  </div></td>
+  </tr>
+<tr> <td>
 <div class="form-group">
-
     <label for="exampleInputEmail1">Assigned To <span class="
 "></span></label> </td> <td><input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Assign_to}}" name="aname" disabled>
-  </div> </td>-->
-  <td ng-show="items[0].Status=='WIP' && items[0].Cdatetime && items[0].Assign_to!='unassigned'">
-<div class="form-group">
-
-
-    <label for="exampleInputEmail1">Creation Date Time <span class="
-"></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
-     <td ng-show="items[0].Status=='WIP' && items[0].Cdatetime && items[0].Assign_to!='unassigned'">
-     <input type="date" class="form-control"    style="color:black"  placeholder="Creation Date Time" name="crtime"/>
-
-     
-  
-   <!--  <input type="text"  datetime-local class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
--->  </div> </td>
-
-
-<td ng-if="items[0].Status=='WIP' && items[0].Cdatetime && items[0].Assign_to=='unassigned'">
-<div class="form-group">
-    <label for="exampleInputEmail1">Creation Date Time <span class="
-"></span></label> </td><input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
-     <td ng-if="items[0].Status=='WIP' && items[0].Cdatetime  && items[0].Assign_to=='unassigned'">
-     <input type=hidden  value="{{items[0].Cdatetime}}" name="crtime"/>
-     <input type="text" class="form-control hasDatepicker"   style="color:black" placeholder="{{items[0].Cdatetime}}" value="{{items[0].Cdatetime}}"  disabled/>
-     
-
-   <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
--->  </div> </td>
-
-<td ng-if="items[0].Status!='WIP'">
-<div class="form-group">
-    <label for="exampleInputEmail1">Creation Date Time <span class="
-"></span></label> </td><!--<input type="hidden" name="crtime" value="{{items[0].Cdatetime}}" />
-    --> <td ng-if="items[0].Status!='WIP'">
-    <input type="text" class="form-control"   style="color:black" placeholder="{{items[0].Cdatetime}}"  name="crtime" enabled/>
-    
-
-   <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
--->  </div> </td>
-</tr><tr align="center">
+  </div> </td>
  <td>
-
 <div class="form-group">
     <label for="exampleInputEmail1">UpadateDateTime <span class="
-"></span></label> </td><!--<input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" />-->
-     <td>
-     <input type="text" class="form-control hasDatepicker"  id="some_class_2" style="color:black" placeholder="Update Date Time" name="utime" required/>
-     
-   <!--  <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime">
--->  </div> </td>
- 
-
-
-<!--<td>
+"></span></label> </td><input type="hidden" value="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" name="utime"/>
+     <td><input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{date | date:'yyyy-MM-dd HH:mm:ss'}}" disabled>
+  </div> </td>
+ <td>
   <div class="form-group">
     <label for="exampleInputEmail1">Status <span class="
 "></span></label> </td> <td><input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
     <input type="text" class="form-control"  id="exampleInputEmail1" placeholder="{{items[0].Status}}" disabled/>
-  </div> </td>-->
-<td>
-  <div class="form-group">
-    <label for="exampleInputEmail1">RequesterName <span class="
-"></span></label> </td> <td><!--<input type="hidden" class="form-control"  value="{{items[0].requester}}"/>
-   --> <input type="text" class="form-control"   id="exampleInputEmail1" name="requester" placeholder="{{items[0].requester}}" value="{{items[0].requester}}" required/>
   </div> </td>
-  <td>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">Type of Job <span class="
-"></span></label> </td><td ng-if="items[0].Status=='WIP' && !items[0].jobtype">
-    <select class="form-control" name="jtype" required>
-
-  <option  value=""></option>
-  <option  value="Billable">Billable</option>
-  <option  value="Non-Billable">Non-Billable</option>
-</select>
-  </div>
-  </td>
-   <td ng-if="items[0].Status=='WIP' && items[0].jobtype">
-     <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].jobtype}}" disabled>
-    <input type='hidden' name='jtype' value='{{items[0].jobtype}}'/>
-  </div>
-  </td>
-  <td ng-if="items[0].Status!='WIP' && items[0].jobtype">
-     <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].jobtype}}" disabled>
-    
-  </div>
-  </td>
-</tr>
-  <!--<tr>
+  <tr>
 <!--<td>
 <div class="form-group">
     <label for="exampleInputEmail1">Resolver <span class="
@@ -345,16 +247,16 @@ td
     <input type="text" class="form-control" name="resolver" id="exampleInputEmail1" placeholder="{{items[0].Resolved_By}}" disabled>
   </div>
   </td>-->
-  <!-- <td >
+   <td >
 
       <div class="form-group">
-    <label for="exampleInputEmail1">Description <span class="
+    <label for="exampleInputEmail1">Discription <span class="
 "></span></label></td><td colspan="8">
 <textarea class="form-control" rows="3" cols="118" name="discription" placeholder="Discription" disabled>{{items[0].Tdiscription}}</textarea>
     
   </div>
       </td>
-      </tr>-->
+      </tr>
       </table>
       <hr/>
       <table>
@@ -466,14 +368,13 @@ td
   
       </tr>-->
 
-<tr align="center"><td>
+<tr><td>
 
 <div class="form-group">
     <label for="exampleInputEmail1">Environment Type <span class="
 "></span></label></td><td ng-if="items[0].EnvType==''">
-     <select class="form-control" name="env" required >
-        <option value="">None</option>
-     <option value="General">General</option>
+     <select class="form-control" name="env">
+     <option value="">Null</option>
   <option value="Prod">Prod</option>
     <option value="Non-Prod">Non-Prod</option>
 </select>
@@ -486,42 +387,40 @@ td
 <div class="form-group">
     <label for="exampleInputEmail1">Shift <span class="
 "></span></label></td><td>
-     <select class="form-control" name="schedule" required>
-      <option value="">None</option>
-  <option ng-repeat="schedule in schedules track by $index" value="{{schedule.title}}">{{schedule.title}}</option>
+     <select class="form-control" name="schedule">
+  <option ng-repeat="schedule in schedules" value="{{schedule.title}}">{{schedule.title}}</option>
 </select>
   </div>
   </td>
   
-
-
+  
+</tr>
+<tr>
 <td ng-if="items[0].Status!='Classify'">
   <div class="form-group">
     <label for="exampleInputEmail1">Select Type Of Task <span class="
 "></span></label></td><td ng-if="items[0].Status!='Classify'">
-  
-     <select class="form-control selectpicker" ng-model="tcat" ng-change="changedValue(tcat)" id="tcat" name="tcategory"  required style="width: 158px;" >
-<option value="">None</option>
-  <option ng-repeat="task in tasks  | filter : items[0].Status | orderBy: 'Category' track by $index" value="{{task.Category}}">{{task.Category}}</option>
-</select>
+     <select class="form-control selectpicker" name="tcategory">
 
+  <option ng-repeat="task in tasks | filter : items[0].Status" value="{{task.Category}}">{{task.Category}}</option>
+</select>
   </div>
 
-  </td><tr >
-<td ng-if="((items[0].Status=='WIP')||(items[0].Status=='AUI'))" align="center">
+  </td>
+<td ng-if="((items[0].Status=='Classify')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="
-"></span></label></td><td ng-if="((items[0].Status=='WIP')||(items[0].Status=='AUI'))">
+"></span></label></td><td ng-if="((items[0].Status=='Classify')||(items[0].Status=='WIP')||(items[0].Status=='AUI'))">
     <select class="form-control" name="cstatus" >
-  <option value="WIP">Work In progress</option>
-   <option value="Closure">Closure</option>
+ 
   <option value="next">Next Status</option>
+   <option value="WIP">Work In progress</option>
   
 </select>
   </div>
   </td>
-   <td ng-if="(items[0].Status=='Review')" align="center">
+  <td ng-if="(items[0].Status=='Review')">
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="
@@ -533,37 +432,49 @@ td
 </select>
   </div>
   </td>
-  <td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))" align="center">
+  <td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))">
 
    <div class="form-group" >
     <label for="exampleInputEmail1">ChangeStatus <span class="
-"></span></label></td><td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))" align="center">
+"></span></label></td><td ng-if="((items[0].Status=='Doc')||(items[0].Status=='Closure'))">
   
 <input type="hidden" name="cstatus" value="next"/>
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Next Status" disabled>
   </div>
   </td>
-  <td ng-if="items[0].Status=='WIP'" align="center">
+  <td ng-if="items[0].Status=='Classify'">
   <div class="form-group">
     <label for="exampleInputEmail1">Select Team {{items[0].team}} <span class="
-"></span></label></td><td ng-if="items[0].team==null" align="center">
+"></span></label></td><td ng-if="items[0].team==null">
    <select class="form-control" name="cteam" >
-  <option ng-repeat="t in cteams track by $index" value="{{t.Team}}" ng-selected="t.Team=='SSS'">{{t.Team}}</option>
+  <option ng-repeat="t in cteams" value="{{t.Team}}" ng-selected="t.Team=='L3'">{{t.Team}}</option>
 </select>
   </div></td>
   
-  <td ng-if="items[0].team!=null&& items[0].Status=='WIP'" align="center">
+  <td ng-if="items[0].team!=null&& items[0].Status=='Classify'">
     <input type="text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].team}}" disabled>
   </div></td>
 
   </td>
-  
-  
-  
-<td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')" align="center" >
+  </tr>
+  <?php 
+
+if($_SESSION['Doc']==1)
+{?>
+  <tr ng-if="items[0].Resolver == User && items[0].Status=='Doc'"><td>
+    <div class="form-group" >
+    <label for="exampleInputEmail1">Upload Documentation file (File size < 5 mb )</label></td><td>
+    <input type="file"  name="dfile"/>
+  </div>
+  </td>
+    </tr>
+    <?php
+}?>
+  <tr>
+<td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')">
 <div class="form-group"  >
     <label for="exampleInputEmail1">If awaiting for User response<span class="
-"></span></label></td><td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')" style="position:relative;left: -110px;;">
+"></span></label></td><td ng-if="(items[0].Status=='WIP')||(items[0].Status=='AUI')" style="position:relative;left: -326px;">
 
   
   <div class="material-switch pull-right">
@@ -574,95 +485,29 @@ td
   </td>
 
     </tr>
-    <tr align="center">
-      <td ng-if="items[0].Status=='WIP' && items[0].CTicket==''">
+    <tr>
+      <td ng-if="items[0].Status=='Classify'">
 <div class="form-group" >
     <label for="exampleInputEmail1">Client Ticket number <span class="
-"></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].CTicket==''">
+"></span></label></td><td ng-if="items[0].Status=='Classify'">
  <input type="text" class="form-control" id="exampleInputEmail1" name="client_tkt" placeholder="Client Ticket Number optional" />
   </td>
-<td ng-if="items[0].Status=='WIP' && items[0].CTicket!=''">
+  <td ng-if="items[0].Status!='Classify' && items[0].CTicket!=''">
 <div class="form-group" >
     <label for="exampleInputEmail1">Client Ticket number <span class="
-"></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].CTicket!=''">
+"></span></label></td><td ng-if="items[0].Status!='Classify' && items[0].CTicket!=''">
  <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="{{items[0].CTicket}}" disabled/>
-  <input type="hidden" name='client_tkt'  value="{{items[0].CTicket}}" disabled/>
-  
   </td>
       </tr>
-<tr align="center">
+<tr>
   <td>
-
-
-
-
-  <td ng-if="items[0].Status!='WIP' && items[0].CTicket!=''">
-<div class="form-group" >
-    <label for="exampleInputEmail1">Client Ticket number <span class="
-"></span></label></td><td ng-if="items[0].Status!='WIP' && items[0].CTicket!=''">
- <input type="text" class="form-control" id="exampleInputEmail1"  placeholder="{{items[0].CTicket}}" disabled/>
-  </td>
-      </tr>
-      
-<tr ng-if="dflag=='Change in Access' || dflag=='Profile Creation' || dflag=='Profile Re-enable'">
- 
-<!----------------------------------------New changes------------------------------- -->
-<td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
-
-<div class="form-group" >
-    <label for="exampleInputEmail1">Access Form number <span class="
-"></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
- <input type="text" class="form-control" id="exampleInputEmail1" name="formnumber" placeholder="Access Form number" />
-  </td>
-
-
- <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
-<div class="form-group" >
-    <label for="exampleInputEmail1">Approver <span class="
-"></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
- <input type="text" class="form-control" id="exampleInputEmail1" name="approver" placeholder="Approver" />
-  </td>
-<td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
-<div class="form-group" >
-    <label for="exampleInputEmail1"> Cloning Profile <span class="
-"></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
- <input type="text" class="form-control" id="exampleInputEmail1" name="cprofile" placeholder="Cloning Profile" />
-  </td>
-  </tr>
-  <tr ng-if="dflag=='Change in Access' || dflag=='Profile Creation' || dflag=='Profile Re-enable'">
-  <td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
-<div class="form-group" >
-    <label for="exampleInputEmail1"> Access Form Date <span class="
-"></span></label></td><td ng-if="items[0].Status=='WIP' && items[0].Assign_to!='unassigned'">
-<input type="date" class="form-control"  id="some_class_3" style="color:black" placeholder="Access form date" name="afdate" />
-      </td>
-</tr>
-
-
-<!-- --------------------------------------------------------------------------- -->
-
-
-
-
-
-
-
-
-
-
-<table>
-<tr align="center"><td>
-
-
-
 <div class="form-group" >
     <label for="exampleInputEmail1">Enter Time<span class="
 "></span></label></td><td ng-if="items[0].Status=='Classify'">
-
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" disabled>
   </div>
     </td>
-    <td ng-if="items[0].Status!='Closure' && items[0].Status!='Close'">
+    <td ng-if="items[0].Status!='Classify' && items[0].Status!='Closure' && items[0].Status!='Close'">
     <input type="number" class="form-control" name="ttime" id="exampleInputEmail1" placeholder="Time In min" required>
   </div>
 
@@ -684,7 +529,6 @@ td
     </td>
     <?php
   }?>
-
 <td ng-if="items[0].Status=='Close'"><div class="form-group" >
     <label for="exampleInputEmail1">Total Client Time</label>
     <input type="number" class="form-control" name="attime" id="exampleInputEmail1" placeholder="{{items[0].Total_client_time}} min" disabled>
@@ -693,22 +537,32 @@ td
     </td>
   
   </tr>
+<tr>
 
+<td ><div class="form-group" >
+    <label for="exampleInputEmail1">Adjust Update DateTime(Optional)</label>
+  <!--  <input type="number" class="form-control" name="auptime" id="exampleInputEmail1" placeholder="{{items[0].Total_client_time}} min" disabled>
+  --></td><td>
+  <input type="text" class="form-control"  id="some_class_2" name="opdate" style="color:black" placeholder="Adujusted Update Date Time" ng-model="sdate"/>
+          
+  </div></td>
+  
+    </tr>
 
-<tr align="center"> <td>
+<tr> <td>
 <div class="form-group">
     <label for="exampleInputEmail1">Comments <span class="
-"></span></label></td><td colspan="8" ng-if="items[0].Status=='Classify'" >
+"></span></label></td><td colspan="8" ng-if="items[0].Status=='Classify' || items[0].Status=='Close'" >
 <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" disabled></textarea>
     
   </div> </td>
-  <td colspan="8" ng-if="items[0].Status!='Classify'">
-<textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments" required></textarea>
-    
-  </div> </td>
+  <td colspan="8" ng-if="items[0].Status!='Classify' && items[0].Status!='Close'">
+<textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments"></textarea>
+  <!-- <textarea class="form-control" rows="3" cols="110" name="comments" placeholder="Comments-optional"  ng-if="items[0].Status!='WIP' || items[0].Status!='AUI'"></textarea> 
+ --> </div> </td>
  
 
-  <tr align="center">
+  <tr>
   
 <!--<td>
 <div class="form-group">
@@ -733,7 +587,6 @@ td
   <button type="submit" class="btn btn-success" ng-if="items[0].Status!='Close'">Submit To Save Changes</button>
   </div>
       </td>
-      <td id="td1"></td>
       </tr>
 
 
@@ -761,13 +614,11 @@ td
     
                                   <textarea class="form-control" rows="20" cols="100" name="comments" placeholder="Comments" style="background-color:#f4f9fd;color:#1e1833;font-family:initial" disabled>
                                     <?php
-//$lk= "/automation/resource/{{ID}}.txt";
 $y=date('y');
 $iparr = split ("CSTKT".$y, $ID); 
-
 $tid=$iparr[1];
 
-$lk="../automation/resource/$tid/$tid.txt";
+$lk="automation/resource/$tid/$tid.txt";
 //echo $lk;
 $myfile = fopen("$lk", "r") or die("New Ticket");
 
@@ -802,7 +653,8 @@ fclose($myfile);
     <div class="panel-heading" role="tab" id="heading{{update.UID}}">
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{update.UID}}" aria-expanded="false" aria-controls="collapse{{update.UID}}">
-  <span class="glyphicon glyphicon-pushpin"> </span> Updater Name: {{update.UpdateBy}} [DateTime: {{update.UpdateTime}} ]    [ <span class="glyphicon glyphicon-bookmark" style="color:green"></span><span style="color:green">Type Of Task Done:{{update.TaskName}}</span>  ]    <span class="glyphicon glyphicon-flag" ng-if="update.AUI_flag==1" style="color:red"></span>
+  <span class="glyphicon glyphicon-pushpin"> </span> {{update.UpdateBy}} [ {{update.UpdateTime}} ]    [ <span class="glyphicon glyphicon-bookmark" style="color:green"></span><span style="color:green">{{update.TaskName}}</span>  ]    <span class="glyphicon glyphicon-flag" ng-if="update.AUI_flag==1" style="color:red"></span>
+       [{{update.TimeTaken}} min]
         </a>
       </h4>
     </div>
@@ -832,15 +684,12 @@ window.onerror = function(errorMsg) {
   $('#console').html($('#console').html()+'<br>'+errorMsg)
 }
 //alert("hello");
- //$('input').datepicker();
  $(function() {
           $('#some_class_1').datetimepicker();
            $('#some_class_2').datetimepicker();
             $('#some_class_3').datetimepicker();
              $('#some_class_4').datetimepicker();
-             //$('.some_class').datetimepicker();
-             $('#datetimepicker_dark').datetimepicker();
-              });
-         </script>
+         });
 
+         </script>
 </html>
