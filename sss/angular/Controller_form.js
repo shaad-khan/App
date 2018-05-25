@@ -8,10 +8,11 @@ app.controller("Form_data",function($scope,$interval,$http,servicecall){
     $http.get("https://apps.continuserve.com/sss/webservice/ntask.php?val="+x).then(function(response){
       //$scope.load2='false';
      $scope.nitems=response.data;
-     if(response.data.Job_Type)
+     if(response.data[0].Job_Type)
      {
        $scope.jjf=2;
        console.log(response.data.Job_Type);
+       console.log($scope.jjf);
      }
      
 
