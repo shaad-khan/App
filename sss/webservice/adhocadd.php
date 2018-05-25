@@ -40,20 +40,21 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     //$adate=str_replace("/","-",$adate);
     $da=explode("-",$adate);
     //echo date_format($da[0],'Y-m-d')."<br/>".date_format($da[1],'Y-m-d');
-    print_r($da);
+    //print_r($da);
     
-    echo date('Y-m-d',strtotime($da[0]))."-----".date('Y-m-d',strtotime($da[1]));
-   /*$x=createRange(date_format($da[0],'Y-m-d'), date_format($da[1],'Y-m-d'));
+   //echo date('Y-m-d',strtotime($da[0]))."-----".date('Y-m-d',strtotime($da[1]));
+   $x=createRange(date('Y-m-d',strtotime($da[0])), date('Y-m-d',strtotime($da[1])));
    
-   //print_r($x);
+  /* print_r($x);
     //print(json_encode($x, JSON_NUMERIC_CHECK));
-   for($i=0;$i<=count($x);$i++)
+  for($i=0;$i<=count($x);$i++)
     {
       echo $x[$i];
     }*/
     //  print(json_encode($x, JSON_NUMERIC_CHECK));
-/*
 
+    for($i=0;$i<=count($x);$i++)
+    {
     date_default_timezone_set('Asia/Kolkata');
 									//$date = date('Ymd H:i:s');
 									$date4 = date('y');
@@ -100,21 +101,21 @@ $id=$row3['id'];
                                   } 
 if($u!=null)
 {
-$sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Project,Resolver,CTicket,Cdatetime,Resolver_Dtime,EnvType,Reviewer,Assign_to,Creator,Updatetime,Repo,aflag,Total_time,atype,team,jobtype,shift)values('$tk','$amessage','Close','$client','$ptype','$u','','$adate','$x[$i]','$etype','','$u','$u','$adate','',1,$tspent,'$ttype','SSS','$jtype','$stype')";
-
+$sql="insert into Master_Ticket_Tab (Ticket_ID,Tdiscription,Status,Client,Project,Resolver,CTicket,Cdatetime,Resolver_Dtime,EnvType,Reviewer,Assign_to,Creator,Updatetime,Repo,aflag,Total_time,atype,team,jobtype,shift)values('$tk','$amessage','Close','$client','$ptype','$u','','$x[$i]','$x[$i]','$etype','','$u','$u','$adate','',1,$tspent,'$ttype','SSS','$jtype','$stype')";
+//echo $sql;
 $conn->query($sql);
-
+/*
 $sql="select Top 1 Ticket_ID from Master_Ticket_Tab where aflag=1 order by Id desc";
 $result=$conn->query($sql);
 //echo $msg;
   while($row3=$result->fetch())
 {
 $rows[]=$row3;
-}
+}*/
 //print(json_encode($rows, JSON_NUMERIC_CHECK));
 }
 else{
   echo "<script> alert('Session expired please re-login');setTimeout(function () { win.close();}, 6000);</script>";
-}*/
- //}
+}
+ }
 ?>
