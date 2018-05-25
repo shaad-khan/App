@@ -316,8 +316,8 @@ td
   <option  value="Billable">Billable</option>
   <option  value="Non-Billable">Non-Billable</option>
 </select>
-<input type="Text" ng-if="jjf==2" class="form-control" id="exampleInputEmail1" placeholder="{{nitems[0].Job_Type}}" disabled>
-    <input type='hidden'ng-if="jjf==2" name='jtype' value='{{nitems[0].Job_Type}}'/>
+<input type="Text" ng-if="jjf==2 && !items[0].jobtype" class="form-control" id="exampleInputEmail1" placeholder="{{nitems[0].Job_Type}}" disabled>
+    <input type='hidden' ng-if="jjf==2 && !items[0].jobtype" name='jtype' value='{{nitems[0].Job_Type}}'/>
   </div>
   </td>
    <td ng-if="items[0].Status=='WIP' && items[0].jobtype">
