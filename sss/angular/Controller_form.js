@@ -11,6 +11,7 @@ app.controller("Form_data",function($scope,$interval,$http,servicecall){
      if(response.data.Job_Type)
      {
        $scope.jjf=2;
+       console.log(response.data.Job_Type);
      }
      
 
