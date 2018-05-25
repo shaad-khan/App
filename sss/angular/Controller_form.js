@@ -14,6 +14,9 @@ app.controller("Form_data",function($scope,$interval,$http,servicecall){
        console.log(response.data.Job_Type);
        console.log($scope.jjf);
      }
+     else{
+      $scope.jjf=1;
+     }
      
 
    });
