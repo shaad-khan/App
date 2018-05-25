@@ -41,15 +41,15 @@ $conn = new PDO( "sqlsrv:Server= $server ; Database = $db ", $user, $pwd);
     $da=explode("-",$adate);
     //echo date_format($da[0],'Y-m-d')."<br/>".date_format($da[1],'Y-m-d');
     print_r($da);
-
-   $x=createRange(date_format($da[0],'Y-m-d'), date_format($da[1],'Y-m-d'));
+    echo date_format($da[0],'Y-m-d')+"-----"+date_format($da[1],'Y-m-d');
+   /*$x=createRange(date_format($da[0],'Y-m-d'), date_format($da[1],'Y-m-d'));
    
    //print_r($x);
     //print(json_encode($x, JSON_NUMERIC_CHECK));
    for($i=0;$i<=count($x);$i++)
     {
       echo $x[$i];
-    }
+    }*/
     //  print(json_encode($x, JSON_NUMERIC_CHECK));
 /*
 
