@@ -161,7 +161,7 @@ td
 "></span></button> <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg2"><span class="glyphicon glyphicon-comment
 "></span></button>&nbsp;<button type="button" class="btn btn-primary"><a href="<?php Echo $link;?>" style="text-decoration:none;color:white"><span class="glyphicon glyphicon-paperclip
 "></span></a></button>  [ Ticket Description : {{items[0].Tdiscription}}]  [Assigned To : {{items[0].Assign_to}}] [Status : {{items[0].Status}}]</div>
-    <div class="panel-body" ng-init="User='<?php Echo $user_session;?>'"><form class="form-inline" action="webservice/add2.php" method="GET" enctype="multipart/form-data">
+    <div class="panel-body" ng-init="User='<?php Echo $user_session;?>'"><form class="form-inline" action="webservice/add2.php" method="POST" enctype="multipart/form-data">
 
 <table>
 <tr align="center"><!--<td>
@@ -184,6 +184,10 @@ td
   </div>
   </td>-->
   <td>
+  <input type="hidden"  name="client" value="{{items[0].Client}}" >
+     <input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
+     <input type="hidden" value="<?php echo $user_session;?>" name="uname">
+     <input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
 
     <div class="form-group">
     <input type="hidden" name="TID" value="<?php Echo $ID;?>"/>
@@ -198,10 +202,7 @@ td
   </td>
   <td ng-if="items[0].Client!=''">
      <input type="Text" class="form-control" id="exampleInputEmail1" placeholder="{{items[0].Client}}" disabled>
-     <input type="hidden"  name="client" value="{{items[0].Client}}" >
-     <input type="hidden" name="assign" value="{{items[0].Assign_to}}"/>
-     <input type="hidden" value="<?php echo $user_session;?>" name="uname">
-     <input type="hidden" class="form-control" name="status" value="{{items[0].Status}}"/>
+    
   </div>
   </td>
 
